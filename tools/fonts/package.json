@@ -1,0 +1,8 @@
+{
+  "name": "tcc-font-build",
+  "private": true,
+  "version": "0.3.0",
+  "dependencies": {
+    "lv_font_conv": "1.5.3"
+  }
+}

@@ -1,0 +1,210 @@
+{
+  "name": "tcc-ui-translator",
+  "displayName": "TCC UI Translator",
+  "description": "Traduza um subconjunto explícito de HTML/CSS para interfaces C do LVGL 8.3, com diagnósticos e fontes em português.",
+  "version": "0.4.0",
+  "publisher": "arthur-carminati",
+  "license": "SEE LICENSE IN LICENSE.txt",
+  "engines": {
+    "vscode": "^1.95.0",
+    "node": ">=22"
+  },
+  "categories": [
+    "Programming Languages",
+    "Other"
+  ],
+  "keywords": [
+    "LVGL",
+    "ESP32",
+    "embedded",
+    "HTML",
+    "C",
+    "Portuguese"
+  ],
+  "icon": "resources/icon.png",
+  "galleryBanner": {
+    "color": "#102B42",
+    "theme": "dark"
+  },
+  "main": "./dist/extension.js",
+  "extensionKind": [
+    "workspace"
+  ],
+  "activationEvents": [
+    "onLanguage:html"
+  ],
+  "capabilities": {
+    "untrustedWorkspaces": {
+      "supported": "limited",
+      "description": "O guia e os trechos HTML funcionam em modo restrito. A tradução executa Python e exige uma pasta confiável.",
+      "restrictedConfigurations": [
+        "tccUiTranslator.pythonPath",
+        "tccUiTranslator.fontManifest",
+        "tccUiTranslator.outputDirectory"
+      ]
+    },
+    "virtualWorkspaces": {
+      "supported": false,
+      "description": "A geração requer arquivos locais no ambiente em que a extensão executa."
+    }
+  },
+  "contributes": {
+    "commands": [
+      {
+        "command": "tccUiTranslator.generate",
+        "title": "Gerar interface LVGL",
+        "category": "TCC UI",
+        "enablement": "isWorkspaceTrusted"
+      },
+      {
+        "command": "tccUiTranslator.validate",
+        "title": "Validar interface",
+        "category": "TCC UI",
+        "enablement": "isWorkspaceTrusted"
+      },
+      {
+        "command": "tccUiTranslator.createExample",
+        "title": "Criar exemplo de contador",
+        "category": "TCC UI"
+      },
+      {
+        "command": "tccUiTranslator.openLanguageGuide",
+        "title": "Abrir guia de HTML/CSS suportado",
+        "category": "TCC UI"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "tccUiTranslator.validate",
+          "when": "editorLangId == html && isWorkspaceTrusted",
+          "group": "tccUi@1"
+        },
+        {
+          "command": "tccUiTranslator.generate",
+          "when": "editorLangId == html && isWorkspaceTrusted",
+          "group": "tccUi@2"
+        }
+      ]
+    },
+    "snippets": [
+      {
+        "language": "html",
+        "path": "./snippets/html.json"
+      }
+    ],
+    "configuration": {
+      "title": "TCC UI Translator",
+      "properties": {
+        "tccUiTranslator.pythonPath": {
+          "type": "string",
+          "default": "",
+          "scope": "machine-overridable",
+          "description": "Executável Python 3.10 ou superior, sem argumentos. Vazio usa python3 (macOS/Linux) ou python (Windows). Não requer pip."
+        },
+        "tccUiTranslator.displayPreset": {
+          "type": "string",
+          "enum": [
+            "st7789",
+            "st7735",
+            "ili9341",
+            "ssd1306",
+            "custom"
+          ],
+          "default": "st7789",
+          "scope": "resource",
+          "description": "Dimensões de referência; não configura o driver físico. ST7789: 172 × 320."
+        },
+        "tccUiTranslator.orientation": {
+          "type": "string",
+          "enum": [
+            "portrait",
+            "landscape"
+          ],
+          "default": "portrait",
+          "scope": "resource",
+          "description": "Orientação da área de geração; não gira o driver físico."
+        },
+        "tccUiTranslator.displayWidth": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 8191,
+          "default": 172,
+          "scope": "resource",
+          "description": "Largura em pixels para o preset custom, antes da orientação."
+        },
+        "tccUiTranslator.displayHeight": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 8191,
+          "default": 320,
+          "scope": "resource",
+          "description": "Altura em pixels para o preset custom, antes da orientação."
+        },
+        "tccUiTranslator.designWidth": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1,
+          "maximum": 8191,
+          "default": null,
+          "scope": "resource",
+          "description": "Largura do desenho; null respeita o elemento screen."
+        },
+        "tccUiTranslator.designHeight": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1,
+          "maximum": 8191,
+          "default": null,
+          "scope": "resource",
+          "description": "Altura do desenho; null respeita o elemento screen."
+        },
+        "tccUiTranslator.strict": {
+          "type": "boolean",
+          "default": true,
+          "scope": "resource",
+          "description": "Bloqueia geração com construções sem suporte ou glifos ausentes. Recomendado para o firmware."
+        },
+        "tccUiTranslator.fontManifest": {
+          "type": "string",
+          "default": "",
+          "scope": "resource",
+          "description": "Catálogo JSON absoluto ou relativo à pasta do projeto. Vazio usa TCC Sans PT incluída. Use builtin para Montserrat do LVGL (sem todos os acentos)."
+        },
+        "tccUiTranslator.outputDirectory": {
+          "type": "string",
+          "default": "generated/${fileBasenameNoExtension}",
+          "scope": "resource",
+          "description": "Pasta exclusiva de saída dentro do projeto (ou da pasta do HTML quando não há projeto). Aceita ${fileBasenameNoExtension}. Arquivos alterados manualmente são protegidos."
+        },
+        "tccUiTranslator.timeoutSeconds": {
+          "type": "integer",
+          "minimum": 5,
+          "maximum": 120,
+          "default": 30,
+          "scope": "resource",
+          "description": "Tempo máximo de cada tradução em segundos."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p .",
+    "test": "npm run compile && node --test dist/test/unit.test.js",
+    "test:integration": "npm run compile && node scripts/run-integration.cjs",
+    "vscode:prepublish": "npm run bundle && npm run compile",
+    "package": "vsce package --allow-missing-repository --no-dependencies --out ../release/tcc-ui-translator-0.4.0.vsix",
+    "bundle": "node scripts/prepare-package.cjs"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/vscode": "1.95.0",
+    "@vscode/test-electron": "3.1.0",
+    "@vscode/vsce": "4.0.0",
+    "typescript": "5.9.3"
+  }
+}

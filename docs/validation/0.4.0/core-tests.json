@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-02",
+  "version": "0.4.0",
+  "platform": "macOS arm64",
+  "tests": {
+    "core": 148,
+    "bundle": 7,
+    "total": 155,
+    "skipped": 0
+  },
+  "real_lvgl": "8.3.11",
+  "native_runtime_cycles": 100,
+  "ruff": "passed",
+  "format": "passed",
+  "hardware_physical_test": "pending"
+}

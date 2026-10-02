@@ -1,0 +1,1 @@
+{"dependencies": [{"name": "beautifulsoup4", "version": "4.15.0", "vulns": []}, {"name": "soupsieve", "version": "2.10", "vulns": []}, {"name": "tinycss2", "version": "1.5.1", "vulns": []}, {"name": "typing-extensions", "version": "4.16.0", "vulns": []}, {"name": "webencodings", "version": "0.6.1", "vulns": []}], "fixes": []}

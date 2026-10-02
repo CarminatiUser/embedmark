@@ -1,0 +1,1131 @@
+{
+  "date": "2026-10-02",
+  "wheel": "<project>/release/tcc_ui_translator-0.4.0-py3-none-any.whl",
+  "wheel_sha256": "ecc11133c21d7cf728b5b2ec611c59b295bddaba9a65b947c6ca17786f0a675d",
+  "wheel_unchanged_after_checks": true,
+  "platform": "macOS",
+  "offline_install": true,
+  "editable_install": false,
+  "status": "passed",
+  "environments": [
+    {
+      "requested_python": "3.10",
+      "interpreter": "<project>/build/python-runtimes/cpython-3.10.22-macos-aarch64-none/bin/python3.10",
+      "status": "passed",
+      "checks": {
+        "wheel_install_without_editable_source": "passed",
+        "cli_version": "passed",
+        "invalid_example_preserves_C_header_JSON": "passed",
+        "invalid_bridge_reports_diagnostics": "passed",
+        "custom_landscape_CLI_bridge_320x240": "passed",
+        "bridge_does_not_write_files": "passed",
+        "external_portuguese_fonts": "passed"
+      },
+      "installed": {
+        "python": "3.10.22",
+        "architecture": "arm64",
+        "module": "<project>/build/clean-install-checks/python-3.10/venv/lib/python3.10/site-packages/translator/__init__.py",
+        "version": "0.4.0",
+        "distribution": "0.4.0",
+        "direct_url": {
+          "archive_info": {},
+          "url": "file://<project>/build/clean-install-checks/inputs/tcc_ui_translator-0.4.0-py3-none-any.whl"
+        },
+        "dependencies": {
+          "beautifulsoup4": "4.15.0",
+          "soupsieve": "2.10",
+          "tinycss2": "1.5.1",
+          "typing_extensions": "4.16.0",
+          "webencodings": "0.6.1"
+        }
+      },
+      "examples": {
+        "01_minima.html": {
+          "cli_generate": "passed",
+          "bridge_validate": "passed",
+          "bridge_generate_equal_cli": "passed",
+          "source_sha256": "15881bb8715200ca77fcf5828202a21199d8e041a582ac5d35167d7dc90cfc3b",
+          "generated_c_sha256": "14afcb56323a3548e0b307a70fd7bc6a6ec5fdef6fb6b6575e68826515cac917"
+        },
+        "02_espacamento.html": {
+          "cli_generate": "passed",
+          "bridge_validate": "passed",
+          "bridge_generate_equal_cli": "passed",
+          "source_sha256": "9f1457bf295e09037b53c23263cefae38f5ff0db64715aff1d64f0a1c3bf4575",
+          "generated_c_sha256": "0327a9e34381f568d727942e5a2543f71c89988701c0c46d4fe5d7210d7b91a7"
+        },
+        "03_hierarquia.html": {
+          "cli_generate": "passed",
+          "bridge_validate": "passed",
+          "bridge_generate_equal_cli": "passed",
+          "source_sha256": "5a6ea645b4d0142cd6d75187c137d4b28c62e6b43d8fda043a21b4b73763030a",
+          "generated_c_sha256": "260fd912ecb92ef6779506555985de03a20a5d3f85055493cd239832e2cecfdd"
+        },
+        "05_interacao.html": {
+          "cli_generate": "passed",
+          "bridge_validate": "passed",
+          "bridge_generate_equal_cli": "passed",
+          "source_sha256": "b16e2577fbbea4e38bc6eb870fb5d4053917186e1265f2feb8a149807633a370",
+          "generated_c_sha256": "f8b3dec5f209db8a81dd73db4d7a54cb27faafdda9ceaba2c5099b728d35749e"
+        },
+        "sample_ui.html": {
+          "cli_generate": "passed",
+          "bridge_validate": "passed",
+          "bridge_generate_equal_cli": "passed",
+          "source_sha256": "237373ac573fe5ed38084a1cc2c339314f6e2290cc21ddcfa7e6ea208afaf1a5",
+          "generated_c_sha256": "783cac694a0166291862ed050103863e11b6daaee0b920461215f32e5db86aca"
+        },
+        "advanced_example.html": {
+          "cli_generate": "passed",
+          "bridge_validate": "passed",
+          "bridge_generate_equal_cli": "passed",
+          "source_sha256": "fa73ef42390b03591472aea543498e0ef2a70ffd0068b9c11ef889c25be376d0",
+          "generated_c_sha256": "dfee9d0b62a4a6aff6023be9e10c53993e574733e934acf7d3e03d496ce855ab"
+        }
+      },
+      "commands": [
+        {
+          "check": "create-venv",
+          "returncode": 0,
+          "seconds": 4.75
+        },
+        {
+          "check": "install-dependencies",
+          "returncode": 0,
+          "seconds": 1.124
+        },
+        {
+          "check": "install-wheel",
+          "returncode": 0,
+          "seconds": 1.049
+        },
+        {
+          "check": "dependency-consistency",
+          "returncode": 0,
+          "seconds": 0.85
+        },
+        {
+          "check": "installed-identity",
+          "returncode": 0,
+          "seconds": 0.235
+        },
+        {
+          "check": "cli-version",
+          "returncode": 0,
+          "seconds": 0.671
+        },
+        {
+          "check": "cli-01_minima",
+          "returncode": 0,
+          "seconds": 0.361
+        },
+        {
+          "check": "bridge-validate-01_minima",
+          "returncode": 0,
+          "seconds": 0.267
+        },
+        {
+          "check": "bridge-generate-01_minima",
+          "returncode": 0,
+          "seconds": 0.231
+        },
+        {
+          "check": "cli-02_espacamento",
+          "returncode": 0,
+          "seconds": 0.234
+        },
+        {
+          "check": "bridge-validate-02_espacamento",
+          "returncode": 0,
+          "seconds": 0.219
+        },
+        {
+          "check": "bridge-generate-02_espacamento",
+          "returncode": 0,
+          "seconds": 0.265
+        },
+        {
+          "check": "cli-03_hierarquia",
+          "returncode": 0,
+          "seconds": 0.226
+        },
+        {
+          "check": "bridge-validate-03_hierarquia",
+          "returncode": 0,
+          "seconds": 0.259
+        },
+        {
+          "check": "bridge-generate-03_hierarquia",
+          "returncode": 0,
+          "seconds": 0.29
+        },
+        {
+          "check": "cli-05_interacao",
+          "returncode": 0,
+          "seconds": 0.231
+        },
+        {
+          "check": "bridge-validate-05_interacao",
+          "returncode": 0,
+          "seconds": 0.245
+        },
+        {
+          "check": "bridge-generate-05_interacao",
+          "returncode": 0,
+          "seconds": 0.24
+        },
+        {
+          "check": "cli-sample_ui",
+          "returncode": 0,
+          "seconds": 0.197
+        },
+        {
+          "check": "bridge-validate-sample_ui",
+          "returncode": 0,
+          "seconds": 0.157
+        },
+        {
+          "check": "bridge-generate-sample_ui",
+          "returncode": 0,
+          "seconds": 0.195
+        },
+        {
+          "check": "cli-advanced_example",
+          "returncode": 0,
+          "seconds": 0.176
+        },
+        {
+          "check": "bridge-validate-advanced_example",
+          "returncode": 0,
+          "seconds": 0.158
+        },
+        {
+          "check": "bridge-generate-advanced_example",
+          "returncode": 0,
+          "seconds": 0.162
+        },
+        {
+          "check": "cli-invalid-preserves-all-outputs",
+          "returncode": 1,
+          "seconds": 0.181
+        },
+        {
+          "check": "bridge-invalid",
+          "returncode": 1,
+          "seconds": 0.168
+        },
+        {
+          "check": "cli-custom-landscape",
+          "returncode": 0,
+          "seconds": 0.163
+        },
+        {
+          "check": "bridge-custom-landscape",
+          "returncode": 0,
+          "seconds": 0.154
+        }
+      ]
+    },
+    {
+      "requested_python": "3.11",
+      "interpreter": "/opt/homebrew/bin/python3.11",
+      "status": "passed",
+      "checks": {
+        "wheel_install_without_editable_source": "passed",
+        "cli_version": "passed",
+        "invalid_example_preserves_C_header_JSON": "passed",
+        "invalid_bridge_reports_diagnostics": "passed",
+        "custom_landscape_CLI_bridge_320x240": "passed",
+        "bridge_does_not_write_files": "passed",
+        "external_portuguese_fonts": "passed"
+      },
+      "installed": {
+        "python": "3.11.15",
+        "architecture": "arm64",
+        "module": "<project>/build/clean-install-checks/python-3.11/venv/lib/python3.11/site-packages/translator/__init__.py",
+        "version": "0.4.0",
+        "distribution": "0.4.0",
+        "direct_url": {
+          "archive_info": {
+            "hash": "sha256=ecc11133c21d7cf728b5b2ec611c59b295bddaba9a65b947c6ca17786f0a675d",
+            "hashes": {
+              "sha256": "ecc11133c21d7cf728b5b2ec611c59b295bddaba9a65b947c6ca17786f0a675d"
+            }
+          },
+          "url": "file://<project>/build/clean-install-checks/inputs/tcc_ui_translator-0.4.0-py3-none-any.whl"
+        },
+        "dependencies": {
+          "beautifulsoup4": "4.15.0",
+          "soupsieve": "2.10",
+          "tinycss2": "1.5.1",
+          "typing_extensions": "4.16.0",
+          "webencodings": "0.6.1"
+        }
+      },
+      "examples": {
+        "01_minima.html": {
+          "cli_generate": "passed",
+          "bridge_validate": "passed",
+          "bridge_generate_equal_cli": "passed",
+          "source_sha256": "15881bb8715200ca77fcf5828202a21199d8e041a582ac5d35167d7dc90cfc3b",
+          "generated_c_sha256": "14afcb56323a3548e0b307a70fd7bc6a6ec5fdef6fb6b6575e68826515cac917"
+        },
+        "02_espacamento.html": {
+          "cli_generate": "passed",
+          "bridge_validate": "passed",
+          "bridge_generate_equal_cli": "passed",
+          "source_sha256": "9f1457bf295e09037b53c23263cefae38f5ff0db64715aff1d64f0a1c3bf4575",
+          "generated_c_sha256": "0327a9e34381f568d727942e5a2543f71c89988701c0c46d4fe5d7210d7b91a7"
+        },
+        "03_hierarquia.html": {
+          "cli_generate": "passed",
+          "bridge_validate": "passed",
+          "bridge_generate_equal_cli": "passed",
+          "source_sha256": "5a6ea645b4d0142cd6d75187c137d4b28c62e6b43d8fda043a21b4b73763030a",
+          "generated_c_sha256": "260fd912ecb92ef6779506555985de03a20a5d3f85055493cd239832e2cecfdd"
+        },
+        "05_interacao.html": {
+          "cli_generate": "passed",
+          "bridge_validate": "passed",
+          "bridge_generate_equal_cli": "passed",
+          "source_sha256": "b16e2577fbbea4e38bc6eb870fb5d4053917186e1265f2feb8a149807633a370",
+          "generated_c_sha256": "f8b3dec5f209db8a81dd73db4d7a54cb27faafdda9ceaba2c5099b728d35749e"
+        },
+        "sample_ui.html": {
+          "cli_generate": "passed",
+          "bridge_validate": "passed",
+          "bridge_generate_equal_cli": "passed",
+          "source_sha256": "237373ac573fe5ed38084a1cc2c339314f6e2290cc21ddcfa7e6ea208afaf1a5",
+          "generated_c_sha256": "783cac694a0166291862ed050103863e11b6daaee0b920461215f32e5db86aca"
+        },
+        "advanced_example.html": {
+          "cli_generate": "passed",
+          "bridge_validate": "passed",
+          "bridge_generate_equal_cli": "passed",
+          "source_sha256": "fa73ef42390b03591472aea543498e0ef2a70ffd0068b9c11ef889c25be376d0",
+          "generated_c_sha256": "dfee9d0b62a4a6aff6023be9e10c53993e574733e934acf7d3e03d496ce855ab"
+        }
+      },
+      "commands": [
+        {
+          "check": "create-venv",
+          "returncode": 0,
+          "seconds": 9.863
+        },
+        {
+          "check": "install-dependencies",
+          "returncode": 0,
+          "seconds": 0.473
+        },
+        {
+          "check": "install-wheel",
+          "returncode": 0,
+          "seconds": 0.318
+        },
+        {
+          "check": "dependency-consistency",
+          "returncode": 0,
+          "seconds": 0.294
+        },
+        {
+          "check": "installed-identity",
+          "returncode": 0,
+          "seconds": 0.097
+        },
+        {
+          "check": "cli-version",
+          "returncode": 0,
+          "seconds": 0.37
+        },
+        {
+          "check": "cli-01_minima",
+          "returncode": 0,
+          "seconds": 0.121
+        },
+        {
+          "check": "bridge-validate-01_minima",
+          "returncode": 0,
+          "seconds": 0.096
+        },
+        {
+          "check": "bridge-generate-01_minima",
+          "returncode": 0,
+          "seconds": 0.098
+        },
+        {
+          "check": "cli-02_espacamento",
+          "returncode": 0,
+          "seconds": 0.09
+        },
+        {
+          "check": "bridge-validate-02_espacamento",
+          "returncode": 0,
+          "seconds": 0.072
+        },
+        {
+          "check": "bridge-generate-02_espacamento",
+          "returncode": 0,
+          "seconds": 0.066
+        },
+        {
+          "check": "cli-03_hierarquia",
+          "returncode": 0,
+          "seconds": 0.066
+        },
+        {
+          "check": "bridge-validate-03_hierarquia",
+          "returncode": 0,
+          "seconds": 0.059
+        },
+        {
+          "check": "bridge-generate-03_hierarquia",
+          "returncode": 0,
+          "seconds": 0.058
+        },
+        {
+          "check": "cli-05_interacao",
+          "returncode": 0,
+          "seconds": 0.102
+        },
+        {
+          "check": "bridge-validate-05_interacao",
+          "returncode": 0,
+          "seconds": 0.071
+        },
+        {
+          "check": "bridge-generate-05_interacao",
+          "returncode": 0,
+          "seconds": 0.065
+        },
+        {
+          "check": "cli-sample_ui",
+          "returncode": 0,
+          "seconds": 0.072
+        },
+        {
+          "check": "bridge-validate-sample_ui",
+          "returncode": 0,
+          "seconds": 0.06
+        },
+        {
+          "check": "bridge-generate-sample_ui",
+          "returncode": 0,
+          "seconds": 0.063
+        },
+        {
+          "check": "cli-advanced_example",
+          "returncode": 0,
+          "seconds": 0.073
+        },
+        {
+          "check": "bridge-validate-advanced_example",
+          "returncode": 0,
+          "seconds": 0.062
+        },
+        {
+          "check": "bridge-generate-advanced_example",
+          "returncode": 0,
+          "seconds": 0.066
+        },
+        {
+          "check": "cli-invalid-preserves-all-outputs",
+          "returncode": 1,
+          "seconds": 0.063
+        },
+        {
+          "check": "bridge-invalid",
+          "returncode": 1,
+          "seconds": 0.062
+        },
+        {
+          "check": "cli-custom-landscape",
+          "returncode": 0,
+          "seconds": 0.069
+        },
+        {
+          "check": "bridge-custom-landscape",
+          "returncode": 0,
+          "seconds": 0.068
+        }
+      ]
+    },
+    {
+      "requested_python": "3.12",
+      "interpreter": "/usr/local/bin/python3.12",
+      "status": "passed",
+      "checks": {
+        "wheel_install_without_editable_source": "passed",
+        "cli_version": "passed",
+        "invalid_example_preserves_C_header_JSON": "passed",
+        "invalid_bridge_reports_diagnostics": "passed",
+        "custom_landscape_CLI_bridge_320x240": "passed",
+        "bridge_does_not_write_files": "passed",
+        "external_portuguese_fonts": "passed"
+      },
+      "installed": {
+        "python": "3.12.2",
+        "architecture": "arm64",
+        "module": "<project>/build/clean-install-checks/python-3.12/venv/lib/python3.12/site-packages/translator/__init__.py",
+        "version": "0.4.0",
+        "distribution": "0.4.0",
+        "direct_url": {
+          "archive_info": {
+            "hash": "sha256=ecc11133c21d7cf728b5b2ec611c59b295bddaba9a65b947c6ca17786f0a675d",
+            "hashes": {
+              "sha256": "ecc11133c21d7cf728b5b2ec611c59b295bddaba9a65b947c6ca17786f0a675d"
+            }
+          },
+          "url": "file://<project>/build/clean-install-checks/inputs/tcc_ui_translator-0.4.0-py3-none-any.whl"
+        },
+        "dependencies": {
+          "beautifulsoup4": "4.15.0",
+          "soupsieve": "2.10",
+          "tinycss2": "1.5.1",
+          "typing_extensions": "4.16.0",
+          "webencodings": "0.6.1"
+        }
+      },
+      "examples": {
+        "01_minima.html": {
+          "cli_generate": "passed",
+          "bridge_validate": "passed",
+          "bridge_generate_equal_cli": "passed",
+          "source_sha256": "15881bb8715200ca77fcf5828202a21199d8e041a582ac5d35167d7dc90cfc3b",
+          "generated_c_sha256": "14afcb56323a3548e0b307a70fd7bc6a6ec5fdef6fb6b6575e68826515cac917"
+        },
+        "02_espacamento.html": {
+          "cli_generate": "passed",
+          "bridge_validate": "passed",
+          "bridge_generate_equal_cli": "passed",
+          "source_sha256": "9f1457bf295e09037b53c23263cefae38f5ff0db64715aff1d64f0a1c3bf4575",
+          "generated_c_sha256": "0327a9e34381f568d727942e5a2543f71c89988701c0c46d4fe5d7210d7b91a7"
+        },
+        "03_hierarquia.html": {
+          "cli_generate": "passed",
+          "bridge_validate": "passed",
+          "bridge_generate_equal_cli": "passed",
+          "source_sha256": "5a6ea645b4d0142cd6d75187c137d4b28c62e6b43d8fda043a21b4b73763030a",
+          "generated_c_sha256": "260fd912ecb92ef6779506555985de03a20a5d3f85055493cd239832e2cecfdd"
+        },
+        "05_interacao.html": {
+          "cli_generate": "passed",
+          "bridge_validate": "passed",
+          "bridge_generate_equal_cli": "passed",
+          "source_sha256": "b16e2577fbbea4e38bc6eb870fb5d4053917186e1265f2feb8a149807633a370",
+          "generated_c_sha256": "f8b3dec5f209db8a81dd73db4d7a54cb27faafdda9ceaba2c5099b728d35749e"
+        },
+        "sample_ui.html": {
+          "cli_generate": "passed",
+          "bridge_validate": "passed",
+          "bridge_generate_equal_cli": "passed",
+          "source_sha256": "237373ac573fe5ed38084a1cc2c339314f6e2290cc21ddcfa7e6ea208afaf1a5",
+          "generated_c_sha256": "783cac694a0166291862ed050103863e11b6daaee0b920461215f32e5db86aca"
+        },
+        "advanced_example.html": {
+          "cli_generate": "passed",
+          "bridge_validate": "passed",
+          "bridge_generate_equal_cli": "passed",
+          "source_sha256": "fa73ef42390b03591472aea543498e0ef2a70ffd0068b9c11ef889c25be376d0",
+          "generated_c_sha256": "dfee9d0b62a4a6aff6023be9e10c53993e574733e934acf7d3e03d496ce855ab"
+        }
+      },
+      "commands": [
+        {
+          "check": "create-venv",
+          "returncode": 0,
+          "seconds": 2.221
+        },
+        {
+          "check": "install-dependencies",
+          "returncode": 0,
+          "seconds": 0.797
+        },
+        {
+          "check": "install-wheel",
+          "returncode": 0,
+          "seconds": 0.65
+        },
+        {
+          "check": "dependency-consistency",
+          "returncode": 0,
+          "seconds": 0.583
+        },
+        {
+          "check": "installed-identity",
+          "returncode": 0,
+          "seconds": 0.114
+        },
+        {
+          "check": "cli-version",
+          "returncode": 0,
+          "seconds": 0.482
+        },
+        {
+          "check": "cli-01_minima",
+          "returncode": 0,
+          "seconds": 0.187
+        },
+        {
+          "check": "bridge-validate-01_minima",
+          "returncode": 0,
+          "seconds": 0.131
+        },
+        {
+          "check": "bridge-generate-01_minima",
+          "returncode": 0,
+          "seconds": 0.136
+        },
+        {
+          "check": "cli-02_espacamento",
+          "returncode": 0,
+          "seconds": 0.165
+        },
+        {
+          "check": "bridge-validate-02_espacamento",
+          "returncode": 0,
+          "seconds": 0.116
+        },
+        {
+          "check": "bridge-generate-02_espacamento",
+          "returncode": 0,
+          "seconds": 0.12
+        },
+        {
+          "check": "cli-03_hierarquia",
+          "returncode": 0,
+          "seconds": 0.115
+        },
+        {
+          "check": "bridge-validate-03_hierarquia",
+          "returncode": 0,
+          "seconds": 0.118
+        },
+        {
+          "check": "bridge-generate-03_hierarquia",
+          "returncode": 0,
+          "seconds": 0.131
+        },
+        {
+          "check": "cli-05_interacao",
+          "returncode": 0,
+          "seconds": 0.157
+        },
+        {
+          "check": "bridge-validate-05_interacao",
+          "returncode": 0,
+          "seconds": 0.143
+        },
+        {
+          "check": "bridge-generate-05_interacao",
+          "returncode": 0,
+          "seconds": 0.127
+        },
+        {
+          "check": "cli-sample_ui",
+          "returncode": 0,
+          "seconds": 0.147
+        },
+        {
+          "check": "bridge-validate-sample_ui",
+          "returncode": 0,
+          "seconds": 0.127
+        },
+        {
+          "check": "bridge-generate-sample_ui",
+          "returncode": 0,
+          "seconds": 0.181
+        },
+        {
+          "check": "cli-advanced_example",
+          "returncode": 0,
+          "seconds": 0.156
+        },
+        {
+          "check": "bridge-validate-advanced_example",
+          "returncode": 0,
+          "seconds": 0.117
+        },
+        {
+          "check": "bridge-generate-advanced_example",
+          "returncode": 0,
+          "seconds": 0.109
+        },
+        {
+          "check": "cli-invalid-preserves-all-outputs",
+          "returncode": 1,
+          "seconds": 0.107
+        },
+        {
+          "check": "bridge-invalid",
+          "returncode": 1,
+          "seconds": 0.123
+        },
+        {
+          "check": "cli-custom-landscape",
+          "returncode": 0,
+          "seconds": 0.108
+        },
+        {
+          "check": "bridge-custom-landscape",
+          "returncode": 0,
+          "seconds": 0.121
+        }
+      ]
+    },
+    {
+      "requested_python": "3.13",
+      "interpreter": "/opt/homebrew/bin/python3.13",
+      "status": "passed",
+      "checks": {
+        "wheel_install_without_editable_source": "passed",
+        "cli_version": "passed",
+        "invalid_example_preserves_C_header_JSON": "passed",
+        "invalid_bridge_reports_diagnostics": "passed",
+        "custom_landscape_CLI_bridge_320x240": "passed",
+        "bridge_does_not_write_files": "passed",
+        "external_portuguese_fonts": "passed"
+      },
+      "installed": {
+        "python": "3.13.3",
+        "architecture": "arm64",
+        "module": "<project>/build/clean-install-checks/python-3.13/venv/lib/python3.13/site-packages/translator/__init__.py",
+        "version": "0.4.0",
+        "distribution": "0.4.0",
+        "direct_url": {
+          "archive_info": {
+            "hash": "sha256=ecc11133c21d7cf728b5b2ec611c59b295bddaba9a65b947c6ca17786f0a675d",
+            "hashes": {
+              "sha256": "ecc11133c21d7cf728b5b2ec611c59b295bddaba9a65b947c6ca17786f0a675d"
+            }
+          },
+          "url": "file://<project>/build/clean-install-checks/inputs/tcc_ui_translator-0.4.0-py3-none-any.whl"
+        },
+        "dependencies": {
+          "beautifulsoup4": "4.15.0",
+          "soupsieve": "2.10",
+          "tinycss2": "1.5.1",
+          "typing_extensions": "4.16.0",
+          "webencodings": "0.6.1"
+        }
+      },
+      "examples": {
+        "01_minima.html": {
+          "cli_generate": "passed",
+          "bridge_validate": "passed",
+          "bridge_generate_equal_cli": "passed",
+          "source_sha256": "15881bb8715200ca77fcf5828202a21199d8e041a582ac5d35167d7dc90cfc3b",
+          "generated_c_sha256": "14afcb56323a3548e0b307a70fd7bc6a6ec5fdef6fb6b6575e68826515cac917"
+        },
+        "02_espacamento.html": {
+          "cli_generate": "passed",
+          "bridge_validate": "passed",
+          "bridge_generate_equal_cli": "passed",
+          "source_sha256": "9f1457bf295e09037b53c23263cefae38f5ff0db64715aff1d64f0a1c3bf4575",
+          "generated_c_sha256": "0327a9e34381f568d727942e5a2543f71c89988701c0c46d4fe5d7210d7b91a7"
+        },
+        "03_hierarquia.html": {
+          "cli_generate": "passed",
+          "bridge_validate": "passed",
+          "bridge_generate_equal_cli": "passed",
+          "source_sha256": "5a6ea645b4d0142cd6d75187c137d4b28c62e6b43d8fda043a21b4b73763030a",
+          "generated_c_sha256": "260fd912ecb92ef6779506555985de03a20a5d3f85055493cd239832e2cecfdd"
+        },
+        "05_interacao.html": {
+          "cli_generate": "passed",
+          "bridge_validate": "passed",
+          "bridge_generate_equal_cli": "passed",
+          "source_sha256": "b16e2577fbbea4e38bc6eb870fb5d4053917186e1265f2feb8a149807633a370",
+          "generated_c_sha256": "f8b3dec5f209db8a81dd73db4d7a54cb27faafdda9ceaba2c5099b728d35749e"
+        },
+        "sample_ui.html": {
+          "cli_generate": "passed",
+          "bridge_validate": "passed",
+          "bridge_generate_equal_cli": "passed",
+          "source_sha256": "237373ac573fe5ed38084a1cc2c339314f6e2290cc21ddcfa7e6ea208afaf1a5",
+          "generated_c_sha256": "783cac694a0166291862ed050103863e11b6daaee0b920461215f32e5db86aca"
+        },
+        "advanced_example.html": {
+          "cli_generate": "passed",
+          "bridge_validate": "passed",
+          "bridge_generate_equal_cli": "passed",
+          "source_sha256": "fa73ef42390b03591472aea543498e0ef2a70ffd0068b9c11ef889c25be376d0",
+          "generated_c_sha256": "dfee9d0b62a4a6aff6023be9e10c53993e574733e934acf7d3e03d496ce855ab"
+        }
+      },
+      "commands": [
+        {
+          "check": "create-venv",
+          "returncode": 0,
+          "seconds": 3.65
+        },
+        {
+          "check": "install-dependencies",
+          "returncode": 0,
+          "seconds": 0.819
+        },
+        {
+          "check": "install-wheel",
+          "returncode": 0,
+          "seconds": 0.565
+        },
+        {
+          "check": "dependency-consistency",
+          "returncode": 0,
+          "seconds": 0.413
+        },
+        {
+          "check": "installed-identity",
+          "returncode": 0,
+          "seconds": 0.092
+        },
+        {
+          "check": "cli-version",
+          "returncode": 0,
+          "seconds": 0.482
+        },
+        {
+          "check": "cli-01_minima",
+          "returncode": 0,
+          "seconds": 0.169
+        },
+        {
+          "check": "bridge-validate-01_minima",
+          "returncode": 0,
+          "seconds": 0.138
+        },
+        {
+          "check": "bridge-generate-01_minima",
+          "returncode": 0,
+          "seconds": 0.157
+        },
+        {
+          "check": "cli-02_espacamento",
+          "returncode": 0,
+          "seconds": 0.153
+        },
+        {
+          "check": "bridge-validate-02_espacamento",
+          "returncode": 0,
+          "seconds": 0.128
+        },
+        {
+          "check": "bridge-generate-02_espacamento",
+          "returncode": 0,
+          "seconds": 0.158
+        },
+        {
+          "check": "cli-03_hierarquia",
+          "returncode": 0,
+          "seconds": 0.142
+        },
+        {
+          "check": "bridge-validate-03_hierarquia",
+          "returncode": 0,
+          "seconds": 0.122
+        },
+        {
+          "check": "bridge-generate-03_hierarquia",
+          "returncode": 0,
+          "seconds": 0.114
+        },
+        {
+          "check": "cli-05_interacao",
+          "returncode": 0,
+          "seconds": 0.131
+        },
+        {
+          "check": "bridge-validate-05_interacao",
+          "returncode": 0,
+          "seconds": 0.108
+        },
+        {
+          "check": "bridge-generate-05_interacao",
+          "returncode": 0,
+          "seconds": 0.115
+        },
+        {
+          "check": "cli-sample_ui",
+          "returncode": 0,
+          "seconds": 0.134
+        },
+        {
+          "check": "bridge-validate-sample_ui",
+          "returncode": 0,
+          "seconds": 0.113
+        },
+        {
+          "check": "bridge-generate-sample_ui",
+          "returncode": 0,
+          "seconds": 0.106
+        },
+        {
+          "check": "cli-advanced_example",
+          "returncode": 0,
+          "seconds": 0.115
+        },
+        {
+          "check": "bridge-validate-advanced_example",
+          "returncode": 0,
+          "seconds": 0.095
+        },
+        {
+          "check": "bridge-generate-advanced_example",
+          "returncode": 0,
+          "seconds": 0.108
+        },
+        {
+          "check": "cli-invalid-preserves-all-outputs",
+          "returncode": 1,
+          "seconds": 0.109
+        },
+        {
+          "check": "bridge-invalid",
+          "returncode": 1,
+          "seconds": 0.111
+        },
+        {
+          "check": "cli-custom-landscape",
+          "returncode": 0,
+          "seconds": 0.102
+        },
+        {
+          "check": "bridge-custom-landscape",
+          "returncode": 0,
+          "seconds": 0.108
+        }
+      ]
+    },
+    {
+      "requested_python": "3.14",
+      "interpreter": "<project>/build/python-runtimes/cpython-3.14.8-macos-aarch64-none/bin/python3.14",
+      "status": "passed",
+      "checks": {
+        "wheel_install_without_editable_source": "passed",
+        "cli_version": "passed",
+        "invalid_example_preserves_C_header_JSON": "passed",
+        "invalid_bridge_reports_diagnostics": "passed",
+        "custom_landscape_CLI_bridge_320x240": "passed",
+        "bridge_does_not_write_files": "passed",
+        "external_portuguese_fonts": "passed"
+      },
+      "installed": {
+        "python": "3.14.8",
+        "architecture": "arm64",
+        "module": "<project>/build/clean-install-checks/python-3.14/venv/lib/python3.14/site-packages/translator/__init__.py",
+        "version": "0.4.0",
+        "distribution": "0.4.0",
+        "direct_url": {
+          "archive_info": {
+            "hash": "sha256=ecc11133c21d7cf728b5b2ec611c59b295bddaba9a65b947c6ca17786f0a675d",
+            "hashes": {
+              "sha256": "ecc11133c21d7cf728b5b2ec611c59b295bddaba9a65b947c6ca17786f0a675d"
+            }
+          },
+          "url": "file://<project>/build/clean-install-checks/inputs/tcc_ui_translator-0.4.0-py3-none-any.whl"
+        },
+        "dependencies": {
+          "beautifulsoup4": "4.15.0",
+          "soupsieve": "2.10",
+          "tinycss2": "1.5.1",
+          "typing_extensions": "4.16.0",
+          "webencodings": "0.6.1"
+        }
+      },
+      "examples": {
+        "01_minima.html": {
+          "cli_generate": "passed",
+          "bridge_validate": "passed",
+          "bridge_generate_equal_cli": "passed",
+          "source_sha256": "15881bb8715200ca77fcf5828202a21199d8e041a582ac5d35167d7dc90cfc3b",
+          "generated_c_sha256": "14afcb56323a3548e0b307a70fd7bc6a6ec5fdef6fb6b6575e68826515cac917"
+        },
+        "02_espacamento.html": {
+          "cli_generate": "passed",
+          "bridge_validate": "passed",
+          "bridge_generate_equal_cli": "passed",
+          "source_sha256": "9f1457bf295e09037b53c23263cefae38f5ff0db64715aff1d64f0a1c3bf4575",
+          "generated_c_sha256": "0327a9e34381f568d727942e5a2543f71c89988701c0c46d4fe5d7210d7b91a7"
+        },
+        "03_hierarquia.html": {
+          "cli_generate": "passed",
+          "bridge_validate": "passed",
+          "bridge_generate_equal_cli": "passed",
+          "source_sha256": "5a6ea645b4d0142cd6d75187c137d4b28c62e6b43d8fda043a21b4b73763030a",
+          "generated_c_sha256": "260fd912ecb92ef6779506555985de03a20a5d3f85055493cd239832e2cecfdd"
+        },
+        "05_interacao.html": {
+          "cli_generate": "passed",
+          "bridge_validate": "passed",
+          "bridge_generate_equal_cli": "passed",
+          "source_sha256": "b16e2577fbbea4e38bc6eb870fb5d4053917186e1265f2feb8a149807633a370",
+          "generated_c_sha256": "f8b3dec5f209db8a81dd73db4d7a54cb27faafdda9ceaba2c5099b728d35749e"
+        },
+        "sample_ui.html": {
+          "cli_generate": "passed",
+          "bridge_validate": "passed",
+          "bridge_generate_equal_cli": "passed",
+          "source_sha256": "237373ac573fe5ed38084a1cc2c339314f6e2290cc21ddcfa7e6ea208afaf1a5",
+          "generated_c_sha256": "783cac694a0166291862ed050103863e11b6daaee0b920461215f32e5db86aca"
+        },
+        "advanced_example.html": {
+          "cli_generate": "passed",
+          "bridge_validate": "passed",
+          "bridge_generate_equal_cli": "passed",
+          "source_sha256": "fa73ef42390b03591472aea543498e0ef2a70ffd0068b9c11ef889c25be376d0",
+          "generated_c_sha256": "dfee9d0b62a4a6aff6023be9e10c53993e574733e934acf7d3e03d496ce855ab"
+        }
+      },
+      "commands": [
+        {
+          "check": "create-venv",
+          "returncode": 0,
+          "seconds": 5.368
+        },
+        {
+          "check": "install-dependencies",
+          "returncode": 0,
+          "seconds": 1.206
+        },
+        {
+          "check": "install-wheel",
+          "returncode": 0,
+          "seconds": 1.084
+        },
+        {
+          "check": "dependency-consistency",
+          "returncode": 0,
+          "seconds": 0.625
+        },
+        {
+          "check": "installed-identity",
+          "returncode": 0,
+          "seconds": 0.307
+        },
+        {
+          "check": "cli-version",
+          "returncode": 0,
+          "seconds": 0.686
+        },
+        {
+          "check": "cli-01_minima",
+          "returncode": 0,
+          "seconds": 0.311
+        },
+        {
+          "check": "bridge-validate-01_minima",
+          "returncode": 0,
+          "seconds": 0.291
+        },
+        {
+          "check": "bridge-generate-01_minima",
+          "returncode": 0,
+          "seconds": 0.315
+        },
+        {
+          "check": "cli-02_espacamento",
+          "returncode": 0,
+          "seconds": 0.295
+        },
+        {
+          "check": "bridge-validate-02_espacamento",
+          "returncode": 0,
+          "seconds": 0.344
+        },
+        {
+          "check": "bridge-generate-02_espacamento",
+          "returncode": 0,
+          "seconds": 0.301
+        },
+        {
+          "check": "cli-03_hierarquia",
+          "returncode": 0,
+          "seconds": 0.306
+        },
+        {
+          "check": "bridge-validate-03_hierarquia",
+          "returncode": 0,
+          "seconds": 0.309
+        },
+        {
+          "check": "bridge-generate-03_hierarquia",
+          "returncode": 0,
+          "seconds": 0.212
+        },
+        {
+          "check": "cli-05_interacao",
+          "returncode": 0,
+          "seconds": 0.227
+        },
+        {
+          "check": "bridge-validate-05_interacao",
+          "returncode": 0,
+          "seconds": 0.222
+        },
+        {
+          "check": "bridge-generate-05_interacao",
+          "returncode": 0,
+          "seconds": 0.195
+        },
+        {
+          "check": "cli-sample_ui",
+          "returncode": 0,
+          "seconds": 0.218
+        },
+        {
+          "check": "bridge-validate-sample_ui",
+          "returncode": 0,
+          "seconds": 0.212
+        },
+        {
+          "check": "bridge-generate-sample_ui",
+          "returncode": 0,
+          "seconds": 0.198
+        },
+        {
+          "check": "cli-advanced_example",
+          "returncode": 0,
+          "seconds": 0.207
+        },
+        {
+          "check": "bridge-validate-advanced_example",
+          "returncode": 0,
+          "seconds": 0.17
+        },
+        {
+          "check": "bridge-generate-advanced_example",
+          "returncode": 0,
+          "seconds": 0.164
+        },
+        {
+          "check": "cli-invalid-preserves-all-outputs",
+          "returncode": 1,
+          "seconds": 0.177
+        },
+        {
+          "check": "bridge-invalid",
+          "returncode": 1,
+          "seconds": 0.16
+        },
+        {
+          "check": "cli-custom-landscape",
+          "returncode": 0,
+          "seconds": 0.174
+        },
+        {
+          "check": "bridge-custom-landscape",
+          "returncode": 0,
+          "seconds": 0.162
+        }
+      ]
+    }
+  ],
+  "cross_version_generated_C_identical": {
+    "01_minima.html": true,
+    "02_espacamento.html": true,
+    "03_hierarquia.html": true,
+    "05_interacao.html": true,
+    "advanced_example.html": true,
+    "sample_ui.html": true
+  },
+  "checks_per_environment": 28
+}

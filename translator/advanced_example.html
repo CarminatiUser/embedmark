@@ -1,0 +1,41 @@
+<screen width="240" height="430">
+  <div id="header">
+    <label id="app_title">Smart Display</label>
+    <label id="app_version">v0.2</label>
+  </div>
+  <div id="status_panel">
+    <label id="status_icon">•</label>
+    <label id="status_text">Connected</label>
+  </div>
+  <div id="content">
+    <label id="temp_label">Temperature</label>
+    <label id="temp_value">24.5°C</label>
+    <label id="humidity_label">Humidity</label>
+    <label id="humidity_value">65%</label>
+  </div>
+  <div id="controls">
+    <button id="btn_plus"><label>+</label></button>
+    <button id="btn_minus"><label>-</label></button>
+    <button id="btn_reset"><label>Reset</label></button>
+  </div>
+  <label id="footer_text">UI demo - events in firmware</label>
+</screen>
+<style>
+  /* Coordenadas dos filhos relativas à área de conteúdo do pai. */
+  #header { left: 0; top: 0; width: 240; height: 50; }
+  #app_title { left: 10; top: 10; width: 185; font-size: 24; }
+  #app_version { left: 200; top: 15; width: 40; color: #AAAAAA; font-size: 12; }
+  #status_panel { left: 0; top: 50; width: 240; height: 30; }
+  #status_icon { left: 10; top: 0; color: #00FF00; font-size: 16; }
+  #status_text { left: 35; top: 0; color: #00FF00; font-size: 14; }
+  #content { left: 0; top: 90; width: 240; height: 90; }
+  #temp_label { left: 10; top: 0; color: #CCCCCC; font-size: 12; }
+  #temp_value { left: 10; top: 20; font-size: 24; }
+  #humidity_label { left: 130; top: 0; color: #CCCCCC; font-size: 12; }
+  #humidity_value { left: 130; top: 20; font-size: 24; }
+  #controls { left: 0; top: 200; width: 240; height: 60; }
+  #btn_plus { left: 20; top: 0; width: 60; height: 50; background-color: #00AA00; border-radius: 5; }
+  #btn_minus { left: 90; top: 0; width: 60; height: 50; background-color: #AA0000; border-radius: 5; }
+  #btn_reset { left: 160; top: 0; width: 60; height: 50; background-color: #0066FF; border-radius: 5; }
+  #footer_text { left: 10; top: 390; width: 220; color: #AAAAAA; font-size: 12; }
+</style>

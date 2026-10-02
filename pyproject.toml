@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tcc-ui-translator"
+version = "0.4.0"
+description = "Tradutor de interfaces HTML/CSS simplificadas para LVGL 8.3"
+readme = "README.md"
+license = "LicenseRef-Proprietary"
+license-files = ["LICENSE", "THIRD_PARTY.md"]
+requires-python = ">=3.10"
+dependencies = ["beautifulsoup4>=4.11,<5", "tinycss2>=1.2,<2"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<9", "ruff>=0.9,<1"]
+
+[project.scripts]
+tcc-ui = "translator.cli:main"
+
+[tool.setuptools]
+packages = ["translator"]
+
+[tool.setuptools.package-data]
+translator = ["*.html"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F"]
+ignore = ["E402"]

@@ -1,0 +1,13 @@
+# Versões verificadas localmente com Python 3.12 em 28/09/2026.
+# Instale este arquivo e depois o projeto com: pip install -e '.[dev]'
+beautifulsoup4==4.15.0
+iniconfig==2.3.0
+packaging==26.3
+pluggy==1.6.0
+Pygments==2.21.0
+pytest==8.4.2
+ruff==0.16.9
+soupsieve==2.10
+tinycss2==1.5.1
+typing_extensions==4.16.0
+webencodings==0.6.1

@@ -1,0 +1,25 @@
+{
+  "schema": 1,
+  "status": "passed",
+  "artifact": "<project>/release/tcc-ui-translator-0.4.0.vsix",
+  "sha256": "0a4636e88d617791e5964cfd11d03b685fa1e20eb2756d5719aec1da03ff1e8b",
+  "vscode_executable": "/Applications/Visual Studio Code.app/Contents/MacOS/Code",
+  "profiles": [
+    {
+      "mode": "trusted",
+      "status": "passed",
+      "extension_id": "arthur-carminati.tcc-ui-translator",
+      "version": "0.4.0",
+      "installed_path": "/private/tmp/tcc-i-7M4MYq/t/e/arthur-carminati.tcc-ui-translator-0.4.0"
+    },
+    {
+      "mode": "untrusted",
+      "status": "passed",
+      "extension_id": "arthur-carminati.tcc-ui-translator",
+      "version": "0.4.0",
+      "installed_path": "/private/tmp/tcc-i-7M4MYq/u/e/arthur-carminati.tcc-ui-translator-0.4.0"
+    }
+  ],
+  "started_at": "2026-10-02T19:33:58.603Z",
+  "completed_at": "2026-10-02T19:34:06.286Z"
+}

@@ -1,0 +1,38 @@
+{
+  "artifact": "tcc-ui-translator-0.4.0.vsix",
+  "sha256": "0a4636e88d617791e5964cfd11d03b685fa1e20eb2756d5719aec1da03ff1e8b",
+  "python_checks": [
+    {
+      "python": "Python 3.10.22",
+      "valid_examples": 6,
+      "invalid_example": "rejected"
+    },
+    {
+      "python": "Python 3.11.15",
+      "valid_examples": 6,
+      "invalid_example": "rejected"
+    },
+    {
+      "python": "Python 3.12.2",
+      "valid_examples": 6,
+      "invalid_example": "rejected"
+    },
+    {
+      "python": "Python 3.13.3",
+      "valid_examples": 6,
+      "invalid_example": "rejected"
+    },
+    {
+      "python": "Python 3.14.8",
+      "valid_examples": 6,
+      "invalid_example": "rejected"
+    }
+  ],
+  "wheel_core_files_matched": 18,
+  "wheel_sha256": "ecc11133c21d7cf728b5b2ec611c59b295bddaba9a65b947c6ca17786f0a675d",
+  "version": "0.4.0",
+  "publisher": "arthur-carminati",
+  "bundled_files_verified": 79,
+  "vsix_files": 102,
+  "status": "passed"
+}
