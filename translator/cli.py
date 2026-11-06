@@ -26,7 +26,7 @@ def report(diagnostics, mode):
 
 
 def main(argv=None):
-    parser = argparse.ArgumentParser(description="Traduz interfaces HTML/CSS simplificadas para LVGL 8.3.")
+    parser = argparse.ArgumentParser(description="EmbedMark: traduz interfaces HTML/CSS simplificadas para LVGL 8.3.")
     parser.add_argument("input", nargs="?", help="Arquivo HTML de entrada")
     parser.add_argument("-o", "--output", default="output/ui_generated.c", help="Arquivo C de saída")
     parser.add_argument("-d", "--display", choices=DisplayPresets.DISPLAYS, default="st7789")

@@ -12,7 +12,7 @@ async function main() {
   }
   executable ||= await downloadAndUnzipVSCode('stable');
   // macOS Unix-domain sockets are capped near 104 bytes, including profile paths.
-  const temp = await fs.mkdtemp(path.join(process.platform === 'darwin' ? '/tmp' : os.tmpdir(), 'tcc-vsc-'));
+  const temp = await fs.mkdtemp(path.join(process.platform === 'darwin' ? '/tmp' : os.tmpdir(), 'em-vsc-'));
   try {
     for (const mode of ['trusted', 'untrusted']) {
       const testRoot = path.join(temp, mode === 'trusted' ? 't' : 'u');
@@ -35,7 +35,7 @@ async function main() {
           ...(process.platform === 'linux' && process.env.CI ? ['--no-sandbox', '--disable-gpu-sandbox'] : []),
           ...(mode === 'trusted' ? ['--disable-workspace-trust'] : [])];
       await new Promise((resolve, reject) => {
-        const env = { ...process.env, TCC_TEST_MODE: mode, TCC_TEST_ROOT: testRoot };
+        const env = { ...process.env, EMBEDMARK_TEST_MODE: mode, EMBEDMARK_TEST_ROOT: testRoot };
         delete env.ELECTRON_RUN_AS_NODE;
         const child = spawn(executable, args, { env, stdio: 'inherit', shell: false });
         const timer = setTimeout(() => { child.kill('SIGKILL'); reject(new Error('VS Code integration test timed out: ' + mode)); }, 180000);
@@ -44,7 +44,7 @@ async function main() {
       });
     }
   } finally {
-    if (!process.env.TCC_KEEP_TEST_PROFILE) { await fs.rm(temp, { recursive: true, force: true }); }
+    if (!process.env.EMBEDMARK_KEEP_TEST_PROFILE) { await fs.rm(temp, { recursive: true, force: true }); }
     else { console.log('Perfil de teste preservado:', temp); }
   }
 }

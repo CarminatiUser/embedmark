@@ -1,5 +1,5 @@
-#ifndef TCC_UI_CONTROLLER_H
-#define TCC_UI_CONTROLLER_H
+#ifndef EMBEDMARK_UI_CONTROLLER_H
+#define EMBEDMARK_UI_CONTROLLER_H
 #include <stdbool.h>
 #ifdef __cplusplus
 extern "C" {

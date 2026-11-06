@@ -21,7 +21,7 @@ def generate():
     entries = []
     ranges = [[32, 126], *[[code, code] for code in sorted(set(map(ord, EXTRA)))]]
     for size in SIZES:
-        symbol = f"tcc_font_pt_{size}"
+        symbol = f"embedmark_sans_pt_{size}"
         destination = OUTPUT / f"{symbol}.c"
         subprocess.run(
             [
@@ -51,7 +51,7 @@ def generate():
         )
         source = destination.read_text().replace(str(destination), f"{symbol}.c")
         destination.write_text(
-            "/* TCC Sans PT: derivada de Montserrat Medium 7.200.\n"
+            "/* EmbedMark Sans PT: derivada de Montserrat Medium 7.200.\n"
             " * Copyright 2011 The Montserrat Project Authors.\n"
             " * SIL Open Font License 1.1; veja OFL.txt distribuído junto. */\n" + source
         )
@@ -60,7 +60,7 @@ def generate():
         json.dumps(
             {
                 "schema_version": 1,
-                "name": "TCC Sans PT",
+                "name": "EmbedMark Sans PT",
                 "fonts": entries,
             },
             indent=2,

@@ -274,7 +274,7 @@ bool screen_main_destroy(void)
             (self.font_catalog.describe(symbol) for symbol in self.used_fonts), key=lambda item: item["size"]
         )
         lines = [
-            "/* Gerado por TCC UI Translator. API alvo: LVGL 8.3. */",
+            "/* Gerado por EmbedMark. API alvo: LVGL 8.3. */",
             '#include "lvgl.h"',
             "#include <stdbool.h>",
             "#include <stddef.h>",
@@ -332,8 +332,8 @@ bool screen_main_destroy(void)
 
     @staticmethod
     def generate_header():
-        return """#ifndef TCC_UI_GENERATED_H
-#define TCC_UI_GENERATED_H
+        return """#ifndef EMBEDMARK_UI_GENERATED_H
+#define EMBEDMARK_UI_GENERATED_H
 #include "lvgl.h"
 #include <stdbool.h>
 #ifdef __cplusplus

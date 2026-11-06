@@ -1,5 +1,7 @@
 # Integração do núcleo — versão 0.3.0
 
+> Registro histórico anterior à adoção do nome EmbedMark em 14/10/2026. Os nomes de arquivos, comandos e resultados abaixo foram preservados para rastreabilidade; consulte o [guia de publicação atual](PUBLICACAO.md) para os novos pacotes.
+
 Etapa concluída em 28/09/2026: o código gerado agora pode ser conectado à lógica da aplicação por IDs e eventos LVGL. A versão anterior foi preservada em `backups/tcc-ui-translator_0.2.0_antes_da_integracao.zip` no workspace do TCC.
 
 ## Entregas

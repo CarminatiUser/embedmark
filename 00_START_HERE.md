@@ -2,10 +2,12 @@
 
 O produto inclui a extensão do VS Code, o núcleo Python e um laboratório separado para a tela ESP32-C6/ST7789T.
 
+Este repositório disponibiliza código, documentação e exemplos para consulta. A pasta `release/` e o laboratório não estão incluídos na publicação; os passos abaixo descrevem o uso da entrega local, conforme as permissões da [licença](LICENSE).
+
 1. Instale o arquivo `.vsix` da pasta `release` usando **Extensions → Install from VSIX** no VS Code.
 2. Tenha Python 3.10 ou superior instalado. As bibliotecas Python necessárias já estão no pacote.
-3. Abra uma pasta confiável, execute **TCC UI: Criar exemplo de contador**, salve o HTML e use **TCC UI: Validar interface** ou **TCC UI: Gerar interface LVGL**.
-4. Para testar na placa, siga o [laboratório de validação](../tcc-ui-validation/README.md).
+3. Abra uma pasta confiável, execute **EmbedMark: Criar exemplo de contador**, salve o HTML e use **EmbedMark: Validar interface** ou **EmbedMark: Gerar interface LVGL**.
+4. Para testar na placa, siga o README do laboratório local separado `embedmark-validation`, caso disponha desse projeto. Seu endereço público ainda não foi confirmado.
 
 - [Uso, contrato e limitações](README.md)
 - [Guia da extensão](extension/README.md)

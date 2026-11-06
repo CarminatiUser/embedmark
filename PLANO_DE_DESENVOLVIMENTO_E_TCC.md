@@ -1,6 +1,6 @@
 # Plano de desenvolvimento do produto e conclusão do TCC
 
-Atualizado em 2 de outubro de 2026. Base: código em `Downloads/tcc-ui-translator`, firmware local ESP32-C6 e documento do TCC revisado.
+Identidade atualizada em 14 de outubro de 2026; resultados e pendências técnicas registrados em 2 de outubro de 2026. Base: código em `Downloads/embedmark`, firmware local ESP32-C6 e documento do TCC revisado.
 
 A versão 0.4.0 foi entregue com núcleo Python, extensão instalável do VS Code e laboratório de firmware. Consulte primeiro o [registro de entrega e validação](docs/VALIDACAO_0.4.0.md): 188 testes automatizados, pacote instalado no VS Code, cinco versões do Python e seis exemplos compilados com ESP-IDF. Publicação na conta do autor, execução física na tela e reescrita do documento permanecem nas próximas etapas.
 
@@ -12,7 +12,7 @@ Este plano organiza o trabalho solicitado. A primeira rodada de correções do n
 
 A etapa seguinte entregou a versão 0.3.0: acesso por ID, eventos no controlador de exemplo, ciclo de vida da tela e fontes com acentos. A suíte agora tem 101 testes aprovados, incluindo execução com LVGL real e 100 ciclos de criação/destruição. Veja o [registro da integração](docs/INTEGRACAO_0.3.0.md). O exemplo completo foi preparado para o firmware, mas a validação na placa permanece pendente.
 
-O [laboratório de validação](../tcc-ui-validation/README.md) agora está em um repositório local separado, com ESP32-C6, ST7789T 172 × 320, ESP-IDF 5.4.3 e LVGL 8.3.11. O firmware completo compilou tanto para o contador com fontes portuguesas quanto para outro exemplo importado; seis testes do importador passaram. Drivers e configuração foram extraídos da referência sem alterá-la. D09 está parcialmente atendido por inspeção e compilação; a confirmação da pinagem/entrada na placa, D10 e a aceitação física de F03 seguem pendentes. Nenhum dispositivo foi gravado nesta preparação.
+O laboratório de validação `embedmark-validation` agora está em um repositório local separado, com ESP32-C6, ST7789T 172 × 320, ESP-IDF 5.4.3 e LVGL 8.3.11. Esse material externo não está incluído nesta publicação, e seu endereço público não foi confirmado. O firmware completo compilou tanto para o contador com fontes portuguesas quanto para outro exemplo importado; seis testes do importador passaram. Drivers e configuração foram extraídos da referência sem alterá-la. D09 está parcialmente atendido por inspeção e compilação; a confirmação da pinagem/entrada na placa, D10 e a aceitação física de F03 seguem pendentes. Nenhum dispositivo foi gravado nesta preparação.
 
 ## 1. Estado observado antes das correções
 
@@ -166,7 +166,7 @@ A extensão consumirá o núcleo por uma interface estável, evitando uma segund
 
 ### Etapa G — Publicar a versão do produto — P1
 
-- [ ] G01. Nome e identificador do produto definidos; confirmar/criar o publisher na conta do autor (`arthur-carminati` é apenas a proposta local).
+- [ ] G01. Nome EmbedMark e identificador `embedmark` definidos; confirmar/criar o publisher na conta do autor (`arthur-carminati` é apenas a proposta local).
 - [x] G02. Registrar direitos reservados do código original e preservar atribuições/licenças de dependências e fontes; nenhuma licença aberta imposta ao autor.
 - [ ] G03. README, ícone, instruções, limitações e changelog concluídos; definir URL de suporte/repositório e capturas públicas quando houver publicação.
 - [x] G04. Inspecionar conteúdo do pacote e compatibilidade entre versão da extensão e do núcleo.

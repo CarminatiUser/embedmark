@@ -1,5 +1,5 @@
 {
-  "Tela LVGL": {"prefix": "tcc-screen", "body": ["<screen id=\"${1:painel}\" width=\"172\" height=\"320\">", "  <label id=\"titulo\">${2:Minha tela}</label>", "  $0", "</screen>", "<style>", "  #titulo { left:12; top:16; width:148; font-size:20; color:#F2F2F2; }", "</style>"], "description": "Tela de 172 × 320 para o subconjunto HTML/CSS do TCC UI Translator"},
-  "Botão LVGL": {"prefix": "tcc-button", "body": ["<button id=\"${1:acao}\">${2:Confirmar}</button>"], "description": "Botão; conecte o evento no firmware usando screen_main_get_object"},
-  "Texto LVGL": {"prefix": "tcc-label", "body": ["<label id=\"${1:legenda}\">${2:Texto}</label>"], "description": "Rótulo de texto LVGL"}
+  "Tela LVGL": {"prefix": "embedmark-screen", "body": ["<screen id=\"${1:painel}\" width=\"172\" height=\"320\">", "  <label id=\"titulo\">${2:Minha tela}</label>", "  $0", "</screen>", "<style>", "  #titulo { left:12; top:16; width:148; font-size:20; color:#F2F2F2; }", "</style>"], "description": "Tela de 172 × 320 para o subconjunto HTML/CSS do EmbedMark"},
+  "Botão LVGL": {"prefix": "embedmark-button", "body": ["<button id=\"${1:acao}\">${2:Confirmar}</button>"], "description": "Botão; conecte o evento no firmware usando screen_main_get_object"},
+  "Texto LVGL": {"prefix": "embedmark-label", "body": ["<label id=\"${1:legenda}\">${2:Texto}</label>"], "description": "Rótulo de texto LVGL"}
 }

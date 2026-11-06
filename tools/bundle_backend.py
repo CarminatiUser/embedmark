@@ -103,7 +103,7 @@ def bundle(root=ROOT, *, download=True):
     version_source = (root / "translator/__init__.py").read_text(encoding="utf-8")
     version = re.search(r'__version__ = "([^"]+)"', version_source).group(1)
     manifest = {"translator": version, "protocol": 1, "dependencies": [], "files": {}}
-    with tempfile.TemporaryDirectory(prefix="tcc-bundle-", dir=bundled) as staging_name:
+    with tempfile.TemporaryDirectory(prefix="embedmark-bundle-", dir=bundled) as staging_name:
         staging = Path(staging_name)
         for name, (wheel, digest) in selected.items():
             unpack_wheel(wheel, staging)

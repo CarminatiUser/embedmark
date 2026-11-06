@@ -1,4 +1,4 @@
-# TCC UI Translator
+# EmbedMark
 
 Gere interfaces **C para LVGL 8.3** usando um subconjunto explícito de HTML/CSS. A extensão inclui o tradutor, suas dependências e fontes com acentos em português. O preset padrão descreve uma tela de **172 × 320 pixels**.
 
@@ -7,7 +7,7 @@ A extensão gera o código da interface. O projeto de firmware continua respons�
 ## Requisitos
 
 - VS Code 1.95 ou superior. A versão foi validada em macOS; Windows e Linux têm suporte planejado no código e verificações de integração contínua preparadas, ainda não executadas nesses sistemas.
-- Python 3.10 ou superior disponível como `python3` (macOS/Linux) ou `python` (Windows). Se necessário, configure **TCC UI Translator: Python Path** com o caminho do executável, sem argumentos.
+- Python 3.10 ou superior disponível como `python3` (macOS/Linux) ou `python` (Windows). Se necessário, configure **EmbedMark: Python Path** com o caminho do executável, sem argumentos.
 - Pasta marcada como confiável no VS Code para executar validação ou geração.
 - Firmware com LVGL 8.3 para compilar os arquivos produzidos.
 
@@ -16,25 +16,33 @@ Não é necessário executar `pip install`. O backend incluído executa localmen
 ## Primeiro uso
 
 1. Instale o VSIX usando **Extensions: Install from VSIX…** na paleta de comandos.
-2. Abra a pasta do seu projeto e execute **TCC UI: Criar exemplo de contador**.
+2. Abra a pasta do seu projeto e execute **EmbedMark: Criar exemplo de contador**.
 3. Salve o HTML na pasta do projeto.
-4. Execute **TCC UI: Validar interface**. Eventuais problemas aparecem no painel **Problemas**, identificados como **TCC UI**.
-5. Execute **TCC UI: Gerar interface LVGL**.
+4. Execute **EmbedMark: Validar interface**. Eventuais problemas aparecem no painel **Problemas**, identificados como **EmbedMark**.
+5. Execute **EmbedMark: Gerar interface LVGL**.
 
 A saída padrão fica em `generated/<nome-do-html>/`. O comando usa o conteúdo atual do editor, inclusive alterações ainda não salvas. Um documento sem nome deve ser salvo antes de gerar. Se o conteúdo mudar durante a geração, execute novamente. A validação pode analisar um exemplo ainda sem nome.
 
-A pasta gerada contém `ui_generated.c`, `ui_generated.h`, as fontes C utilizadas, avisos de licença, `fontes.json`, `translation.json` e `sources.cmake`. O arquivo oculto `.tcc-ui-output.json` identifica a origem e registra hashes para proteger alterações manuais. Não remova esse registro.
+A pasta gerada contém `ui_generated.c`, `ui_generated.h`, as fontes C utilizadas, avisos de licença, `fontes.json`, `translation.json` e `sources.cmake`. O arquivo oculto `.embedmark-output.json` identifica a origem e registra hashes para proteger alterações manuais. Não remova esse registro.
 
 Ao gerar novamente, apenas uma saída íntegra da mesma interface pode ser substituída. Se você adicionou ou editou arquivos nessa pasta, preserve suas alterações em outro local ou escolha outra pasta em **Output Directory**. A geração nunca substitui silenciosamente código escrito à mão. Mantenha callbacks, drivers e lógica da aplicação fora da pasta gerada.
 
+## Migração da versão anterior
+
+EmbedMark substitui o nome TCC UI Translator. Se você já instalou o pacote antigo, desative-o ou desinstale-o antes de usar EmbedMark. Nas configurações do usuário e do projeto, troque o prefixo `tccUiTranslator.` por `embedmark.` mantendo os valores; os comandos agora pertencem à categoria **EmbedMark** e os trechos HTML usam o prefixo `embedmark-`.
+
+Uma pasta com o registro antigo `.tcc-ui-output.json` continua protegida pelos mesmos hashes e pela identificação do HTML de origem. Na próxima geração bem-sucedida, o registro é substituído por `.embedmark-output.json`. Arquivos editados, arquivos extras, registros conflitantes ou uma geração cancelada impedem a migração sem apagar a saída existente. Não renomeie nem remova esses registros manualmente.
+
+A geração utiliza o bloqueio novo `.embedmark-lock` e o bloqueio legado `.tcc-ui-lock` para evitar gravações simultâneas por versões diferentes. O arquivo `sources.cmake` oferece `EMBEDMARK_UI_SOURCES` e mantém `TCC_UI_SOURCES` como alias de compatibilidade para projetos existentes. Os arquivos e símbolos das fontes incluídas agora usam `embedmark_sans_pt_`; prefira a lista CMake gerada em vez de enumerar nomes de fontes no firmware.
+
 ## Integração no firmware
 
-Adicione os arquivos C da pasta gerada ao componente de sua aplicação, ou inclua `sources.cmake` e use a lista `TCC_UI_SOURCES`. Inclua a pasta gerada entre os diretórios de cabeçalhos. Exemplo ESP-IDF, adaptando o caminho ao seu projeto:
+Adicione os arquivos C da pasta gerada ao componente de sua aplicação, ou inclua `sources.cmake` e use a lista `EMBEDMARK_UI_SOURCES`. Inclua a pasta gerada entre os diretórios de cabeçalhos. Exemplo ESP-IDF, adaptando o caminho ao seu projeto:
 
 ```cmake
 include("${CMAKE_CURRENT_LIST_DIR}/generated/contador/sources.cmake")
 idf_component_register(
-  SRCS "main.c" ${TCC_UI_SOURCES}
+  SRCS "main.c" ${EMBEDMARK_UI_SOURCES}
   INCLUDE_DIRS "." "generated/contador"
   REQUIRES lvgl
 )
@@ -57,7 +65,7 @@ Execute chamadas LVGL na mesma tarefa ou sob o bloqueio usado pelo seu firmware.
 
 ## Configurações
 
-Todas as configurações estão no grupo **TCC UI Translator**. Configurações de interface se aplicam à pasta do HTML em projetos com múltiplas pastas.
+Todas as configurações estão no grupo **EmbedMark**. Configurações de interface se aplicam à pasta do HTML em projetos com múltiplas pastas.
 
 | Configuração | Uso |
 | --- | --- |
@@ -66,7 +74,7 @@ Todas as configurações estão no grupo **TCC UI Translator**. Configurações 
 | Display Width / Height | Dimensões do preset `custom`, antes da orientação. |
 | Design Width / Height | Sobrescrevem a área de desenho; `null` usa o elemento `screen`. |
 | Strict | Ativado por padrão. Bloqueia construções sem suporte e glifos ausentes. |
-| Font Manifest | Vazio usa TCC Sans PT incluída; `builtin` usa Montserrat LVGL; ou indique seu catálogo JSON. |
+| Font Manifest | Vazio usa EmbedMark Sans PT incluída; `builtin` usa Montserrat LVGL; ou indique seu catálogo JSON. |
 | Output Directory | Pasta exclusiva dentro do projeto. Aceita `${fileBasenameNoExtension}`. |
 | Python Path | Caminho do executável Python, sem argumentos. |
 | Timeout Seconds | Limite de execução, de 5 a 120 segundos. |
@@ -75,12 +83,12 @@ Caminhos relativos de fontes e Python são resolvidos a partir da pasta do proje
 
 ## Ajuda e diagnóstico
 
-- **TCC UI: Abrir guia de HTML/CSS suportado** abre o manual incluído.
-- Digite `tcc-screen`, `tcc-button` ou `tcc-label` no editor HTML para inserir um trecho.
-- O canal **TCC UI Translator** no painel Saída registra o resultado e os diagnósticos.
+- **EmbedMark: Abrir guia de HTML/CSS suportado** abre o manual incluído.
+- Digite `embedmark-screen`, `embedmark-button` ou `embedmark-label` no editor HTML para inserir um trecho.
+- O canal **EmbedMark** no painel Saída registra o resultado e os diagnósticos.
 - **Python não encontrado:** ajuste Python Path para o executável instalado.
 - **Arquivo gerado foi alterado:** preserve a mudança e use outra saída, ou restaure a versão gerada anterior.
-- **Pasta em uso:** se nenhum comando estiver ativo, verifique uma execução interrompida antes de remover o arquivo `.tcc-ui-lock` indicado. Uma pasta `.tcc-ui-backup-*` deve ser preservada até conferir a recuperação.
+- **Pasta em uso:** se nenhum comando estiver ativo, verifique uma execução interrompida antes de remover o arquivo `.embedmark-lock` ou `.tcc-ui-lock` indicado. Uma pasta `.embedmark-backup-*` ou `.tcc-ui-backup-*` deve ser preservada até conferir a recuperação.
 - **Cor, orientação ou corte incorreto na placa:** confira a resolução configurada e o driver físico. A geração não altera pinagem, offset, RGB/BGR ou backlight.
 
 Validação do código não substitui teste físico de cor, leitura, alinhamento e interação no display. Não há emulação do navegador ou promessa de equivalência com CSS completo.
@@ -95,6 +103,6 @@ Referências oficiais: [instalação e uso de extensões](https://code.visualstu
 
 ## Desenvolvimento e empacotamento
 
-Este repositório usa Node.js 22 ou superior apenas para desenvolver e empacotar a extensão; o usuário final não precisa instalar Node.js. Execute `npm ci`, `npm test` e `npm run test:integration` na pasta `extension`. O teste de integração usa perfis temporários, separados do perfil pessoal, para testar pastas confiáveis e restritas. Em macOS ele usa a instalação em `/Applications/Visual Studio Code.app`; em outro ambiente, defina `VSCODE_EXECUTABLE_PATH` ou permita ao executor obter uma versão de teste. `TCC_TEST_PYTHON` seleciona o Python dos testes.
+Este repositório usa Node.js 22 ou superior apenas para desenvolver e empacotar a extensão; o usuário final não precisa instalar Node.js. Execute `npm ci`, `npm test` e `npm run test:integration` na pasta `extension`. O teste de integração usa perfis temporários, separados do perfil pessoal, para testar pastas confiáveis e restritas. Em macOS ele usa a instalação em `/Applications/Visual Studio Code.app`; em outro ambiente, defina `VSCODE_EXECUTABLE_PATH` ou permita ao executor obter uma versão de teste. `EMBEDMARK_TEST_PYTHON` seleciona o Python dos testes.
 
-`npm run package` reconstrói o backend a partir do código do repositório e das dependências com hashes fixados, confere suas versões e gera o VSIX na pasta `release`. `TCC_BUILD_PYTHON` seleciona o Python usado para empacotar; por padrão é usado o ambiente `.venv` do repositório, quando presente. `TCC_BUNDLE_OFFLINE=1` reutiliza os wheels já verificados em `build/wheels`. A instalação e o uso do VSIX funcionam sem rede após Python estar disponível.
+`npm run package` reconstrói o backend a partir do código do repositório e das dependências com hashes fixados, confere suas versões e gera `release/embedmark-0.4.0.vsix`. `EMBEDMARK_BUILD_PYTHON` seleciona o Python usado para empacotar; por padrão é usado o ambiente `.venv` do repositório, quando presente. `EMBEDMARK_BUNDLE_OFFLINE=1` reutiliza os wheels já verificados em `build/wheels`. A instalação e o uso do VSIX funcionam sem rede após Python estar disponível.

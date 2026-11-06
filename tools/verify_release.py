@@ -14,7 +14,7 @@ ROOT = Path(__file__).resolve().parents[1]
 def verify(vsix, pythons):
     vsix = Path(vsix).resolve()
     record = {"artifact": vsix.name, "sha256": hashlib.sha256(vsix.read_bytes()).hexdigest(), "python_checks": []}
-    with tempfile.TemporaryDirectory(prefix="tcc-release-check-") as directory:
+    with tempfile.TemporaryDirectory(prefix="embedmark-release-check-") as directory:
         work = Path(directory)
         with zipfile.ZipFile(vsix) as archive:
             names = archive.namelist()
@@ -31,7 +31,7 @@ def verify(vsix, pythons):
         manifest = json.loads((bundled / "BACKEND_MANIFEST.json").read_text(encoding="utf-8"))
         if package["version"] != manifest["translator"]:
             raise ValueError("Extension/backend version mismatch")
-        wheel = vsix.parent / f"tcc_ui_translator-{package['version']}-py3-none-any.whl"
+        wheel = vsix.parent / f"embedmark-{package['version']}-py3-none-any.whl"
         if wheel.exists():
             with zipfile.ZipFile(wheel) as python_package:
                 core_files = [name for name in python_package.namelist() if name.startswith("translator/")]

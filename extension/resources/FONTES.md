@@ -5,12 +5,12 @@ O tradutor preserva texto UTF-8. Para exibir um caractere, a fonte utilizada tam
 ## Exemplo em português
 
 ```sh
-tcc-ui examples/05_interacao.html --font-manifest examples/fonts/fontes.json --strict -o output/interacao/ui_generated.c
+embedmark examples/05_interacao.html --font-manifest examples/fonts/fontes.json --strict -o output/interacao/ui_generated.c
 ```
 
-O catálogo TCC Sans PT inclui fontes de 14, 20 e 24 pixels, ASCII imprimível e `áàâãéêíóôõúüçÁÀÂÃÉÊÍÓÔÕÚÜÇºª°•`. Os tamanhos solicitados são ajustados para o mais próximo disponível no catálogo, com preferência pelo maior em caso de empate. Ele não inclui emojis, todos os símbolos das fontes LVGL, nem marcas combinantes de acentos; utilize os caracteres acentuados precompostos indicados.
+O catálogo EmbedMark Sans PT inclui fontes de 14, 20 e 24 pixels, ASCII imprimível e `áàâãéêíóôõúüçÁÀÂÃÉÊÍÓÔÕÚÜÇºª°•`. Os tamanhos solicitados são ajustados para o mais próximo disponível no catálogo, com preferência pelo maior em caso de empate. Ele não inclui emojis, todos os símbolos das fontes LVGL, nem marcas combinantes de acentos; utilize os caracteres acentuados precompostos indicados.
 
-Compile os arquivos `tcc_font_pt_14.c`, `tcc_font_pt_20.c` e `tcc_font_pt_24.c` junto ao aplicativo e mantenha `OFL.txt` com eles. O C gerado declara as fontes com `LV_FONT_DECLARE`; não as inclui como arquivos `.c` e não precisa habilitar equivalentes Montserrat embutidos para os labels gerados. O tema ou outros componentes do firmware podem continuar exigindo sua fonte padrão LVGL.
+Compile os arquivos `embedmark_sans_pt_14.c`, `embedmark_sans_pt_20.c` e `embedmark_sans_pt_24.c` junto ao aplicativo e mantenha `OFL.txt` com eles. O C gerado declara as fontes com `LV_FONT_DECLARE`; não as inclui como arquivos `.c` e não precisa habilitar equivalentes Montserrat embutidos para os labels gerados. O tema ou outros componentes do firmware podem continuar exigindo sua fonte padrão LVGL.
 
 Para preparar código gerado, controlador, fontes e fragmento CMake em uma única pasta:
 
@@ -29,21 +29,21 @@ O diretório padrão é `output/interacao`. O preparador recusa sobrescrever um 
   "fonts": [
     {
       "size": 16,
-      "symbol": "tcc_font_exemplo_16",
-      "source": "tcc_font_exemplo_16.c",
+      "symbol": "embedmark_font_exemplo_16",
+      "source": "embedmark_font_exemplo_16.c",
       "ranges": [[32, 126], [231, 231]]
     }
   ]
 }
 ```
 
-`size` deve ser um inteiro entre 1 e 512. Tamanhos, símbolos e arquivos são únicos no catálogo. Símbolos usam o prefixo `tcc_font_`, seguido de letras ASCII, números ou `_`. `source` contém somente o nome do arquivo `.c`, sem diretórios. Cada intervalo de `ranges` é inclusivo e contém pontos de código Unicode válidos; no exemplo, 231 representa `ç`.
+`size` deve ser um inteiro entre 1 e 512. Tamanhos, símbolos e arquivos são únicos no catálogo. Símbolos usam o prefixo `embedmark_`, seguido de letras ASCII, números ou `_`. O prefixo legado `tcc_font_` continua aceito para catálogos existentes. `source` contém somente o nome do arquivo `.c`, sem diretórios. Cada intervalo de `ranges` é inclusivo e contém pontos de código Unicode válidos; no exemplo, 231 representa `ç`.
 
 O catálogo descreve fontes externas; o tradutor não abre, valida, converte ou copia automaticamente o C indicado em `source`. A aplicação precisa fornecer esses símbolos ao compilador/linker. O diagnóstico de cobertura usa os intervalos declarados da fonte selecionada: metadados incorretos não comprovam que o arquivo realmente contenha os glifos. O teste do catálogo fornecido neste projeto consulta cada glifo nas tabelas reais das três fontes.
 
 ## Reprodução e atribuição
 
-As fontes TCC Sans PT são versões bitmap derivadas de Montserrat Medium 7.200, obtida do [LVGL v8.3.11](https://github.com/lvgl/lvgl/blob/v8.3.11/scripts/built_in_font/Montserrat-Medium.ttf). O TTF e sua declaração de copyright original de 2011 estão preservados em `tools/fonts`, sob SIL Open Font License 1.1. As fontes derivadas são distribuídas sob a mesma licença; a autoria de Montserrat é dos autores do projeto Montserrat.
+As fontes EmbedMark Sans PT são versões bitmap derivadas de Montserrat Medium 7.200, obtida do [LVGL v8.3.11](https://github.com/lvgl/lvgl/blob/v8.3.11/scripts/built_in_font/Montserrat-Medium.ttf). O TTF e sua declaração de copyright original de 2011 estão preservados em `tools/fonts`, sob SIL Open Font License 1.1. As fontes derivadas são distribuídas sob a mesma licença; a autoria de Montserrat é dos autores do projeto Montserrat.
 
 SHA-256 do TTF: `421f26b23e2be6b98373d32acd3cb2897b154d4bf0a77d26534ce476e4cbed53`.
 

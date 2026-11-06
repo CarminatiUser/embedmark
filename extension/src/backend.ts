@@ -102,7 +102,7 @@ export function runBackend(options: BackendOptions): Promise<BackendResult> {
     });
     child.stderr.on('data', (chunk: Buffer) => { if (stderr.length < 4096) { stderr += chunk.toString('utf8').slice(0, 4096 - stderr.length); } });
     child.on('error', (error: NodeJS.ErrnoException) => finish(new Error(
-      error.code === 'ENOENT' ? 'Python não encontrado. Instale Python 3.10+ ou ajuste TCC UI Translator: Python Path.' : `Não foi possível iniciar Python: ${error.message}`,
+      error.code === 'ENOENT' ? 'Python não encontrado. Instale Python 3.10+ ou ajuste EmbedMark: Python Path.' : `Não foi possível iniciar Python: ${error.message}`,
     )));
     child.stdin.on('error', (error: NodeJS.ErrnoException) => { if (error.code !== 'EPIPE') { abort(error); } });
     child.on('close', (code, signal) => {

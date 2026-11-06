@@ -3,7 +3,7 @@ requires = ["setuptools>=77"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "tcc-ui-translator"
+name = "embedmark"
 version = "0.4.0"
 description = "Tradutor de interfaces HTML/CSS simplificadas para LVGL 8.3"
 readme = "README.md"
@@ -12,10 +12,15 @@ license-files = ["LICENSE", "THIRD_PARTY.md"]
 requires-python = ">=3.10"
 dependencies = ["beautifulsoup4>=4.11,<5", "tinycss2>=1.2,<2"]
 
+[project.urls]
+Repository = "https://github.com/CarminatiUser/embedmark"
+Documentation = "https://github.com/CarminatiUser/embedmark/blob/main/docs/LINGUAGEM.md"
+
 [project.optional-dependencies]
 dev = ["pytest>=8,<9", "ruff>=0.9,<1"]
 
 [project.scripts]
+embedmark = "translator.cli:main"
 tcc-ui = "translator.cli:main"
 
 [tool.setuptools]

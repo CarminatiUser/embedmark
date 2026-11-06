@@ -58,7 +58,7 @@ As escalas são `largura_display/largura_projeto` e `altura_display/altura_proje
 
 Catálogo padrão: 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 32, 38 e 48. As fontes usadas devem ser habilitadas na configuração LVGL. O gerador emite verificações de compilação para elas e para LVGL 8.3.x. Um catálogo externo substitui o catálogo padrão para os labels gerados; tamanhos e cobertura passam a ser os declarados nele.
 
-Os bytes UTF-8 do texto são preservados em strings C escapadas. Caracteres NUL são rejeitados. A cobertura padrão é a dos arquivos Montserrat do LVGL 8.3.11, que não inclui todos os acentos portugueses. Caracteres ausentes da fonte selecionada geram diagnóstico `font.glyphs`; isso não significa perda dos bytes de entrada. A opção `--font-manifest` e o catálogo TCC Sans PT estão descritos no [guia de fontes](FONTES.md).
+Os bytes UTF-8 do texto são preservados em strings C escapadas. Caracteres NUL são rejeitados. A cobertura padrão é a dos arquivos Montserrat do LVGL 8.3.11, que não inclui todos os acentos portugueses. Caracteres ausentes da fonte selecionada geram diagnóstico `font.glyphs`; isso não significa perda dos bytes de entrada. A opção `--font-manifest` e o catálogo EmbedMark Sans PT estão descritos no [guia de fontes](FONTES.md).
 
 ## Diagnósticos e saída
 

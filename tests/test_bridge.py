@@ -107,7 +107,7 @@ def test_portuguese_font_manifest_exposes_only_used_font_sources():
     )
     assert response["ok"] and not response["diagnostics"]
     assert len(response["fonts"]) == 1
-    assert response["fonts"][0]["source"] == "tcc_font_pt_14.c"
+    assert response["fonts"][0]["source"] == "embedmark_sans_pt_14.c"
 
 
 def test_glyph_warning_points_to_label_and_invalid_unicode_is_structured():

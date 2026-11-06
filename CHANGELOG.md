@@ -1,3 +1,10 @@
+# Identidade EmbedMark — 14/10/2026
+
+- Produto renomeado para EmbedMark antes da publicação, mantendo a versão 0.4.0.
+- Distribuição Python e comando principal `embedmark`; `tcc-ui` permanece como alias legado.
+- Fontes derivadas passam a se chamar EmbedMark Sans PT, com símbolos `embedmark_sans_pt_*` e atribuições originais de Montserrat preservadas.
+- Documentação e ferramentas de distribuição adotam a nova identidade. Os registros anteriores abaixo conservam os nomes usados em cada execução.
+
 # 0.4.0 — 02/10/2026
 
 - Extensão desktop do VS Code com validação, geração, exemplo, snippets e guia da linguagem.

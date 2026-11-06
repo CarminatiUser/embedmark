@@ -1,6 +1,6 @@
 # Arquitetura do produto
 
-O TCC UI Translator gera uma interface LVGL 8.3 a partir de um subconjunto documentado de HTML/CSS. O produto tem um único núcleo de tradução; a extensão e a linha de comando usam esse mesmo código.
+O EmbedMark gera uma interface LVGL 8.3 a partir de um subconjunto documentado de HTML/CSS. O produto tem um único núcleo de tradução; a extensão e a linha de comando usam esse mesmo código.
 
 ## Fluxo de tradução
 
@@ -24,7 +24,7 @@ Os diagnósticos vão para Problems, com posições quando disponíveis. A gera�
 
 A saída representa uma instância de tela e fornece `screen_main_create`, `screen_main_get`, `screen_main_get_object` e `screen_main_destroy`. As referências são invalidadas quando objetos são excluídos pelo LVGL. Eventos e comportamento da aplicação usam a API LVGL; o tradutor não configura GPIO, touch ou periféricos.
 
-O [laboratório](../tcc-ui-validation/README.md) inicializa SPI, ST7789T, iluminação, buffers e temporização do LVGL no ESP32-C6. O controlador de exemplo conta eventos, e o padrão de calibração ajuda a verificar cores e geometria. O firmware original em `Downloads/tela_lcd` é uma referência preservada.
+O laboratório local separado `embedmark-validation` inicializa SPI, ST7789T, iluminação, buffers e temporização do LVGL no ESP32-C6. Ele não está incluído neste repositório, e seu endereço público não foi confirmado. O controlador de exemplo conta eventos, e o padrão de calibração ajuda a verificar cores e geometria. O firmware original em `Downloads/tela_lcd` é uma referência preservada.
 
 ## Distribuição e verificação
 

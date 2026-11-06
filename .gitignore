@@ -7,6 +7,7 @@ __pycache__/
 build/
 dist/
 .DS_Store
+.vscode/
 node_modules/
 extension/out/
 extension/bundled/python/

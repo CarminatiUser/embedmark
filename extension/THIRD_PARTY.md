@@ -9,7 +9,7 @@ O código original mantém os direitos reservados conforme `LICENSE.txt`. Os com
 | tinycss2 | 1.5.1 | BSD-3-Clause |
 | typing_extensions | 4.16.0 | PSF, incluindo os termos históricos no arquivo original |
 | webencodings | 0.6.1 | BSD-3-Clause |
-| Fontes bitmap TCC Sans PT | Derivadas de Montserrat Medium 7.200 | SIL Open Font License 1.1 |
+| Fontes bitmap EmbedMark Sans PT | Derivadas de Montserrat Medium 7.200 | SIL Open Font License 1.1 |
 
 Os arquivos originais de licença das dependências Python estão em `bundled/python/*.dist-info/licenses`, e os caminhos completos estão listados em `bundled/python/THIRD_PARTY_NOTICES.md`. `bundled/python/BACKEND_MANIFEST.json` registra versões e hashes.
 

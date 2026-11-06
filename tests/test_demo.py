@@ -14,12 +14,12 @@ def test_prepared_demo_preserves_modified_application_code(tmp_path):
         "ui_generated.h",
         "ui_controller.c",
         "ui_controller.h",
-        "tcc_font_pt_14.c",
-        "tcc_font_pt_20.c",
-        "tcc_font_pt_24.c",
+        "embedmark_sans_pt_14.c",
+        "embedmark_sans_pt_20.c",
+        "embedmark_sans_pt_24.c",
         "OFL.txt",
         "fontes.json",
-        "tcc_ui_sources.cmake",
+        "embedmark_ui_sources.cmake",
     }
     assert {path.name for path in destination.iterdir()} == expected
     controller = destination / "ui_controller.c"

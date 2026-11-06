@@ -20,10 +20,26 @@ def test_portuguese_catalog_and_config_roundtrip():
     assert TranslationConfig.from_dict(config.to_dict()).to_dict() == config.to_dict()
     result = UITranslator(config).translate((ROOT / "examples/05_interacao.html").read_text())
     assert not result.diagnostics
-    assert {font["symbol"] for font in result.fonts} == {"tcc_font_pt_14", "tcc_font_pt_20", "tcc_font_pt_24"}
+    assert {font["symbol"] for font in result.fonts} == {
+        "embedmark_sans_pt_14",
+        "embedmark_sans_pt_20",
+        "embedmark_sans_pt_24",
+    }
     assert all(font["source"].endswith(".c") for font in result.to_dict()["fonts"])
-    assert "LV_FONT_DECLARE(tcc_font_pt_14);" in result.code
+    assert "LV_FONT_DECLARE(embedmark_sans_pt_14);" in result.code
     assert "#if !LV_FONT_MONTSERRAT_" not in result.code
+
+
+def test_legacy_catalog_symbols_remain_usable_after_rename():
+    data = json.loads(MANIFEST.read_text())
+    for font in data["fonts"]:
+        font["symbol"] = font["symbol"].replace("embedmark_sans_pt_", "tcc_font_pt_")
+        font["source"] = font["source"].replace("embedmark_sans_pt_", "tcc_font_pt_")
+    config = TranslationConfig(font_catalog=FontCatalog(data), strict=True)
+    result = UITranslator(config).translate((ROOT / "examples/05_interacao.html").read_text())
+    assert not result.diagnostics
+    assert "LV_FONT_DECLARE(tcc_font_pt_14);" in result.code
+    assert result.fonts[0]["source"] == "tcc_font_pt_14.c"
 
 
 def test_unknown_glyph_still_fails_strict_mode():
@@ -38,7 +54,7 @@ def test_coverage_checked_for_the_selected_size():
     data["fonts"][0]["ranges"] = [[32, 126]]
     config = TranslationConfig(font_catalog=FontCatalog(data))
     result = UITranslator(config).translate('<screen width="172" height="320"><label>Ação</label></screen>')
-    assert any(d.code == "font.glyphs" and "tcc_font_pt_14" in d.message for d in result.diagnostics)
+    assert any(d.code == "font.glyphs" and "embedmark_sans_pt_14" in d.message for d in result.diagnostics)
     assert config.font_catalog.select(17)["size"] == 20
 
 
@@ -47,7 +63,7 @@ def test_coverage_checked_for_the_selected_size():
     [
         lambda d: d.update(schema_version=True),
         lambda d: d.update(fonts=[]),
-        lambda d: d["fonts"][0].update(symbol="tcc_font_x);system(0)"),
+        lambda d: d["fonts"][0].update(symbol="embedmark_font_x);system(0)"),
         lambda d: d["fonts"][0].update(source="../escape.c"),
         lambda d: d["fonts"][0].update(size=True),
         lambda d: d["fonts"][0].update(ranges=[[100, 20]]),

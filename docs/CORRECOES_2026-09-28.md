@@ -1,5 +1,7 @@
 # Correções do núcleo em 28 de setembro de 2026
 
+> Registro histórico anterior à adoção do nome EmbedMark em 14/10/2026. Os nomes de arquivos, comandos e resultados abaixo foram preservados para rastreabilidade; consulte o [guia de publicação atual](PUBLICACAO.md) para os novos pacotes.
+
 O foco desta revisão foi tornar verificáveis as correções do tradutor. A extensão do VS Code, publicação e testes físicos permanecem nas etapas seguintes.
 
 ## Implementado

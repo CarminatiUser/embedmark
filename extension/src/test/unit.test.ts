@@ -1,4 +1,5 @@
 import { strict as assert } from 'node:assert';
+import { createHash } from 'node:crypto';
 import * as fs from 'node:fs/promises';
 import * as os from 'node:os';
 import * as path from 'node:path';
@@ -7,16 +8,63 @@ import { BackendResult, CancelledError, parseResponse, runBackend } from '../bac
 import { prepareFiles, resolveOutput, writeOutput } from '../output';
 const response: BackendResult = { protocol: 1, ok: true, version: '0.4.0', diagnostics: [], code: '#include "ui_generated.h"\n', header: '#pragma once\n', fonts: [], result: { valid: true } };
 async function temporary<T>(body: (dir: string) => Promise<T>): Promise<T> {
-  const dir = await fs.mkdtemp(path.join(os.tmpdir(), 'tcc ui ação-'));
+  const dir = await fs.mkdtemp(path.join(os.tmpdir(), 'embedmark ação-'));
   try { return await body(dir); } finally { await fs.rm(dir, { recursive: true, force: true }); }
 }
 function data(value: string): Map<string, Buffer> { return new Map([['ui_generated.c', Buffer.from(value)]]); }
-const python = process.env.TCC_TEST_PYTHON ?? (process.platform === 'win32' ? 'python' : 'python3');
+async function legacyOutput(target: string): Promise<void> {
+  await fs.mkdir(target);
+  await fs.writeFile(path.join(target, 'ui_generated.c'), 'legacy code');
+  await fs.writeFile(path.join(target, '.tcc-ui-output.json'), JSON.stringify({
+    schema: 1, owner: 'tcc-ui-translator', source: 'legacy.html',
+    files: { 'ui_generated.c': createHash('sha256').update('legacy code').digest('hex') },
+  }));
+}
+const python = process.env.EMBEDMARK_TEST_PYTHON ?? (process.platform === 'win32' ? 'python' : 'python3');
 test('managed output updates paths with spaces and Unicode', async () => temporary(async base => {
   const target = resolveOutput(base, path.join(base, 'minha ação.html'), 'generated/${fileBasenameNoExtension}');
   assert.equal(target, path.join(base, 'generated', 'minha ação'));
   await writeOutput(base, target, 'source1', data('first')); await writeOutput(base, target, 'source1', data('second'));
   assert.equal(await fs.readFile(path.join(target, 'ui_generated.c'), 'utf8'), 'second');
+}));
+test('legacy output migrates to EmbedMark only after a successful generation', async () => temporary(async base => {
+  const target = path.join(base, 'out'); await legacyOutput(target);
+  await writeOutput(base, target, 'legacy.html', data('new code'));
+  assert.equal(await fs.readFile(path.join(target, 'ui_generated.c'), 'utf8'), 'new code');
+  const manifest = JSON.parse(await fs.readFile(path.join(target, '.embedmark-output.json'), 'utf8'));
+  assert.equal(manifest.owner, 'embedmark'); assert.equal(manifest.source, 'legacy.html');
+  assert.deepEqual((await fs.readdir(target)).sort(), ['.embedmark-output.json', 'ui_generated.c']);
+  assert.deepEqual(await fs.readdir(base), ['out']);
+}));
+test('legacy migration protects manual edits, extra files, source identity and conflicting records', async () => temporary(async base => {
+  const target = path.join(base, 'out'); await legacyOutput(target);
+  const original = await fs.readFile(path.join(target, '.tcc-ui-output.json'), 'utf8');
+  await assert.rejects(writeOutput(base, target, 'different.html', data('new code')), /outra interface/);
+  await fs.writeFile(path.join(target, 'ui_generated.c'), 'manual edit');
+  await assert.rejects(writeOutput(base, target, 'legacy.html', data('new code')), /alterado/);
+  assert.equal(await fs.readFile(path.join(target, 'ui_generated.c'), 'utf8'), 'manual edit');
+  await fs.writeFile(path.join(target, 'ui_generated.c'), 'legacy code');
+  await fs.writeFile(path.join(target, 'controller.c'), 'user code');
+  await assert.rejects(writeOutput(base, target, 'legacy.html', data('new code')), /adicionados/);
+  assert.equal(await fs.readFile(path.join(target, 'controller.c'), 'utf8'), 'user code');
+  await fs.unlink(path.join(target, 'controller.c'));
+  await fs.writeFile(path.join(target, '.embedmark-output.json'), original);
+  await assert.rejects(writeOutput(base, target, 'legacy.html', data('new code')), /registros de versões diferentes/);
+  assert.equal(await fs.readFile(path.join(target, '.tcc-ui-output.json'), 'utf8'), original);
+  assert.equal(await fs.readFile(path.join(target, '.embedmark-output.json'), 'utf8'), original);
+  assert.deepEqual(await fs.readdir(base), ['out']);
+}));
+test('cancelled legacy migration restores the original manifest and files', async () => temporary(async base => {
+  const target = path.join(base, 'out'); await legacyOutput(target);
+  const original = await fs.readFile(path.join(target, '.tcc-ui-output.json'), 'utf8');
+  let guards = 0;
+  await assert.rejects(writeOutput(base, target, 'legacy.html', data('new code'), () => {
+    if (++guards === 2) { throw new CancelledError(); }
+  }), CancelledError);
+  assert.equal(await fs.readFile(path.join(target, '.tcc-ui-output.json'), 'utf8'), original);
+  assert.equal(await fs.readFile(path.join(target, 'ui_generated.c'), 'utf8'), 'legacy code');
+  assert.deepEqual((await fs.readdir(target)).sort(), ['.tcc-ui-output.json', 'ui_generated.c']);
+  assert.deepEqual(await fs.readdir(base), ['out']);
 }));
 test('root, traversal, input ancestor and unknown variable are refused', () => {
   for (const setting of ['.', '../outside', '${workspaceFolder}/anything', '']) { assert.throws(() => resolveOutput('/workspace', '/workspace/tela.html', setting)); }
@@ -50,9 +98,13 @@ test('unmanaged content and outstanding locks are preserved', async () => tempor
   const target = path.join(base, 'out'); await fs.mkdir(target); await fs.writeFile(path.join(target, 'precious.c'), 'user code');
   await assert.rejects(writeOutput(base, target, 'source', data('second')), /não pertencem/);
   assert.equal(await fs.readFile(path.join(target, 'precious.c'), 'utf8'), 'user code');
-  await fs.writeFile(path.join(base, '.out.tcc-ui-lock'), 'in use');
-  await assert.rejects(writeOutput(base, target, 'source', data('second')), /em uso/);
-  assert.equal(await fs.readFile(path.join(base, '.out.tcc-ui-lock'), 'utf8'), 'in use');
+  for (const lock of ['.out.tcc-ui-lock', '.out.embedmark-lock']) {
+    await fs.writeFile(path.join(base, lock), 'in use');
+    await assert.rejects(writeOutput(base, target, 'source', data('second')), /em uso/);
+    assert.equal(await fs.readFile(path.join(base, lock), 'utf8'), 'in use');
+    assert.deepEqual((await fs.readdir(base)).sort(), [lock, 'out']);
+    await fs.unlink(path.join(base, lock));
+  }
 }));
 test('obsolete fonts removed only inside managed output', async () => temporary(async base => {
   const target = path.join(base, 'out'); const before = data('old'); before.set('old_font.c', Buffer.from('font'));
@@ -63,13 +115,15 @@ test('obsolete fonts removed only inside managed output', async () => temporary(
 }));
 test('font preparation copies used C sources and license notices', async () => temporary(async base => {
   const manifest = path.join(base, 'fontes.json'); await fs.writeFile(manifest, '{}'); await fs.writeFile(path.join(base, 'font.c'), 'font data'); await fs.writeFile(path.join(base, 'OFL.txt'), 'license');
-  const files = await prepareFiles({ ...response, fonts: [{ symbol: 'tcc_font_a', size: 14, source: 'font.c' }] }, manifest);
+  const files = await prepareFiles({ ...response, fonts: [{ symbol: 'embedmark_font_a', size: 14, source: 'font.c' }] }, manifest);
   assert.equal(files.get('font.c')?.toString(), 'font data'); assert.equal(files.get('OFL.txt')?.toString(), 'license');
   assert.match(files.get('sources.cmake')!.toString(), /\$\{CMAKE_CURRENT_LIST_DIR\}\/font\.c/);
+  assert.match(files.get('sources.cmake')!.toString(), /set\(EMBEDMARK_UI_SOURCES/);
+  assert.match(files.get('sources.cmake')!.toString(), /set\(TCC_UI_SOURCES \$\{EMBEDMARK_UI_SOURCES\}\)/);
 }));
 test('missing fonts, traversal and generated-name collisions fail before writes', async () => temporary(async base => {
   const manifest = path.join(base, 'fontes.json'); await fs.writeFile(manifest, '{}');
-  for (const source of ['missing.c', '../outside.c', 'ui_generated.c', 'UI_GENERATED.c']) { await assert.rejects(prepareFiles({ ...response, fonts: [{ symbol: 'tcc_font_a', size: 14, source }] }, manifest)); }
+  for (const source of ['missing.c', '../outside.c', 'ui_generated.c', 'UI_GENERATED.c']) { await assert.rejects(prepareFiles({ ...response, fonts: [{ symbol: 'embedmark_font_a', size: 14, source }] }, manifest)); }
 }));
 test('response validates protocol, version, diagnostics and field types', () => {
   assert.deepEqual(parseResponse(JSON.stringify(response)), response);
@@ -112,4 +166,11 @@ test('case-insensitive output collisions are rejected on all platforms', async (
   const files = data('first'); files.set('UI_GENERATED.c', Buffer.from('second'));
   await assert.rejects(writeOutput(base, path.join(base, 'out'), 'source', files), /Nome inseguro/);
   assert.deepEqual(await fs.readdir(base), []);
+}));
+test('current and legacy manifest names are reserved before writing any output', async () => temporary(async base => {
+  for (const name of ['.embedmark-output.json', '.EMBEDMARK-output.json', '.tcc-ui-output.json', '.TCC-UI-output.json']) {
+    const files = data('first'); files.set(name, Buffer.from('{}'));
+    await assert.rejects(writeOutput(base, path.join(base, 'out'), 'source', files), /Nome inseguro/);
+    assert.deepEqual(await fs.readdir(base), []);
+  }
 }));

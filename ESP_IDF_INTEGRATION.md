@@ -4,15 +4,15 @@ A referência encontrada no firmware local é ESP32-C6, ESP-IDF 5.4.3, LVGL 8.3.
 
 ## Testar no laboratório separado
 
-Use o projeto local [tcc-ui-validation](../tcc-ui-validation/README.md), criado em `Downloads/tcc-ui-validation` a partir das configurações de `Downloads/tela_lcd/ESP32-C6-LCD-1.47-Test`. Ele contém o driver, LVGL, padrão de cores, contador com acentos e comandos para importar outra interface, compilar, copiar a flash e gravar uma porta explicitamente escolhida. O firmware original foi preservado.
+O projeto local `embedmark-validation` foi criado em `Downloads/embedmark-validation` a partir das configurações de `Downloads/tela_lcd/ESP32-C6-LCD-1.47-Test`. Ele não está incluído neste repositório, e seu endereço público ainda não foi confirmado. Ele contém o driver, LVGL, padrão de cores, contador com acentos e comandos para importar outra interface, compilar, copiar a flash e gravar uma porta explicitamente escolhida. O firmware original foi preservado. Os comandos abaixo pressupõem que esse laboratório esteja disponível como pasta irmã do EmbedMark.
 
 ```sh
-cd ../tcc-ui-validation
+cd ../embedmark-validation
 ./lab build
 ./lab ports
 ```
 
-Confira a pinagem e identifique a porta conforme o README antes de usar `./lab flash PORTA`. A configuração ativa do arquivo original e a alternativa comentada como “Arthur” têm pinos diferentes. Os resultados de compilação estão em [VALIDACAO.md](../tcc-ui-validation/docs/VALIDACAO.md); o teste físico deve ser registrado separadamente.
+Confira a pinagem e identifique a porta conforme o README do laboratório antes de usar `./lab flash PORTA`. A configuração ativa do arquivo original e a alternativa comentada como “Arthur” têm pinos diferentes. Os resultados de compilação estão no arquivo local `embedmark-validation/docs/VALIDACAO.md`, fora deste repositório; o teste físico deve ser registrado separadamente.
 
 ## Exemplo completo com contador e acentos
 
@@ -23,15 +23,15 @@ Confira a pinagem e identifique a porta conforme o README antes de usar `./lab f
    python tools/prepare_demo.py
    ```
 
-2. Copie a pasta `output/interacao` para `main/tcc_ui` do firmware. Ela contém C/header gerados, controlador do exemplo, três fontes C, catálogo, licença das fontes e fragmento CMake. Preserve `OFL.txt` com as fontes. O preparador protege um controlador modificado contra sobrescrita; `--output` permite preparar uma cópia em outro diretório.
+2. Copie a pasta `output/interacao` para `main/embedmark_ui` do firmware. Ela contém C/header gerados, controlador do exemplo, três fontes C, catálogo, licença das fontes e fragmento CMake. Preserve `OFL.txt` com as fontes. O preparador protege um controlador modificado contra sobrescrita; `--output` permite preparar uma cópia em outro diretório.
 
 3. No `main/CMakeLists.txt`, inclua o fragmento antes do registro existente:
 
    ```cmake
-   include(tcc_ui/tcc_ui_sources.cmake)
+   include(embedmark_ui/embedmark_ui_sources.cmake)
    ```
 
-   Acrescente `${TCC_UI_SOURCES}` à lista `SRCS` e `${TCC_UI_INCLUDE_DIR}` à lista `INCLUDE_DIRS` do `idf_component_register` já existente. Mantenha todos os fontes, includes e dependências do firmware. A referência local já declara `lvgl/lvgl: "~8.3.0"` em `main/idf_component.yml`; confira essa dependência no projeto em que integrar.
+   Acrescente `${EMBEDMARK_UI_SOURCES}` à lista `SRCS` e `${EMBEDMARK_UI_INCLUDE_DIR}` à lista `INCLUDE_DIRS` do `idf_component_register` já existente. Mantenha todos os fontes, includes e dependências do firmware. A referência local já declara `lvgl/lvgl: "~8.3.0"` em `main/idf_component.yml`; confira essa dependência no projeto em que integrar.
 
 4. No aplicativo, inclua o controlador:
 
@@ -50,7 +50,7 @@ O preparador gera tudo a partir de `examples/05_interacao.html`, `examples/fonts
 ## Integração apenas da saída gerada
 
 ```sh
-tcc-ui translator/sample_ui.html --strict -o output/ui_generated.c
+embedmark translator/sample_ui.html --strict -o output/ui_generated.c
 ```
 
 Compile `ui_generated.c` como fonte do componente e inclua apenas `ui_generated.h` na aplicação. Chame `screen_main_create()` após a inicialização LVGL/display. Para as fontes padrão, habilite as opções `LV_FONT_MONTSERRAT_*` indicadas no C; no Kconfig ESP-IDF, confira as opções `CONFIG_LV_FONT_MONTSERRAT_*` correspondentes.

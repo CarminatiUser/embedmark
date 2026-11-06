@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "name": "TCC Sans PT",
+  "name": "EmbedMark Sans PT",
   "fonts": [
     {
       "size": 14,
-      "symbol": "tcc_font_pt_14",
-      "source": "tcc_font_pt_14.c",
+      "symbol": "embedmark_sans_pt_14",
+      "source": "embedmark_sans_pt_14.c",
       "ranges": [
         [
           32,
@@ -135,8 +135,8 @@
     },
     {
       "size": 20,
-      "symbol": "tcc_font_pt_20",
-      "source": "tcc_font_pt_20.c",
+      "symbol": "embedmark_sans_pt_20",
+      "source": "embedmark_sans_pt_20.c",
       "ranges": [
         [
           32,
@@ -266,8 +266,8 @@
     },
     {
       "size": 24,
-      "symbol": "tcc_font_pt_24",
-      "source": "tcc_font_pt_24.c",
+      "symbol": "embedmark_sans_pt_24",
+      "source": "embedmark_sans_pt_24.c",
       "ranges": [
         [
           32,

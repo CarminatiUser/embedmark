@@ -1,4 +1,4 @@
-> Registro histórico anterior à revisão de 28/09/2026. Para instalação, funcionalidades e limitações atuais, consulte [README](README.md) e [correções do núcleo](docs/CORRECOES_2026-09-28.md). As estimativas e declarações de conclusão abaixo não são resultados de validação.
+> Registro histórico anterior à revisão de 28/09/2026. Para instalação, funcionalidades e limitações atuais, consulte [README](../../README.md) e [correções do núcleo](../CORRECOES_2026-09-28.md). As estimativas e declarações de conclusão abaixo não são resultados de validação.
 
 # TCC UI Translator - Estrutura do Projeto
 

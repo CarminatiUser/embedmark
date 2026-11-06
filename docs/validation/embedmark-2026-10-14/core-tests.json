@@ -1,0 +1,40 @@
+{
+  "product": "EmbedMark",
+  "version": "0.4.0",
+  "date": "2026-10-14",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "python": "3.12.14",
+  "status": "passed",
+  "scope": [
+    "translator",
+    "tests",
+    "tools/tests",
+    "examples/fonts"
+  ],
+  "checks": {
+    "ruff_check": "passed",
+    "ruff_format_check": "passed",
+    "pytest": {
+      "passed": 156,
+      "skipped": 0,
+      "elapsed_seconds": 4.2,
+      "command": "LVGL_DIR=<diretorio-local>/tcc-ui-validation/components/lvgl CC=/opt/homebrew/opt/llvm/bin/clang HOST_CC=/opt/homebrew/opt/llvm/bin/clang HOST_CFLAGS=\"-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk\" HOST_LDFLAGS=\"-fuse-ld=/Library/Developer/CommandLineTools/usr/bin/ld\" .venv/bin/python -m pytest -q tests tools/tests",
+      "reproduction_command": "LVGL_DIR=../embedmark-validation/components/lvgl CC=/opt/homebrew/opt/llvm/bin/clang HOST_CC=/opt/homebrew/opt/llvm/bin/clang HOST_CFLAGS=\"-isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk\" HOST_LDFLAGS=\"-fuse-ld=/Library/Developer/CommandLineTools/usr/bin/ld\" .venv/bin/python -m pytest -q tests tools/tests"
+    },
+    "cli_embedmark_version": "0.4.0",
+    "cli_legacy_tcc_ui_version": "0.4.0",
+    "portuguese_example_strict_validation": "passed",
+    "font_generation_reproducibility": {
+      "status": "passed",
+      "files_compared": 5,
+      "method": "byte equality before/after Node24 font generator",
+      "upstream_ttf_sha256": "421f26b23e2be6b98373d32acd3cb2897b154d4bf0a77d26534ce476e4cbed53"
+    }
+  },
+  "limitations": [
+    "Este relatório não cobre publicação no Marketplace nem observação de hardware físico.",
+    "Testes de extensão e pacote são registrados separadamente.",
+    "A execução ocorreu antes da mudança física de diretório; reproduction_command usa os nomes finais."
+  ],
+  "publication_note": "Na cópia pública deste relatório, o caminho pessoal em command foi substituído por <diretorio-local>. Os resultados originais foram preservados; reproduction_command contém o comando de reprodução."
+}

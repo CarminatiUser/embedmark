@@ -13,7 +13,7 @@ interface Settings { python: string; timeoutMs: number; fontManifest?: string; c
 const busy = new Set<string>();
 
 function readSettings(context: vscode.ExtensionContext, document: vscode.TextDocument): Settings {
-  const config = vscode.workspace.getConfiguration('tccUiTranslator', document.uri);
+  const config = vscode.workspace.getConfiguration('embedmark', document.uri);
   const preset = config.get<string>('displayPreset', 'st7789');
   const base = vscode.workspace.getWorkspaceFolder(document.uri)?.uri.fsPath ?? (document.uri.scheme === 'file' ? path.dirname(document.uri.fsPath) : undefined);
   const fontSetting = config.get<string>('fontManifest', '');
@@ -52,12 +52,12 @@ function toDiagnostic(issue: Issue, document: vscode.TextDocument): vscode.Diagn
   const diagnostic = new vscode.Diagnostic(new vscode.Range(line, character, line, end), issue.message,
     issue.severity === 'error' ? vscode.DiagnosticSeverity.Error : issue.severity === 'warning' ? vscode.DiagnosticSeverity.Warning : vscode.DiagnosticSeverity.Information);
   diagnostic.code = issue.code;
-  diagnostic.source = 'TCC UI';
+  diagnostic.source = 'EmbedMark';
   return diagnostic;
 }
 export function activate(context: vscode.ExtensionContext): ExtensionApi {
-  const diagnostics = vscode.languages.createDiagnosticCollection('tcc-ui-translator');
-  const output = vscode.window.createOutputChannel('TCC UI Translator');
+  const diagnostics = vscode.languages.createDiagnosticCollection('embedmark');
+  const output = vscode.window.createOutputChannel('EmbedMark');
   context.subscriptions.push(diagnostics, output);
   context.subscriptions.push(vscode.workspace.onDidCloseTextDocument(document => diagnostics.delete(document.uri)));
   context.subscriptions.push(vscode.workspace.onDidChangeTextDocument(event => {
@@ -66,7 +66,7 @@ export function activate(context: vscode.ExtensionContext): ExtensionApi {
   async function run(action: 'validate' | 'generate', uri?: vscode.Uri, quiet = false): Promise<BackendResult | undefined> {
     if (!vscode.workspace.isTrusted) { throw new Error('Confie nesta pasta no VS Code para executar o tradutor Python. O guia permanece disponível em modo restrito.'); }
     let document = uri ? await vscode.workspace.openTextDocument(uri) : vscode.window.activeTextEditor?.document;
-    if (!document) { throw new Error('Abra um arquivo HTML ou use TCC UI: Criar exemplo de contador.'); }
+    if (!document) { throw new Error('Abra um arquivo HTML ou use EmbedMark: Criar exemplo de contador.'); }
     if (document.languageId !== 'html' && !/\.html?$/i.test(document.fileName)) { throw new Error('Selecione um documento HTML para traduzir.'); }
     if (action === 'generate' && document.isUntitled) {
       await vscode.window.showTextDocument(document, { preview: false });
@@ -91,7 +91,7 @@ export function activate(context: vscode.ExtensionContext): ExtensionApi {
     checkDirtyOutput();
     busy.add(key);
     try {
-      return await vscode.window.withProgress({ location: vscode.ProgressLocation.Notification, title: action === 'generate' ? 'TCC UI: gerando interface' : 'TCC UI: validando interface', cancellable: true }, async (progress, token) => {
+      return await vscode.window.withProgress({ location: vscode.ProgressLocation.Notification, title: action === 'generate' ? 'EmbedMark: gerando interface' : 'EmbedMark: validando interface', cancellable: true }, async (progress, token) => {
         progress.report({ message: 'Analisando HTML/CSS…' });
         const result = await runBackend({ python: settings.python, launcher: context.asAbsolutePath('bundled/launcher.py'),
           request: { protocol: 1, action, source: snapshot, config: settings.config }, timeoutMs: settings.timeoutMs, cancellation: token });
@@ -101,7 +101,7 @@ export function activate(context: vscode.ExtensionContext): ExtensionApi {
         output.appendLine(`${new Date().toISOString()} | ${action} | ${path.basename(document!.fileName)} | ${result.ok ? 'OK' : 'FALHOU'} | ${result.diagnostics.length} diagnóstico(s)`);
         for (const issue of result.diagnostics) { output.appendLine(`${issue.severity.toUpperCase()} ${issue.code}: ${issue.message}`); }
         if (!result.ok) {
-          if (!quiet) { void vscode.window.showWarningMessage('A interface tem problemas. Consulte o painel Problemas (TCC UI).'); await vscode.commands.executeCommand('workbench.actions.view.problems'); }
+          if (!quiet) { void vscode.window.showWarningMessage('A interface tem problemas. Consulte o painel Problemas (EmbedMark).'); await vscode.commands.executeCommand('workbench.actions.view.problems'); }
           return result;
         }
         if (target) {
@@ -128,14 +128,14 @@ export function activate(context: vscode.ExtensionContext): ExtensionApi {
   }
   const guarded = (action: 'validate' | 'generate') => async (uri?: vscode.Uri) => {
     try { return await run(action, uri); } catch (error) {
-      if (!(error instanceof CancelledError)) { output.appendLine(`ERRO: ${(error as Error).message}`); void vscode.window.showErrorMessage(`TCC UI: ${(error as Error).message}`); }
+      if (!(error instanceof CancelledError)) { output.appendLine(`ERRO: ${(error as Error).message}`); void vscode.window.showErrorMessage(`EmbedMark: ${(error as Error).message}`); }
       return undefined;
     }
   };
   context.subscriptions.push(
-    vscode.commands.registerCommand('tccUiTranslator.generate', guarded('generate')),
-    vscode.commands.registerCommand('tccUiTranslator.validate', guarded('validate')),
-    vscode.commands.registerCommand('tccUiTranslator.createExample', async () => {
+    vscode.commands.registerCommand('embedmark.generate', guarded('generate')),
+    vscode.commands.registerCommand('embedmark.validate', guarded('validate')),
+    vscode.commands.registerCommand('embedmark.createExample', async () => {
       try {
         const content = await fs.readFile(context.asAbsolutePath('resources/contador.html'), 'utf8');
         const document = await vscode.workspace.openTextDocument({ language: 'html', content });
@@ -143,7 +143,7 @@ export function activate(context: vscode.ExtensionContext): ExtensionApi {
         return document;
       } catch (error) { void vscode.window.showErrorMessage(`Não foi possível abrir o exemplo: ${(error as Error).message}`); return undefined; }
     }),
-    vscode.commands.registerCommand('tccUiTranslator.openLanguageGuide', async () => {
+    vscode.commands.registerCommand('embedmark.openLanguageGuide', async () => {
       const uri = vscode.Uri.file(context.asAbsolutePath('resources/LANGUAGE_GUIDE.md'));
       await vscode.commands.executeCommand('markdown.showPreview', uri);
       return uri;

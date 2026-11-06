@@ -113,8 +113,14 @@ class FontCatalog:
             size, symbol, source = (entry.get(key) for key in ("size", "symbol", "source"))
             if type(size) is not int or not 1 <= size <= 512 or size in sizes:
                 raise ValueError("Tamanhos de fonte devem ser inteiros únicos entre 1 e 512.")
-            if not isinstance(symbol, str) or not re.fullmatch(r"tcc_font_[A-Za-z0-9_]+", symbol) or symbol in symbols:
-                raise ValueError("Símbolos de fontes devem ser únicos e usar o prefixo tcc_font_.")
+            if (
+                not isinstance(symbol, str)
+                or not re.fullmatch(r"(?:embedmark_|tcc_font_)[A-Za-z0-9_]+", symbol)
+                or symbol in symbols
+            ):
+                raise ValueError(
+                    "Símbolos de fontes devem ser únicos e usar o prefixo embedmark_ (ou tcc_font_ legado)."
+                )
             if (
                 not isinstance(source, str)
                 or not re.fullmatch(r"[A-Za-z0-9_][A-Za-z0-9_.-]*\.c", source)

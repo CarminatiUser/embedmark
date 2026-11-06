@@ -1,5 +1,7 @@
 # Entrega e validação da versão 0.4.0
 
+> Registro histórico anterior à adoção do nome EmbedMark em 14/10/2026. Os nomes de arquivos, comandos e resultados abaixo foram preservados para rastreabilidade; consulte o [guia de publicação atual](PUBLICACAO.md) para os novos pacotes.
+
 Execuções realizadas em **2 de outubro de 2026**, no macOS arm64. O produto entregue reúne núcleo Python, extensão desktop do VS Code e laboratório separado para ESP32-C6/ST7789T. O pacote de instalação é `release/tcc-ui-translator-0.4.0.vsix`.
 
 ## Resultado da entrega
@@ -58,7 +60,7 @@ A execução LVGL no computador não mede o consumo real de RAM/energia do micro
 - [Teste do VSIX instalado](validation/0.4.0/installed-extension-verification.json).
 - [Testes do núcleo](validation/0.4.0/core-tests.json).
 - [Auditoria Python](validation/0.4.0/runtime-dependency-audit.json) e [auditoria npm](validation/0.4.0/extension-dependency-audit.json).
-- [Resultados do firmware](../../tcc-ui-validation/docs/VALIDACAO.md).
+- Resultados do firmware: arquivo local `tcc-ui-validation/docs/VALIDACAO.md`, no laboratório externo a este repositório. O nome histórico foi preservado; não há endereço público confirmado para esse registro.
 
 Os registros JSON preservam versões, configurações, resultados e hashes. Caminhos do projeto foram normalizados nos registros copiados para a documentação. Logs completos permanecem em `build/` e no laboratório, fora do Git.
 

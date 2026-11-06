@@ -5,9 +5,9 @@
 #include <stdlib.h>
 #include <string.h>
 
-LV_FONT_DECLARE(tcc_font_pt_14);
-LV_FONT_DECLARE(tcc_font_pt_20);
-LV_FONT_DECLARE(tcc_font_pt_24);
+LV_FONT_DECLARE(embedmark_sans_pt_14);
+LV_FONT_DECLARE(embedmark_sans_pt_20);
+LV_FONT_DECLARE(embedmark_sans_pt_24);
 
 static lv_color_t buffer[172 * 16];
 static lv_color_t framebuffer[172 * 320];
@@ -27,7 +27,7 @@ static void flush(lv_disp_drv_t *display, const lv_area_t *area, lv_color_t *pix
 
 static void capture_if_requested(void)
 {
-    const char *path = getenv("TCC_TEST_CAPTURE");
+    const char *path = getenv("EMBEDMARK_TEST_CAPTURE");
     if (path == NULL) return;
     FILE *image = fopen(path, "wb");
     assert(image != NULL);
@@ -77,7 +77,7 @@ int main(void)
     assert(button && counter);
     for (int i = 0; i < 3; ++i) lv_event_send(button, LV_EVENT_CLICKED, NULL);
     assert(strcmp(lv_label_get_text(counter), "Ações: 3") == 0);
-    assert(lv_obj_get_style_text_font(counter, LV_PART_MAIN) == &tcc_font_pt_20);
+    assert(lv_obj_get_style_text_font(counter, LV_PART_MAIN) == &embedmark_sans_pt_20);
     lv_obj_update_layout(root);
     assert(lv_obj_get_width(counter) == 148);
     assert(lv_obj_get_height(counter) > 0);

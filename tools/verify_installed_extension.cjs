@@ -16,8 +16,8 @@ const TIMEOUT_MS = 180_000;
 function usage() {
   console.log('Uso: node tools/verify_installed_extension.cjs ARQUIVO.vsix [--report resultado.json]');
   console.log('VSCODE_EXECUTABLE_PATH: executável do VS Code; obrigatório fora do macOS.');
-  console.log('TCC_TEST_PYTHON: executável Python do teste; padrão python3/python.');
-  console.log('TCC_KEEP_TEST_PROFILE=1: preserva os perfis temporários para diagnóstico.');
+  console.log('EMBEDMARK_TEST_PYTHON: executável Python do teste; padrão python3/python.');
+  console.log('EMBEDMARK_KEEP_TEST_PROFILE=1: preserva os perfis temporários para diagnóstico.');
 }
 
 function argumentsFor(argv) {
@@ -143,7 +143,7 @@ async function runMode(mode, temporary, executable, vsix, expected, integrationT
     'telemetry.telemetryLevel': 'off', 'workbench.startupEditor': 'none', 'window.restoreWindows': 'none',
   }, null, 2));
   await fs.writeFile(path.join(verifier, 'package.json'), JSON.stringify({
-    name: 'tcc-installed-artifact-verifier', publisher: 'tcc-local-verifier', version: '0.0.0',
+    name: 'embedmark-installed-artifact-verifier', publisher: 'embedmark-local-verifier', version: '0.0.0',
     engines: { vscode: '^1.95.0' }, main: './index.js', activationEvents: ['*'],
     capabilities: { untrustedWorkspaces: { supported: true } },
   }, null, 2));
@@ -170,8 +170,8 @@ async function runMode(mode, temporary, executable, vsix, expected, integrationT
   ], {
     label: `Testando o artefato instalado: ${mode}`,
     env: isolatedEnvironment({
-      TCC_TEST_MODE: mode, TCC_TEST_ROOT: testRoot, TCC_TEST_EXTENSION_ID: expected.id,
-      TCC_EXPECT_INSTALLED_ROOT: installedRoot,
+      EMBEDMARK_TEST_MODE: mode, EMBEDMARK_TEST_ROOT: testRoot, EMBEDMARK_TEST_EXTENSION_ID: expected.id,
+      EMBEDMARK_EXPECT_INSTALLED_ROOT: installedRoot,
     }),
   });
   const marker = mode === 'trusted' ? 'PASS: commands' : 'PASS: restricted workspace';
@@ -195,12 +195,12 @@ async function main() {
   }
   const integrationTests = path.join(EXTENSION, 'dist/test/integration.test.js');
   const compiled = await fs.readFile(integrationTests, 'utf8');
-  if (!compiled.includes('TCC_EXPECT_INSTALLED_ROOT')) {
+  if (!compiled.includes('EMBEDMARK_EXPECT_INSTALLED_ROOT')) {
     throw new Error('Recompile a extensão: o teste deve confirmar que a instância ativada pertence ao VSIX instalado.');
   }
   const manifest = JSON.parse(await fs.readFile(path.join(EXTENSION, 'package.json'), 'utf8'));
   const expected = { id: `${manifest.publisher}.${manifest.name}`, version: manifest.version };
-  const temporary = await fs.mkdtemp(path.join(process.platform === 'darwin' ? '/tmp' : os.tmpdir(), 'tcc-i-'));
+  const temporary = await fs.mkdtemp(path.join(process.platform === 'darwin' ? '/tmp' : os.tmpdir(), 'em-i-'));
   const artifact = await fs.readFile(options.vsix);
   const candidate = path.join(temporary, 'candidate.vsix');
   await fs.writeFile(candidate, artifact, { flag: 'wx' });
@@ -221,7 +221,7 @@ async function main() {
     summary.status = 'failed'; summary.error = error.message; failure = error;
   } finally {
     summary.completed_at = new Date().toISOString();
-    if (failure || process.env.TCC_KEEP_TEST_PROFILE) {
+    if (failure || process.env.EMBEDMARK_KEEP_TEST_PROFILE) {
       summary.retained_profile = temporary;
       console.log(`Perfis isolados preservados: ${temporary}`);
     } else { await fs.rm(temporary, { recursive: true, force: true, maxRetries: 10, retryDelay: 200 }); }

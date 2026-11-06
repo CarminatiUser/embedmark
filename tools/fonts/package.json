@@ -1,5 +1,5 @@
 {
-  "name": "tcc-font-build",
+  "name": "embedmark-font-build",
   "private": true,
   "version": "0.3.0",
   "dependencies": {
