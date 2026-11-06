@@ -170,7 +170,7 @@ LVGL_DIR=/caminho/para/lvgl CC=cc HOST_CC=cc python -m pytest -q
 
 `CC` pode apontar para o compilador RISC-V da Espressif. `HOST_CC` deve ser um compilador nativo capaz de gerar executáveis para o computador. Sem `HOST_CC`, o teste de execução LVGL é explicitamente ignorado. `HOST_CFLAGS` e `HOST_LDFLAGS` permitem configurar SDK e linker locais.
 
-A suíte compila o código gerado e também executa uma aplicação com LVGL real e display em memória: valida IDs, eventos, cobertura das fontes, exclusão e 100 ciclos de recriação. Essa execução não testa o firmware ESP-IDF completo nem o display físico. O workflow em `.github/workflows/tests.yml` prepara as verificações para Python 3.10, 3.12 e 3.14; ainda precisa ser executado no repositório remoto.
+A suíte compila o código gerado e também executa uma aplicação com LVGL real e display em memória: valida IDs, eventos, cobertura das fontes, exclusão e 100 ciclos de recriação. Essa execução não testa o firmware ESP-IDF completo nem o display físico. O workflow em `.github/workflows/tests.yml` verifica o núcleo em Python 3.10, 3.12 e 3.14 e a extensão em Linux, macOS e Windows. Consulte o [histórico de verificações no GitHub](https://github.com/CarminatiUser/embedmark/actions/workflows/tests.yml) para os resultados de cada commit e ambiente.
 
 ## Licença e atribuições
 

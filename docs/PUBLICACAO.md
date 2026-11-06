@@ -62,4 +62,4 @@ Os testes do VS Code usam perfis e pastas temporários, sem instalar a extensão
 
 ## Limites dos resultados
 
-A versão foi preparada e testada no macOS deste computador. A matriz automatizada para Linux, Windows e macOS está configurada no repositório, mas só pode receber resultado remoto depois que o código for enviado a um serviço de integração contínua. Consulte [VALIDACAO_0.4.0.md](VALIDACAO_0.4.0.md) para as execuções efetivamente concluídas. A validação física do display permanece no roteiro do laboratório.
+A versão foi preparada e testada originalmente no macOS do autor. A matriz automatizada para Linux, Windows e macOS é executada no [GitHub Actions](https://github.com/CarminatiUser/embedmark/actions/workflows/tests.yml), com resultados vinculados ao commit verificado e ao ambiente de execução. Consulte [VALIDACAO_0.4.0.md](VALIDACAO_0.4.0.md) para os registros históricos das verificações locais. A validação física do display permanece no roteiro do laboratório.
