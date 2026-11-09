@@ -10,7 +10,7 @@ Versão **0.4.1**, com extensão desktop do VS Code, núcleo Python e laboratór
 
 Este [repositório de consulta](https://github.com/CarminatiUser/embedmark) reúne o código-fonte, a documentação e os exemplos do EmbedMark, mantendo a licença proprietária e os direitos reservados.
 
-A versão **0.4.1** está em preparação para publicação no Marketplace, com o identificador `arthur-carminati.embedmark`. O publicador **Arthur Carminati** (`arthur-carminati`) foi confirmado no painel do serviço em 09/11/2026; a disponibilidade pública será registrada após a aprovação do pacote.
+A versão **0.4.1 está publicada no [Marketplace do VS Code](https://marketplace.visualstudio.com/items?itemName=arthur-carminati.embedmark)**, desde 09/11/2026, pelo publicador **Arthur Carminati** (`arthur-carminati`). Identificador completo: `arthur-carminati.embedmark`. A disponibilidade pública, o download e a instalação pelo catálogo foram verificados.
 
 A pasta `release/` contém artefatos locais e não é versionada pelo Git. O pacote oficial da extensão pode ser instalado e usado gratuitamente; o código-fonte permanece proprietário e disponível para consulta. O [procedimento de empacotamento](docs/PUBLICACAO.md#reproduzir-a-distribuição) documenta a manutenção da distribuição pelo titular.
 
@@ -18,7 +18,7 @@ Para conhecer o produto, comece pelo [manual de HTML/CSS](docs/LINGUAGEM.md), pe
 
 ## Usar no VS Code
 
-Requisitos: **VS Code 1.95 ou superior**, **Python 3.10 ou superior** e uma pasta de trabalho confiável. Instale `embedmark-0.4.1.vsix` usando **Extensions: Install from VSIX…** na paleta de comandos. O pacote inclui o tradutor e suas dependências Python; Node.js e a instalação de bibliotecas com pip não são necessários para usar a extensão já empacotada.
+Requisitos: **VS Code 1.95 ou superior**, **Python 3.10 ou superior** e uma pasta de trabalho confiável. Na aba **Extensões**, procure **EmbedMark**, do publicador **Arthur Carminati**, e selecione **Instalar**. Você também pode abrir a [página oficial](https://marketplace.visualstudio.com/items?itemName=arthur-carminati.embedmark) ou usar `code --install-extension arthur-carminati.embedmark`. O pacote inclui o tradutor e suas dependências Python; Node.js e a instalação de bibliotecas com pip não são necessários para usar a extensão já empacotada.
 
 Se o Python não for encontrado, configure **EmbedMark: Python Path** com o caminho do executável, sem argumentos. Se a extensão anterior TCC UI Translator estiver instalada, desative-a antes de usar o EmbedMark.
 
@@ -31,7 +31,7 @@ Abra uma pasta confiável e use a paleta de comandos:
 
 Salve o exemplo como `contador.html` dentro da pasta de trabalho antes de gerar. A saída padrão é `generated/contador/`, com `ui_generated.c`, `ui_generated.h`, fontes, licenças, `fontes.json`, `translation.json` e `sources.cmake`. Mantenha controladores e drivers fora dessa pasta; preserve o registro oculto `.embedmark-output.json`, usado na proteção contra sobrescrita.
 
-A extensão usa o conteúdo atual do editor, protege arquivos alterados manualmente e mantém a última saída válida quando a tradução falha. Configurações pertencem à pasta da interface, inclusive em workspaces com várias pastas. Consulte o [guia da extensão](extension/README.md), os [resultados verificados](docs/VALIDACAO_0.4.0.md) e as [instruções de publicação](docs/PUBLICACAO.md).
+A extensão usa o conteúdo atual do editor, protege arquivos alterados manualmente e mantém a última saída válida quando a tradução falha. Configurações pertencem à pasta da interface, inclusive em workspaces com várias pastas. Consulte o [guia da extensão](extension/README.md), os [resultados da versão 0.4.1](docs/VALIDACAO_0.4.1.md) e as [instruções de publicação](docs/PUBLICACAO.md).
 
 ## Primeiro HTML
 
@@ -151,7 +151,8 @@ O firmware deve inicializar o LVGL, configurar o driver e fornecer os eventos da
 - [Integração com o firmware](ESP_IDF_INTEGRATION.md)
 - [Registro de correções e verificações](docs/CORRECOES_2026-09-28.md)
 - [Integração e verificações da versão 0.3](docs/INTEGRACAO_0.3.0.md)
-- [Validação e entrega da versão 0.4](docs/VALIDACAO_0.4.0.md)
+- [Publicação e validação da versão 0.4.1](docs/VALIDACAO_0.4.1.md)
+- [Histórico da validação da versão 0.4.0](docs/VALIDACAO_0.4.0.md)
 - [Plano do produto, extensão e TCC](PLANO_DE_DESENVOLVIMENTO_E_TCC.md)
 
 ```sh

@@ -2,9 +2,17 @@
 
 O [repositório GitHub do EmbedMark](https://github.com/CarminatiUser/embedmark) disponibiliza o código-fonte da ferramenta **para consulta**, com licença proprietária. A extensão oficial distribuída pelo Marketplace pode ser instalada e usada gratuitamente. A permissão para usar o produto e as interfaces geradas está descrita em [LICENSE](../LICENSE); o núcleo e a extensão não receberam licença de código aberto. As licenças dos componentes de terceiros permanecem preservadas.
 
-A versão atual é **0.4.1**, preparada em 09/11/2026. O publicador `arthur-carminati` foi confirmado no painel do Marketplace. O envio e a disponibilidade pública serão registrados após a validação do pacote pelo serviço.
+A versão **0.4.1 foi publicada em 09/11/2026** e está disponível no [Marketplace do VS Code](https://marketplace.visualstudio.com/items?itemName=arthur-carminati.embedmark), com o identificador `arthur-carminati.embedmark`. A API pública retornou a versão validada, o arquivo baixado coincidiu com o pacote testado e a instalação diretamente pelo catálogo foi concluída com sucesso. Consulte as [evidências da versão](VALIDACAO_0.4.1.md).
 
 Os pacotes e relatórios locais ficam em `release/`, ignorada pelo Git. Os registros da versão 0.4.0 e da adoção do nome EmbedMark em 14/10/2026 permanecem como histórico e não comprovam a validação de um pacote reconstruído.
+
+## Instalar pelo Marketplace
+
+No VS Code, abra **Extensões**, procure **EmbedMark**, do publicador **Arthur Carminati**, e selecione **Instalar**. Alternativamente:
+
+```sh
+code --install-extension arthur-carminati.embedmark
+```
 
 ## Instalar o pacote local
 

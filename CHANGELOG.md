@@ -1,6 +1,6 @@
 # 0.4.1 — 09/11/2026
 
-- Preparação para distribuição pelo publicador `arthur-carminati` no Marketplace do VS Code.
+- Versão publicada no [Marketplace do VS Code](https://marketplace.visualstudio.com/items?itemName=arthur-carminati.embedmark) pelo publicador `arthur-carminati`, com download e instalação verificados.
 - Uso gratuito da extensão oficial, mantendo o código-fonte proprietário disponível para consulta e as licenças dos componentes de terceiros.
 - Ferramentas de empacotamento atualizadas e dependências de desenvolvimento corrigidas conforme auditoria npm.
 - Documentação de instalação, links públicos e versões da extensão e do núcleo sincronizados.
