@@ -1,6 +1,6 @@
 # Dependências e atribuições
 
-O código original do EmbedMark tem direitos reservados conforme `LICENSE`. Isso não altera as licenças dos componentes abaixo.
+O código original do EmbedMark é disponibilizado sob a licença MIT, conforme `LICENSE`. A autoria permanece atribuída a Arthur Felipe Carminati. Os componentes abaixo mantêm seus próprios termos; a licença MIT do produto não substitui suas licenças ou atribuições.
 
 | Componente incluído na extensão | Versão | Licença |
 |---|---|---|

@@ -1,6 +1,6 @@
 # Componentes de terceiros
 
-O código original mantém os direitos reservados conforme `LICENSE.txt`. Os componentes de terceiros preservam suas próprias licenças.
+O código original do EmbedMark é disponibilizado sob a licença MIT, conforme `LICENSE.txt`, com autoria de Arthur Felipe Carminati. Os componentes de terceiros preservam suas próprias licenças e atribuições.
 
 | Componente | Versão | Licença |
 | --- | --- | --- |

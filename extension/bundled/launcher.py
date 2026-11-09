@@ -5,7 +5,7 @@ import runpy
 import sys
 
 if sys.version_info < (3, 10):
-    print(json.dumps({"protocol": 1, "ok": False, "version": "0.4.1", "diagnostics": [
+    print(json.dumps({"protocol": 1, "ok": False, "version": "0.4.2", "diagnostics": [
         {"severity": "error", "code": "PYTHON_VERSION", "message": "Instale Python 3.10 ou superior."}
     ]}))
     raise SystemExit(1)

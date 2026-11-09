@@ -1,3 +1,9 @@
+# 0.4.2 — 09/11/2026
+
+- Código original disponibilizado sob a licença MIT por decisão do autor, permitindo uso, modificação e redistribuição, inclusive comercial, com preservação dos avisos de autoria e licença.
+- Licenças de dependências e fontes preservadas; metadados Python, VSIX e documentação atualizados.
+- Versões da extensão e do núcleo sincronizadas; linguagem, protocolo JSON 1 e comportamento funcional preservados.
+
 # 0.4.1 — 09/11/2026
 
 - Versão publicada no [Marketplace do VS Code](https://marketplace.visualstudio.com/items?itemName=arthur-carminati.embedmark) pelo publicador `arthur-carminati`, com download e instalação verificados.

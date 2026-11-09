@@ -6,7 +6,7 @@ import * as path from 'node:path';
 import { test } from 'node:test';
 import { BackendResult, CancelledError, parseResponse, runBackend } from '../backend';
 import { prepareFiles, resolveOutput, writeOutput } from '../output';
-const response: BackendResult = { protocol: 1, ok: true, version: '0.4.1', diagnostics: [], code: '#include "ui_generated.h"\n', header: '#pragma once\n', fonts: [], result: { valid: true } };
+const response: BackendResult = { protocol: 1, ok: true, version: '0.4.2', diagnostics: [], code: '#include "ui_generated.h"\n', header: '#pragma once\n', fonts: [], result: { valid: true } };
 async function temporary<T>(body: (dir: string) => Promise<T>): Promise<T> {
   const dir = await fs.mkdtemp(path.join(os.tmpdir(), 'embedmark ação-'));
   try { return await body(dir); } finally { await fs.rm(dir, { recursive: true, force: true }); }
@@ -132,7 +132,7 @@ test('response validates protocol, version, diagnostics and field types', () => 
 test('isolated subprocess preserves structured failure and Unicode input', async () => temporary(async base => {
   const launcher = path.join(base, 'ponte ação.py');
   // Match the real bridge's UTF-8 byte protocol, even with a Windows legacy text encoding.
-  await fs.writeFile(launcher, 'import json,sys\nsys.stdin.reconfigure(encoding="cp1252")\nr=json.loads(sys.stdin.buffer.read().decode("utf-8"))\nprint(json.dumps({"protocol":1,"ok":False,"version":"0.4.1","diagnostics":[{"severity":"error","code":"EXPECTED","message":r["source"]}]}))\nsys.exit(1)\n');
+  await fs.writeFile(launcher, 'import json,sys\nsys.stdin.reconfigure(encoding="cp1252")\nr=json.loads(sys.stdin.buffer.read().decode("utf-8"))\nprint(json.dumps({"protocol":1,"ok":False,"version":"0.4.2","diagnostics":[{"severity":"error","code":"EXPECTED","message":r["source"]}]}))\nsys.exit(1)\n');
   const result = await runBackend({ python, launcher, request: { source: 'ação 😃' }, timeoutMs: 5000 });
   assert.equal(result.ok, false); assert.equal(result.diagnostics[0]?.message, 'ação 😃');
 }));

@@ -2,9 +2,9 @@
   "name": "embedmark",
   "displayName": "EmbedMark",
   "description": "Traduza um subconjunto explícito de HTML/CSS para interfaces C do LVGL 8.3, com diagnósticos e fontes em português.",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "publisher": "arthur-carminati",
-  "license": "SEE LICENSE IN LICENSE.txt",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/CarminatiUser/embedmark.git"
@@ -205,7 +205,7 @@
     "test": "npm run compile && node --test dist/test/unit.test.js",
     "test:integration": "npm run compile && node scripts/run-integration.cjs",
     "vscode:prepublish": "npm run bundle && npm run compile",
-    "package": "vsce package --allow-missing-repository --no-dependencies --out ../release/embedmark-0.4.1.vsix",
+    "package": "vsce package --allow-missing-repository --no-dependencies --out ../release/embedmark-0.4.2.vsix",
     "bundle": "node scripts/prepare-package.cjs"
   },
   "devDependencies": {

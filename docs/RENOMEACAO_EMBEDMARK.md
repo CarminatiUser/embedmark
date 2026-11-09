@@ -41,7 +41,7 @@ O [registro estruturado](validation/embedmark-2026-10-14/core-tests.json) delimi
 
 Em **14/10/2026**, foram produzidos os três artefatos com a identidade EmbedMark, mantendo a versão 0.4.0:
 
-Os artefatos e relatórios desta seção permanecem na pasta local `release/`, ignorada pelo Git. Os caminhos identificam evidências da entrega local e não são links de download; esses arquivos não integram a publicação do código para consulta.
+Os artefatos e relatórios desta seção permanecem na pasta local `release/`, ignorada pelo Git. Os caminhos identificam evidências da entrega local e não são links de download; esses arquivos não integram o repositório público. Este registro descreve a entrega de 14/10/2026; a licença atual do código original está em [LICENSE](../LICENSE).
 
 | Artefato | Finalidade |
 |---|---|

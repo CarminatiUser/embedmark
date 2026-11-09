@@ -1,4 +1,4 @@
-# Contrato da linguagem na versão 0.4.1
+# Contrato da linguagem na versão 0.4.2
 
 Este documento descreve o comportamento implementado no núcleo. A entrada utiliza sintaxe inspirada em HTML/CSS, com regras próprias e suporte limitado. O parser HTML é tolerante à marcação; não é um validador completo de conformidade HTML.
 

@@ -4,15 +4,15 @@ Extensão para Visual Studio Code e núcleo Python para gerar interfaces **C par
 
 Nome adotado em 14/10/2026; anteriormente TCC UI Translator. Registros históricos conservam a identidade usada nas respectivas execuções. Consulte o [registro da adoção do nome EmbedMark](docs/RENOMEACAO_EMBEDMARK.md).
 
-Versão **0.4.1**, com extensão desktop do VS Code, núcleo Python e laboratório ESP-IDF separado. A referência é ESP32-C6 com display ST7789T de 172 × 320 pixels. Outros presets apenas configuram dimensões; não representam suporte a drivers ou hardware já validado.
+Versão **0.4.2**, com extensão desktop do VS Code, núcleo Python e laboratório ESP-IDF separado. A referência é ESP32-C6 com display ST7789T de 172 × 320 pixels. Outros presets apenas configuram dimensões; não representam suporte a drivers ou hardware já validado.
 
 ## Disponibilidade
 
-Este [repositório de consulta](https://github.com/CarminatiUser/embedmark) reúne o código-fonte, a documentação e os exemplos do EmbedMark, mantendo a licença proprietária e os direitos reservados.
+Este [repositório público](https://github.com/CarminatiUser/embedmark) reúne o código-fonte, a documentação e os exemplos do EmbedMark. O código original é **aberto sob a licença MIT**, permitindo uso, estudo, modificação e redistribuição, inclusive comercial, com preservação dos avisos de autoria e da licença.
 
-A versão **0.4.1 está publicada no [Marketplace do VS Code](https://marketplace.visualstudio.com/items?itemName=arthur-carminati.embedmark)**, desde 09/11/2026, pelo publicador **Arthur Carminati** (`arthur-carminati`). Identificador completo: `arthur-carminati.embedmark`. A disponibilidade pública, o download e a instalação pelo catálogo foram verificados.
+A primeira publicação no [Marketplace do VS Code](https://marketplace.visualstudio.com/items?itemName=arthur-carminati.embedmark) ocorreu em 09/11/2026, na versão 0.4.1. A versão **0.4.2** incorpora a licença MIT e está em preparação para atualização no catálogo. O identificador permanece `arthur-carminati.embedmark`, do publicador **Arthur Carminati**.
 
-A pasta `release/` contém artefatos locais e não é versionada pelo Git. O pacote oficial da extensão pode ser instalado e usado gratuitamente; o código-fonte permanece proprietário e disponível para consulta. O [procedimento de empacotamento](docs/PUBLICACAO.md#reproduzir-a-distribuição) documenta a manutenção da distribuição pelo titular.
+A pasta `release/` contém artefatos locais e não é versionada pelo Git. O pacote oficial da extensão pode ser instalado e usado gratuitamente. O [procedimento de empacotamento](docs/PUBLICACAO.md#reproduzir-a-distribuição) permite reproduzir a distribuição a partir do código aberto.
 
 Para conhecer o produto, comece pelo [manual de HTML/CSS](docs/LINGUAGEM.md), pelo [guia da extensão](extension/README.md) e pelos [exemplos](examples). A [arquitetura](ARCHITECTURE.md) descreve como a extensão e o núcleo se integram.
 
@@ -53,7 +53,7 @@ Salve o exemplo abaixo como `minha_tela.html` e execute os comandos de validaç�
 
 ## Usar pela linha de comando
 
-Os procedimentos de instalação a partir do código-fonte e uso como biblioteca documentam a manutenção pelo titular; não ampliam as permissões da licença de consulta. Para uso público, utilize o pacote oficial da extensão.
+O núcleo e a extensão podem ser utilizados, modificados e redistribuídos sob a licença MIT. Para utilizar a ferramenta dentro do editor, instale a extensão oficial; para executar o núcleo pela CLI ou integrá-lo a outro programa, siga os procedimentos abaixo.
 
 Requer Python 3.10 ou superior. Para instalar o núcleo a partir do código-fonte, execute na pasta do projeto, em macOS/Linux:
 
@@ -177,6 +177,6 @@ A suíte compila o código gerado e também executa uma aplicação com LVGL rea
 
 ## Licença e atribuições
 
-O código original é **proprietário, com direitos reservados a Arthur Felipe Carminati**, conforme [LICENSE](LICENSE). O pacote oficial distribuído pelo Marketplace pode ser instalado e usado gratuitamente. O código-fonte da ferramenta é disponibilizado apenas para consulta, sem licença aberta ou permissão de modificação e redistribuição. O código de interface gerado e os exemplos podem ser usados nas aplicações dos usuários, preservando as licenças dos componentes de terceiros. O pacote Python registra `LicenseRef-Proprietary`, e a extensão inclui os mesmos termos em [LICENSE.txt](extension/LICENSE.txt). As instruções técnicas deste documento não alteram essas permissões.
+O código original do EmbedMark é **licenciado sob MIT**, com copyright de Arthur Felipe Carminati, conforme [LICENSE](LICENSE). A licença permite uso, modificação, distribuição, sublicenciamento e uso comercial, exigindo a preservação dos avisos de copyright e licença em cópias ou partes substanciais do software. O software é fornecido sem garantia, nos termos da licença. O pacote Python e a extensão identificam a licença como `MIT`, e o VSIX inclui os mesmos termos em [LICENSE.txt](extension/LICENSE.txt).
 
 As dependências e fontes preservam suas próprias licenças, documentadas em [THIRD_PARTY.md](THIRD_PARTY.md). As fontes bitmap EmbedMark Sans PT derivam de Montserrat e mantêm a licença [SIL Open Font License 1.1](examples/fonts/OFL.txt) e a atribuição original.

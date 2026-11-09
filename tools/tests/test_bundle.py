@@ -13,7 +13,7 @@ spec.loader.exec_module(bundler)
 
 def fixture_root(root):
     (root / "translator").mkdir()
-    (root / "translator/__init__.py").write_text('__version__ = "0.4.1"\n')
+    (root / "translator/__init__.py").write_text('__version__ = "0.4.2"\n')
     (root / "LICENSE").write_text("All rights reserved.\n")
     cache = root / "build/wheels"
     cache.mkdir(parents=True)

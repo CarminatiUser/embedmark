@@ -4,10 +4,10 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "embedmark"
-version = "0.4.1"
+version = "0.4.2"
 description = "Tradutor de interfaces HTML/CSS simplificadas para LVGL 8.3"
 readme = "README.md"
-license = "LicenseRef-Proprietary"
+license = "MIT"
 license-files = ["LICENSE", "THIRD_PARTY.md"]
 requires-python = ">=3.10"
 dependencies = ["beautifulsoup4>=4.11,<5", "tinycss2>=1.2,<2"]

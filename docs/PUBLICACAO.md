@@ -1,8 +1,8 @@
 # Pacote da extensão e publicação
 
-O [repositório GitHub do EmbedMark](https://github.com/CarminatiUser/embedmark) disponibiliza o código-fonte da ferramenta **para consulta**, com licença proprietária. A extensão oficial distribuída pelo Marketplace pode ser instalada e usada gratuitamente. A permissão para usar o produto e as interfaces geradas está descrita em [LICENSE](../LICENSE); o núcleo e a extensão não receberam licença de código aberto. As licenças dos componentes de terceiros permanecem preservadas.
+O [repositório GitHub do EmbedMark](https://github.com/CarminatiUser/embedmark) disponibiliza o código original da ferramenta **sob a licença MIT**, com autoria de Arthur Felipe Carminati. A licença permite uso, modificação e redistribuição, inclusive comercial, mantendo os avisos de autoria e licença. Os termos completos estão em [LICENSE](../LICENSE). As bibliotecas e fontes de terceiros mantêm suas próprias licenças e atribuições.
 
-A versão **0.4.1 foi publicada em 09/11/2026** e está disponível no [Marketplace do VS Code](https://marketplace.visualstudio.com/items?itemName=arthur-carminati.embedmark), com o identificador `arthur-carminati.embedmark`. A API pública retornou a versão validada, o arquivo baixado coincidiu com o pacote testado e a instalação diretamente pelo catálogo foi concluída com sucesso. Consulte as [evidências da versão](VALIDACAO_0.4.1.md).
+A primeira publicação no [Marketplace do VS Code](https://marketplace.visualstudio.com/items?itemName=arthur-carminati.embedmark) ocorreu em 09/11/2026 na versão **0.4.1**, cujas evidências permanecem no [registro histórico](VALIDACAO_0.4.1.md). A versão **0.4.2** incorpora a licença MIT e está em preparação para atualização no catálogo. O identificador permanece `arthur-carminati.embedmark`.
 
 Os pacotes e relatórios locais ficam em `release/`, ignorada pelo Git. Os registros da versão 0.4.0 e da adoção do nome EmbedMark em 14/10/2026 permanecem como histórico e não comprovam a validação de um pacote reconstruído.
 
@@ -34,7 +34,7 @@ Acesse o painel de gerenciamento de extensões da sua conta, selecione o publica
 
 ## Reproduzir a distribuição
 
-Este procedimento documenta a manutenção pelo titular, sem ampliar as permissões de consulta do código. Para desenvolver/empacotar, use Python 3.10+ e Node.js 24 LTS. Na pasta raiz:
+Para reproduzir ou desenvolver o produto de código aberto, use Python 3.10+ e Node.js 24 LTS. Na pasta raiz:
 
 ```sh
 python3 -m venv .venv
@@ -55,7 +55,7 @@ O empacotamento recompila a extensão e reúne novamente o núcleo e as dependê
 De volta à pasta raiz do repositório, para verificar o conteúdo de um `.vsix` e executar o núcleo incluído sem pacotes Python do usuário:
 
 ```sh
-python tools/verify_release.py release/embedmark-0.4.1.vsix --python python3 --report release/embedmark-package-verification.json
+python tools/verify_release.py release/embedmark-0.4.2.vsix --python "$(python -c 'import sys; print(sys.executable)')" --report release/embedmark-package-verification.json
 ```
 
 Os testes do VS Code usam perfis e pastas temporários, sem instalar a extensão na configuração pessoal. O comando de verificação da instalação real do `.vsix` está em `tools/verify_installed_extension.cjs`.

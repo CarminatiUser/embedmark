@@ -166,13 +166,13 @@ A extensão consumirá o núcleo por uma interface estável, evitando uma segund
 
 ### Etapa G — Publicar a versão do produto — P1
 
-- [ ] G01. Nome EmbedMark e identificador `embedmark` definidos; confirmar/criar o publisher na conta do autor (`arthur-carminati` é apenas a proposta local).
-- [x] G02. Registrar direitos reservados do código original e preservar atribuições/licenças de dependências e fontes; nenhuma licença aberta imposta ao autor.
-- [ ] G03. README, ícone, instruções, limitações e changelog concluídos; definir URL de suporte/repositório e capturas públicas quando houver publicação.
+- [x] G01. Nome EmbedMark, identificador `embedmark` e publicador `arthur-carminati` confirmados no Marketplace em 09/11/2026.
+- [x] G02. Licença proprietária registrada na entrega inicial. Em 09/11/2026, por decisão expressa do autor, o código original passou à licença MIT na versão 0.4.2; atribuições e licenças de terceiros foram preservadas.
+- [x] G03. README, ícone, instruções, limitações, changelog e links públicos do repositório e suporte disponíveis.
 - [x] G04. Inspecionar conteúdo do pacote e compatibilidade entre versão da extensão e do núcleo.
-- [ ] G05. Preparar autenticação de publicação na conta correta, sem incluir credenciais no repositório ou pacote.
-- [ ] G06. Publicar no Visual Studio Marketplace e verificar instalação da versão pública.
-- [x] G07. Registrar versão, tag, pacote e instruções para reproduzir a versão usada no TCC.
+- [x] G05. Publicação realizada pela conta do autor, sem credenciais no repositório ou pacote.
+- [x] G06. Versão 0.4.1 publicada no Marketplace, com download e instalação pelo catálogo verificados. Atualização 0.4.2 em preparação.
+- [x] G07. Registrar versão, commit, pacote e instruções para reproduzir a versão usada no TCC.
 
 **Pronto quando:** a versão pública instala e completa o fluxo de referência. O `.vsix` validado serve como distribuição local durante a preparação do lançamento.
 

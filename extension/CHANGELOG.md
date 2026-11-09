@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.4.2 — 09/11/2026
+
+- EmbedMark passa a ser software de código aberto sob a licença MIT, com copyright de Arthur Felipe Carminati.
+- Permissões de uso, modificação e redistribuição descritas no pacote e na documentação.
+- Bibliotecas e fontes de terceiros mantêm suas licenças e atribuições.
+- Versões da extensão e do núcleo sincronizadas, sem mudanças na linguagem ou no protocolo JSON.
+
 ## 0.4.1 — 09/11/2026
 
 - Preparação da distribuição pública no Marketplace com instalação e uso gratuitos do pacote oficial e código-fonte disponível para consulta.

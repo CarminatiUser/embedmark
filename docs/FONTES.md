@@ -1,8 +1,8 @@
 # Fontes com acentos e catálogos externos
 
-O tradutor preserva texto UTF-8. Para exibir um caractere, a fonte utilizada também precisa conter seu glifo. O suporte a catálogos externos foi introduzido na versão 0.3 e é mantido na 0.4.1: na CLI, use `--font-manifest`; na API Python, use `TranslationConfig(font_catalog=FontCatalog.load(caminho))`. Sem essa seleção, a CLI e a API usam Montserrat do LVGL.
+O tradutor preserva texto UTF-8. Para exibir um caractere, a fonte utilizada também precisa conter seu glifo. O suporte a catálogos externos foi introduzido na versão 0.3 e é mantido na 0.4.2: na CLI, use `--font-manifest`; na API Python, use `TranslationConfig(font_catalog=FontCatalog.load(caminho))`. Sem essa seleção, a CLI e a API usam Montserrat do LVGL.
 
-Na extensão do VS Code, **Font Manifest** vazia usa o catálogo EmbedMark Sans PT incluído. O valor `builtin` seleciona Montserrat do LVGL; um caminho absoluto ou relativo à pasta do projeto seleciona outro catálogo. A extensão já copia as fontes externas utilizadas durante **Gerar interface LVGL**; não é necessário executar os comandos de CLI deste guia para esse fluxo. Os comandos abaixo documentam o uso e a manutenção pelo titular a partir do repositório, conforme a licença da ferramenta.
+Na extensão do VS Code, **Font Manifest** vazia usa o catálogo EmbedMark Sans PT incluído. O valor `builtin` seleciona Montserrat do LVGL; um caminho absoluto ou relativo à pasta do projeto seleciona outro catálogo. A extensão já copia as fontes externas utilizadas durante **Gerar interface LVGL**; não é necessário executar os comandos de CLI deste guia para esse fluxo. Os comandos abaixo podem ser usados e adaptados a partir do repositório, conforme a licença MIT da ferramenta.
 
 ## Exemplo em português
 
