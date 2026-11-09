@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.4.1 — 09/11/2026
+
+- Preparação da distribuição pública no Marketplace com instalação e uso gratuitos do pacote oficial e código-fonte disponível para consulta.
+- Atualização das ferramentas de empacotamento e correção das dependências de desenvolvimento apontadas pela auditoria npm.
+- Instruções de instalação, identificação do publicador e links do manual e do repositório atualizados.
+- Versões da extensão e do núcleo sincronizadas; comportamento da linguagem e protocolo JSON 1 preservados.
+- Correção da codificação UTF-8 no simulador usado pelos testes em Windows.
+
 ## 0.4.0
 
 - Identidade EmbedMark, comandos e configurações `embedmark.*`, com migração protegida dos registros de saída da versão anterior.

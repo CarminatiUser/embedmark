@@ -25,4 +25,4 @@ for (const resource of ['bundled/launcher.py', 'resources/icon.png', 'resources/
   if (!fs.statSync(path.join(extension, resource)).isFile()) { throw new Error('Recurso ausente: ' + resource); }
 }
 fs.mkdirSync(path.join(root, 'release'), { recursive: true });
-console.log('Backend verificado. Publisher a confirmar antes do upload: ' + manifest.publisher);
+console.log('Backend verificado. Publisher do pacote: ' + manifest.publisher);

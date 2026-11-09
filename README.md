@@ -4,21 +4,21 @@ Extensão para Visual Studio Code e núcleo Python para gerar interfaces **C par
 
 Nome adotado em 14/10/2026; anteriormente TCC UI Translator. Registros históricos conservam a identidade usada nas respectivas execuções. Consulte o [registro da adoção do nome EmbedMark](docs/RENOMEACAO_EMBEDMARK.md).
 
-Versão **0.4.0**, com extensão desktop do VS Code, núcleo Python e laboratório ESP-IDF separado. A referência é ESP32-C6 com display ST7789T de 172 × 320 pixels. Outros presets apenas configuram dimensões; não representam suporte a drivers ou hardware já validado.
+Versão **0.4.1**, com extensão desktop do VS Code, núcleo Python e laboratório ESP-IDF separado. A referência é ESP32-C6 com display ST7789T de 172 × 320 pixels. Outros presets apenas configuram dimensões; não representam suporte a drivers ou hardware já validado.
 
 ## Disponibilidade
 
 Este [repositório de consulta](https://github.com/CarminatiUser/embedmark) reúne o código-fonte, a documentação e os exemplos do EmbedMark, mantendo a licença proprietária e os direitos reservados.
 
-A distribuição verificada é o pacote local **`embedmark-0.4.0.vsix`**. A publicação no Marketplace e uma URL pública de download ainda não estão confirmadas nesta documentação. O identificador `arthur-carminati.embedmark` no manifesto, por si só, não comprova uma publicação.
+A versão **0.4.1** está em preparação para publicação no Marketplace, com o identificador `arthur-carminati.embedmark`. O publicador **Arthur Carminati** (`arthur-carminati`) foi confirmado no painel do serviço em 09/11/2026; a disponibilidade pública será registrada após a aprovação do pacote.
 
-A pasta `release/` contém artefatos locais e não é versionada pelo Git. Os pacotes instaláveis não fazem parte da disponibilização para consulta aqui definida. O [procedimento de empacotamento](docs/PUBLICACAO.md#reproduzir-a-distribuição) e as instruções abaixo documentam a preparação técnica da entrega local.
+A pasta `release/` contém artefatos locais e não é versionada pelo Git. O pacote oficial da extensão pode ser instalado e usado gratuitamente; o código-fonte permanece proprietário e disponível para consulta. O [procedimento de empacotamento](docs/PUBLICACAO.md#reproduzir-a-distribuição) documenta a manutenção da distribuição pelo titular.
 
 Para conhecer o produto, comece pelo [manual de HTML/CSS](docs/LINGUAGEM.md), pelo [guia da extensão](extension/README.md) e pelos [exemplos](examples). A [arquitetura](ARCHITECTURE.md) descreve como a extensão e o núcleo se integram.
 
 ## Usar no VS Code
 
-Requisitos: **VS Code 1.95 ou superior**, **Python 3.10 ou superior** e uma pasta de trabalho confiável. Instale `embedmark-0.4.0.vsix` usando **Extensions: Install from VSIX…** na paleta de comandos. O pacote inclui o tradutor e suas dependências Python; Node.js e a instalação de bibliotecas com pip não são necessários para usar a extensão já empacotada.
+Requisitos: **VS Code 1.95 ou superior**, **Python 3.10 ou superior** e uma pasta de trabalho confiável. Instale `embedmark-0.4.1.vsix` usando **Extensions: Install from VSIX…** na paleta de comandos. O pacote inclui o tradutor e suas dependências Python; Node.js e a instalação de bibliotecas com pip não são necessários para usar a extensão já empacotada.
 
 Se o Python não for encontrado, configure **EmbedMark: Python Path** com o caminho do executável, sem argumentos. Se a extensão anterior TCC UI Translator estiver instalada, desative-a antes de usar o EmbedMark.
 
@@ -52,6 +52,8 @@ Salve o exemplo abaixo como `minha_tela.html` e execute os comandos de validaç�
 `screen` define as dimensões do desenho. O preset define o destino da tradução; no padrão `st7789` em orientação `portrait`, ambos medem 172 × 320. `Design Width` e `Design Height` com valor `null` respeitam o HTML. Presets e orientação não configuram pinos nem giram o driver físico. Consulte o [manual de HTML/CSS suportado](docs/LINGUAGEM.md) antes de adaptar uma interface.
 
 ## Usar pela linha de comando
+
+Os procedimentos de instalação a partir do código-fonte e uso como biblioteca documentam a manutenção pelo titular; não ampliam as permissões da licença de consulta. Para uso público, utilize o pacote oficial da extensão.
 
 Requer Python 3.10 ou superior. Para instalar o núcleo a partir do código-fonte, execute na pasta do projeto, em macOS/Linux:
 
@@ -174,6 +176,6 @@ A suíte compila o código gerado e também executa uma aplicação com LVGL rea
 
 ## Licença e atribuições
 
-O código original é **proprietário, com direitos reservados a Arthur Felipe Carminati**, conforme [LICENSE](LICENSE). A disponibilização para consulta não concede permissão de uso, modificação ou redistribuição. O pacote Python registra `LicenseRef-Proprietary`, e a extensão inclui os mesmos termos em [LICENSE.txt](extension/LICENSE.txt). As instruções técnicas deste documento não alteram essas permissões.
+O código original é **proprietário, com direitos reservados a Arthur Felipe Carminati**, conforme [LICENSE](LICENSE). O pacote oficial distribuído pelo Marketplace pode ser instalado e usado gratuitamente. O código-fonte da ferramenta é disponibilizado apenas para consulta, sem licença aberta ou permissão de modificação e redistribuição. O código de interface gerado e os exemplos podem ser usados nas aplicações dos usuários, preservando as licenças dos componentes de terceiros. O pacote Python registra `LicenseRef-Proprietary`, e a extensão inclui os mesmos termos em [LICENSE.txt](extension/LICENSE.txt). As instruções técnicas deste documento não alteram essas permissões.
 
 As dependências e fontes preservam suas próprias licenças, documentadas em [THIRD_PARTY.md](THIRD_PARTY.md). As fontes bitmap EmbedMark Sans PT derivam de Montserrat e mantêm a licença [SIL Open Font License 1.1](examples/fonts/OFL.txt) e a atribuição original.

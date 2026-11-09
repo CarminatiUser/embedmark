@@ -1,3 +1,11 @@
+# 0.4.1 — 09/11/2026
+
+- Preparação para distribuição pelo publicador `arthur-carminati` no Marketplace do VS Code.
+- Uso gratuito da extensão oficial, mantendo o código-fonte proprietário disponível para consulta e as licenças dos componentes de terceiros.
+- Ferramentas de empacotamento atualizadas e dependências de desenvolvimento corrigidas conforme auditoria npm.
+- Documentação de instalação, links públicos e versões da extensão e do núcleo sincronizados.
+- Teste de subprocesso corrigido para UTF-8 no Windows; protocolo e linguagem preservados.
+
 # Identidade EmbedMark — 14/10/2026
 
 - Produto renomeado para EmbedMark antes da publicação, mantendo a versão 0.4.0.

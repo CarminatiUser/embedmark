@@ -33,7 +33,7 @@ def test_generate_and_validate_share_result_without_writing(tmp_path):
     assert generated.returncode == 0, generated.stderr
     assert generated.stderr == b""
     data = json.loads(generated.stdout)
-    assert data["protocol"] == 1 and data["ok"] and data["version"] == __version__ == "0.4.0"
+    assert data["protocol"] == 1 and data["ok"] and data["version"] == __version__ == "0.4.1"
     assert "screen_main_create" in data["code"] and "screen_main_destroy" in data["header"]
     validated = process_request(request(action="validate"))
     assert validated["result"] == data["result"]

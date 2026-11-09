@@ -1,4 +1,4 @@
-# Contrato da linguagem na versão 0.4
+# Contrato da linguagem na versão 0.4.1
 
 Este documento descreve o comportamento implementado no núcleo. A entrada utiliza sintaxe inspirada em HTML/CSS, com regras próprias e suporte limitado. O parser HTML é tolerante à marcação; não é um validador completo de conformidade HTML.
 
@@ -56,9 +56,11 @@ Aceitos: `#RGB`, `#RRGGBB`, `rgb(r,g,b)` com componentes inteiros entre 0 e 255 
 
 As escalas são `largura_display/largura_projeto` e `altura_display/altura_projeto`. Posições e comprimentos são truncados em direção a zero após a escala, preservando a convenção anterior. A fonte usa o maior fator entre os dois e é mapeada ao tamanho mais próximo; empates escolhem o maior. Esse ajuste por eixos pode alterar proporções e não equivale a um layout responsivo de navegador.
 
-Catálogo padrão: 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 32, 38 e 48. As fontes usadas devem ser habilitadas na configuração LVGL. O gerador emite verificações de compilação para elas e para LVGL 8.3.x. Um catálogo externo substitui o catálogo padrão para os labels gerados; tamanhos e cobertura passam a ser os declarados nele.
+Na CLI e na API Python, sem catálogo externo, o padrão é Montserrat do LVGL nos tamanhos 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 32, 38 e 48. As fontes usadas devem ser habilitadas na configuração LVGL. O gerador emite verificações de compilação para elas e para LVGL 8.3.x. Um catálogo externo substitui esse padrão para os labels gerados; tamanhos e cobertura passam a ser os declarados nele.
 
-Os bytes UTF-8 do texto são preservados em strings C escapadas. Caracteres NUL são rejeitados. A cobertura padrão é a dos arquivos Montserrat do LVGL 8.3.11, que não inclui todos os acentos portugueses. Caracteres ausentes da fonte selecionada geram diagnóstico `font.glyphs`; isso não significa perda dos bytes de entrada. A opção `--font-manifest` e o catálogo EmbedMark Sans PT estão descritos no [guia de fontes](FONTES.md).
+Na extensão do VS Code, o padrão é o catálogo incluído **EmbedMark Sans PT**, com fontes de 14, 20 e 24 pixels e acentos em português. A configuração **Font Manifest** vazia seleciona esse catálogo; `builtin` seleciona Montserrat do LVGL; um caminho seleciona um catálogo externo. Ao gerar, a extensão copia os arquivos C das fontes externas utilizadas e os avisos de licença reconhecidos ao lado do catálogo para a pasta de saída, além de preparar a lista de compilação em `sources.cmake`. O firmware precisa compilar esses arquivos.
+
+Os bytes UTF-8 do texto são preservados em strings C escapadas. Caracteres NUL são rejeitados. A cobertura do catálogo Montserrat embutido corresponde aos arquivos do LVGL 8.3.11 e não inclui todos os acentos portugueses. Caracteres ausentes da fonte selecionada geram diagnóstico `font.glyphs`; isso não significa perda dos bytes de entrada. A opção `--font-manifest`, a configuração da extensão e a cobertura do catálogo EmbedMark Sans PT estão descritas no [guia de fontes](FONTES.md).
 
 ## Diagnósticos e saída
 

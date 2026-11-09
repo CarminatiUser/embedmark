@@ -1,6 +1,6 @@
-# API de integração — versão 0.3
+# API de integração — versão 0.4.1
 
-A saída C expõe uma tela principal e seus componentes com ID. O firmware continua responsável pela inicialização do LVGL 8.3, display, temporização, entrada do usuário e acesso sincronizado ao LVGL.
+A API de integração foi introduzida na versão 0.3 e mantém o mesmo contrato na 0.4.1. A saída C expõe uma tela principal e seus componentes com ID. O firmware continua responsável pela inicialização do LVGL 8.3, display, temporização, entrada do usuário e acesso sincronizado ao LVGL.
 
 ## Criar, encontrar e atualizar
 
@@ -56,8 +56,8 @@ screen_main_create();
 
 A API não apaga a tela ativa para deixar o display sem uma tela. Transições com `lv_scr_load_anim()` devem terminar antes da destruição. Não remova os callbacks internos de exclusão, não altere os IDs da tabela e não reparentalize componentes gerados para fora da tela: a API pressupõe a hierarquia que ela criou.
 
-Os estilos compartilhados são inicializados uma vez e permanecem durante a vida do LVGL. Destruir/recriar libera os objetos, sem realocar esses estilos a cada ciclo. A versão 0.3 não oferece descarregamento do módulo, reinicialização por `lv_deinit()`/`lv_init()`, múltiplas instâncias, namespaces para vincular várias saídas geradas ou proteção contra esgotamento de memória do LVGL. Todas as chamadas devem ocorrer no contexto/proteção usado pelo firmware para acessar o LVGL.
+Os estilos compartilhados são inicializados uma vez e permanecem durante a vida do LVGL. Destruir/recriar libera os objetos, sem realocar esses estilos a cada ciclo. Na versão 0.4.1, permanecem as limitações da API introduzida na 0.3: não há descarregamento do módulo, reinicialização por `lv_deinit()`/`lv_init()`, múltiplas instâncias, namespaces para vincular várias saídas geradas ou proteção contra esgotamento de memória do LVGL. Todas as chamadas devem ocorrer no contexto/proteção usado pelo firmware para acessar o LVGL.
 
 ## Compatibilidade
 
-Regere C e header juntos. Chamadas antigas que apenas executam `screen_main_create();` continuam válidas, mas a função agora retorna um ponteiro e reutiliza a tela existente. Não misture um header 0.2 com um arquivo C 0.3. O JSON mantém `schema_version: 1` e acrescenta `fonts` com as fontes realmente utilizadas.
+Regere C e header juntos, usando a mesma versão do gerador. Chamadas antigas que apenas executam `screen_main_create();` continuam válidas; desde a versão 0.3, a função retorna um ponteiro e reutiliza a tela existente. Essa mudança foi preservada na 0.4.1. Um header da versão 0.2 não corresponde à API introduzida na 0.3. O JSON mantém `schema_version: 1` e o campo aditivo `fonts`, introduzido na 0.3, com as fontes realmente utilizadas.

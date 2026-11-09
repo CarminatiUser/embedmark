@@ -1,7 +1,21 @@
 Copyright (c) 2026 Arthur Felipe Carminati.
 All rights reserved.
 
-No open-source license is granted for the original EmbedMark code by
-this file. Redistribution and licensing decisions remain with the copyright
-holder. Third-party components retain their respective licenses, reproduced
-in their bundled distributions and listed in THIRD_PARTY.md.
+The official, unmodified EmbedMark extension distributed by Arthur Felipe
+Carminati through the Visual Studio Marketplace may be downloaded, installed
+and used free of charge with Visual Studio Code to generate interfaces.
+
+The original source code is made publicly available for consultation only.
+No open-source license, or permission to modify or redistribute the original
+EmbedMark implementation, is granted. All other rights are reserved, except
+where applicable law provides otherwise.
+
+Users retain their rights in their input documents. The generated interface
+code and the included example interfaces may be used, modified and distributed
+as part of the user's applications. This permission does not extend to the
+implementation of the translator or the extension.
+
+Third-party components, including bundled fonts and any third-party material
+copied to generated output, retain their respective licenses and attribution
+requirements. Those licenses are reproduced in the bundled distributions and
+listed in THIRD_PARTY.md or THIRD_PARTY_NOTICES.md.

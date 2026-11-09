@@ -41,7 +41,7 @@ export function parseResponse(text: string): BackendResult {
   try { data = JSON.parse(text); } catch { throw new Error('O tradutor retornou uma resposta inválida. Reinstale a extensão.'); }
   if (!data || typeof data !== 'object') { throw new Error('Resposta vazia do tradutor.'); }
   const r = data as Partial<BackendResult>;
-  if (r.protocol !== 1 || r.version !== '0.4.0' || typeof r.ok !== 'boolean' || !Array.isArray(r.diagnostics)) {
+  if (r.protocol !== 1 || r.version !== '0.4.1' || typeof r.ok !== 'boolean' || !Array.isArray(r.diagnostics)) {
     throw new Error('Versão ou formato incompatível do tradutor incluído na extensão.');
   }
   for (const issue of r.diagnostics) {

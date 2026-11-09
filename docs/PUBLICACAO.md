@@ -1,10 +1,10 @@
 # Pacote da extensão e publicação
 
-O [repositório GitHub do EmbedMark](https://github.com/CarminatiUser/embedmark) disponibiliza código-fonte, documentação e exemplos **para consulta**, conforme a licença proprietária em [LICENSE](../LICENSE). Esta publicação não inclui pacotes instaláveis nem concede permissão de uso, modificação ou redistribuição do código original. As licenças dos componentes de terceiros permanecem preservadas.
+O [repositório GitHub do EmbedMark](https://github.com/CarminatiUser/embedmark) disponibiliza o código-fonte da ferramenta **para consulta**, com licença proprietária. A extensão oficial distribuída pelo Marketplace pode ser instalada e usada gratuitamente. A permissão para usar o produto e as interfaces geradas está descrita em [LICENSE](../LICENSE); o núcleo e a extensão não receberam licença de código aberto. As licenças dos componentes de terceiros permanecem preservadas.
 
-Após a adoção do nome EmbedMark em 14/10/2026, a versão 0.4.0 é entregue como `release/embedmark-0.4.0.vsix`, acompanhada do pacote Python, hashes e registros de verificação. O envio ao Marketplace é uma etapa posterior; não foi feito automaticamente. Os registros de validação de 02/10/2026 conservam os nomes anteriores e não devem ser confundidos com verificações de um pacote reconstruído.
+A versão atual é **0.4.1**, preparada em 09/11/2026. O publicador `arthur-carminati` foi confirmado no painel do Marketplace. O envio e a disponibilidade pública serão registrados após a validação do pacote pelo serviço.
 
-A pasta `release/` e seus artefatos são locais, ignorados pelo Git e ausentes deste repositório público. As instruções a seguir registram o procedimento técnico da entrega local; elas não alteram as permissões da licença.
+Os pacotes e relatórios locais ficam em `release/`, ignorada pelo Git. Os registros da versão 0.4.0 e da adoção do nome EmbedMark em 14/10/2026 permanecem como histórico e não comprovam a validação de um pacote reconstruído.
 
 ## Instalar o pacote local
 
@@ -16,17 +16,9 @@ O ESP-IDF é necessário apenas para compilar/gravar um firmware. O laboratório
 
 ## Identidade do publicador
 
-O manifesto utiliza `arthur-carminati` como **identificador proposto**, sem afirmar que a conta existe ou que está disponível. Antes do envio, entre na sua conta do Marketplace e confirme/crie o publicador. O campo `publisher` do pacote deve corresponder exatamente a essa conta.
+O publicador confirmado é **Arthur Carminati** (`arthur-carminati`), com acesso de proprietário verificado em 09/11/2026. O identificador completo é `arthur-carminati.embedmark`. A conta GitHub `CarminatiUser` e o publicador do Marketplace são identidades de serviços diferentes.
 
-Se o identificador escolhido for diferente, altere somente esse metadado e gere outro pacote:
-
-```sh
-cd extension
-npm pkg set publisher=IDENTIFICADOR_REAL
-npm run package
-```
-
-O código original mantém direitos reservados em `LICENSE`/`LICENSE.txt`; as licenças das dependências e das fontes estão incluídas. Nenhuma licença aberta foi aplicada ao código original. Os metadados Python e da extensão apontam para o repositório GitHub de consulta. A conta GitHub `CarminatiUser` e o identificador proposto do Marketplace `arthur-carminati` são identidades de serviços diferentes; uma não confirma a outra.
+O campo `publisher` do manifesto e do VSIX deve permanecer igual ao publicador selecionado para o envio. `LICENSE` e `extension/LICENSE.txt` contêm os mesmos termos, e as licenças das dependências e fontes acompanham o pacote.
 
 ## Enviar ao Marketplace
 
@@ -34,7 +26,7 @@ Acesse o painel de gerenciamento de extensões da sua conta, selecione o publica
 
 ## Reproduzir a distribuição
 
-Para desenvolver/empacotar, use Python 3.10+ e Node.js 24 LTS. Na pasta raiz:
+Este procedimento documenta a manutenção pelo titular, sem ampliar as permissões de consulta do código. Para desenvolver/empacotar, use Python 3.10+ e Node.js 24 LTS. Na pasta raiz:
 
 ```sh
 python3 -m venv .venv
@@ -55,7 +47,7 @@ O empacotamento recompila a extensão e reúne novamente o núcleo e as dependê
 De volta à pasta raiz do repositório, para verificar o conteúdo de um `.vsix` e executar o núcleo incluído sem pacotes Python do usuário:
 
 ```sh
-python tools/verify_release.py release/embedmark-0.4.0.vsix --python python3 --report release/embedmark-package-verification.json
+python tools/verify_release.py release/embedmark-0.4.1.vsix --python python3 --report release/embedmark-package-verification.json
 ```
 
 Os testes do VS Code usam perfis e pastas temporários, sem instalar a extensão na configuração pessoal. O comando de verificação da instalação real do `.vsix` está em `tools/verify_installed_extension.cjs`.

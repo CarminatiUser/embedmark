@@ -6,7 +6,7 @@ A extensão gera o código da interface. O projeto de firmware continua respons�
 
 ## Requisitos
 
-- VS Code 1.95 ou superior. A versão foi validada em macOS; Windows e Linux têm suporte planejado no código e verificações de integração contínua preparadas, ainda não executadas nesses sistemas.
+- VS Code desktop 1.95 ou superior, em Windows, macOS ou Linux. Os testes automatizados da extensão abrangem os três sistemas; os resultados de cada versão estão no [GitHub Actions](https://github.com/CarminatiUser/embedmark/actions/workflows/tests.yml).
 - Python 3.10 ou superior disponível como `python3` (macOS/Linux) ou `python` (Windows). Se necessário, configure **EmbedMark: Python Path** com o caminho do executável, sem argumentos.
 - Pasta marcada como confiável no VS Code para executar validação ou geração.
 - Firmware com LVGL 8.3 para compilar os arquivos produzidos.
@@ -15,7 +15,7 @@ Não é necessário executar `pip install`. O backend incluído executa localmen
 
 ## Primeiro uso
 
-1. Instale o VSIX usando **Extensions: Install from VSIX…** na paleta de comandos.
+1. Na aba **Extensões**, procure **EmbedMark**, do publicador **Arthur Carminati** (`arthur-carminati.embedmark`), e selecione **Instalar**. Também é possível abrir a [página no Marketplace](https://marketplace.visualstudio.com/items?itemName=arthur-carminati.embedmark).
 2. Abra a pasta do seu projeto e execute **EmbedMark: Criar exemplo de contador**.
 3. Salve o HTML na pasta do projeto.
 4. Execute **EmbedMark: Validar interface**. Eventuais problemas aparecem no painel **Problemas**, identificados como **EmbedMark**.
@@ -95,9 +95,9 @@ Validação do código não substitui teste físico de cor, leitura, alinhamento
 
 ## Licenças e publicação
 
-O código original mantém os direitos reservados ao autor, conforme `LICENSE.txt`. As fontes incluídas preservam a SIL Open Font License e as dependências Python preservam suas respectivas licenças e atribuições no pacote.
+O pacote oficial pode ser instalado e usado gratuitamente no VS Code. O código-fonte da ferramenta está disponível para consulta, com direitos reservados ao autor; não é software de código aberto. O código de interface gerado e os exemplos podem ser incorporados às suas aplicações. Os termos completos estão em [LICENSE.txt](https://github.com/CarminatiUser/embedmark/blob/main/extension/LICENSE.txt). As fontes incluídas preservam a SIL Open Font License e as dependências Python preservam suas respectivas licenças e atribuições no pacote.
 
-O identificador de publisher `arthur-carminati` é uma sugestão local, sem afirmar que a conta foi criada ou que pertence ao autor. Antes do upload, confirme ou ajuste `publisher` no manifesto e empacote novamente. Nenhuma publicação ou autenticação no Marketplace é executada pela extensão.
+O publicador é **Arthur Carminati** (`arthur-carminati`) e o identificador completo da extensão é `arthur-carminati.embedmark`. Consulte também o [repositório](https://github.com/CarminatiUser/embedmark), o [manual da linguagem](https://github.com/CarminatiUser/embedmark/blob/main/docs/LINGUAGEM.md) e o [canal de problemas](https://github.com/CarminatiUser/embedmark/issues).
 
 Referências oficiais: [instalação e uso de extensões](https://code.visualstudio.com/docs/configure/extensions/extension-marketplace), [Workspace Trust](https://code.visualstudio.com/docs/editing/workspaces/workspace-trust), [publicação de extensões](https://code.visualstudio.com/api/working-with-extensions/publishing-extension).
 
@@ -105,4 +105,4 @@ Referências oficiais: [instalação e uso de extensões](https://code.visualstu
 
 Este repositório usa Node.js 22 ou superior apenas para desenvolver e empacotar a extensão; o usuário final não precisa instalar Node.js. Execute `npm ci`, `npm test` e `npm run test:integration` na pasta `extension`. O teste de integração usa perfis temporários, separados do perfil pessoal, para testar pastas confiáveis e restritas. Em macOS ele usa a instalação em `/Applications/Visual Studio Code.app`; em outro ambiente, defina `VSCODE_EXECUTABLE_PATH` ou permita ao executor obter uma versão de teste. `EMBEDMARK_TEST_PYTHON` seleciona o Python dos testes.
 
-`npm run package` reconstrói o backend a partir do código do repositório e das dependências com hashes fixados, confere suas versões e gera `release/embedmark-0.4.0.vsix`. `EMBEDMARK_BUILD_PYTHON` seleciona o Python usado para empacotar; por padrão é usado o ambiente `.venv` do repositório, quando presente. `EMBEDMARK_BUNDLE_OFFLINE=1` reutiliza os wheels já verificados em `build/wheels`. A instalação e o uso do VSIX funcionam sem rede após Python estar disponível.
+`npm run package` reconstrói o backend a partir do código do repositório e das dependências com hashes fixados, confere suas versões e gera `release/embedmark-0.4.1.vsix`. `EMBEDMARK_BUILD_PYTHON` seleciona o Python usado para empacotar; por padrão é usado o ambiente `.venv` do repositório, quando presente. `EMBEDMARK_BUNDLE_OFFLINE=1` reutiliza os wheels já verificados em `build/wheels`. Estes procedimentos documentam a manutenção pelo titular e não ampliam os direitos da licença. O uso do pacote instalado funciona sem rede após Python estar disponível.

@@ -2,7 +2,7 @@
   "name": "embedmark",
   "displayName": "EmbedMark",
   "description": "Traduza um subconjunto explícito de HTML/CSS para interfaces C do LVGL 8.3, com diagnósticos e fontes em português.",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "publisher": "arthur-carminati",
   "license": "SEE LICENSE IN LICENSE.txt",
   "repository": {
@@ -10,6 +10,9 @@
     "url": "https://github.com/CarminatiUser/embedmark.git"
   },
   "homepage": "https://github.com/CarminatiUser/embedmark#readme",
+  "bugs": {
+    "url": "https://github.com/CarminatiUser/embedmark/issues"
+  },
   "engines": {
     "vscode": "^1.95.0",
     "node": ">=22"
@@ -202,14 +205,19 @@
     "test": "npm run compile && node --test dist/test/unit.test.js",
     "test:integration": "npm run compile && node scripts/run-integration.cjs",
     "vscode:prepublish": "npm run bundle && npm run compile",
-    "package": "vsce package --allow-missing-repository --no-dependencies --out ../release/embedmark-0.4.0.vsix",
+    "package": "vsce package --allow-missing-repository --no-dependencies --out ../release/embedmark-0.4.1.vsix",
     "bundle": "node scripts/prepare-package.cjs"
   },
   "devDependencies": {
     "@types/node": "^22.0.0",
     "@types/vscode": "1.95.0",
     "@vscode/test-electron": "3.1.0",
-    "@vscode/vsce": "4.0.0",
+    "@vscode/vsce": "4.1.0",
     "typescript": "5.9.3"
+  },
+  "overrides": {
+    "@vscode/vsce": {
+      "minimatch": "11.0.5"
+    }
   }
 }
