@@ -2,7 +2,7 @@
 
 O [repositório GitHub do EmbedMark](https://github.com/CarminatiUser/embedmark) disponibiliza o código original da ferramenta **sob a licença MIT**, com autoria de Arthur Felipe Carminati. A licença permite uso, modificação e redistribuição, inclusive comercial, mantendo os avisos de autoria e licença. Os termos completos estão em [LICENSE](../LICENSE). As bibliotecas e fontes de terceiros mantêm suas próprias licenças e atribuições.
 
-A primeira publicação no [Marketplace do VS Code](https://marketplace.visualstudio.com/items?itemName=arthur-carminati.embedmark) ocorreu em 09/11/2026 na versão **0.4.1**, cujas evidências permanecem no [registro histórico](VALIDACAO_0.4.1.md). A versão **0.4.2** incorpora a licença MIT e está em preparação para atualização no catálogo. O identificador permanece `arthur-carminati.embedmark`.
+A primeira publicação no [Marketplace do VS Code](https://marketplace.visualstudio.com/items?itemName=arthur-carminati.embedmark) ocorreu em 09/11/2026 na versão **0.4.1**, cujas evidências permanecem no [registro histórico](VALIDACAO_0.4.1.md). A versão **0.4.2 está publicada**, com licença MIT, desde 09/11/2026. O download e a instalação pelo catálogo foram verificados. O identificador permanece `arthur-carminati.embedmark`. Consulte as [evidências da versão 0.4.2](VALIDACAO_0.4.2.md).
 
 Os pacotes e relatórios locais ficam em `release/`, ignorada pelo Git. Os registros da versão 0.4.0 e da adoção do nome EmbedMark em 14/10/2026 permanecem como histórico e não comprovam a validação de um pacote reconstruído.
 

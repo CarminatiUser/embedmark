@@ -10,9 +10,11 @@ Versão **0.4.2**, com extensão desktop do VS Code, núcleo Python e laboratór
 
 Este [repositório público](https://github.com/CarminatiUser/embedmark) reúne o código-fonte, a documentação e os exemplos do EmbedMark. O código original é **aberto sob a licença MIT**, permitindo uso, estudo, modificação e redistribuição, inclusive comercial, com preservação dos avisos de autoria e da licença.
 
-A primeira publicação no [Marketplace do VS Code](https://marketplace.visualstudio.com/items?itemName=arthur-carminati.embedmark) ocorreu em 09/11/2026, na versão 0.4.1. A versão **0.4.2** incorpora a licença MIT e está em preparação para atualização no catálogo. O identificador permanece `arthur-carminati.embedmark`, do publicador **Arthur Carminati**.
+A primeira publicação no [Marketplace do VS Code](https://marketplace.visualstudio.com/items?itemName=arthur-carminati.embedmark) ocorreu em 09/11/2026, na versão 0.4.1. A versão **0.4.2 está publicada**, com licença MIT, desde 09/11/2026. O download e a instalação pelo catálogo foram verificados. O identificador permanece `arthur-carminati.embedmark`, do publicador **Arthur Carminati**.
 
 A pasta `release/` contém artefatos locais e não é versionada pelo Git. O pacote oficial da extensão pode ser instalado e usado gratuitamente. O [procedimento de empacotamento](docs/PUBLICACAO.md#reproduzir-a-distribuição) permite reproduzir a distribuição a partir do código aberto.
+
+Consulte os [resultados da versão 0.4.2](docs/VALIDACAO_0.4.2.md).
 
 Para conhecer o produto, comece pelo [manual de HTML/CSS](docs/LINGUAGEM.md), pelo [guia da extensão](extension/README.md) e pelos [exemplos](examples). A [arquitetura](ARCHITECTURE.md) descreve como a extensão e o núcleo se integram.
 

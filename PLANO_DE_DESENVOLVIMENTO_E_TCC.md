@@ -171,7 +171,7 @@ A extensão consumirá o núcleo por uma interface estável, evitando uma segund
 - [x] G03. README, ícone, instruções, limitações, changelog e links públicos do repositório e suporte disponíveis.
 - [x] G04. Inspecionar conteúdo do pacote e compatibilidade entre versão da extensão e do núcleo.
 - [x] G05. Publicação realizada pela conta do autor, sem credenciais no repositório ou pacote.
-- [x] G06. Versão 0.4.1 publicada no Marketplace, com download e instalação pelo catálogo verificados. Atualização 0.4.2 em preparação.
+- [x] G06. Versão 0.4.1 publicada no Marketplace, com download e instalação pelo catálogo verificados. Atualização 0.4.2 sob licença MIT publicada; download e instalação pelo catálogo também verificados.
 - [x] G07. Registrar versão, commit, pacote e instruções para reproduzir a versão usada no TCC.
 
 **Pronto quando:** a versão pública instala e completa o fluxo de referência. O `.vsix` validado serve como distribuição local durante a preparação do lançamento.
