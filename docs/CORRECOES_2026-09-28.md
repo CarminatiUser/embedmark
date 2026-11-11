@@ -1,5 +1,7 @@
 # Correções do núcleo em 28 de setembro de 2026
 
+> **Atualização de acompanhamento — 11/11/2026:** As pendências desta página descrevem o estado em 28/09/2026. Fontes e integração por eventos avançaram na [versão 0.3.0](INTEGRACAO_0.3.0.md); extensão e compilação embarcada, na [entrega 0.4.0](VALIDACAO_0.4.0.md). Publicação e matriz remota estão documentadas nas validações [0.4.1](VALIDACAO_0.4.1.md) e [0.4.2, sob licença MIT](VALIDACAO_0.4.2.md). O [ensaio físico de 11/11/2026](VALIDACAO_FISICA_2026-11-11.md) acrescenta a execução na Waveshare com núcleo 0.4.2 e eventos por console, sem touch ou botão físico. Os resultados históricos abaixo permanecem inalterados; os recursos atualmente aceitos estão no [contrato da linguagem](LINGUAGEM.md).
+
 > Registro histórico anterior à adoção do nome EmbedMark em 14/10/2026. Os nomes de arquivos, comandos e resultados abaixo foram preservados para rastreabilidade; consulte o [guia de publicação atual](PUBLICACAO.md) para os novos pacotes.
 
 O foco desta revisão foi tornar verificáveis as correções do tradutor. A extensão do VS Code, publicação e testes físicos permanecem nas etapas seguintes.

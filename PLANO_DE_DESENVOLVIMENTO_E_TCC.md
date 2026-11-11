@@ -1,6 +1,16 @@
 # Plano de desenvolvimento do produto e conclusão do TCC
 
-Identidade atualizada em 14 de outubro de 2026; resultados e pendências técnicas registrados em 2 de outubro de 2026. Base: código em `Downloads/embedmark`, firmware local ESP32-C6 e documento do TCC revisado.
+Plano original de setembro/outubro de 2026, com atualização de acompanhamento em **11/11/2026**. Os diagnósticos iniciais e marcos antigos abaixo preservam o contexto de cada rodada; não devem ser lidos como a situação atual do produto.
+
+## Situação em 11/11/2026
+
+- **Distribuição:** a versão 0.4.2 está publicada no Marketplace sob MIT, com instalação verificada e matriz de testes de software aprovada. Veja o [registro da versão](docs/VALIDACAO_0.4.2.md).
+- **Hardware:** o contador gerado pelo núcleo 0.4.2 foi executado na Waveshare ESP32-C6-LCD-1.47. Foram aprovadas 143 verificações por console, com 50 ciclos de recriação e 10 ciclos de alternância entre padrão e interface, além da confirmação visual e fotografia. Veja a [validação física](docs/VALIDACAO_FISICA_2026-11-11.md).
+- **Escopo:** RF08 está atendido no cenário ensaiado, com eventos por console. Não foram validados todos os exemplos na placa, toque ou botão físico, outros periféricos ou estabilidade prolongada. Medições de desempenho/consumo e avaliação com participantes não foram realizadas nesse ensaio.
+- **Reprodução:** o protocolo e as evidências estão públicos; o firmware completo do laboratório isolado `embedmark-validation-waveshare` permanece local e separado deste repositório.
+- **TCC e vídeo:** o documento do TCC é mantido separadamente. Este plano não certifica seu fechamento editorial. O vídeo de demonstração será gravado posteriormente pelo autor; as evidências atuais são registros seriais, configuração, confirmação visual e fotografia.
+
+### Contexto das entregas iniciais
 
 A versão 0.4.0 foi entregue com núcleo Python, extensão instalável do VS Code e laboratório de firmware. Consulte primeiro o [registro de entrega e validação](docs/VALIDACAO_0.4.0.md): 188 testes automatizados, pacote instalado no VS Code, cinco versões do Python e seis exemplos compilados com ESP-IDF. Publicação na conta do autor, execução física na tela e reescrita do documento permanecem nas próximas etapas.
 
@@ -126,8 +136,8 @@ P0 = bloqueia a base confiável. P1 = necessário para a versão apresentável e
 - [x] D06. Consolidar os vários resumos Markdown em documentação com navegação simples e informação coerente.
 - [x] D07. Substituir afirmações de fidelidade, RAM, ROM e desempenho por descrições verificadas ou limitações explícitas.
 - [x] D08. Entregar integração por `.h` e `.c`, CMake e configuração de fontes; separar código gerado de código do usuário.
-- [ ] D09. Conferir drivers, inicialização LVGL, contexto de chamada e fonte de entrada/eventos realmente disponíveis na placa.
-- [ ] D10. Executar o exemplo completo no hardware e registrar instruções reproduzíveis, imagem e log.
+- [x] D09. Perfil Waveshare conferido no ensaio de 11/11/2026: driver, inicialização LVGL, pinagem e eventos por console; sem touch ou botão físico ensaiado.
+- [ ] D10. Parcial: contador executado no hardware, com protocolo, fotografia e logs públicos. O firmware completo do laboratório ainda precisa ser disponibilizado para reprodução integral a partir deste repositório.
 
 **Pronto quando:** alguém consegue seguir o guia, gerar e compilar uma interface e reproduzir a demonstração no hardware de referência.
 
@@ -145,7 +155,7 @@ A extensão consumirá o núcleo por uma interface estável, evitando uma segund
 - [x] E08. Preservar caminhos com espaços e caracteres acentuados, projetos com múltiplas pastas e arquivos ainda não salvos.
 - [x] E09. Respeitar Workspace Trust e limitar execução em projetos não confiáveis; passar argumentos sem montar comandos de shell a partir do conteúdo da interface.
 - [x] E10. Criar testes da extensão e do fluxo integrado com o tradutor.
-- [ ] E11. Instalação limpa e execução no macOS aprovadas; executar a matriz CI de Linux/Windows antes de anunciar validação nesses sistemas.
+- [x] E11. Instalação limpa e execução local aprovadas; matriz da versão 0.4.2 aprovada para a extensão em Linux, macOS e Windows, conforme registro de 09/11/2026.
 - [x] E12. Empacotar uma versão `.vsix` e validar instalação local.
 
 **Pronto quando:** o usuário instala a extensão, configura o ambiente, abre um exemplo, recebe diagnósticos e gera a saída sem editar o código da ferramenta.
@@ -154,8 +164,8 @@ A extensão consumirá o núcleo por uma interface estável, evitando uma segund
 
 - [x] F01. Montar matriz requisito → caso de teste → resultado → evidência.
 - [x] F02. Executar testes de parsing, estilos, hierarquia, layout, geração, CLI e extensão.
-- [ ] F03. Todos os seis exemplos válidos compilaram no ESP-IDF; falta executar os casos na placa e registrar as observações físicas.
-- [ ] F04. Verificar coordenadas, dimensões, quebras de texto, fontes, cores e componentes fora da área visível segundo critérios previamente definidos.
+- [ ] F03. Parcial: seis exemplos compilados no ESP-IDF na rodada anterior; contador gerado pela versão 0.4.2 executado fisicamente em 11/11/2026. A execução física dos demais exemplos não foi documentada.
+- [ ] F04. Parcial: cores, enquadramento, acentos e ausência de cortes conferidos no padrão e no contador da Waveshare. Não foi feita uma avaliação visual completa de todos os exemplos e dimensões.
 - [x] F05. Registrar versão do código, ferramentas, configuração, entradas, resultados e limitações de cada execução.
 - [ ] F06. Instalação e fluxo automatizado aprovados; definir com o orientador se haverá avaliação com participantes e executar o procedimento correspondente.
 - [ ] F07. Só comparar tempo/esforço com procedimento definido, tarefas equivalentes e limitações registradas; não usar estimativas do `utils.py` como dados experimentais.
@@ -231,8 +241,8 @@ A documentação e os testes acompanham as correções; não ficam reservados ao
 - [x] Recursos documentados implementados de ponta a ponta.
 - [x] Entradas inválidas produzem diagnósticos; não desaparecem silenciosamente.
 - [x] Exemplos oficiais geram saída compilável na versão LVGL anunciada.
-- [ ] Demonstração registrada no hardware de referência.
-- [ ] Extensão instalada e testada por VSIX; falta publicar e verificar a instalação da versão pública.
+- [x] Demonstração do contador registrada na Waveshare em 11/11/2026, com fotografia e logs; vídeo ainda não gravado.
+- [x] Extensão publicada e instalação da versão pública 0.4.2 verificada, conforme registro de 09/11/2026.
 - [x] Manual, exemplos, dependências, licença e versão organizados.
 - [ ] TCC vincula requisitos, testes e resultados da versão entregue.
 

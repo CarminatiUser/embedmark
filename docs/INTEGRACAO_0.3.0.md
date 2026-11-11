@@ -1,5 +1,7 @@
 # Integração do núcleo — versão 0.3.0
 
+> **Atualização de acompanhamento — 11/11/2026:** As próximas etapas e pendências abaixo retratam 28/09/2026. Os avanços posteriores estão documentados na [entrega 0.4.0](VALIDACAO_0.4.0.md), nas publicações [0.4.1](VALIDACAO_0.4.1.md) e [0.4.2, sob licença MIT](VALIDACAO_0.4.2.md), e no [ensaio físico de 11/11/2026](VALIDACAO_FISICA_2026-11-11.md). O ensaio utilizou o núcleo 0.4.2 na Waveshare ESP32-C6-LCD-1.47 e eventos por console, sem touch ou botão físico. Não se atribuem esses resultados ao firmware ou aos testes desta rodada 0.3.0; as limitações do contrato continuam documentadas na [API](API_FIRMWARE.md).
+
 > Registro histórico anterior à adoção do nome EmbedMark em 14/10/2026. Os nomes de arquivos, comandos e resultados abaixo foram preservados para rastreabilidade; consulte o [guia de publicação atual](PUBLICACAO.md) para os novos pacotes.
 
 Etapa concluída em 28/09/2026: o código gerado agora pode ser conectado à lógica da aplicação por IDs e eventos LVGL. A versão anterior foi preservada em `backups/tcc-ui-translator_0.2.0_antes_da_integracao.zip` no workspace do TCC.

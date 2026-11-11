@@ -1,5 +1,7 @@
 # Entrega e validação da versão 0.4.0
 
+> **Atualização de acompanhamento — 11/11/2026:** As pendências abaixo descrevem a rodada de 02/10/2026. A publicação no Marketplace e a matriz remota posteriores estão documentadas nas validações [0.4.1](VALIDACAO_0.4.1.md) e [0.4.2, sob licença MIT](VALIDACAO_0.4.2.md). O [ensaio físico de 11/11/2026](VALIDACAO_FISICA_2026-11-11.md), realizado com o núcleo 0.4.2 na placa Waveshare ESP32-C6-LCD-1.47, aprovou 143 verificações com eventos por console, sem touch ou botão físico. Essa evidência atende RF08 no cenário ensaiado e não altera os 188 testes históricos nem atribui validação física à rodada 0.4.0.
+
 > Registro histórico anterior à adoção do nome EmbedMark em 14/10/2026. Os nomes de arquivos, comandos e resultados abaixo foram preservados para rastreabilidade; consulte o [guia de publicação atual](PUBLICACAO.md) para os novos pacotes.
 
 Execuções realizadas em **2 de outubro de 2026**, no macOS arm64. O produto entregue reúne núcleo Python, extensão desktop do VS Code e laboratório separado para ESP32-C6/ST7789T. O pacote de instalação é `release/tcc-ui-translator-0.4.0.vsix`.

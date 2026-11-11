@@ -1,0 +1,4 @@
+# Preserve documentary evidence byte for byte, including original line endings.
+docs/validation/waveshare-2026-11-11/* -text
+# Raw serial capture intentionally retains CRLF and firmware-emitted spaces.
+docs/validation/waveshare-2026-11-11/serial-rx.log -whitespace

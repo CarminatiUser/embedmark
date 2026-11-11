@@ -1,0 +1,326 @@
+{
+  "date": "2026-11-11T13:46:45.685380-03:00",
+  "project": "embedmark-validation-waveshare",
+  "translator": "0.4.2",
+  "translator_git_commit": "309a492a9f585eabbfc59a1ea906c89687b22642",
+  "idf": "v5.4.3-dirty",
+  "board": "Waveshare ESP32-C6-LCD-1.47 / ESP32-C6FH4 rev0.1",
+  "resolution": [
+    172,
+    320
+  ],
+  "pins": {
+    "sclk": 7,
+    "mosi": 6,
+    "cs": 14,
+    "dc": 15,
+    "rst": 21,
+    "bl": 22
+  },
+  "brightness_percent": 50,
+  "console": "USB Serial/JTAG primary",
+  "files": {
+    "build-embedmark/bootloader/bootloader.bin": {
+      "bytes": 21888,
+      "sha256": "fd738782c5a45508dba8579faca350970871c7cc698725e198f8167c962ba244"
+    },
+    "build-embedmark/embedmark-validation.bin": {
+      "bytes": 477552,
+      "sha256": "3dddf02e8b0bfca432f191b92f2147e80dec366cadd878b0ec56aebbe0dfa4d3"
+    },
+    "build-embedmark/embedmark-validation.elf": {
+      "bytes": 6928392,
+      "sha256": "23050c1429036368ea24d74013315f4d0179f739f8f101cc3ea6fd891abda46a"
+    },
+    "build-embedmark/flasher_args.json": {
+      "bytes": 931,
+      "sha256": "76e140c67892ffd58c1b63a942932417ce7c7cde6460ed17cb74534d1db7f2fc"
+    },
+    "build-embedmark/partition_table/partition-table.bin": {
+      "bytes": 3072,
+      "sha256": "a95f3b66ea28999fe0a6dd577a166b16e49ccd1dbb8b6826f320d45c2987a8b5"
+    },
+    "interfaces/contador.html": {
+      "bytes": 704,
+      "sha256": "b16e2577fbbea4e38bc6eb870fb5d4053917186e1265f2feb8a149807633a370"
+    },
+    "interfaces/fonts/fontes.json": {
+      "bytes": 5141,
+      "sha256": "c9ac3f796587f1a64defed36b1ea915aae21f87a2e3169f2c5432a4bc602f154"
+    },
+    "main/Kconfig.projbuild": {
+      "bytes": 764,
+      "sha256": "4e8a482595deb8a623e8f7bd4b2d31b9a7c6a133da9f660a64336d1c016745b0"
+    },
+    "main/board/display.c": {
+      "bytes": 4492,
+      "sha256": "776981a5c32fd59165a35a1462537ea5340aa2acc0e98681ca9d786ff2decb76"
+    },
+    "main/board/display.h": {
+      "bytes": 842,
+      "sha256": "474fcea8ffef84517be473b928ddd40ba0795cb4c375cbc973fb80c2309207a8"
+    },
+    "main/generated/OFL.txt": {
+      "bytes": 4393,
+      "sha256": "96f89debae4be9de73811172a14858935a5c811c01db9e71e128c9960740abb1"
+    },
+    "main/generated/embedmark_sans_pt_14.c": {
+      "bytes": 61670,
+      "sha256": "2d783bdee61086c1f075acaad6e0680ca62b13f709e309ab53844b38028bf133"
+    },
+    "main/generated/embedmark_sans_pt_20.c": {
+      "bytes": 88269,
+      "sha256": "3d930858d6b6cddd993ac00d7a5e256c95f32dc3caa94bfee56fc7707e533399"
+    },
+    "main/generated/embedmark_sans_pt_24.c": {
+      "bytes": 111526,
+      "sha256": "ce4c34376291ef20d318317266eb2e70c18ba7f8eaeb7bebc7174c4063457be5"
+    },
+    "main/generated/fontes.json": {
+      "bytes": 5141,
+      "sha256": "c9ac3f796587f1a64defed36b1ea915aae21f87a2e3169f2c5432a4bc602f154"
+    },
+    "main/generated/source.json": {
+      "bytes": 154,
+      "sha256": "9062b75fa72fdb652d685fe464d8b3920770c3d6cbb7c8a7aa91e57dee906066"
+    },
+    "main/generated/sources.cmake": {
+      "bytes": 229,
+      "sha256": "e24cc47922ae9c8b0c7ada0321bb41ee5b5d3ba9e98f704b74e9fe8e0c64faba"
+    },
+    "main/generated/translation.json": {
+      "bytes": 12033,
+      "sha256": "5dbdc68da5cf68c222adc2f10ddee69117508ebc69fac5816d39a47fdbde78fe"
+    },
+    "main/generated/ui_generated.c": {
+      "bytes": 8449,
+      "sha256": "5ea962ef8e64ebc03c22ae583828e907693604bda8749560ee027523220de6bc"
+    },
+    "main/generated/ui_generated.h": {
+      "bytes": 658,
+      "sha256": "87a53d460bc33a71ac580031b45b092ffd1b3dfe27cb7f653be134906261a359"
+    },
+    "main/generated/validation_ui.h": {
+      "bytes": 46,
+      "sha256": "24056f6be6ab2667bc7c0022a303f9a0b5d000ccecce029c6430ba145fbf65a3"
+    },
+    "main/main.c": {
+      "bytes": 5281,
+      "sha256": "0265fa8c55692e333cb0a8b5a610db28b54569c8326df589f5373d8991da77c3"
+    },
+    "main/ui_controller.c": {
+      "bytes": 1175,
+      "sha256": "61b48da09f761dd7146a10e6141098b3f2d3d3811bcba098899f473bf8c823ba"
+    },
+    "sdkconfig": {
+      "bytes": 75468,
+      "sha256": "7000da6db7f8d40ec4faeb8c7bd9eb515b7f52dbd1cd5de7f83670b4048f6454"
+    },
+    "sdkconfig.defaults": {
+      "bytes": 1232,
+      "sha256": "3078189f9101a1b0b1cf83e3c5b226154a0e05953bfa8d1c7f36068724e119b7"
+    }
+  },
+  "firmware_version": "0.1.0",
+  "lvgl": "8.3.11",
+  "files_scope": "Hashes e tamanhos dos 25 artefatos locais do ensaio; estes arquivos não estão incluídos no conjunto documental público.",
+  "configuration": {
+    "profile": "TCC_PINS_WAVESHARE",
+    "spi": {
+      "host": "SPI2",
+      "configured_clock_hz": 12000000,
+      "mode": 0,
+      "miso": null,
+      "command_bits": 8,
+      "parameter_bits": 8,
+      "transaction_queue_depth": 10,
+      "dma": "auto"
+    },
+    "panel": {
+      "manufacturer_controller_name": "ST7789",
+      "local_driver_name": "Vernon_ST7789T",
+      "offset_x": 34,
+      "offset_y": 0,
+      "mirror_x": true,
+      "mirror_y": false,
+      "swap_xy": false,
+      "pixel_format": "RGB565",
+      "color_order": "BGR",
+      "lv_color_16_swap": 0,
+      "ramctrl_command": "0xB0",
+      "ramctrl_parameters": [
+        "0x00",
+        "0xE8"
+      ]
+    },
+    "lvgl": {
+      "version": "8.3.11",
+      "buffers": 2,
+      "buffer_pixels": 3440,
+      "tick_ms": 2
+    },
+    "backlight": {
+      "configured_percent": 50,
+      "clamp_percent": 50,
+      "pwm_configured_hz": 5000,
+      "pwm_resolution_bits": 13
+    },
+    "automatic_at_boot": false,
+    "primary_console": "USB Serial/JTAG",
+    "environment_note": "ESP-IDF v5.4.3-dirty; aviso local de submódulo OpenThread fora da revisão esperada. Ambiente global preservado, OpenThread não exercitado."
+  },
+  "recorded_flash_preparation": {
+    "backup_bytes": 4194304,
+    "backup_retained_locally": true,
+    "backup_comparison": "verify OK (digest matched)",
+    "written_components": [
+      "bootloader",
+      "partition table",
+      "application"
+    ],
+    "flash_write_hash_verification": "passed, according to local test report",
+    "raw_preparation_logs_published": false
+  },
+  "publication": {
+    "date": "2026-11-11",
+    "kind": "documentary_public_copy_of_existing_test",
+    "new_physical_test_performed": false,
+    "source_records": {
+      "docs/RESULTADO_DO_TESTE.txt": {
+        "bytes": 5803,
+        "sha256": "f2db209b6c1c4e408f57a9641138921742d5677efb97c69e3e3cb5fce25e8e54"
+      },
+      "docs/PLACA_WAVESHARE.md": {
+        "bytes": 6755,
+        "sha256": "55f061a3f24bd4258ac2360c39c04b524ce241472a9523c0239c262b4f62e6dd"
+      },
+      "docs/TESTE_SERIAL.md": {
+        "bytes": 4467,
+        "sha256": "2dada0ea461bc8eec1c91631c1ce230712f0f02b334484338e79c1a135d73ed6"
+      },
+      "evidencias/2026-11-11/manifest.json": {
+        "bytes": 4284,
+        "sha256": "a405424168b5627362a8506c4f36f073311ab5dca03f52eb0d8bf117ccb51d17"
+      },
+      "evidencias/2026-11-11/visual-validation.json": {
+        "bytes": 1781,
+        "sha256": "d4343918a9dc2705fc7afa605b43022e36b994832269bf8fa07cd3aa20a20eb0"
+      },
+      "evidencias/2026-11-11/results/run-01/result.json": {
+        "bytes": 35293,
+        "sha256": "d2c128883b2a031544c5882ce7b3ccae7feb7c3286e6dde021dff613d4f9c256"
+      },
+      "evidencias/2026-11-11/results/run-01/events.jsonl": {
+        "bytes": 90039,
+        "sha256": "f886aa04c5fb140c6e6657baf5b4268d5abfe73a19b0ea274029da33e368b031"
+      },
+      "evidencias/2026-11-11/results/run-01/serial-rx.log": {
+        "bytes": 10168,
+        "sha256": "8ecb0f7ab44cfb911f0c7445fba71cb5760e51db9144348e9593c43878a05e77"
+      }
+    },
+    "changes": [
+      {
+        "file": "result.json",
+        "change": "Substituição apenas do valor da porta por <PORTA_LOCAL_OMITIDA>; todas as 143 verificações e os demais campos preservados."
+      },
+      {
+        "file": "events.jsonl",
+        "change": "Substituição apenas do valor da porta no evento de abertura; 631 eventos, tempos e respostas preservados."
+      },
+      {
+        "file": "serial-rx.log",
+        "change": "Nenhuma; cópia byte a byte do log recebido."
+      },
+      {
+        "file": "manifest.json",
+        "change": "Caminho absoluto do projeto substituído pelo nome do laboratório; acrescentados resumo de configuração e proveniência pública; os 25 registros de arquivos locais foram preservados."
+      },
+      {
+        "file": "visual-validation.json",
+        "change": "Registro público derivado: confirmação e observações preservadas; indicação explícita da fotografia adicional publicada e dos originais que permanecem locais."
+      },
+      {
+        "file": "IMG_6242-preview.png",
+        "change": "Removidos metadados EXIF/XMP/texto originais; EXIF mínimo apenas com Orientation=6. Sem alteração dos pixels, dos bytes IDAT ou da orientação exibida.",
+        "removed_original_chunks": [
+          "eXIf",
+          "iTXt"
+        ],
+        "retained_minimal_exif": {
+          "Orientation": 6
+        },
+        "source": {
+          "bytes": 1984170,
+          "sha256": "ba9a807b57dcc4b0d91546925a76ca0fe4b499a1669934859eb0d8e0338e7b7c"
+        },
+        "public": {
+          "bytes": 1976798,
+          "sha256": "01a05c37e0d9975065b5b7513e875a8d5183bacd20dee08b1259c188e03e5d75"
+        },
+        "idat_sha256": "f6afc90798e4798252c3332f7476bc503ce560827c9a2a9f14d5fb2e472204ca",
+        "idat_identical": true,
+        "decoded_pixels_identical": true,
+        "displayed_pixels_identical": true,
+        "native_dimensions": [
+          1400,
+          1050
+        ],
+        "display_dimensions": [
+          1050,
+          1400
+        ]
+      }
+    ],
+    "omitted": [
+      "backup integral da flash",
+      "binários e ELF",
+      "originais HEIC e conversões PNG integrais",
+      "logs de compilação, gravação e backup com caminhos ou identificadores",
+      "arquivos de credenciais",
+      "código e evidências de outros protótipos",
+      "script e código-fonte completos do laboratório local"
+    ],
+    "checks": {
+      "recorded_local_artifacts_rechecked": 25,
+      "matching_local_artifact_hashes": 25,
+      "serial_assertions": 143,
+      "passed_assertions": 143,
+      "failed_assertions": 0,
+      "event_records": 631,
+      "result_assertions_equal_event_assertions": true,
+      "lifecycle_repeated_cycles": 50,
+      "pattern_generated_repeated_cycles": 10,
+      "duration_seconds_including_initial_window": 42.59,
+      "initial_window_nominal_seconds": 3.5,
+      "final_counter": 3,
+      "final_automatic": false
+    }
+  },
+  "published_files": {
+    "IMG_6242-preview.png": {
+      "bytes": 1976798,
+      "sha256": "01a05c37e0d9975065b5b7513e875a8d5183bacd20dee08b1259c188e03e5d75"
+    },
+    "README.md": {
+      "bytes": 4561,
+      "sha256": "cde6f6feb83115564051332275da676d75d6fc4ec6df52fc4314445f87123ebc"
+    },
+    "events.jsonl": {
+      "bytes": 90040,
+      "sha256": "7da499df7be8aad3f65482df5327439840547c81c2965c0235d99f91924b0a7b"
+    },
+    "result.json": {
+      "bytes": 35294,
+      "sha256": "174b675eee2c118e5b3fb1eb9a448c2103ee19c77fd7711107495813c0579f92"
+    },
+    "serial-rx.log": {
+      "bytes": 10168,
+      "sha256": "8ecb0f7ab44cfb911f0c7445fba71cb5760e51db9144348e9593c43878a05e77"
+    },
+    "visual-validation.json": {
+      "bytes": 2149,
+      "sha256": "87f57b87aca97845d1936d1f65be6b079d6c3dd11a7d29969471b3047c728e7d"
+    }
+  }
+}

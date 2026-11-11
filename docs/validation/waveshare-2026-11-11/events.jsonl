@@ -1,0 +1,631 @@
+{"elapsed_s": 0.0, "kind": "opened", "port": "<PORTA_LOCAL_OMITIDA>", "dtr": false, "rts": false}
+{"elapsed_s": 0.0, "kind": "step_start", "name": "initial_usb_warmup", "expected": "janela inicial de 3,5s; boot permitido"}
+{"elapsed_s": 0.0, "kind": "rx_line", "text": "ESP-ROM:esp32c6-20220919", "normalized": "ESP-ROM:esp32c6-20220919"}
+{"elapsed_s": 0.0, "kind": "rx_line", "text": "Build:Sep 19 2022", "normalized": "Build:Sep 19 2022"}
+{"elapsed_s": 0.001, "kind": "rx_line", "text": "rst:0x15 (USB_UART_HPSYS),boot:0x6f (SPI_FAST_FLASH_BOOT)", "normalized": "rst:0x15 (USB_UART_HPSYS),boot:0x6f (SPI_FAST_FLASH_BOOT)"}
+{"elapsed_s": 0.001, "kind": "rx_line", "text": "Saved PC:0x408051e4", "normalized": "Saved PC:0x408051e4"}
+{"elapsed_s": 0.001, "kind": "rx_line", "text": "SPIWP:0xee", "normalized": "SPIWP:0xee"}
+{"elapsed_s": 0.003, "kind": "rx_line", "text": "mode:DIO, clock div:2", "normalized": "mode:DIO, clock div:2"}
+{"elapsed_s": 0.005, "kind": "rx_line", "text": "load:0x40875730,len:0x16bc", "normalized": "load:0x40875730,len:0x16bc"}
+{"elapsed_s": 0.008, "kind": "rx_line", "text": "load:0x4086c110,len:0xdf4", "normalized": "load:0x4086c110,len:0xdf4"}
+{"elapsed_s": 0.01, "kind": "rx_line", "text": "load:0x4086e610,len:0x3078", "normalized": "load:0x4086e610,len:0x3078"}
+{"elapsed_s": 0.012, "kind": "rx_line", "text": "entry 0x4086c11a", "normalized": "entry 0x4086c11a"}
+{"elapsed_s": 0.023, "kind": "rx_line", "text": "I (23) boot: ESP-IDF v5.4.3-dirty 2nd stage bootloader", "normalized": "I (23) boot: ESP-IDF v5.4.3-dirty 2nd stage bootloader"}
+{"elapsed_s": 0.024, "kind": "rx_line", "text": "I (23) boot: compile time Nov 11 2026 13:45:12", "normalized": "I (23) boot: compile time Nov 11 2026 13:45:12"}
+{"elapsed_s": 0.024, "kind": "rx_line", "text": "I (23) boot: chip revision: v0.1", "normalized": "I (23) boot: chip revision: v0.1"}
+{"elapsed_s": 0.024, "kind": "rx_line", "text": "I (24) boot: efuse block revision: v0.3", "normalized": "I (24) boot: efuse block revision: v0.3"}
+{"elapsed_s": 0.024, "kind": "rx_line", "text": "I (24) boot.esp32c6: SPI Speed      : 80MHz", "normalized": "I (24) boot.esp32c6: SPI Speed      : 80MHz"}
+{"elapsed_s": 0.025, "kind": "rx_line", "text": "I (24) boot.esp32c6: SPI Mode       : DIO", "normalized": "I (24) boot.esp32c6: SPI Mode       : DIO"}
+{"elapsed_s": 0.025, "kind": "rx_line", "text": "I (24) boot.esp32c6: SPI Flash Size : 4MB", "normalized": "I (24) boot.esp32c6: SPI Flash Size : 4MB"}
+{"elapsed_s": 0.026, "kind": "rx_line", "text": "I (25) boot: Enabling RNG early entropy source...", "normalized": "I (25) boot: Enabling RNG early entropy source..."}
+{"elapsed_s": 0.026, "kind": "rx_line", "text": "I (25) boot: Partition Table:", "normalized": "I (25) boot: Partition Table:"}
+{"elapsed_s": 0.026, "kind": "rx_line", "text": "I (25) boot: ## Label            Usage          Type ST Offset   Length", "normalized": "I (25) boot: ## Label            Usage          Type ST Offset   Length"}
+{"elapsed_s": 0.026, "kind": "rx_line", "text": "I (25) boot:  0 nvs              WiFi data        01 02 00009000 00006000", "normalized": "I (25) boot:  0 nvs              WiFi data        01 02 00009000 00006000"}
+{"elapsed_s": 0.027, "kind": "rx_line", "text": "I (26) boot:  1 factory          factory app      00 00 00010000 00200000", "normalized": "I (26) boot:  1 factory          factory app      00 00 00010000 00200000"}
+{"elapsed_s": 0.028, "kind": "rx_line", "text": "I (27) boot:  2 flash_test       Unknown data     01 81 00210000 00084000", "normalized": "I (27) boot:  2 flash_test       Unknown data     01 81 00210000 00084000"}
+{"elapsed_s": 0.028, "kind": "rx_line", "text": "I (27) boot: End of partition table", "normalized": "I (27) boot: End of partition table"}
+{"elapsed_s": 0.028, "kind": "rx_line", "text": "I (27) esp_image: segment 0: paddr=00010020 vaddr=42050020 size=1a3f8h (107512) map", "normalized": "I (27) esp_image: segment 0: paddr=00010020 vaddr=42050020 size=1a3f8h (107512) map"}
+{"elapsed_s": 0.049, "kind": "rx_line", "text": "I (48) esp_image: segment 1: paddr=0002a420 vaddr=40800000 size=05bf8h ( 23544) load", "normalized": "I (48) esp_image: segment 1: paddr=0002a420 vaddr=40800000 size=05bf8h ( 23544) load"}
+{"elapsed_s": 0.055, "kind": "rx_line", "text": "I (54) esp_image: segment 2: paddr=00030020 vaddr=42000020 size=47fd4h (294868) map", "normalized": "I (54) esp_image: segment 2: paddr=00030020 vaddr=42000020 size=47fd4h (294868) map"}
+{"elapsed_s": 0.111, "kind": "rx_line", "text": "I (110) esp_image: segment 3: paddr=00077ffc vaddr=40805bf8 size=079f4h ( 31220) load", "normalized": "I (110) esp_image: segment 3: paddr=00077ffc vaddr=40805bf8 size=079f4h ( 31220) load"}
+{"elapsed_s": 0.118, "kind": "rx_line", "text": "I (117) esp_image: segment 4: paddr=0007f9f8 vaddr=4080d5f0 size=04f28h ( 20264) load", "normalized": "I (117) esp_image: segment 4: paddr=0007f9f8 vaddr=4080d5f0 size=04f28h ( 20264) load"}
+{"elapsed_s": 0.123, "kind": "rx_line", "text": "I (122) esp_image: segment 5: paddr=00084928 vaddr=50000000 size=0001ch (    28) load", "normalized": "I (122) esp_image: segment 5: paddr=00084928 vaddr=50000000 size=0001ch (    28) load"}
+{"elapsed_s": 0.127, "kind": "rx_line", "text": "I (126) boot: Loaded app from partition at offset 0x10000", "normalized": "I (126) boot: Loaded app from partition at offset 0x10000"}
+{"elapsed_s": 0.128, "kind": "rx_line", "text": "I (127) boot: Disabling RNG early entropy source...", "normalized": "I (127) boot: Disabling RNG early entropy source..."}
+{"elapsed_s": 0.129, "kind": "rx_line", "text": "I (128) cpu_start: Unicore app", "normalized": "I (128) cpu_start: Unicore app"}
+{"elapsed_s": 0.137, "kind": "rx_line", "text": "I (136) cpu_start: Pro cpu start user code", "normalized": "I (136) cpu_start: Pro cpu start user code"}
+{"elapsed_s": 0.137, "kind": "rx_line", "text": "I (137) cpu_start: cpu freq: 160000000 Hz", "normalized": "I (137) cpu_start: cpu freq: 160000000 Hz"}
+{"elapsed_s": 0.138, "kind": "rx_line", "text": "I (137) app_init: Application information:", "normalized": "I (137) app_init: Application information:"}
+{"elapsed_s": 0.138, "kind": "rx_line", "text": "I (137) app_init: Project name:     embedmark-validation", "normalized": "I (137) app_init: Project name:     embedmark-validation"}
+{"elapsed_s": 0.138, "kind": "rx_line", "text": "I (137) app_init: App version:      0.1.0", "normalized": "I (137) app_init: App version:      0.1.0"}
+{"elapsed_s": 0.138, "kind": "rx_line", "text": "I (137) app_init: Compile time:     Nov 11 2026 13:45:03", "normalized": "I (137) app_init: Compile time:     Nov 11 2026 13:45:03"}
+{"elapsed_s": 0.138, "kind": "rx_line", "text": "I (138) app_init: ELF file SHA256:  23050c142...", "normalized": "I (138) app_init: ELF file SHA256:  23050c142..."}
+{"elapsed_s": 0.139, "kind": "rx_line", "text": "I (138) app_init: ESP-IDF:          v5.4.3-dirty", "normalized": "I (138) app_init: ESP-IDF:          v5.4.3-dirty"}
+{"elapsed_s": 0.139, "kind": "rx_line", "text": "I (138) efuse_init: Min chip rev:     v0.0", "normalized": "I (138) efuse_init: Min chip rev:     v0.0"}
+{"elapsed_s": 0.139, "kind": "rx_line", "text": "I (138) efuse_init: Max chip rev:     v0.99 ", "normalized": "I (138) efuse_init: Max chip rev:     v0.99 "}
+{"elapsed_s": 0.139, "kind": "rx_line", "text": "I (139) efuse_init: Chip rev:         v0.1", "normalized": "I (139) efuse_init: Chip rev:         v0.1"}
+{"elapsed_s": 0.14, "kind": "rx_line", "text": "I (139) heap_init: Initializing. RAM available for dynamic allocation:", "normalized": "I (139) heap_init: Initializing. RAM available for dynamic allocation:"}
+{"elapsed_s": 0.14, "kind": "rx_line", "text": "I (139) heap_init: At 408239D0 len 00058C40 (355 KiB): RAM", "normalized": "I (139) heap_init: At 408239D0 len 00058C40 (355 KiB): RAM"}
+{"elapsed_s": 0.14, "kind": "rx_line", "text": "I (139) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM", "normalized": "I (139) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM"}
+{"elapsed_s": 0.14, "kind": "rx_line", "text": "I (140) heap_init: At 5000001C len 00003FCC (15 KiB): RTCRAM", "normalized": "I (140) heap_init: At 5000001C len 00003FCC (15 KiB): RTCRAM"}
+{"elapsed_s": 0.141, "kind": "rx_line", "text": "I (141) spi_flash: detected chip: generic", "normalized": "I (141) spi_flash: detected chip: generic"}
+{"elapsed_s": 0.141, "kind": "rx_line", "text": "I (141) spi_flash: flash io: dio", "normalized": "I (141) spi_flash: flash io: dio"}
+{"elapsed_s": 0.142, "kind": "rx_line", "text": "I (141) sleep_gpio: Configure to isolate all GPIO pins in sleep state", "normalized": "I (141) sleep_gpio: Configure to isolate all GPIO pins in sleep state"}
+{"elapsed_s": 0.142, "kind": "rx_line", "text": "I (142) sleep_gpio: Enable automatic switching of GPIO sleep configuration", "normalized": "I (142) sleep_gpio: Enable automatic switching of GPIO sleep configuration"}
+{"elapsed_s": 0.143, "kind": "rx_line", "text": "I (142) coexist: coex firmware version: b0bcc39", "normalized": "I (142) coexist: coex firmware version: b0bcc39"}
+{"elapsed_s": 0.143, "kind": "rx_line", "text": "I (142) coexist: coexist rom version 5b8dcfa", "normalized": "I (142) coexist: coexist rom version 5b8dcfa"}
+{"elapsed_s": 0.143, "kind": "rx_line", "text": "I (143) main_task: Started on CPU0", "normalized": "I (143) main_task: Started on CPU0"}
+{"elapsed_s": 0.144, "kind": "rx_line", "text": "I (143) main_task: Calling app_main()", "normalized": "I (143) main_task: Calling app_main()"}
+{"elapsed_s": 0.144, "kind": "rx_line", "text": "I (143) TCC_DISPLAY: Waveshare ESP32-C6-LCD-1.47: CLK=7 MOSI=6 CS=14 DC=15 RST=21 BL=22", "normalized": "I (143) TCC_DISPLAY: Waveshare ESP32-C6-LCD-1.47: CLK=7 MOSI=6 CS=14 DC=15 RST=21 BL=22"}
+{"elapsed_s": 0.144, "kind": "rx_line", "text": "I (143) TCC_DISPLAY: ST7789T 172x320, SPI 12 MHz, offset 34,0", "normalized": "I (143) TCC_DISPLAY: ST7789T 172x320, SPI 12 MHz, offset 34,0"}
+{"elapsed_s": 0.146, "kind": "rx_line", "text": "I (143) gpio: GPIO[21]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 ", "normalized": "I (143) gpio: GPIO[21]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 "}
+{"elapsed_s": 0.282, "kind": "rx_line", "text": "I (273) EMBEDMARK_VALIDATION: Tela gerada: OK", "normalized": "I (273) EMBEDMARK_VALIDATION: Tela gerada: OK"}
+{"elapsed_s": 0.282, "kind": "rx_line", "text": "", "normalized": ""}
+{"elapsed_s": 0.282, "kind": "rx_line", "text": "EmbedMark: g=tela gerada | p=padrao de cores | c=clique | r=recriar | a=automatico | h=ajuda", "normalized": "EmbedMark: g=tela gerada | p=padrao de cores | c=clique | r=recriar | a=automatico | h=ajuda"}
+{"elapsed_s": 0.283, "kind": "rx_line", "text": "O exemplo nao depende de touch. Comandos entram pela console principal configurada.", "normalized": "O exemplo nao depende de touch. Comandos entram pela console principal configurada."}
+{"elapsed_s": 0.283, "kind": "rx_line", "text": "I (273) EMBEDMARK_VALIDATION: Padrao de cores por 3 segundos; depois, interface gerada.", "normalized": "I (273) EMBEDMARK_VALIDATION: Padrao de cores por 3 segundos; depois, interface gerada."}
+{"elapsed_s": 3.284, "kind": "rx_line", "text": "I (3283) EMBEDMARK_VALIDATION: Tela gerada: OK", "normalized": "I (3283) EMBEDMARK_VALIDATION: Tela gerada: OK"}
+{"elapsed_s": 3.599, "kind": "assertion", "name": "initial_usb_warmup", "passed": true, "duration_s": 3.599, "observed": null, "expected": "janela inicial de 3,5s; boot permitido"}
+{"elapsed_s": 3.6, "kind": "step_start", "name": "help", "command": "h", "expected": "EmbedMark: g=tela gerada"}
+{"elapsed_s": 3.807, "kind": "tx", "command": "h"}
+{"elapsed_s": 3.814, "kind": "rx_line", "text": "", "normalized": ""}
+{"elapsed_s": 3.814, "kind": "rx_line", "text": "EmbedMark: g=tela gerada | p=padrao de cores | c=clique | r=recriar | a=automatico | h=ajuda", "normalized": "EmbedMark: g=tela gerada | p=padrao de cores | c=clique | r=recriar | a=automatico | h=ajuda"}
+{"elapsed_s": 3.814, "kind": "assertion", "name": "help", "passed": true, "duration_s": 0.214, "observed": "EmbedMark: g=tela gerada | p=padrao de cores | c=clique | r=recriar | a=automatico | h=ajuda", "command": "h", "expected": "EmbedMark: g=tela gerada"}
+{"elapsed_s": 3.814, "kind": "step_start", "name": "initial_recreate", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 3.814, "kind": "rx_line", "text": "O exemplo nao depende de touch. Comandos entram pela console principal configurada.", "normalized": "O exemplo nao depende de touch. Comandos entram pela console principal configurada."}
+{"elapsed_s": 4.02, "kind": "tx", "command": "r"}
+{"elapsed_s": 4.041, "kind": "rx_line", "text": "I (4033) EMBEDMARK_VALIDATION: Tela gerada: OK", "normalized": "I (4033) EMBEDMARK_VALIDATION: Tela gerada: OK"}
+{"elapsed_s": 4.041, "kind": "assertion", "name": "initial_recreate", "passed": true, "duration_s": 0.228, "observed": "I (4033) EMBEDMARK_VALIDATION: Tela gerada: OK", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 4.041, "kind": "step_start", "name": "manual_click_1", "command": "c", "expected_count": 1}
+{"elapsed_s": 4.247, "kind": "tx", "command": "c"}
+{"elapsed_s": 4.254, "kind": "rx_line", "text": "I (4253) EMBEDMARK_VALIDATION: Ações: 1", "normalized": "I (4253) EMBEDMARK_VALIDATION: Ações: 1"}
+{"elapsed_s": 4.255, "kind": "assertion", "name": "manual_click_1", "passed": true, "duration_s": 0.213, "observed": {"count": 1, "line": "I (4253) EMBEDMARK_VALIDATION: Ações: 1"}, "command": "c", "expected_count": 1}
+{"elapsed_s": 4.255, "kind": "step_start", "name": "manual_click_2", "command": "c", "expected_count": 2}
+{"elapsed_s": 4.463, "kind": "tx", "command": "c"}
+{"elapsed_s": 4.474, "kind": "rx_line", "text": "I (4473) EMBEDMARK_VALIDATION: Ações: 2", "normalized": "I (4473) EMBEDMARK_VALIDATION: Ações: 2"}
+{"elapsed_s": 4.474, "kind": "assertion", "name": "manual_click_2", "passed": true, "duration_s": 0.22, "observed": {"count": 2, "line": "I (4473) EMBEDMARK_VALIDATION: Ações: 2"}, "command": "c", "expected_count": 2}
+{"elapsed_s": 4.474, "kind": "step_start", "name": "manual_click_3", "command": "c", "expected_count": 3}
+{"elapsed_s": 4.681, "kind": "tx", "command": "c"}
+{"elapsed_s": 4.694, "kind": "rx_line", "text": "I (4693) EMBEDMARK_VALIDATION: Ações: 3", "normalized": "I (4693) EMBEDMARK_VALIDATION: Ações: 3"}
+{"elapsed_s": 4.694, "kind": "assertion", "name": "manual_click_3", "passed": true, "duration_s": 0.22, "observed": {"count": 3, "line": "I (4693) EMBEDMARK_VALIDATION: Ações: 3"}, "command": "c", "expected_count": 3}
+{"elapsed_s": 4.694, "kind": "step_start", "name": "pattern", "command": "p", "expected": "Padrao de cores ativo"}
+{"elapsed_s": 4.905, "kind": "tx", "command": "p"}
+{"elapsed_s": 4.914, "kind": "rx_line", "text": "I (4913) EMBEDMARK_VALIDATION: Padrao de cores ativo", "normalized": "I (4913) EMBEDMARK_VALIDATION: Padrao de cores ativo"}
+{"elapsed_s": 4.914, "kind": "assertion", "name": "pattern", "passed": true, "duration_s": 0.22, "observed": "I (4913) EMBEDMARK_VALIDATION: Padrao de cores ativo", "command": "p", "expected": "Padrao de cores ativo"}
+{"elapsed_s": 4.914, "kind": "step_start", "name": "generated_preserves_state", "command": "g", "expected": "Tela gerada: OK"}
+{"elapsed_s": 5.116, "kind": "tx", "command": "g"}
+{"elapsed_s": 5.134, "kind": "rx_line", "text": "I (5133) EMBEDMARK_VALIDATION: Tela gerada: OK", "normalized": "I (5133) EMBEDMARK_VALIDATION: Tela gerada: OK"}
+{"elapsed_s": 5.134, "kind": "assertion", "name": "generated_preserves_state", "passed": true, "duration_s": 0.22, "observed": "I (5133) EMBEDMARK_VALIDATION: Tela gerada: OK", "command": "g", "expected": "Tela gerada: OK"}
+{"elapsed_s": 5.134, "kind": "step_start", "name": "click_after_return", "command": "c", "expected_count": 4}
+{"elapsed_s": 5.345, "kind": "tx", "command": "c"}
+{"elapsed_s": 5.354, "kind": "rx_line", "text": "I (5353) EMBEDMARK_VALIDATION: Ações: 4", "normalized": "I (5353) EMBEDMARK_VALIDATION: Ações: 4"}
+{"elapsed_s": 5.354, "kind": "assertion", "name": "click_after_return", "passed": true, "duration_s": 0.22, "observed": {"count": 4, "line": "I (5353) EMBEDMARK_VALIDATION: Ações: 4"}, "command": "c", "expected_count": 4}
+{"elapsed_s": 5.354, "kind": "step_start", "name": "reset_counter", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 5.561, "kind": "tx", "command": "r"}
+{"elapsed_s": 5.581, "kind": "rx_line", "text": "I (5573) EMBEDMARK_VALIDATION: Tela gerada: OK", "normalized": "I (5573) EMBEDMARK_VALIDATION: Tela gerada: OK"}
+{"elapsed_s": 5.581, "kind": "assertion", "name": "reset_counter", "passed": true, "duration_s": 0.227, "observed": "I (5573) EMBEDMARK_VALIDATION: Tela gerada: OK", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 5.581, "kind": "step_start", "name": "click_after_reset", "command": "c", "expected_count": 1}
+{"elapsed_s": 5.791, "kind": "tx", "command": "c"}
+{"elapsed_s": 5.794, "kind": "rx_line", "text": "I (5793) EMBEDMARK_VALIDATION: Ações: 1", "normalized": "I (5793) EMBEDMARK_VALIDATION: Ações: 1"}
+{"elapsed_s": 5.794, "kind": "assertion", "name": "click_after_reset", "passed": true, "duration_s": 0.213, "observed": {"count": 1, "line": "I (5793) EMBEDMARK_VALIDATION: Ações: 1"}, "command": "c", "expected_count": 1}
+{"elapsed_s": 5.794, "kind": "step_start", "name": "automatic_on", "command": "a", "expected_automatic": true}
+{"elapsed_s": 6.0, "kind": "tx", "command": "a"}
+{"elapsed_s": 6.014, "kind": "rx_line", "text": "I (6013) EMBEDMARK_VALIDATION: Automatico: ON", "normalized": "I (6013) EMBEDMARK_VALIDATION: Automatico: ON"}
+{"elapsed_s": 6.014, "kind": "assertion", "name": "automatic_on", "passed": true, "duration_s": 0.22, "observed": {"automatic": true, "line": "I (6013) EMBEDMARK_VALIDATION: Automatico: ON"}, "command": "a", "expected_automatic": true}
+{"elapsed_s": 6.014, "kind": "step_start", "name": "automatic_increment_1", "expected_count": 2}
+{"elapsed_s": 6.285, "kind": "rx_line", "text": "I (6283) EMBEDMARK_VALIDATION: Ações: 2", "normalized": "I (6283) EMBEDMARK_VALIDATION: Ações: 2"}
+{"elapsed_s": 6.285, "kind": "assertion", "name": "automatic_increment_1", "passed": true, "duration_s": 0.271, "observed": {"count": 2, "line": "I (6283) EMBEDMARK_VALIDATION: Ações: 2"}, "expected_count": 2}
+{"elapsed_s": 6.285, "kind": "step_start", "name": "automatic_increment_2", "expected_count": 3}
+{"elapsed_s": 8.284, "kind": "rx_line", "text": "I (8283) EMBEDMARK_VALIDATION: Ações: 3", "normalized": "I (8283) EMBEDMARK_VALIDATION: Ações: 3"}
+{"elapsed_s": 8.285, "kind": "assertion", "name": "automatic_increment_2", "passed": true, "duration_s": 2.0, "observed": {"count": 3, "line": "I (8283) EMBEDMARK_VALIDATION: Ações: 3"}, "expected_count": 3}
+{"elapsed_s": 8.285, "kind": "step_start", "name": "automatic_increment_3", "expected_count": 4}
+{"elapsed_s": 10.284, "kind": "rx_line", "text": "I (10283) EMBEDMARK_VALIDATION: Ações: 4", "normalized": "I (10283) EMBEDMARK_VALIDATION: Ações: 4"}
+{"elapsed_s": 10.284, "kind": "assertion", "name": "automatic_increment_3", "passed": true, "duration_s": 2.0, "observed": {"count": 4, "line": "I (10283) EMBEDMARK_VALIDATION: Ações: 4"}, "expected_count": 4}
+{"elapsed_s": 10.284, "kind": "step_start", "name": "automatic_off", "command": "a", "expected_automatic": false}
+{"elapsed_s": 10.491, "kind": "tx", "command": "a"}
+{"elapsed_s": 10.494, "kind": "rx_line", "text": "I (10493) EMBEDMARK_VALIDATION: Automatico: OFF", "normalized": "I (10493) EMBEDMARK_VALIDATION: Automatico: OFF"}
+{"elapsed_s": 10.494, "kind": "assertion", "name": "automatic_off", "passed": true, "duration_s": 0.209, "observed": {"automatic": false, "line": "I (10493) EMBEDMARK_VALIDATION: Automatico: OFF"}, "command": "a", "expected_automatic": false}
+{"elapsed_s": 10.494, "kind": "step_start", "name": "automatic_stays_off", "expected": "sem incrementos por 2,2s"}
+{"elapsed_s": 12.785, "kind": "assertion", "name": "automatic_stays_off", "passed": true, "duration_s": 2.291, "observed": null, "expected": "sem incrementos por 2,2s"}
+{"elapsed_s": 12.785, "kind": "step_start", "name": "lifecycle_01_recreate", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 12.995, "kind": "tx", "command": "r"}
+{"elapsed_s": 13.021, "kind": "rx_line", "text": "I (13013) EMBEDMARK_VALIDATION: Tela gerada: OK", "normalized": "I (13013) EMBEDMARK_VALIDATION: Tela gerada: OK"}
+{"elapsed_s": 13.021, "kind": "assertion", "name": "lifecycle_01_recreate", "passed": true, "duration_s": 0.236, "observed": "I (13013) EMBEDMARK_VALIDATION: Tela gerada: OK", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 13.021, "kind": "step_start", "name": "lifecycle_01_click", "command": "c", "expected_count": 1}
+{"elapsed_s": 13.23, "kind": "tx", "command": "c"}
+{"elapsed_s": 13.234, "kind": "rx_line", "text": "I (13233) EMBEDMARK_VALIDATION: Ações: 1", "normalized": "I (13233) EMBEDMARK_VALIDATION: Ações: 1"}
+{"elapsed_s": 13.234, "kind": "assertion", "name": "lifecycle_01_click", "passed": true, "duration_s": 0.213, "observed": {"count": 1, "line": "I (13233) EMBEDMARK_VALIDATION: Ações: 1"}, "command": "c", "expected_count": 1}
+{"elapsed_s": 13.234, "kind": "step_start", "name": "lifecycle_02_recreate", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 13.44, "kind": "tx", "command": "r"}
+{"elapsed_s": 13.461, "kind": "rx_line", "text": "I (13453) EMBEDMARK_VALIDATION: Tela gerada: OK", "normalized": "I (13453) EMBEDMARK_VALIDATION: Tela gerada: OK"}
+{"elapsed_s": 13.461, "kind": "assertion", "name": "lifecycle_02_recreate", "passed": true, "duration_s": 0.227, "observed": "I (13453) EMBEDMARK_VALIDATION: Tela gerada: OK", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 13.461, "kind": "step_start", "name": "lifecycle_02_click", "command": "c", "expected_count": 1}
+{"elapsed_s": 13.667, "kind": "tx", "command": "c"}
+{"elapsed_s": 13.674, "kind": "rx_line", "text": "I (13673) EMBEDMARK_VALIDATION: Ações: 1", "normalized": "I (13673) EMBEDMARK_VALIDATION: Ações: 1"}
+{"elapsed_s": 13.675, "kind": "assertion", "name": "lifecycle_02_click", "passed": true, "duration_s": 0.213, "observed": {"count": 1, "line": "I (13673) EMBEDMARK_VALIDATION: Ações: 1"}, "command": "c", "expected_count": 1}
+{"elapsed_s": 13.675, "kind": "step_start", "name": "lifecycle_03_recreate", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 13.884, "kind": "tx", "command": "r"}
+{"elapsed_s": 13.901, "kind": "rx_line", "text": "I (13893) EMBEDMARK_VALIDATION: Tela gerada: OK", "normalized": "I (13893) EMBEDMARK_VALIDATION: Tela gerada: OK"}
+{"elapsed_s": 13.901, "kind": "assertion", "name": "lifecycle_03_recreate", "passed": true, "duration_s": 0.227, "observed": "I (13893) EMBEDMARK_VALIDATION: Tela gerada: OK", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 13.901, "kind": "step_start", "name": "lifecycle_03_click", "command": "c", "expected_count": 1}
+{"elapsed_s": 14.11, "kind": "tx", "command": "c"}
+{"elapsed_s": 14.114, "kind": "rx_line", "text": "I (14113) EMBEDMARK_VALIDATION: Ações: 1", "normalized": "I (14113) EMBEDMARK_VALIDATION: Ações: 1"}
+{"elapsed_s": 14.115, "kind": "assertion", "name": "lifecycle_03_click", "passed": true, "duration_s": 0.213, "observed": {"count": 1, "line": "I (14113) EMBEDMARK_VALIDATION: Ações: 1"}, "command": "c", "expected_count": 1}
+{"elapsed_s": 14.115, "kind": "step_start", "name": "lifecycle_04_recreate", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 14.319, "kind": "tx", "command": "r"}
+{"elapsed_s": 14.341, "kind": "rx_line", "text": "I (14333) EMBEDMARK_VALIDATION: Tela gerada: OK", "normalized": "I (14333) EMBEDMARK_VALIDATION: Tela gerada: OK"}
+{"elapsed_s": 14.341, "kind": "assertion", "name": "lifecycle_04_recreate", "passed": true, "duration_s": 0.227, "observed": "I (14333) EMBEDMARK_VALIDATION: Tela gerada: OK", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 14.341, "kind": "step_start", "name": "lifecycle_04_click", "command": "c", "expected_count": 1}
+{"elapsed_s": 14.55, "kind": "tx", "command": "c"}
+{"elapsed_s": 14.554, "kind": "rx_line", "text": "I (14553) EMBEDMARK_VALIDATION: Ações: 1", "normalized": "I (14553) EMBEDMARK_VALIDATION: Ações: 1"}
+{"elapsed_s": 14.554, "kind": "assertion", "name": "lifecycle_04_click", "passed": true, "duration_s": 0.213, "observed": {"count": 1, "line": "I (14553) EMBEDMARK_VALIDATION: Ações: 1"}, "command": "c", "expected_count": 1}
+{"elapsed_s": 14.554, "kind": "step_start", "name": "lifecycle_05_recreate", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 14.759, "kind": "tx", "command": "r"}
+{"elapsed_s": 14.781, "kind": "rx_line", "text": "I (14773) EMBEDMARK_VALIDATION: Tela gerada: OK", "normalized": "I (14773) EMBEDMARK_VALIDATION: Tela gerada: OK"}
+{"elapsed_s": 14.781, "kind": "assertion", "name": "lifecycle_05_recreate", "passed": true, "duration_s": 0.227, "observed": "I (14773) EMBEDMARK_VALIDATION: Tela gerada: OK", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 14.781, "kind": "step_start", "name": "lifecycle_05_click", "command": "c", "expected_count": 1}
+{"elapsed_s": 14.987, "kind": "tx", "command": "c"}
+{"elapsed_s": 14.994, "kind": "rx_line", "text": "I (14993) EMBEDMARK_VALIDATION: Ações: 1", "normalized": "I (14993) EMBEDMARK_VALIDATION: Ações: 1"}
+{"elapsed_s": 14.995, "kind": "assertion", "name": "lifecycle_05_click", "passed": true, "duration_s": 0.213, "observed": {"count": 1, "line": "I (14993) EMBEDMARK_VALIDATION: Ações: 1"}, "command": "c", "expected_count": 1}
+{"elapsed_s": 14.995, "kind": "step_start", "name": "lifecycle_06_recreate", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 15.203, "kind": "tx", "command": "r"}
+{"elapsed_s": 15.227, "kind": "rx_line", "text": "I (15213) EMBEDMARK_VALIDATION: Tela gerada: OK", "normalized": "I (15213) EMBEDMARK_VALIDATION: Tela gerada: OK"}
+{"elapsed_s": 15.227, "kind": "assertion", "name": "lifecycle_06_recreate", "passed": true, "duration_s": 0.232, "observed": "I (15213) EMBEDMARK_VALIDATION: Tela gerada: OK", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 15.227, "kind": "step_start", "name": "lifecycle_06_click", "command": "c", "expected_count": 1}
+{"elapsed_s": 15.433, "kind": "tx", "command": "c"}
+{"elapsed_s": 15.434, "kind": "rx_line", "text": "I (15433) EMBEDMARK_VALIDATION: Ações: 1", "normalized": "I (15433) EMBEDMARK_VALIDATION: Ações: 1"}
+{"elapsed_s": 15.434, "kind": "assertion", "name": "lifecycle_06_click", "passed": true, "duration_s": 0.207, "observed": {"count": 1, "line": "I (15433) EMBEDMARK_VALIDATION: Ações: 1"}, "command": "c", "expected_count": 1}
+{"elapsed_s": 15.434, "kind": "step_start", "name": "lifecycle_07_recreate", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 15.644, "kind": "tx", "command": "r"}
+{"elapsed_s": 15.661, "kind": "rx_line", "text": "I (15653) EMBEDMARK_VALIDATION: Tela gerada: OK", "normalized": "I (15653) EMBEDMARK_VALIDATION: Tela gerada: OK"}
+{"elapsed_s": 15.661, "kind": "assertion", "name": "lifecycle_07_recreate", "passed": true, "duration_s": 0.227, "observed": "I (15653) EMBEDMARK_VALIDATION: Tela gerada: OK", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 15.661, "kind": "step_start", "name": "lifecycle_07_click", "command": "c", "expected_count": 1}
+{"elapsed_s": 15.866, "kind": "tx", "command": "c"}
+{"elapsed_s": 15.875, "kind": "rx_line", "text": "I (15873) EMBEDMARK_VALIDATION: Ações: 1", "normalized": "I (15873) EMBEDMARK_VALIDATION: Ações: 1"}
+{"elapsed_s": 15.875, "kind": "assertion", "name": "lifecycle_07_click", "passed": true, "duration_s": 0.214, "observed": {"count": 1, "line": "I (15873) EMBEDMARK_VALIDATION: Ações: 1"}, "command": "c", "expected_count": 1}
+{"elapsed_s": 15.875, "kind": "step_start", "name": "lifecycle_08_recreate", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 16.085, "kind": "tx", "command": "r"}
+{"elapsed_s": 16.101, "kind": "rx_line", "text": "I (16093) EMBEDMARK_VALIDATION: Tela gerada: OK", "normalized": "I (16093) EMBEDMARK_VALIDATION: Tela gerada: OK"}
+{"elapsed_s": 16.101, "kind": "assertion", "name": "lifecycle_08_recreate", "passed": true, "duration_s": 0.226, "observed": "I (16093) EMBEDMARK_VALIDATION: Tela gerada: OK", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 16.101, "kind": "step_start", "name": "lifecycle_08_click", "command": "c", "expected_count": 1}
+{"elapsed_s": 16.308, "kind": "tx", "command": "c"}
+{"elapsed_s": 16.314, "kind": "rx_line", "text": "I (16313) EMBEDMARK_VALIDATION: Ações: 1", "normalized": "I (16313) EMBEDMARK_VALIDATION: Ações: 1"}
+{"elapsed_s": 16.315, "kind": "assertion", "name": "lifecycle_08_click", "passed": true, "duration_s": 0.213, "observed": {"count": 1, "line": "I (16313) EMBEDMARK_VALIDATION: Ações: 1"}, "command": "c", "expected_count": 1}
+{"elapsed_s": 16.315, "kind": "step_start", "name": "lifecycle_09_recreate", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 16.524, "kind": "tx", "command": "r"}
+{"elapsed_s": 16.541, "kind": "rx_line", "text": "I (16533) EMBEDMARK_VALIDATION: Tela gerada: OK", "normalized": "I (16533) EMBEDMARK_VALIDATION: Tela gerada: OK"}
+{"elapsed_s": 16.542, "kind": "assertion", "name": "lifecycle_09_recreate", "passed": true, "duration_s": 0.227, "observed": "I (16533) EMBEDMARK_VALIDATION: Tela gerada: OK", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 16.542, "kind": "step_start", "name": "lifecycle_09_click", "command": "c", "expected_count": 1}
+{"elapsed_s": 16.748, "kind": "tx", "command": "c"}
+{"elapsed_s": 16.754, "kind": "rx_line", "text": "I (16753) EMBEDMARK_VALIDATION: Ações: 1", "normalized": "I (16753) EMBEDMARK_VALIDATION: Ações: 1"}
+{"elapsed_s": 16.755, "kind": "assertion", "name": "lifecycle_09_click", "passed": true, "duration_s": 0.213, "observed": {"count": 1, "line": "I (16753) EMBEDMARK_VALIDATION: Ações: 1"}, "command": "c", "expected_count": 1}
+{"elapsed_s": 16.755, "kind": "step_start", "name": "lifecycle_10_recreate", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 16.963, "kind": "tx", "command": "r"}
+{"elapsed_s": 16.981, "kind": "rx_line", "text": "I (16973) EMBEDMARK_VALIDATION: Tela gerada: OK", "normalized": "I (16973) EMBEDMARK_VALIDATION: Tela gerada: OK"}
+{"elapsed_s": 16.981, "kind": "assertion", "name": "lifecycle_10_recreate", "passed": true, "duration_s": 0.227, "observed": "I (16973) EMBEDMARK_VALIDATION: Tela gerada: OK", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 16.981, "kind": "step_start", "name": "lifecycle_10_click", "command": "c", "expected_count": 1}
+{"elapsed_s": 17.187, "kind": "tx", "command": "c"}
+{"elapsed_s": 17.194, "kind": "rx_line", "text": "I (17193) EMBEDMARK_VALIDATION: Ações: 1", "normalized": "I (17193) EMBEDMARK_VALIDATION: Ações: 1"}
+{"elapsed_s": 17.195, "kind": "assertion", "name": "lifecycle_10_click", "passed": true, "duration_s": 0.213, "observed": {"count": 1, "line": "I (17193) EMBEDMARK_VALIDATION: Ações: 1"}, "command": "c", "expected_count": 1}
+{"elapsed_s": 17.195, "kind": "step_start", "name": "lifecycle_11_recreate", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 17.405, "kind": "tx", "command": "r"}
+{"elapsed_s": 17.421, "kind": "rx_line", "text": "I (17413) EMBEDMARK_VALIDATION: Tela gerada: OK", "normalized": "I (17413) EMBEDMARK_VALIDATION: Tela gerada: OK"}
+{"elapsed_s": 17.421, "kind": "assertion", "name": "lifecycle_11_recreate", "passed": true, "duration_s": 0.227, "observed": "I (17413) EMBEDMARK_VALIDATION: Tela gerada: OK", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 17.421, "kind": "step_start", "name": "lifecycle_11_click", "command": "c", "expected_count": 1}
+{"elapsed_s": 17.632, "kind": "tx", "command": "c"}
+{"elapsed_s": 17.634, "kind": "rx_line", "text": "I (17633) EMBEDMARK_VALIDATION: Ações: 1", "normalized": "I (17633) EMBEDMARK_VALIDATION: Ações: 1"}
+{"elapsed_s": 17.634, "kind": "assertion", "name": "lifecycle_11_click", "passed": true, "duration_s": 0.213, "observed": {"count": 1, "line": "I (17633) EMBEDMARK_VALIDATION: Ações: 1"}, "command": "c", "expected_count": 1}
+{"elapsed_s": 17.634, "kind": "step_start", "name": "lifecycle_12_recreate", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 17.84, "kind": "tx", "command": "r"}
+{"elapsed_s": 17.861, "kind": "rx_line", "text": "I (17853) EMBEDMARK_VALIDATION: Tela gerada: OK", "normalized": "I (17853) EMBEDMARK_VALIDATION: Tela gerada: OK"}
+{"elapsed_s": 17.861, "kind": "assertion", "name": "lifecycle_12_recreate", "passed": true, "duration_s": 0.227, "observed": "I (17853) EMBEDMARK_VALIDATION: Tela gerada: OK", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 17.861, "kind": "step_start", "name": "lifecycle_12_click", "command": "c", "expected_count": 1}
+{"elapsed_s": 18.071, "kind": "tx", "command": "c"}
+{"elapsed_s": 18.074, "kind": "rx_line", "text": "I (18073) EMBEDMARK_VALIDATION: Ações: 1", "normalized": "I (18073) EMBEDMARK_VALIDATION: Ações: 1"}
+{"elapsed_s": 18.074, "kind": "assertion", "name": "lifecycle_12_click", "passed": true, "duration_s": 0.213, "observed": {"count": 1, "line": "I (18073) EMBEDMARK_VALIDATION: Ações: 1"}, "command": "c", "expected_count": 1}
+{"elapsed_s": 18.075, "kind": "step_start", "name": "lifecycle_13_recreate", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 18.279, "kind": "tx", "command": "r"}
+{"elapsed_s": 18.301, "kind": "rx_line", "text": "I (18293) EMBEDMARK_VALIDATION: Tela gerada: OK", "normalized": "I (18293) EMBEDMARK_VALIDATION: Tela gerada: OK"}
+{"elapsed_s": 18.301, "kind": "assertion", "name": "lifecycle_13_recreate", "passed": true, "duration_s": 0.227, "observed": "I (18293) EMBEDMARK_VALIDATION: Tela gerada: OK", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 18.301, "kind": "step_start", "name": "lifecycle_13_click", "command": "c", "expected_count": 1}
+{"elapsed_s": 18.51, "kind": "tx", "command": "c"}
+{"elapsed_s": 18.514, "kind": "rx_line", "text": "I (18513) EMBEDMARK_VALIDATION: Ações: 1", "normalized": "I (18513) EMBEDMARK_VALIDATION: Ações: 1"}
+{"elapsed_s": 18.515, "kind": "assertion", "name": "lifecycle_13_click", "passed": true, "duration_s": 0.213, "observed": {"count": 1, "line": "I (18513) EMBEDMARK_VALIDATION: Ações: 1"}, "command": "c", "expected_count": 1}
+{"elapsed_s": 18.515, "kind": "step_start", "name": "lifecycle_14_recreate", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 18.722, "kind": "tx", "command": "r"}
+{"elapsed_s": 18.741, "kind": "rx_line", "text": "I (18733) EMBEDMARK_VALIDATION: Tela gerada: OK", "normalized": "I (18733) EMBEDMARK_VALIDATION: Tela gerada: OK"}
+{"elapsed_s": 18.741, "kind": "assertion", "name": "lifecycle_14_recreate", "passed": true, "duration_s": 0.227, "observed": "I (18733) EMBEDMARK_VALIDATION: Tela gerada: OK", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 18.741, "kind": "step_start", "name": "lifecycle_14_click", "command": "c", "expected_count": 1}
+{"elapsed_s": 18.945, "kind": "tx", "command": "c"}
+{"elapsed_s": 18.954, "kind": "rx_line", "text": "I (18953) EMBEDMARK_VALIDATION: Ações: 1", "normalized": "I (18953) EMBEDMARK_VALIDATION: Ações: 1"}
+{"elapsed_s": 18.955, "kind": "assertion", "name": "lifecycle_14_click", "passed": true, "duration_s": 0.213, "observed": {"count": 1, "line": "I (18953) EMBEDMARK_VALIDATION: Ações: 1"}, "command": "c", "expected_count": 1}
+{"elapsed_s": 18.955, "kind": "step_start", "name": "lifecycle_15_recreate", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 19.16, "kind": "tx", "command": "r"}
+{"elapsed_s": 19.181, "kind": "rx_line", "text": "I (19173) EMBEDMARK_VALIDATION: Tela gerada: OK", "normalized": "I (19173) EMBEDMARK_VALIDATION: Tela gerada: OK"}
+{"elapsed_s": 19.181, "kind": "assertion", "name": "lifecycle_15_recreate", "passed": true, "duration_s": 0.227, "observed": "I (19173) EMBEDMARK_VALIDATION: Tela gerada: OK", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 19.181, "kind": "step_start", "name": "lifecycle_15_click", "command": "c", "expected_count": 1}
+{"elapsed_s": 19.391, "kind": "tx", "command": "c"}
+{"elapsed_s": 19.394, "kind": "rx_line", "text": "I (19393) EMBEDMARK_VALIDATION: Ações: 1", "normalized": "I (19393) EMBEDMARK_VALIDATION: Ações: 1"}
+{"elapsed_s": 19.395, "kind": "assertion", "name": "lifecycle_15_click", "passed": true, "duration_s": 0.213, "observed": {"count": 1, "line": "I (19393) EMBEDMARK_VALIDATION: Ações: 1"}, "command": "c", "expected_count": 1}
+{"elapsed_s": 19.395, "kind": "step_start", "name": "lifecycle_16_recreate", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 19.601, "kind": "tx", "command": "r"}
+{"elapsed_s": 19.621, "kind": "rx_line", "text": "I (19613) EMBEDMARK_VALIDATION: Tela gerada: OK", "normalized": "I (19613) EMBEDMARK_VALIDATION: Tela gerada: OK"}
+{"elapsed_s": 19.621, "kind": "assertion", "name": "lifecycle_16_recreate", "passed": true, "duration_s": 0.227, "observed": "I (19613) EMBEDMARK_VALIDATION: Tela gerada: OK", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 19.621, "kind": "step_start", "name": "lifecycle_16_click", "command": "c", "expected_count": 1}
+{"elapsed_s": 19.828, "kind": "tx", "command": "c"}
+{"elapsed_s": 19.834, "kind": "rx_line", "text": "I (19833) EMBEDMARK_VALIDATION: Ações: 1", "normalized": "I (19833) EMBEDMARK_VALIDATION: Ações: 1"}
+{"elapsed_s": 19.834, "kind": "assertion", "name": "lifecycle_16_click", "passed": true, "duration_s": 0.213, "observed": {"count": 1, "line": "I (19833) EMBEDMARK_VALIDATION: Ações: 1"}, "command": "c", "expected_count": 1}
+{"elapsed_s": 19.834, "kind": "step_start", "name": "lifecycle_17_recreate", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 20.043, "kind": "tx", "command": "r"}
+{"elapsed_s": 20.062, "kind": "rx_line", "text": "I (20053) EMBEDMARK_VALIDATION: Tela gerada: OK", "normalized": "I (20053) EMBEDMARK_VALIDATION: Tela gerada: OK"}
+{"elapsed_s": 20.062, "kind": "assertion", "name": "lifecycle_17_recreate", "passed": true, "duration_s": 0.227, "observed": "I (20053) EMBEDMARK_VALIDATION: Tela gerada: OK", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 20.062, "kind": "step_start", "name": "lifecycle_17_click", "command": "c", "expected_count": 1}
+{"elapsed_s": 20.268, "kind": "tx", "command": "c"}
+{"elapsed_s": 20.275, "kind": "rx_line", "text": "I (20273) EMBEDMARK_VALIDATION: Ações: 1", "normalized": "I (20273) EMBEDMARK_VALIDATION: Ações: 1"}
+{"elapsed_s": 20.275, "kind": "assertion", "name": "lifecycle_17_click", "passed": true, "duration_s": 0.213, "observed": {"count": 1, "line": "I (20273) EMBEDMARK_VALIDATION: Ações: 1"}, "command": "c", "expected_count": 1}
+{"elapsed_s": 20.275, "kind": "step_start", "name": "lifecycle_18_recreate", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 20.48, "kind": "tx", "command": "r"}
+{"elapsed_s": 20.501, "kind": "rx_line", "text": "I (20493) EMBEDMARK_VALIDATION: Tela gerada: OK", "normalized": "I (20493) EMBEDMARK_VALIDATION: Tela gerada: OK"}
+{"elapsed_s": 20.501, "kind": "assertion", "name": "lifecycle_18_recreate", "passed": true, "duration_s": 0.226, "observed": "I (20493) EMBEDMARK_VALIDATION: Tela gerada: OK", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 20.501, "kind": "step_start", "name": "lifecycle_18_click", "command": "c", "expected_count": 1}
+{"elapsed_s": 20.706, "kind": "tx", "command": "c"}
+{"elapsed_s": 20.714, "kind": "rx_line", "text": "I (20713) EMBEDMARK_VALIDATION: Ações: 1", "normalized": "I (20713) EMBEDMARK_VALIDATION: Ações: 1"}
+{"elapsed_s": 20.715, "kind": "assertion", "name": "lifecycle_18_click", "passed": true, "duration_s": 0.213, "observed": {"count": 1, "line": "I (20713) EMBEDMARK_VALIDATION: Ações: 1"}, "command": "c", "expected_count": 1}
+{"elapsed_s": 20.715, "kind": "step_start", "name": "lifecycle_19_recreate", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 20.922, "kind": "tx", "command": "r"}
+{"elapsed_s": 20.941, "kind": "rx_line", "text": "I (20933) EMBEDMARK_VALIDATION: Tela gerada: OK", "normalized": "I (20933) EMBEDMARK_VALIDATION: Tela gerada: OK"}
+{"elapsed_s": 20.941, "kind": "assertion", "name": "lifecycle_19_recreate", "passed": true, "duration_s": 0.227, "observed": "I (20933) EMBEDMARK_VALIDATION: Tela gerada: OK", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 20.941, "kind": "step_start", "name": "lifecycle_19_click", "command": "c", "expected_count": 1}
+{"elapsed_s": 21.147, "kind": "tx", "command": "c"}
+{"elapsed_s": 21.154, "kind": "rx_line", "text": "I (21153) EMBEDMARK_VALIDATION: Ações: 1", "normalized": "I (21153) EMBEDMARK_VALIDATION: Ações: 1"}
+{"elapsed_s": 21.154, "kind": "assertion", "name": "lifecycle_19_click", "passed": true, "duration_s": 0.213, "observed": {"count": 1, "line": "I (21153) EMBEDMARK_VALIDATION: Ações: 1"}, "command": "c", "expected_count": 1}
+{"elapsed_s": 21.154, "kind": "step_start", "name": "lifecycle_20_recreate", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 21.365, "kind": "tx", "command": "r"}
+{"elapsed_s": 21.381, "kind": "rx_line", "text": "I (21373) EMBEDMARK_VALIDATION: Tela gerada: OK", "normalized": "I (21373) EMBEDMARK_VALIDATION: Tela gerada: OK"}
+{"elapsed_s": 21.381, "kind": "assertion", "name": "lifecycle_20_recreate", "passed": true, "duration_s": 0.227, "observed": "I (21373) EMBEDMARK_VALIDATION: Tela gerada: OK", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 21.381, "kind": "step_start", "name": "lifecycle_20_click", "command": "c", "expected_count": 1}
+{"elapsed_s": 21.591, "kind": "tx", "command": "c"}
+{"elapsed_s": 21.594, "kind": "rx_line", "text": "I (21593) EMBEDMARK_VALIDATION: Ações: 1", "normalized": "I (21593) EMBEDMARK_VALIDATION: Ações: 1"}
+{"elapsed_s": 21.594, "kind": "assertion", "name": "lifecycle_20_click", "passed": true, "duration_s": 0.213, "observed": {"count": 1, "line": "I (21593) EMBEDMARK_VALIDATION: Ações: 1"}, "command": "c", "expected_count": 1}
+{"elapsed_s": 21.594, "kind": "step_start", "name": "lifecycle_21_recreate", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 21.801, "kind": "tx", "command": "r"}
+{"elapsed_s": 21.821, "kind": "rx_line", "text": "I (21813) EMBEDMARK_VALIDATION: Tela gerada: OK", "normalized": "I (21813) EMBEDMARK_VALIDATION: Tela gerada: OK"}
+{"elapsed_s": 21.821, "kind": "assertion", "name": "lifecycle_21_recreate", "passed": true, "duration_s": 0.227, "observed": "I (21813) EMBEDMARK_VALIDATION: Tela gerada: OK", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 21.821, "kind": "step_start", "name": "lifecycle_21_click", "command": "c", "expected_count": 1}
+{"elapsed_s": 22.027, "kind": "tx", "command": "c"}
+{"elapsed_s": 22.034, "kind": "rx_line", "text": "I (22033) EMBEDMARK_VALIDATION: Ações: 1", "normalized": "I (22033) EMBEDMARK_VALIDATION: Ações: 1"}
+{"elapsed_s": 22.035, "kind": "assertion", "name": "lifecycle_21_click", "passed": true, "duration_s": 0.213, "observed": {"count": 1, "line": "I (22033) EMBEDMARK_VALIDATION: Ações: 1"}, "command": "c", "expected_count": 1}
+{"elapsed_s": 22.035, "kind": "step_start", "name": "lifecycle_22_recreate", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 22.24, "kind": "tx", "command": "r"}
+{"elapsed_s": 22.261, "kind": "rx_line", "text": "I (22253) EMBEDMARK_VALIDATION: Tela gerada: OK", "normalized": "I (22253) EMBEDMARK_VALIDATION: Tela gerada: OK"}
+{"elapsed_s": 22.261, "kind": "assertion", "name": "lifecycle_22_recreate", "passed": true, "duration_s": 0.227, "observed": "I (22253) EMBEDMARK_VALIDATION: Tela gerada: OK", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 22.261, "kind": "step_start", "name": "lifecycle_22_click", "command": "c", "expected_count": 1}
+{"elapsed_s": 22.47, "kind": "tx", "command": "c"}
+{"elapsed_s": 22.474, "kind": "rx_line", "text": "I (22473) EMBEDMARK_VALIDATION: Ações: 1", "normalized": "I (22473) EMBEDMARK_VALIDATION: Ações: 1"}
+{"elapsed_s": 22.474, "kind": "assertion", "name": "lifecycle_22_click", "passed": true, "duration_s": 0.213, "observed": {"count": 1, "line": "I (22473) EMBEDMARK_VALIDATION: Ações: 1"}, "command": "c", "expected_count": 1}
+{"elapsed_s": 22.474, "kind": "step_start", "name": "lifecycle_23_recreate", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 22.68, "kind": "tx", "command": "r"}
+{"elapsed_s": 22.701, "kind": "rx_line", "text": "I (22693) EMBEDMARK_VALIDATION: Tela gerada: OK", "normalized": "I (22693) EMBEDMARK_VALIDATION: Tela gerada: OK"}
+{"elapsed_s": 22.701, "kind": "assertion", "name": "lifecycle_23_recreate", "passed": true, "duration_s": 0.227, "observed": "I (22693) EMBEDMARK_VALIDATION: Tela gerada: OK", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 22.701, "kind": "step_start", "name": "lifecycle_23_click", "command": "c", "expected_count": 1}
+{"elapsed_s": 22.91, "kind": "tx", "command": "c"}
+{"elapsed_s": 22.914, "kind": "rx_line", "text": "I (22913) EMBEDMARK_VALIDATION: Ações: 1", "normalized": "I (22913) EMBEDMARK_VALIDATION: Ações: 1"}
+{"elapsed_s": 22.914, "kind": "assertion", "name": "lifecycle_23_click", "passed": true, "duration_s": 0.213, "observed": {"count": 1, "line": "I (22913) EMBEDMARK_VALIDATION: Ações: 1"}, "command": "c", "expected_count": 1}
+{"elapsed_s": 22.914, "kind": "step_start", "name": "lifecycle_24_recreate", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 23.12, "kind": "tx", "command": "r"}
+{"elapsed_s": 23.141, "kind": "rx_line", "text": "I (23133) EMBEDMARK_VALIDATION: Tela gerada: OK", "normalized": "I (23133) EMBEDMARK_VALIDATION: Tela gerada: OK"}
+{"elapsed_s": 23.141, "kind": "assertion", "name": "lifecycle_24_recreate", "passed": true, "duration_s": 0.227, "observed": "I (23133) EMBEDMARK_VALIDATION: Tela gerada: OK", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 23.141, "kind": "step_start", "name": "lifecycle_24_click", "command": "c", "expected_count": 1}
+{"elapsed_s": 23.351, "kind": "tx", "command": "c"}
+{"elapsed_s": 23.354, "kind": "rx_line", "text": "I (23353) EMBEDMARK_VALIDATION: Ações: 1", "normalized": "I (23353) EMBEDMARK_VALIDATION: Ações: 1"}
+{"elapsed_s": 23.355, "kind": "assertion", "name": "lifecycle_24_click", "passed": true, "duration_s": 0.213, "observed": {"count": 1, "line": "I (23353) EMBEDMARK_VALIDATION: Ações: 1"}, "command": "c", "expected_count": 1}
+{"elapsed_s": 23.355, "kind": "step_start", "name": "lifecycle_25_recreate", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 23.563, "kind": "tx", "command": "r"}
+{"elapsed_s": 23.581, "kind": "rx_line", "text": "I (23573) EMBEDMARK_VALIDATION: Tela gerada: OK", "normalized": "I (23573) EMBEDMARK_VALIDATION: Tela gerada: OK"}
+{"elapsed_s": 23.581, "kind": "assertion", "name": "lifecycle_25_recreate", "passed": true, "duration_s": 0.227, "observed": "I (23573) EMBEDMARK_VALIDATION: Tela gerada: OK", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 23.581, "kind": "step_start", "name": "lifecycle_25_click", "command": "c", "expected_count": 1}
+{"elapsed_s": 23.789, "kind": "tx", "command": "c"}
+{"elapsed_s": 23.794, "kind": "rx_line", "text": "I (23793) EMBEDMARK_VALIDATION: Ações: 1", "normalized": "I (23793) EMBEDMARK_VALIDATION: Ações: 1"}
+{"elapsed_s": 23.795, "kind": "assertion", "name": "lifecycle_25_click", "passed": true, "duration_s": 0.213, "observed": {"count": 1, "line": "I (23793) EMBEDMARK_VALIDATION: Ações: 1"}, "command": "c", "expected_count": 1}
+{"elapsed_s": 23.795, "kind": "step_start", "name": "lifecycle_26_recreate", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 24.001, "kind": "tx", "command": "r"}
+{"elapsed_s": 24.021, "kind": "rx_line", "text": "I (24013) EMBEDMARK_VALIDATION: Tela gerada: OK", "normalized": "I (24013) EMBEDMARK_VALIDATION: Tela gerada: OK"}
+{"elapsed_s": 24.021, "kind": "assertion", "name": "lifecycle_26_recreate", "passed": true, "duration_s": 0.227, "observed": "I (24013) EMBEDMARK_VALIDATION: Tela gerada: OK", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 24.021, "kind": "step_start", "name": "lifecycle_26_click", "command": "c", "expected_count": 1}
+{"elapsed_s": 24.229, "kind": "tx", "command": "c"}
+{"elapsed_s": 24.234, "kind": "rx_line", "text": "I (24233) EMBEDMARK_VALIDATION: Ações: 1", "normalized": "I (24233) EMBEDMARK_VALIDATION: Ações: 1"}
+{"elapsed_s": 24.235, "kind": "assertion", "name": "lifecycle_26_click", "passed": true, "duration_s": 0.213, "observed": {"count": 1, "line": "I (24233) EMBEDMARK_VALIDATION: Ações: 1"}, "command": "c", "expected_count": 1}
+{"elapsed_s": 24.235, "kind": "step_start", "name": "lifecycle_27_recreate", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 24.44, "kind": "tx", "command": "r"}
+{"elapsed_s": 24.461, "kind": "rx_line", "text": "I (24453) EMBEDMARK_VALIDATION: Tela gerada: OK", "normalized": "I (24453) EMBEDMARK_VALIDATION: Tela gerada: OK"}
+{"elapsed_s": 24.461, "kind": "assertion", "name": "lifecycle_27_recreate", "passed": true, "duration_s": 0.227, "observed": "I (24453) EMBEDMARK_VALIDATION: Tela gerada: OK", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 24.461, "kind": "step_start", "name": "lifecycle_27_click", "command": "c", "expected_count": 1}
+{"elapsed_s": 24.672, "kind": "tx", "command": "c"}
+{"elapsed_s": 24.674, "kind": "rx_line", "text": "I (24673) EMBEDMARK_VALIDATION: Ações: 1", "normalized": "I (24673) EMBEDMARK_VALIDATION: Ações: 1"}
+{"elapsed_s": 24.674, "kind": "assertion", "name": "lifecycle_27_click", "passed": true, "duration_s": 0.213, "observed": {"count": 1, "line": "I (24673) EMBEDMARK_VALIDATION: Ações: 1"}, "command": "c", "expected_count": 1}
+{"elapsed_s": 24.674, "kind": "step_start", "name": "lifecycle_28_recreate", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 24.885, "kind": "tx", "command": "r"}
+{"elapsed_s": 24.901, "kind": "rx_line", "text": "I (24893) EMBEDMARK_VALIDATION: Tela gerada: OK", "normalized": "I (24893) EMBEDMARK_VALIDATION: Tela gerada: OK"}
+{"elapsed_s": 24.901, "kind": "assertion", "name": "lifecycle_28_recreate", "passed": true, "duration_s": 0.227, "observed": "I (24893) EMBEDMARK_VALIDATION: Tela gerada: OK", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 24.901, "kind": "step_start", "name": "lifecycle_28_click", "command": "c", "expected_count": 1}
+{"elapsed_s": 25.108, "kind": "tx", "command": "c"}
+{"elapsed_s": 25.114, "kind": "rx_line", "text": "I (25113) EMBEDMARK_VALIDATION: Ações: 1", "normalized": "I (25113) EMBEDMARK_VALIDATION: Ações: 1"}
+{"elapsed_s": 25.115, "kind": "assertion", "name": "lifecycle_28_click", "passed": true, "duration_s": 0.213, "observed": {"count": 1, "line": "I (25113) EMBEDMARK_VALIDATION: Ações: 1"}, "command": "c", "expected_count": 1}
+{"elapsed_s": 25.115, "kind": "step_start", "name": "lifecycle_29_recreate", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 25.325, "kind": "tx", "command": "r"}
+{"elapsed_s": 25.341, "kind": "rx_line", "text": "I (25333) EMBEDMARK_VALIDATION: Tela gerada: OK", "normalized": "I (25333) EMBEDMARK_VALIDATION: Tela gerada: OK"}
+{"elapsed_s": 25.341, "kind": "assertion", "name": "lifecycle_29_recreate", "passed": true, "duration_s": 0.227, "observed": "I (25333) EMBEDMARK_VALIDATION: Tela gerada: OK", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 25.341, "kind": "step_start", "name": "lifecycle_29_click", "command": "c", "expected_count": 1}
+{"elapsed_s": 25.553, "kind": "tx", "command": "c"}
+{"elapsed_s": 25.554, "kind": "rx_line", "text": "I (25553) EMBEDMARK_VALIDATION: Ações: 1", "normalized": "I (25553) EMBEDMARK_VALIDATION: Ações: 1"}
+{"elapsed_s": 25.554, "kind": "assertion", "name": "lifecycle_29_click", "passed": true, "duration_s": 0.213, "observed": {"count": 1, "line": "I (25553) EMBEDMARK_VALIDATION: Ações: 1"}, "command": "c", "expected_count": 1}
+{"elapsed_s": 25.554, "kind": "step_start", "name": "lifecycle_30_recreate", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 25.762, "kind": "tx", "command": "r"}
+{"elapsed_s": 25.781, "kind": "rx_line", "text": "I (25773) EMBEDMARK_VALIDATION: Tela gerada: OK", "normalized": "I (25773) EMBEDMARK_VALIDATION: Tela gerada: OK"}
+{"elapsed_s": 25.781, "kind": "assertion", "name": "lifecycle_30_recreate", "passed": true, "duration_s": 0.227, "observed": "I (25773) EMBEDMARK_VALIDATION: Tela gerada: OK", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 25.781, "kind": "step_start", "name": "lifecycle_30_click", "command": "c", "expected_count": 1}
+{"elapsed_s": 25.984, "kind": "tx", "command": "c"}
+{"elapsed_s": 25.994, "kind": "rx_line", "text": "I (25993) EMBEDMARK_VALIDATION: Ações: 1", "normalized": "I (25993) EMBEDMARK_VALIDATION: Ações: 1"}
+{"elapsed_s": 25.994, "kind": "assertion", "name": "lifecycle_30_click", "passed": true, "duration_s": 0.213, "observed": {"count": 1, "line": "I (25993) EMBEDMARK_VALIDATION: Ações: 1"}, "command": "c", "expected_count": 1}
+{"elapsed_s": 25.994, "kind": "step_start", "name": "lifecycle_31_recreate", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 26.201, "kind": "tx", "command": "r"}
+{"elapsed_s": 26.221, "kind": "rx_line", "text": "I (26213) EMBEDMARK_VALIDATION: Tela gerada: OK", "normalized": "I (26213) EMBEDMARK_VALIDATION: Tela gerada: OK"}
+{"elapsed_s": 26.222, "kind": "assertion", "name": "lifecycle_31_recreate", "passed": true, "duration_s": 0.227, "observed": "I (26213) EMBEDMARK_VALIDATION: Tela gerada: OK", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 26.222, "kind": "step_start", "name": "lifecycle_31_click", "command": "c", "expected_count": 1}
+{"elapsed_s": 26.427, "kind": "tx", "command": "c"}
+{"elapsed_s": 26.434, "kind": "rx_line", "text": "I (26433) EMBEDMARK_VALIDATION: Ações: 1", "normalized": "I (26433) EMBEDMARK_VALIDATION: Ações: 1"}
+{"elapsed_s": 26.435, "kind": "assertion", "name": "lifecycle_31_click", "passed": true, "duration_s": 0.213, "observed": {"count": 1, "line": "I (26433) EMBEDMARK_VALIDATION: Ações: 1"}, "command": "c", "expected_count": 1}
+{"elapsed_s": 26.435, "kind": "step_start", "name": "lifecycle_32_recreate", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 26.645, "kind": "tx", "command": "r"}
+{"elapsed_s": 26.661, "kind": "rx_line", "text": "I (26653) EMBEDMARK_VALIDATION: Tela gerada: OK", "normalized": "I (26653) EMBEDMARK_VALIDATION: Tela gerada: OK"}
+{"elapsed_s": 26.661, "kind": "assertion", "name": "lifecycle_32_recreate", "passed": true, "duration_s": 0.227, "observed": "I (26653) EMBEDMARK_VALIDATION: Tela gerada: OK", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 26.661, "kind": "step_start", "name": "lifecycle_32_click", "command": "c", "expected_count": 1}
+{"elapsed_s": 26.87, "kind": "tx", "command": "c"}
+{"elapsed_s": 26.874, "kind": "rx_line", "text": "I (26873) EMBEDMARK_VALIDATION: Ações: 1", "normalized": "I (26873) EMBEDMARK_VALIDATION: Ações: 1"}
+{"elapsed_s": 26.874, "kind": "assertion", "name": "lifecycle_32_click", "passed": true, "duration_s": 0.213, "observed": {"count": 1, "line": "I (26873) EMBEDMARK_VALIDATION: Ações: 1"}, "command": "c", "expected_count": 1}
+{"elapsed_s": 26.874, "kind": "step_start", "name": "lifecycle_33_recreate", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 27.082, "kind": "tx", "command": "r"}
+{"elapsed_s": 27.101, "kind": "rx_line", "text": "I (27093) EMBEDMARK_VALIDATION: Tela gerada: OK", "normalized": "I (27093) EMBEDMARK_VALIDATION: Tela gerada: OK"}
+{"elapsed_s": 27.101, "kind": "assertion", "name": "lifecycle_33_recreate", "passed": true, "duration_s": 0.227, "observed": "I (27093) EMBEDMARK_VALIDATION: Tela gerada: OK", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 27.101, "kind": "step_start", "name": "lifecycle_33_click", "command": "c", "expected_count": 1}
+{"elapsed_s": 27.306, "kind": "tx", "command": "c"}
+{"elapsed_s": 27.314, "kind": "rx_line", "text": "I (27313) EMBEDMARK_VALIDATION: Ações: 1", "normalized": "I (27313) EMBEDMARK_VALIDATION: Ações: 1"}
+{"elapsed_s": 27.315, "kind": "assertion", "name": "lifecycle_33_click", "passed": true, "duration_s": 0.213, "observed": {"count": 1, "line": "I (27313) EMBEDMARK_VALIDATION: Ações: 1"}, "command": "c", "expected_count": 1}
+{"elapsed_s": 27.315, "kind": "step_start", "name": "lifecycle_34_recreate", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 27.521, "kind": "tx", "command": "r"}
+{"elapsed_s": 27.541, "kind": "rx_line", "text": "I (27533) EMBEDMARK_VALIDATION: Tela gerada: OK", "normalized": "I (27533) EMBEDMARK_VALIDATION: Tela gerada: OK"}
+{"elapsed_s": 27.541, "kind": "assertion", "name": "lifecycle_34_recreate", "passed": true, "duration_s": 0.227, "observed": "I (27533) EMBEDMARK_VALIDATION: Tela gerada: OK", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 27.541, "kind": "step_start", "name": "lifecycle_34_click", "command": "c", "expected_count": 1}
+{"elapsed_s": 27.752, "kind": "tx", "command": "c"}
+{"elapsed_s": 27.754, "kind": "rx_line", "text": "I (27753) EMBEDMARK_VALIDATION: Ações: 1", "normalized": "I (27753) EMBEDMARK_VALIDATION: Ações: 1"}
+{"elapsed_s": 27.754, "kind": "assertion", "name": "lifecycle_34_click", "passed": true, "duration_s": 0.213, "observed": {"count": 1, "line": "I (27753) EMBEDMARK_VALIDATION: Ações: 1"}, "command": "c", "expected_count": 1}
+{"elapsed_s": 27.754, "kind": "step_start", "name": "lifecycle_35_recreate", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 27.963, "kind": "tx", "command": "r"}
+{"elapsed_s": 27.981, "kind": "rx_line", "text": "I (27973) EMBEDMARK_VALIDATION: Tela gerada: OK", "normalized": "I (27973) EMBEDMARK_VALIDATION: Tela gerada: OK"}
+{"elapsed_s": 27.981, "kind": "assertion", "name": "lifecycle_35_recreate", "passed": true, "duration_s": 0.227, "observed": "I (27973) EMBEDMARK_VALIDATION: Tela gerada: OK", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 27.981, "kind": "step_start", "name": "lifecycle_35_click", "command": "c", "expected_count": 1}
+{"elapsed_s": 28.185, "kind": "tx", "command": "c"}
+{"elapsed_s": 28.194, "kind": "rx_line", "text": "I (28193) EMBEDMARK_VALIDATION: Ações: 1", "normalized": "I (28193) EMBEDMARK_VALIDATION: Ações: 1"}
+{"elapsed_s": 28.195, "kind": "assertion", "name": "lifecycle_35_click", "passed": true, "duration_s": 0.213, "observed": {"count": 1, "line": "I (28193) EMBEDMARK_VALIDATION: Ações: 1"}, "command": "c", "expected_count": 1}
+{"elapsed_s": 28.195, "kind": "step_start", "name": "lifecycle_36_recreate", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 28.403, "kind": "tx", "command": "r"}
+{"elapsed_s": 28.421, "kind": "rx_line", "text": "I (28413) EMBEDMARK_VALIDATION: Tela gerada: OK", "normalized": "I (28413) EMBEDMARK_VALIDATION: Tela gerada: OK"}
+{"elapsed_s": 28.421, "kind": "assertion", "name": "lifecycle_36_recreate", "passed": true, "duration_s": 0.227, "observed": "I (28413) EMBEDMARK_VALIDATION: Tela gerada: OK", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 28.421, "kind": "step_start", "name": "lifecycle_36_click", "command": "c", "expected_count": 1}
+{"elapsed_s": 28.629, "kind": "tx", "command": "c"}
+{"elapsed_s": 28.634, "kind": "rx_line", "text": "I (28633) EMBEDMARK_VALIDATION: Ações: 1", "normalized": "I (28633) EMBEDMARK_VALIDATION: Ações: 1"}
+{"elapsed_s": 28.634, "kind": "assertion", "name": "lifecycle_36_click", "passed": true, "duration_s": 0.213, "observed": {"count": 1, "line": "I (28633) EMBEDMARK_VALIDATION: Ações: 1"}, "command": "c", "expected_count": 1}
+{"elapsed_s": 28.634, "kind": "step_start", "name": "lifecycle_37_recreate", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 28.841, "kind": "tx", "command": "r"}
+{"elapsed_s": 28.861, "kind": "rx_line", "text": "I (28853) EMBEDMARK_VALIDATION: Tela gerada: OK", "normalized": "I (28853) EMBEDMARK_VALIDATION: Tela gerada: OK"}
+{"elapsed_s": 28.861, "kind": "assertion", "name": "lifecycle_37_recreate", "passed": true, "duration_s": 0.227, "observed": "I (28853) EMBEDMARK_VALIDATION: Tela gerada: OK", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 28.861, "kind": "step_start", "name": "lifecycle_37_click", "command": "c", "expected_count": 1}
+{"elapsed_s": 29.07, "kind": "tx", "command": "c"}
+{"elapsed_s": 29.074, "kind": "rx_line", "text": "I (29073) EMBEDMARK_VALIDATION: Ações: 1", "normalized": "I (29073) EMBEDMARK_VALIDATION: Ações: 1"}
+{"elapsed_s": 29.074, "kind": "assertion", "name": "lifecycle_37_click", "passed": true, "duration_s": 0.213, "observed": {"count": 1, "line": "I (29073) EMBEDMARK_VALIDATION: Ações: 1"}, "command": "c", "expected_count": 1}
+{"elapsed_s": 29.074, "kind": "step_start", "name": "lifecycle_38_recreate", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 29.276, "kind": "tx", "command": "r"}
+{"elapsed_s": 29.301, "kind": "rx_line", "text": "I (29293) EMBEDMARK_VALIDATION: Tela gerada: OK", "normalized": "I (29293) EMBEDMARK_VALIDATION: Tela gerada: OK"}
+{"elapsed_s": 29.302, "kind": "assertion", "name": "lifecycle_38_recreate", "passed": true, "duration_s": 0.227, "observed": "I (29293) EMBEDMARK_VALIDATION: Tela gerada: OK", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 29.302, "kind": "step_start", "name": "lifecycle_38_click", "command": "c", "expected_count": 1}
+{"elapsed_s": 29.51, "kind": "tx", "command": "c"}
+{"elapsed_s": 29.514, "kind": "rx_line", "text": "I (29513) EMBEDMARK_VALIDATION: Ações: 1", "normalized": "I (29513) EMBEDMARK_VALIDATION: Ações: 1"}
+{"elapsed_s": 29.514, "kind": "assertion", "name": "lifecycle_38_click", "passed": true, "duration_s": 0.213, "observed": {"count": 1, "line": "I (29513) EMBEDMARK_VALIDATION: Ações: 1"}, "command": "c", "expected_count": 1}
+{"elapsed_s": 29.515, "kind": "step_start", "name": "lifecycle_39_recreate", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 29.725, "kind": "tx", "command": "r"}
+{"elapsed_s": 29.741, "kind": "rx_line", "text": "I (29733) EMBEDMARK_VALIDATION: Tela gerada: OK", "normalized": "I (29733) EMBEDMARK_VALIDATION: Tela gerada: OK"}
+{"elapsed_s": 29.742, "kind": "assertion", "name": "lifecycle_39_recreate", "passed": true, "duration_s": 0.227, "observed": "I (29733) EMBEDMARK_VALIDATION: Tela gerada: OK", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 29.742, "kind": "step_start", "name": "lifecycle_39_click", "command": "c", "expected_count": 1}
+{"elapsed_s": 29.949, "kind": "tx", "command": "c"}
+{"elapsed_s": 29.954, "kind": "rx_line", "text": "I (29953) EMBEDMARK_VALIDATION: Ações: 1", "normalized": "I (29953) EMBEDMARK_VALIDATION: Ações: 1"}
+{"elapsed_s": 29.955, "kind": "assertion", "name": "lifecycle_39_click", "passed": true, "duration_s": 0.213, "observed": {"count": 1, "line": "I (29953) EMBEDMARK_VALIDATION: Ações: 1"}, "command": "c", "expected_count": 1}
+{"elapsed_s": 29.955, "kind": "step_start", "name": "lifecycle_40_recreate", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 30.16, "kind": "tx", "command": "r"}
+{"elapsed_s": 30.181, "kind": "rx_line", "text": "I (30173) EMBEDMARK_VALIDATION: Tela gerada: OK", "normalized": "I (30173) EMBEDMARK_VALIDATION: Tela gerada: OK"}
+{"elapsed_s": 30.181, "kind": "assertion", "name": "lifecycle_40_recreate", "passed": true, "duration_s": 0.227, "observed": "I (30173) EMBEDMARK_VALIDATION: Tela gerada: OK", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 30.181, "kind": "step_start", "name": "lifecycle_40_click", "command": "c", "expected_count": 1}
+{"elapsed_s": 30.389, "kind": "tx", "command": "c"}
+{"elapsed_s": 30.394, "kind": "rx_line", "text": "I (30393) EMBEDMARK_VALIDATION: Ações: 1", "normalized": "I (30393) EMBEDMARK_VALIDATION: Ações: 1"}
+{"elapsed_s": 30.395, "kind": "assertion", "name": "lifecycle_40_click", "passed": true, "duration_s": 0.213, "observed": {"count": 1, "line": "I (30393) EMBEDMARK_VALIDATION: Ações: 1"}, "command": "c", "expected_count": 1}
+{"elapsed_s": 30.395, "kind": "step_start", "name": "lifecycle_41_recreate", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 30.601, "kind": "tx", "command": "r"}
+{"elapsed_s": 30.621, "kind": "rx_line", "text": "I (30613) EMBEDMARK_VALIDATION: Tela gerada: OK", "normalized": "I (30613) EMBEDMARK_VALIDATION: Tela gerada: OK"}
+{"elapsed_s": 30.621, "kind": "assertion", "name": "lifecycle_41_recreate", "passed": true, "duration_s": 0.227, "observed": "I (30613) EMBEDMARK_VALIDATION: Tela gerada: OK", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 30.621, "kind": "step_start", "name": "lifecycle_41_click", "command": "c", "expected_count": 1}
+{"elapsed_s": 30.83, "kind": "tx", "command": "c"}
+{"elapsed_s": 30.834, "kind": "rx_line", "text": "I (30833) EMBEDMARK_VALIDATION: Ações: 1", "normalized": "I (30833) EMBEDMARK_VALIDATION: Ações: 1"}
+{"elapsed_s": 30.834, "kind": "assertion", "name": "lifecycle_41_click", "passed": true, "duration_s": 0.213, "observed": {"count": 1, "line": "I (30833) EMBEDMARK_VALIDATION: Ações: 1"}, "command": "c", "expected_count": 1}
+{"elapsed_s": 30.834, "kind": "step_start", "name": "lifecycle_42_recreate", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 31.045, "kind": "tx", "command": "r"}
+{"elapsed_s": 31.061, "kind": "rx_line", "text": "I (31053) EMBEDMARK_VALIDATION: Tela gerada: OK", "normalized": "I (31053) EMBEDMARK_VALIDATION: Tela gerada: OK"}
+{"elapsed_s": 31.061, "kind": "assertion", "name": "lifecycle_42_recreate", "passed": true, "duration_s": 0.227, "observed": "I (31053) EMBEDMARK_VALIDATION: Tela gerada: OK", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 31.061, "kind": "step_start", "name": "lifecycle_42_click", "command": "c", "expected_count": 1}
+{"elapsed_s": 31.265, "kind": "tx", "command": "c"}
+{"elapsed_s": 31.274, "kind": "rx_line", "text": "I (31273) EMBEDMARK_VALIDATION: Ações: 1", "normalized": "I (31273) EMBEDMARK_VALIDATION: Ações: 1"}
+{"elapsed_s": 31.275, "kind": "assertion", "name": "lifecycle_42_click", "passed": true, "duration_s": 0.213, "observed": {"count": 1, "line": "I (31273) EMBEDMARK_VALIDATION: Ações: 1"}, "command": "c", "expected_count": 1}
+{"elapsed_s": 31.275, "kind": "step_start", "name": "lifecycle_43_recreate", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 31.481, "kind": "tx", "command": "r"}
+{"elapsed_s": 31.501, "kind": "rx_line", "text": "I (31493) EMBEDMARK_VALIDATION: Tela gerada: OK", "normalized": "I (31493) EMBEDMARK_VALIDATION: Tela gerada: OK"}
+{"elapsed_s": 31.501, "kind": "assertion", "name": "lifecycle_43_recreate", "passed": true, "duration_s": 0.227, "observed": "I (31493) EMBEDMARK_VALIDATION: Tela gerada: OK", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 31.501, "kind": "step_start", "name": "lifecycle_43_click", "command": "c", "expected_count": 1}
+{"elapsed_s": 31.707, "kind": "tx", "command": "c"}
+{"elapsed_s": 31.714, "kind": "rx_line", "text": "I (31713) EMBEDMARK_VALIDATION: Ações: 1", "normalized": "I (31713) EMBEDMARK_VALIDATION: Ações: 1"}
+{"elapsed_s": 31.714, "kind": "assertion", "name": "lifecycle_43_click", "passed": true, "duration_s": 0.213, "observed": {"count": 1, "line": "I (31713) EMBEDMARK_VALIDATION: Ações: 1"}, "command": "c", "expected_count": 1}
+{"elapsed_s": 31.715, "kind": "step_start", "name": "lifecycle_44_recreate", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 31.922, "kind": "tx", "command": "r"}
+{"elapsed_s": 31.941, "kind": "rx_line", "text": "I (31933) EMBEDMARK_VALIDATION: Tela gerada: OK", "normalized": "I (31933) EMBEDMARK_VALIDATION: Tela gerada: OK"}
+{"elapsed_s": 31.941, "kind": "assertion", "name": "lifecycle_44_recreate", "passed": true, "duration_s": 0.227, "observed": "I (31933) EMBEDMARK_VALIDATION: Tela gerada: OK", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 31.941, "kind": "step_start", "name": "lifecycle_44_click", "command": "c", "expected_count": 1}
+{"elapsed_s": 32.15, "kind": "tx", "command": "c"}
+{"elapsed_s": 32.154, "kind": "rx_line", "text": "I (32153) EMBEDMARK_VALIDATION: Ações: 1", "normalized": "I (32153) EMBEDMARK_VALIDATION: Ações: 1"}
+{"elapsed_s": 32.155, "kind": "assertion", "name": "lifecycle_44_click", "passed": true, "duration_s": 0.213, "observed": {"count": 1, "line": "I (32153) EMBEDMARK_VALIDATION: Ações: 1"}, "command": "c", "expected_count": 1}
+{"elapsed_s": 32.155, "kind": "step_start", "name": "lifecycle_45_recreate", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 32.363, "kind": "tx", "command": "r"}
+{"elapsed_s": 32.381, "kind": "rx_line", "text": "I (32373) EMBEDMARK_VALIDATION: Tela gerada: OK", "normalized": "I (32373) EMBEDMARK_VALIDATION: Tela gerada: OK"}
+{"elapsed_s": 32.381, "kind": "assertion", "name": "lifecycle_45_recreate", "passed": true, "duration_s": 0.227, "observed": "I (32373) EMBEDMARK_VALIDATION: Tela gerada: OK", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 32.381, "kind": "step_start", "name": "lifecycle_45_click", "command": "c", "expected_count": 1}
+{"elapsed_s": 32.586, "kind": "tx", "command": "c"}
+{"elapsed_s": 32.594, "kind": "rx_line", "text": "I (32593) EMBEDMARK_VALIDATION: Ações: 1", "normalized": "I (32593) EMBEDMARK_VALIDATION: Ações: 1"}
+{"elapsed_s": 32.595, "kind": "assertion", "name": "lifecycle_45_click", "passed": true, "duration_s": 0.213, "observed": {"count": 1, "line": "I (32593) EMBEDMARK_VALIDATION: Ações: 1"}, "command": "c", "expected_count": 1}
+{"elapsed_s": 32.595, "kind": "step_start", "name": "lifecycle_46_recreate", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 32.799, "kind": "tx", "command": "r"}
+{"elapsed_s": 32.821, "kind": "rx_line", "text": "I (32813) EMBEDMARK_VALIDATION: Tela gerada: OK", "normalized": "I (32813) EMBEDMARK_VALIDATION: Tela gerada: OK"}
+{"elapsed_s": 32.821, "kind": "assertion", "name": "lifecycle_46_recreate", "passed": true, "duration_s": 0.227, "observed": "I (32813) EMBEDMARK_VALIDATION: Tela gerada: OK", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 32.821, "kind": "step_start", "name": "lifecycle_46_click", "command": "c", "expected_count": 1}
+{"elapsed_s": 33.027, "kind": "tx", "command": "c"}
+{"elapsed_s": 33.035, "kind": "rx_line", "text": "I (33033) EMBEDMARK_VALIDATION: Ações: 1", "normalized": "I (33033) EMBEDMARK_VALIDATION: Ações: 1"}
+{"elapsed_s": 33.035, "kind": "assertion", "name": "lifecycle_46_click", "passed": true, "duration_s": 0.213, "observed": {"count": 1, "line": "I (33033) EMBEDMARK_VALIDATION: Ações: 1"}, "command": "c", "expected_count": 1}
+{"elapsed_s": 33.035, "kind": "step_start", "name": "lifecycle_47_recreate", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 33.238, "kind": "tx", "command": "r"}
+{"elapsed_s": 33.261, "kind": "rx_line", "text": "I (33253) EMBEDMARK_VALIDATION: Tela gerada: OK", "normalized": "I (33253) EMBEDMARK_VALIDATION: Tela gerada: OK"}
+{"elapsed_s": 33.261, "kind": "assertion", "name": "lifecycle_47_recreate", "passed": true, "duration_s": 0.227, "observed": "I (33253) EMBEDMARK_VALIDATION: Tela gerada: OK", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 33.261, "kind": "step_start", "name": "lifecycle_47_click", "command": "c", "expected_count": 1}
+{"elapsed_s": 33.47, "kind": "tx", "command": "c"}
+{"elapsed_s": 33.474, "kind": "rx_line", "text": "I (33473) EMBEDMARK_VALIDATION: Ações: 1", "normalized": "I (33473) EMBEDMARK_VALIDATION: Ações: 1"}
+{"elapsed_s": 33.475, "kind": "assertion", "name": "lifecycle_47_click", "passed": true, "duration_s": 0.213, "observed": {"count": 1, "line": "I (33473) EMBEDMARK_VALIDATION: Ações: 1"}, "command": "c", "expected_count": 1}
+{"elapsed_s": 33.475, "kind": "step_start", "name": "lifecycle_48_recreate", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 33.68, "kind": "tx", "command": "r"}
+{"elapsed_s": 33.701, "kind": "rx_line", "text": "I (33693) EMBEDMARK_VALIDATION: Tela gerada: OK", "normalized": "I (33693) EMBEDMARK_VALIDATION: Tela gerada: OK"}
+{"elapsed_s": 33.701, "kind": "assertion", "name": "lifecycle_48_recreate", "passed": true, "duration_s": 0.227, "observed": "I (33693) EMBEDMARK_VALIDATION: Tela gerada: OK", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 33.702, "kind": "step_start", "name": "lifecycle_48_click", "command": "c", "expected_count": 1}
+{"elapsed_s": 33.908, "kind": "tx", "command": "c"}
+{"elapsed_s": 33.914, "kind": "rx_line", "text": "I (33913) EMBEDMARK_VALIDATION: Ações: 1", "normalized": "I (33913) EMBEDMARK_VALIDATION: Ações: 1"}
+{"elapsed_s": 33.914, "kind": "assertion", "name": "lifecycle_48_click", "passed": true, "duration_s": 0.213, "observed": {"count": 1, "line": "I (33913) EMBEDMARK_VALIDATION: Ações: 1"}, "command": "c", "expected_count": 1}
+{"elapsed_s": 33.915, "kind": "step_start", "name": "lifecycle_49_recreate", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 34.121, "kind": "tx", "command": "r"}
+{"elapsed_s": 34.141, "kind": "rx_line", "text": "I (34133) EMBEDMARK_VALIDATION: Tela gerada: OK", "normalized": "I (34133) EMBEDMARK_VALIDATION: Tela gerada: OK"}
+{"elapsed_s": 34.141, "kind": "assertion", "name": "lifecycle_49_recreate", "passed": true, "duration_s": 0.227, "observed": "I (34133) EMBEDMARK_VALIDATION: Tela gerada: OK", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 34.141, "kind": "step_start", "name": "lifecycle_49_click", "command": "c", "expected_count": 1}
+{"elapsed_s": 34.349, "kind": "tx", "command": "c"}
+{"elapsed_s": 34.355, "kind": "rx_line", "text": "I (34353) EMBEDMARK_VALIDATION: Ações: 1", "normalized": "I (34353) EMBEDMARK_VALIDATION: Ações: 1"}
+{"elapsed_s": 34.355, "kind": "assertion", "name": "lifecycle_49_click", "passed": true, "duration_s": 0.213, "observed": {"count": 1, "line": "I (34353) EMBEDMARK_VALIDATION: Ações: 1"}, "command": "c", "expected_count": 1}
+{"elapsed_s": 34.355, "kind": "step_start", "name": "lifecycle_50_recreate", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 34.565, "kind": "tx", "command": "r"}
+{"elapsed_s": 34.581, "kind": "rx_line", "text": "I (34573) EMBEDMARK_VALIDATION: Tela gerada: OK", "normalized": "I (34573) EMBEDMARK_VALIDATION: Tela gerada: OK"}
+{"elapsed_s": 34.581, "kind": "assertion", "name": "lifecycle_50_recreate", "passed": true, "duration_s": 0.227, "observed": "I (34573) EMBEDMARK_VALIDATION: Tela gerada: OK", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 34.581, "kind": "step_start", "name": "lifecycle_50_click", "command": "c", "expected_count": 1}
+{"elapsed_s": 34.785, "kind": "tx", "command": "c"}
+{"elapsed_s": 34.794, "kind": "rx_line", "text": "I (34793) EMBEDMARK_VALIDATION: Ações: 1", "normalized": "I (34793) EMBEDMARK_VALIDATION: Ações: 1"}
+{"elapsed_s": 34.795, "kind": "assertion", "name": "lifecycle_50_click", "passed": true, "duration_s": 0.213, "observed": {"count": 1, "line": "I (34793) EMBEDMARK_VALIDATION: Ações: 1"}, "command": "c", "expected_count": 1}
+{"elapsed_s": 34.795, "kind": "step_start", "name": "switch_01_pattern", "command": "p", "expected": "Padrao de cores ativo"}
+{"elapsed_s": 35.004, "kind": "tx", "command": "p"}
+{"elapsed_s": 35.014, "kind": "rx_line", "text": "I (35013) EMBEDMARK_VALIDATION: Padrao de cores ativo", "normalized": "I (35013) EMBEDMARK_VALIDATION: Padrao de cores ativo"}
+{"elapsed_s": 35.014, "kind": "assertion", "name": "switch_01_pattern", "passed": true, "duration_s": 0.219, "observed": "I (35013) EMBEDMARK_VALIDATION: Padrao de cores ativo", "command": "p", "expected": "Padrao de cores ativo"}
+{"elapsed_s": 35.014, "kind": "step_start", "name": "switch_01_generated", "command": "g", "expected": "Tela gerada: OK"}
+{"elapsed_s": 35.224, "kind": "tx", "command": "g"}
+{"elapsed_s": 35.234, "kind": "rx_line", "text": "I (35233) EMBEDMARK_VALIDATION: Tela gerada: OK", "normalized": "I (35233) EMBEDMARK_VALIDATION: Tela gerada: OK"}
+{"elapsed_s": 35.234, "kind": "assertion", "name": "switch_01_generated", "passed": true, "duration_s": 0.22, "observed": "I (35233) EMBEDMARK_VALIDATION: Tela gerada: OK", "command": "g", "expected": "Tela gerada: OK"}
+{"elapsed_s": 35.234, "kind": "step_start", "name": "switch_02_pattern", "command": "p", "expected": "Padrao de cores ativo"}
+{"elapsed_s": 35.441, "kind": "tx", "command": "p"}
+{"elapsed_s": 35.454, "kind": "rx_line", "text": "I (35453) EMBEDMARK_VALIDATION: Padrao de cores ativo", "normalized": "I (35453) EMBEDMARK_VALIDATION: Padrao de cores ativo"}
+{"elapsed_s": 35.454, "kind": "assertion", "name": "switch_02_pattern", "passed": true, "duration_s": 0.22, "observed": "I (35453) EMBEDMARK_VALIDATION: Padrao de cores ativo", "command": "p", "expected": "Padrao de cores ativo"}
+{"elapsed_s": 35.454, "kind": "step_start", "name": "switch_02_generated", "command": "g", "expected": "Tela gerada: OK"}
+{"elapsed_s": 35.663, "kind": "tx", "command": "g"}
+{"elapsed_s": 35.674, "kind": "rx_line", "text": "I (35673) EMBEDMARK_VALIDATION: Tela gerada: OK", "normalized": "I (35673) EMBEDMARK_VALIDATION: Tela gerada: OK"}
+{"elapsed_s": 35.674, "kind": "assertion", "name": "switch_02_generated", "passed": true, "duration_s": 0.22, "observed": "I (35673) EMBEDMARK_VALIDATION: Tela gerada: OK", "command": "g", "expected": "Tela gerada: OK"}
+{"elapsed_s": 35.674, "kind": "step_start", "name": "switch_03_pattern", "command": "p", "expected": "Padrao de cores ativo"}
+{"elapsed_s": 35.883, "kind": "tx", "command": "p"}
+{"elapsed_s": 35.894, "kind": "rx_line", "text": "I (35893) EMBEDMARK_VALIDATION: Padrao de cores ativo", "normalized": "I (35893) EMBEDMARK_VALIDATION: Padrao de cores ativo"}
+{"elapsed_s": 35.894, "kind": "assertion", "name": "switch_03_pattern", "passed": true, "duration_s": 0.22, "observed": "I (35893) EMBEDMARK_VALIDATION: Padrao de cores ativo", "command": "p", "expected": "Padrao de cores ativo"}
+{"elapsed_s": 35.894, "kind": "step_start", "name": "switch_03_generated", "command": "g", "expected": "Tela gerada: OK"}
+{"elapsed_s": 36.1, "kind": "tx", "command": "g"}
+{"elapsed_s": 36.114, "kind": "rx_line", "text": "I (36113) EMBEDMARK_VALIDATION: Tela gerada: OK", "normalized": "I (36113) EMBEDMARK_VALIDATION: Tela gerada: OK"}
+{"elapsed_s": 36.114, "kind": "assertion", "name": "switch_03_generated", "passed": true, "duration_s": 0.22, "observed": "I (36113) EMBEDMARK_VALIDATION: Tela gerada: OK", "command": "g", "expected": "Tela gerada: OK"}
+{"elapsed_s": 36.114, "kind": "step_start", "name": "switch_04_pattern", "command": "p", "expected": "Padrao de cores ativo"}
+{"elapsed_s": 36.32, "kind": "tx", "command": "p"}
+{"elapsed_s": 36.334, "kind": "rx_line", "text": "I (36333) EMBEDMARK_VALIDATION: Padrao de cores ativo", "normalized": "I (36333) EMBEDMARK_VALIDATION: Padrao de cores ativo"}
+{"elapsed_s": 36.334, "kind": "assertion", "name": "switch_04_pattern", "passed": true, "duration_s": 0.22, "observed": "I (36333) EMBEDMARK_VALIDATION: Padrao de cores ativo", "command": "p", "expected": "Padrao de cores ativo"}
+{"elapsed_s": 36.334, "kind": "step_start", "name": "switch_04_generated", "command": "g", "expected": "Tela gerada: OK"}
+{"elapsed_s": 36.539, "kind": "tx", "command": "g"}
+{"elapsed_s": 36.554, "kind": "rx_line", "text": "I (36553) EMBEDMARK_VALIDATION: Tela gerada: OK", "normalized": "I (36553) EMBEDMARK_VALIDATION: Tela gerada: OK"}
+{"elapsed_s": 36.554, "kind": "assertion", "name": "switch_04_generated", "passed": true, "duration_s": 0.22, "observed": "I (36553) EMBEDMARK_VALIDATION: Tela gerada: OK", "command": "g", "expected": "Tela gerada: OK"}
+{"elapsed_s": 36.554, "kind": "step_start", "name": "switch_05_pattern", "command": "p", "expected": "Padrao de cores ativo"}
+{"elapsed_s": 36.755, "kind": "tx", "command": "p"}
+{"elapsed_s": 36.774, "kind": "rx_line", "text": "I (36773) EMBEDMARK_VALIDATION: Padrao de cores ativo", "normalized": "I (36773) EMBEDMARK_VALIDATION: Padrao de cores ativo"}
+{"elapsed_s": 36.774, "kind": "assertion", "name": "switch_05_pattern", "passed": true, "duration_s": 0.22, "observed": "I (36773) EMBEDMARK_VALIDATION: Padrao de cores ativo", "command": "p", "expected": "Padrao de cores ativo"}
+{"elapsed_s": 36.774, "kind": "step_start", "name": "switch_05_generated", "command": "g", "expected": "Tela gerada: OK"}
+{"elapsed_s": 36.979, "kind": "tx", "command": "g"}
+{"elapsed_s": 36.994, "kind": "rx_line", "text": "I (36993) EMBEDMARK_VALIDATION: Tela gerada: OK", "normalized": "I (36993) EMBEDMARK_VALIDATION: Tela gerada: OK"}
+{"elapsed_s": 36.994, "kind": "assertion", "name": "switch_05_generated", "passed": true, "duration_s": 0.22, "observed": "I (36993) EMBEDMARK_VALIDATION: Tela gerada: OK", "command": "g", "expected": "Tela gerada: OK"}
+{"elapsed_s": 36.994, "kind": "step_start", "name": "switch_06_pattern", "command": "p", "expected": "Padrao de cores ativo"}
+{"elapsed_s": 37.2, "kind": "tx", "command": "p"}
+{"elapsed_s": 37.214, "kind": "rx_line", "text": "I (37213) EMBEDMARK_VALIDATION: Padrao de cores ativo", "normalized": "I (37213) EMBEDMARK_VALIDATION: Padrao de cores ativo"}
+{"elapsed_s": 37.214, "kind": "assertion", "name": "switch_06_pattern", "passed": true, "duration_s": 0.22, "observed": "I (37213) EMBEDMARK_VALIDATION: Padrao de cores ativo", "command": "p", "expected": "Padrao de cores ativo"}
+{"elapsed_s": 37.214, "kind": "step_start", "name": "switch_06_generated", "command": "g", "expected": "Tela gerada: OK"}
+{"elapsed_s": 37.425, "kind": "tx", "command": "g"}
+{"elapsed_s": 37.434, "kind": "rx_line", "text": "I (37433) EMBEDMARK_VALIDATION: Tela gerada: OK", "normalized": "I (37433) EMBEDMARK_VALIDATION: Tela gerada: OK"}
+{"elapsed_s": 37.434, "kind": "assertion", "name": "switch_06_generated", "passed": true, "duration_s": 0.22, "observed": "I (37433) EMBEDMARK_VALIDATION: Tela gerada: OK", "command": "g", "expected": "Tela gerada: OK"}
+{"elapsed_s": 37.434, "kind": "step_start", "name": "switch_07_pattern", "command": "p", "expected": "Padrao de cores ativo"}
+{"elapsed_s": 37.643, "kind": "tx", "command": "p"}
+{"elapsed_s": 37.654, "kind": "rx_line", "text": "I (37653) EMBEDMARK_VALIDATION: Padrao de cores ativo", "normalized": "I (37653) EMBEDMARK_VALIDATION: Padrao de cores ativo"}
+{"elapsed_s": 37.654, "kind": "assertion", "name": "switch_07_pattern", "passed": true, "duration_s": 0.22, "observed": "I (37653) EMBEDMARK_VALIDATION: Padrao de cores ativo", "command": "p", "expected": "Padrao de cores ativo"}
+{"elapsed_s": 37.654, "kind": "step_start", "name": "switch_07_generated", "command": "g", "expected": "Tela gerada: OK"}
+{"elapsed_s": 37.863, "kind": "tx", "command": "g"}
+{"elapsed_s": 37.874, "kind": "rx_line", "text": "I (37873) EMBEDMARK_VALIDATION: Tela gerada: OK", "normalized": "I (37873) EMBEDMARK_VALIDATION: Tela gerada: OK"}
+{"elapsed_s": 37.874, "kind": "assertion", "name": "switch_07_generated", "passed": true, "duration_s": 0.22, "observed": "I (37873) EMBEDMARK_VALIDATION: Tela gerada: OK", "command": "g", "expected": "Tela gerada: OK"}
+{"elapsed_s": 37.874, "kind": "step_start", "name": "switch_08_pattern", "command": "p", "expected": "Padrao de cores ativo"}
+{"elapsed_s": 38.081, "kind": "tx", "command": "p"}
+{"elapsed_s": 38.094, "kind": "rx_line", "text": "I (38093) EMBEDMARK_VALIDATION: Padrao de cores ativo", "normalized": "I (38093) EMBEDMARK_VALIDATION: Padrao de cores ativo"}
+{"elapsed_s": 38.094, "kind": "assertion", "name": "switch_08_pattern", "passed": true, "duration_s": 0.22, "observed": "I (38093) EMBEDMARK_VALIDATION: Padrao de cores ativo", "command": "p", "expected": "Padrao de cores ativo"}
+{"elapsed_s": 38.094, "kind": "step_start", "name": "switch_08_generated", "command": "g", "expected": "Tela gerada: OK"}
+{"elapsed_s": 38.304, "kind": "tx", "command": "g"}
+{"elapsed_s": 38.314, "kind": "rx_line", "text": "I (38313) EMBEDMARK_VALIDATION: Tela gerada: OK", "normalized": "I (38313) EMBEDMARK_VALIDATION: Tela gerada: OK"}
+{"elapsed_s": 38.314, "kind": "assertion", "name": "switch_08_generated", "passed": true, "duration_s": 0.22, "observed": "I (38313) EMBEDMARK_VALIDATION: Tela gerada: OK", "command": "g", "expected": "Tela gerada: OK"}
+{"elapsed_s": 38.314, "kind": "step_start", "name": "switch_09_pattern", "command": "p", "expected": "Padrao de cores ativo"}
+{"elapsed_s": 38.524, "kind": "tx", "command": "p"}
+{"elapsed_s": 38.534, "kind": "rx_line", "text": "I (38533) EMBEDMARK_VALIDATION: Padrao de cores ativo", "normalized": "I (38533) EMBEDMARK_VALIDATION: Padrao de cores ativo"}
+{"elapsed_s": 38.534, "kind": "assertion", "name": "switch_09_pattern", "passed": true, "duration_s": 0.22, "observed": "I (38533) EMBEDMARK_VALIDATION: Padrao de cores ativo", "command": "p", "expected": "Padrao de cores ativo"}
+{"elapsed_s": 38.534, "kind": "step_start", "name": "switch_09_generated", "command": "g", "expected": "Tela gerada: OK"}
+{"elapsed_s": 38.744, "kind": "tx", "command": "g"}
+{"elapsed_s": 38.754, "kind": "rx_line", "text": "I (38753) EMBEDMARK_VALIDATION: Tela gerada: OK", "normalized": "I (38753) EMBEDMARK_VALIDATION: Tela gerada: OK"}
+{"elapsed_s": 38.754, "kind": "assertion", "name": "switch_09_generated", "passed": true, "duration_s": 0.22, "observed": "I (38753) EMBEDMARK_VALIDATION: Tela gerada: OK", "command": "g", "expected": "Tela gerada: OK"}
+{"elapsed_s": 38.754, "kind": "step_start", "name": "switch_10_pattern", "command": "p", "expected": "Padrao de cores ativo"}
+{"elapsed_s": 38.96, "kind": "tx", "command": "p"}
+{"elapsed_s": 38.974, "kind": "rx_line", "text": "I (38973) EMBEDMARK_VALIDATION: Padrao de cores ativo", "normalized": "I (38973) EMBEDMARK_VALIDATION: Padrao de cores ativo"}
+{"elapsed_s": 38.974, "kind": "assertion", "name": "switch_10_pattern", "passed": true, "duration_s": 0.22, "observed": "I (38973) EMBEDMARK_VALIDATION: Padrao de cores ativo", "command": "p", "expected": "Padrao de cores ativo"}
+{"elapsed_s": 38.974, "kind": "step_start", "name": "switch_10_generated", "command": "g", "expected": "Tela gerada: OK"}
+{"elapsed_s": 39.18, "kind": "tx", "command": "g"}
+{"elapsed_s": 39.194, "kind": "rx_line", "text": "I (39193) EMBEDMARK_VALIDATION: Tela gerada: OK", "normalized": "I (39193) EMBEDMARK_VALIDATION: Tela gerada: OK"}
+{"elapsed_s": 39.194, "kind": "assertion", "name": "switch_10_generated", "passed": true, "duration_s": 0.22, "observed": "I (39193) EMBEDMARK_VALIDATION: Tela gerada: OK", "command": "g", "expected": "Tela gerada: OK"}
+{"elapsed_s": 39.194, "kind": "step_start", "name": "state_after_ten_switches", "command": "c", "expected_count": 2}
+{"elapsed_s": 39.403, "kind": "tx", "command": "c"}
+{"elapsed_s": 39.414, "kind": "rx_line", "text": "I (39413) EMBEDMARK_VALIDATION: Ações: 2", "normalized": "I (39413) EMBEDMARK_VALIDATION: Ações: 2"}
+{"elapsed_s": 39.414, "kind": "assertion", "name": "state_after_ten_switches", "passed": true, "duration_s": 0.22, "observed": {"count": 2, "line": "I (39413) EMBEDMARK_VALIDATION: Ações: 2"}, "command": "c", "expected_count": 2}
+{"elapsed_s": 39.415, "kind": "step_start", "name": "final_recreate", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 39.625, "kind": "tx", "command": "r"}
+{"elapsed_s": 39.642, "kind": "rx_line", "text": "I (39633) EMBEDMARK_VALIDATION: Tela gerada: OK", "normalized": "I (39633) EMBEDMARK_VALIDATION: Tela gerada: OK"}
+{"elapsed_s": 39.642, "kind": "assertion", "name": "final_recreate", "passed": true, "duration_s": 0.228, "observed": "I (39633) EMBEDMARK_VALIDATION: Tela gerada: OK", "command": "r", "expected": "Tela gerada: OK"}
+{"elapsed_s": 39.642, "kind": "step_start", "name": "final_click_1", "command": "c", "expected_count": 1}
+{"elapsed_s": 39.851, "kind": "tx", "command": "c"}
+{"elapsed_s": 39.854, "kind": "rx_line", "text": "I (39853) EMBEDMARK_VALIDATION: Ações: 1", "normalized": "I (39853) EMBEDMARK_VALIDATION: Ações: 1"}
+{"elapsed_s": 39.854, "kind": "assertion", "name": "final_click_1", "passed": true, "duration_s": 0.212, "observed": {"count": 1, "line": "I (39853) EMBEDMARK_VALIDATION: Ações: 1"}, "command": "c", "expected_count": 1}
+{"elapsed_s": 39.854, "kind": "step_start", "name": "final_click_2", "command": "c", "expected_count": 2}
+{"elapsed_s": 40.065, "kind": "tx", "command": "c"}
+{"elapsed_s": 40.074, "kind": "rx_line", "text": "I (40073) EMBEDMARK_VALIDATION: Ações: 2", "normalized": "I (40073) EMBEDMARK_VALIDATION: Ações: 2"}
+{"elapsed_s": 40.074, "kind": "assertion", "name": "final_click_2", "passed": true, "duration_s": 0.22, "observed": {"count": 2, "line": "I (40073) EMBEDMARK_VALIDATION: Ações: 2"}, "command": "c", "expected_count": 2}
+{"elapsed_s": 40.074, "kind": "step_start", "name": "final_click_3", "command": "c", "expected_count": 3}
+{"elapsed_s": 40.28, "kind": "tx", "command": "c"}
+{"elapsed_s": 40.294, "kind": "rx_line", "text": "I (40293) EMBEDMARK_VALIDATION: Ações: 3", "normalized": "I (40293) EMBEDMARK_VALIDATION: Ações: 3"}
+{"elapsed_s": 40.295, "kind": "assertion", "name": "final_click_3", "passed": true, "duration_s": 0.22, "observed": {"count": 3, "line": "I (40293) EMBEDMARK_VALIDATION: Ações: 3"}, "command": "c", "expected_count": 3}
+{"elapsed_s": 40.295, "kind": "step_start", "name": "final_quiet", "expected": "sem incrementos por 2,2s"}
+{"elapsed_s": 42.584, "kind": "assertion", "name": "final_quiet", "passed": true, "duration_s": 2.289, "observed": null, "expected": "sem incrementos por 2,2s"}

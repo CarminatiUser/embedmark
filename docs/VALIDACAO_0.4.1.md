@@ -1,5 +1,7 @@
 # Validação da versão 0.4.1 — 09/11/2026
 
+> **Atualização de acompanhamento — 11/11/2026:** Esta página preserva a publicação e as verificações de 09/11/2026 da versão 0.4.1. A distribuição posterior sob licença MIT está documentada na [validação 0.4.2](VALIDACAO_0.4.2.md). O [ensaio físico de 11/11/2026](VALIDACAO_FISICA_2026-11-11.md) utilizou o núcleo 0.4.2 na placa Waveshare ESP32-C6-LCD-1.47, com eventos por console. Seus resultados são independentes da rodada de software registrada abaixo e não comprovam touch ou entrada por botão físico.
+
 A versão **0.4.1 foi publicada e está disponível no [Marketplace do VS Code](https://marketplace.visualstudio.com/items?itemName=arthur-carminati.embedmark)**. O identificador é `arthur-carminati.embedmark`, do publicador Arthur Carminati. A consulta pública sem autenticação confirmou a versão com estado validado e público em 09/11/2026.
 
 ## Código e pacote verificados

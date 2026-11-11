@@ -1,5 +1,7 @@
 # Validação da versão 0.4.2 — 09/11/2026
 
+> **Atualização de acompanhamento — 11/11/2026:** Após esta rodada de software, o [ensaio físico documentado em 11/11/2026](VALIDACAO_FISICA_2026-11-11.md) utilizou o núcleo 0.4.2 na placa Waveshare ESP32-C6-LCD-1.47, com ESP32-C6FH4. Foram aprovadas 143 verificações com eventos por console, acompanhadas de confirmação visual e da fotografia IMG_6242. Esse registro atende RF08 no cenário ensaiado, sem comprovar touch ou entrada por botão físico. As contagens, os hashes e os limites da rodada de 09/11/2026 permanecem preservados abaixo.
+
 A versão **0.4.2 está publicada no [Marketplace do VS Code](https://marketplace.visualstudio.com/items?itemName=arthur-carminati.embedmark)**. Esta atualização adota a **licença MIT** para o código original do EmbedMark. O identificador permanece `arthur-carminati.embedmark`, do publicador Arthur Carminati. O fluxo funcional e as dependências permanecem iguais aos da versão 0.4.1.
 
 ## Código e pacote verificados

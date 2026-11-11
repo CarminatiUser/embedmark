@@ -24,7 +24,7 @@ Os diagnósticos vão para Problems, com posições quando disponíveis. A gera�
 
 A saída representa uma instância de tela e fornece `screen_main_create`, `screen_main_get`, `screen_main_get_object` e `screen_main_destroy`. As referências são invalidadas quando objetos são excluídos pelo LVGL. Eventos e comportamento da aplicação usam a API LVGL; o tradutor não configura GPIO, touch ou periféricos.
 
-O laboratório local separado `embedmark-validation` inicializa SPI, ST7789T, iluminação, buffers e temporização do LVGL no ESP32-C6. Ele não está incluído neste repositório, e seu endereço público não foi confirmado. O controlador de exemplo conta eventos, e o padrão de calibração ajuda a verificar cores e geometria. O firmware original em `Downloads/tela_lcd` é uma referência preservada.
+O laboratório local isolado `embedmark-validation-waveshare`, derivado do laboratório anterior `embedmark-validation`, inicializa SPI, ST7789, iluminação, buffers e temporização do LVGL na placa Waveshare ESP32-C6-LCD-1.47. O controlador de exemplo conta eventos enviados pelo console USB Serial/JTAG, e o padrão de calibração permite conferir cores e geometria. O firmware completo do laboratório não está incluído neste repositório; o [relatório de 11/11/2026](docs/VALIDACAO_FISICA_2026-11-11.md) publica a configuração e as evidências da execução física. O firmware original em `Downloads/tela_lcd` foi preservado.
 
 ## Distribuição e verificação
 
@@ -33,6 +33,6 @@ O laboratório local separado `embedmark-validation` inicializa SPI, ST7789T, il
 - `tools/bundle_backend.py` verifica os wheels, preserva licenças e produz o catálogo de hashes do núcleo incluído.
 - `extension/package-lock.json` fixa as ferramentas de compilação e empacotamento da extensão.
 - Os testes cobrem núcleo, API/CLI, protocolo, gravação de arquivos, processo Python, integração com VS Code e compilação/execução do C com LVGL.
-- A execução com LVGL no computador, a compilação ESP-IDF e a validação física são resultados distintos, registrados em [VALIDACAO_0.4.0.md](docs/VALIDACAO_0.4.0.md).
+- A execução com LVGL no computador, a compilação ESP-IDF e a validação física são resultados distintos. As rodadas de software estão em [VALIDACAO_0.4.0.md](docs/VALIDACAO_0.4.0.md) e [VALIDACAO_0.4.2.md](docs/VALIDACAO_0.4.2.md); o ensaio na placa está em [VALIDACAO_FISICA_2026-11-11.md](docs/VALIDACAO_FISICA_2026-11-11.md).
 
 O [relato anterior de arquitetura](docs/historico/ARCHITECTURE.md) foi mantido como histórico; estimativas de recursos nele não são medições do produto.

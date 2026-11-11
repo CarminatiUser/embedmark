@@ -1,5 +1,7 @@
 # Adoção do nome EmbedMark
 
+> **Atualização de acompanhamento — 11/11/2026:** A identidade, a versão e as pendências descritas abaixo correspondem à renomeação de 14/10/2026. O publicador `arthur-carminati` foi confirmado, a versão [0.4.1 foi publicada e verificada](VALIDACAO_0.4.1.md) e a [0.4.2 foi publicada sob licença MIT](VALIDACAO_0.4.2.md); esses registros também documentam a matriz remota aprovada. O [ensaio físico de 11/11/2026](VALIDACAO_FISICA_2026-11-11.md) registra a execução na Waveshare com o núcleo 0.4.2 e eventos por console. Esses resultados posteriores não substituem os artefatos ou os 197 testes desta entrega histórica.
+
 Em 14/10/2026, o autor escolheu **EmbedMark** como identidade do produto. A versão continua **0.4.0** durante a preparação da primeira publicação. O publicador proposto continua `arthur-carminati`; o envio ao Marketplace permanece uma etapa separada.
 
 ## Identidade atual

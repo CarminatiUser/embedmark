@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-11",
+  "source_updated_at": "2026-11-11T13:51:22.355986-03:00",
+  "pattern": {
+    "status": "confirmed_by_user",
+    "answer": "Sim, cores e imagem corretas",
+    "observed_by": "user",
+    "criteria": [
+      "ordem vermelho/verde/azul/branco",
+      "nomes correspondentes",
+      "borda e enquadramento completos"
+    ]
+  },
+  "counter_texts": {
+    "status": "confirmed_by_user_and_photo",
+    "answer": "Sim, textos corretos e Ações: 3",
+    "observations": [
+      "Contador de ações em duas linhas",
+      "Ações: 3",
+      "Adicionar ação",
+      "Pronto para começar em duas linhas",
+      "acentos presentes",
+      "elementos dentro da área visível"
+    ]
+  },
+  "first_confirmation_photo": {
+    "filename": "IMG_6241.HEIC",
+    "published": false,
+    "bytes": 801871,
+    "sha256": "3b7474578fefa22e63c9d785f248879ff3a28e5d8c1d25fe4a16f979a767ee35"
+  },
+  "photos_after_flashing": true,
+  "published_photo": {
+    "path": "IMG_6242-preview.png",
+    "bytes": 1976798,
+    "sha256": "01a05c37e0d9975065b5b7513e875a8d5183bacd20dee08b1259c188e03e5d75",
+    "native_dimensions": [
+      1400,
+      1050
+    ],
+    "display_dimensions": [
+      1050,
+      1400
+    ],
+    "source_preview": {
+      "bytes": 1984170,
+      "sha256": "ba9a807b57dcc4b0d91546925a76ca0fe4b499a1669934859eb0d8e0338e7b7c"
+    },
+    "source_original": {
+      "filename": "IMG_6242.HEIC",
+      "published": false,
+      "bytes": 955616,
+      "sha256": "f0b340526dc19228fd5d95f18f9e4cf773fd573f414af69b856350e832434e3a"
+    },
+    "observation": "Fotografia adicional do mesmo ensaio, com Ações: 3, escolhida pelo autor para inclusão no TCC.",
+    "removed_original_metadata_chunks": [
+      "eXIf",
+      "iTXt"
+    ],
+    "retained_minimal_exif": {
+      "Orientation": 6
+    },
+    "idat_preserved": true,
+    "decoded_pixels_preserved": true,
+    "displayed_pixels_preserved": true
+  },
+  "scope": "Confirmação visual complementar à rodada serial. Fotografia é registro estático; a sequência de comandos e respostas está nos logs. Sem validação de touch, botão físico ou desempenho."
+}

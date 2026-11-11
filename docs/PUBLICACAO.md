@@ -20,7 +20,7 @@ No VS Code, abra Extensions, use o menu de três pontos e escolha **Install from
 
 Abra uma pasta confiável e use **EmbedMark: Criar exemplo de contador**. Salve o HTML e execute **Validar interface** e **Gerar interface LVGL**. Se o Python não for encontrado, configure **EmbedMark: Python Path** com o caminho do executável, sem argumentos adicionais.
 
-O ESP-IDF é necessário apenas para compilar/gravar um firmware. O laboratório da tela, `embedmark-validation`, é um projeto local separado, não incluído neste repositório e sem endereço público confirmado; seu próprio README documenta esse procedimento.
+O ESP-IDF é necessário apenas para compilar/gravar um firmware. O ensaio físico de 11/11/2026 utilizou o laboratório local isolado `embedmark-validation-waveshare`, separado do projeto anterior `embedmark-validation`. O firmware completo desses laboratórios não está incluído neste repositório. A configuração, os resultados e as evidências do ensaio estão no [relatório de validação física](VALIDACAO_FISICA_2026-11-11.md).
 
 ## Identidade do publicador
 
@@ -62,4 +62,6 @@ Os testes do VS Code usam perfis e pastas temporários, sem instalar a extensão
 
 ## Limites dos resultados
 
-A versão foi preparada e testada originalmente no macOS do autor. A matriz automatizada para Linux, Windows e macOS é executada no [GitHub Actions](https://github.com/CarminatiUser/embedmark/actions/workflows/tests.yml), com resultados vinculados ao commit verificado e ao ambiente de execução. Consulte [VALIDACAO_0.4.0.md](VALIDACAO_0.4.0.md) para os registros históricos das verificações locais. A validação física do display permanece no roteiro do laboratório.
+A versão foi preparada e testada originalmente no macOS do autor. A matriz automatizada para Linux, Windows e macOS é executada no [GitHub Actions](https://github.com/CarminatiUser/embedmark/actions/workflows/tests.yml), com resultados vinculados ao commit verificado e ao ambiente de execução. Consulte [VALIDACAO_0.4.0.md](VALIDACAO_0.4.0.md) para os registros históricos das verificações locais e [VALIDACAO_0.4.2.md](VALIDACAO_0.4.2.md) para a publicação sob MIT.
+
+O [ensaio físico de 11/11/2026](VALIDACAO_FISICA_2026-11-11.md) confirmou a execução do contador gerado pelo núcleo 0.4.2 na Waveshare ESP32-C6-LCD-1.47: 143 verificações por console aprovadas, com conferência visual e fotografia. Esse resultado é separado dos testes de instalação do VSIX e não valida touch, outros hardwares ou desempenho. A atualização documental não modifica a versão publicada da extensão. O vídeo de demonstração será gravado posteriormente pelo autor.

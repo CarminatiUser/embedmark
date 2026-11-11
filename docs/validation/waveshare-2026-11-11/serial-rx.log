@@ -1,0 +1,207 @@
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x15 (USB_UART_HPSYS),boot:0x6f (SPI_FAST_FLASH_BOOT)
+Saved PC:0x408051e4
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875730,len:0x16bc
+load:0x4086c110,len:0xdf4
+load:0x4086e610,len:0x3078
+entry 0x4086c11a
+I (23) boot: ESP-IDF v5.4.3-dirty 2nd stage bootloader
+I (23) boot: compile time Nov 11 2026 13:45:12
+I (23) boot: chip revision: v0.1
+I (24) boot: efuse block revision: v0.3
+I (24) boot.esp32c6: SPI Speed      : 80MHz
+I (24) boot.esp32c6: SPI Mode       : DIO
+I (24) boot.esp32c6: SPI Flash Size : 4MB
+I (25) boot: Enabling RNG early entropy source...
+I (25) boot: Partition Table:
+I (25) boot: ## Label            Usage          Type ST Offset   Length
+I (25) boot:  0 nvs              WiFi data        01 02 00009000 00006000
+I (26) boot:  1 factory          factory app      00 00 00010000 00200000
+I (27) boot:  2 flash_test       Unknown data     01 81 00210000 00084000
+I (27) boot: End of partition table
+I (27) esp_image: segment 0: paddr=00010020 vaddr=42050020 size=1a3f8h (107512) map
+I (48) esp_image: segment 1: paddr=0002a420 vaddr=40800000 size=05bf8h ( 23544) load
+I (54) esp_image: segment 2: paddr=00030020 vaddr=42000020 size=47fd4h (294868) map
+I (110) esp_image: segment 3: paddr=00077ffc vaddr=40805bf8 size=079f4h ( 31220) load
+I (117) esp_image: segment 4: paddr=0007f9f8 vaddr=4080d5f0 size=04f28h ( 20264) load
+I (122) esp_image: segment 5: paddr=00084928 vaddr=50000000 size=0001ch (    28) load
+I (126) boot: Loaded app from partition at offset 0x10000
+I (127) boot: Disabling RNG early entropy source...
+I (128) cpu_start: Unicore app
+I (136) cpu_start: Pro cpu start user code
+I (137) cpu_start: cpu freq: 160000000 Hz
+I (137) app_init: Application information:
+I (137) app_init: Project name:     embedmark-validation
+I (137) app_init: App version:      0.1.0
+I (137) app_init: Compile time:     Nov 11 2026 13:45:03
+I (138) app_init: ELF file SHA256:  23050c142...
+I (138) app_init: ESP-IDF:          v5.4.3-dirty
+I (138) efuse_init: Min chip rev:     v0.0
+I (138) efuse_init: Max chip rev:     v0.99 
+I (139) efuse_init: Chip rev:         v0.1
+I (139) heap_init: Initializing. RAM available for dynamic allocation:
+I (139) heap_init: At 408239D0 len 00058C40 (355 KiB): RAM
+I (139) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM
+I (140) heap_init: At 5000001C len 00003FCC (15 KiB): RTCRAM
+I (141) spi_flash: detected chip: generic
+I (141) spi_flash: flash io: dio
+I (141) sleep_gpio: Configure to isolate all GPIO pins in sleep state
+I (142) sleep_gpio: Enable automatic switching of GPIO sleep configuration
+I (142) coexist: coex firmware version: b0bcc39
+I (142) coexist: coexist rom version 5b8dcfa
+I (143) main_task: Started on CPU0
+I (143) main_task: Calling app_main()
+I (143) TCC_DISPLAY: Waveshare ESP32-C6-LCD-1.47: CLK=7 MOSI=6 CS=14 DC=15 RST=21 BL=22
+I (143) TCC_DISPLAY: ST7789T 172x320, SPI 12 MHz, offset 34,0
+I (143) gpio: GPIO[21]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+I (273) EMBEDMARK_VALIDATION: Tela gerada: OK
+
+EmbedMark: g=tela gerada | p=padrao de cores | c=clique | r=recriar | a=automatico | h=ajuda
+O exemplo nao depende de touch. Comandos entram pela console principal configurada.
+I (273) EMBEDMARK_VALIDATION: Padrao de cores por 3 segundos; depois, interface gerada.
+I (3283) EMBEDMARK_VALIDATION: Tela gerada: OK
+
+EmbedMark: g=tela gerada | p=padrao de cores | c=clique | r=recriar | a=automatico | h=ajuda
+O exemplo nao depende de touch. Comandos entram pela console principal configurada.
+I (4033) EMBEDMARK_VALIDATION: Tela gerada: OK
+I (4253) EMBEDMARK_VALIDATION: Ações: 1
+I (4473) EMBEDMARK_VALIDATION: Ações: 2
+I (4693) EMBEDMARK_VALIDATION: Ações: 3
+I (4913) EMBEDMARK_VALIDATION: Padrao de cores ativo
+I (5133) EMBEDMARK_VALIDATION: Tela gerada: OK
+I (5353) EMBEDMARK_VALIDATION: Ações: 4
+I (5573) EMBEDMARK_VALIDATION: Tela gerada: OK
+I (5793) EMBEDMARK_VALIDATION: Ações: 1
+I (6013) EMBEDMARK_VALIDATION: Automatico: ON
+I (6283) EMBEDMARK_VALIDATION: Ações: 2
+I (8283) EMBEDMARK_VALIDATION: Ações: 3
+I (10283) EMBEDMARK_VALIDATION: Ações: 4
+I (10493) EMBEDMARK_VALIDATION: Automatico: OFF
+I (13013) EMBEDMARK_VALIDATION: Tela gerada: OK
+I (13233) EMBEDMARK_VALIDATION: Ações: 1
+I (13453) EMBEDMARK_VALIDATION: Tela gerada: OK
+I (13673) EMBEDMARK_VALIDATION: Ações: 1
+I (13893) EMBEDMARK_VALIDATION: Tela gerada: OK
+I (14113) EMBEDMARK_VALIDATION: Ações: 1
+I (14333) EMBEDMARK_VALIDATION: Tela gerada: OK
+I (14553) EMBEDMARK_VALIDATION: Ações: 1
+I (14773) EMBEDMARK_VALIDATION: Tela gerada: OK
+I (14993) EMBEDMARK_VALIDATION: Ações: 1
+I (15213) EMBEDMARK_VALIDATION: Tela gerada: OK
+I (15433) EMBEDMARK_VALIDATION: Ações: 1
+I (15653) EMBEDMARK_VALIDATION: Tela gerada: OK
+I (15873) EMBEDMARK_VALIDATION: Ações: 1
+I (16093) EMBEDMARK_VALIDATION: Tela gerada: OK
+I (16313) EMBEDMARK_VALIDATION: Ações: 1
+I (16533) EMBEDMARK_VALIDATION: Tela gerada: OK
+I (16753) EMBEDMARK_VALIDATION: Ações: 1
+I (16973) EMBEDMARK_VALIDATION: Tela gerada: OK
+I (17193) EMBEDMARK_VALIDATION: Ações: 1
+I (17413) EMBEDMARK_VALIDATION: Tela gerada: OK
+I (17633) EMBEDMARK_VALIDATION: Ações: 1
+I (17853) EMBEDMARK_VALIDATION: Tela gerada: OK
+I (18073) EMBEDMARK_VALIDATION: Ações: 1
+I (18293) EMBEDMARK_VALIDATION: Tela gerada: OK
+I (18513) EMBEDMARK_VALIDATION: Ações: 1
+I (18733) EMBEDMARK_VALIDATION: Tela gerada: OK
+I (18953) EMBEDMARK_VALIDATION: Ações: 1
+I (19173) EMBEDMARK_VALIDATION: Tela gerada: OK
+I (19393) EMBEDMARK_VALIDATION: Ações: 1
+I (19613) EMBEDMARK_VALIDATION: Tela gerada: OK
+I (19833) EMBEDMARK_VALIDATION: Ações: 1
+I (20053) EMBEDMARK_VALIDATION: Tela gerada: OK
+I (20273) EMBEDMARK_VALIDATION: Ações: 1
+I (20493) EMBEDMARK_VALIDATION: Tela gerada: OK
+I (20713) EMBEDMARK_VALIDATION: Ações: 1
+I (20933) EMBEDMARK_VALIDATION: Tela gerada: OK
+I (21153) EMBEDMARK_VALIDATION: Ações: 1
+I (21373) EMBEDMARK_VALIDATION: Tela gerada: OK
+I (21593) EMBEDMARK_VALIDATION: Ações: 1
+I (21813) EMBEDMARK_VALIDATION: Tela gerada: OK
+I (22033) EMBEDMARK_VALIDATION: Ações: 1
+I (22253) EMBEDMARK_VALIDATION: Tela gerada: OK
+I (22473) EMBEDMARK_VALIDATION: Ações: 1
+I (22693) EMBEDMARK_VALIDATION: Tela gerada: OK
+I (22913) EMBEDMARK_VALIDATION: Ações: 1
+I (23133) EMBEDMARK_VALIDATION: Tela gerada: OK
+I (23353) EMBEDMARK_VALIDATION: Ações: 1
+I (23573) EMBEDMARK_VALIDATION: Tela gerada: OK
+I (23793) EMBEDMARK_VALIDATION: Ações: 1
+I (24013) EMBEDMARK_VALIDATION: Tela gerada: OK
+I (24233) EMBEDMARK_VALIDATION: Ações: 1
+I (24453) EMBEDMARK_VALIDATION: Tela gerada: OK
+I (24673) EMBEDMARK_VALIDATION: Ações: 1
+I (24893) EMBEDMARK_VALIDATION: Tela gerada: OK
+I (25113) EMBEDMARK_VALIDATION: Ações: 1
+I (25333) EMBEDMARK_VALIDATION: Tela gerada: OK
+I (25553) EMBEDMARK_VALIDATION: Ações: 1
+I (25773) EMBEDMARK_VALIDATION: Tela gerada: OK
+I (25993) EMBEDMARK_VALIDATION: Ações: 1
+I (26213) EMBEDMARK_VALIDATION: Tela gerada: OK
+I (26433) EMBEDMARK_VALIDATION: Ações: 1
+I (26653) EMBEDMARK_VALIDATION: Tela gerada: OK
+I (26873) EMBEDMARK_VALIDATION: Ações: 1
+I (27093) EMBEDMARK_VALIDATION: Tela gerada: OK
+I (27313) EMBEDMARK_VALIDATION: Ações: 1
+I (27533) EMBEDMARK_VALIDATION: Tela gerada: OK
+I (27753) EMBEDMARK_VALIDATION: Ações: 1
+I (27973) EMBEDMARK_VALIDATION: Tela gerada: OK
+I (28193) EMBEDMARK_VALIDATION: Ações: 1
+I (28413) EMBEDMARK_VALIDATION: Tela gerada: OK
+I (28633) EMBEDMARK_VALIDATION: Ações: 1
+I (28853) EMBEDMARK_VALIDATION: Tela gerada: OK
+I (29073) EMBEDMARK_VALIDATION: Ações: 1
+I (29293) EMBEDMARK_VALIDATION: Tela gerada: OK
+I (29513) EMBEDMARK_VALIDATION: Ações: 1
+I (29733) EMBEDMARK_VALIDATION: Tela gerada: OK
+I (29953) EMBEDMARK_VALIDATION: Ações: 1
+I (30173) EMBEDMARK_VALIDATION: Tela gerada: OK
+I (30393) EMBEDMARK_VALIDATION: Ações: 1
+I (30613) EMBEDMARK_VALIDATION: Tela gerada: OK
+I (30833) EMBEDMARK_VALIDATION: Ações: 1
+I (31053) EMBEDMARK_VALIDATION: Tela gerada: OK
+I (31273) EMBEDMARK_VALIDATION: Ações: 1
+I (31493) EMBEDMARK_VALIDATION: Tela gerada: OK
+I (31713) EMBEDMARK_VALIDATION: Ações: 1
+I (31933) EMBEDMARK_VALIDATION: Tela gerada: OK
+I (32153) EMBEDMARK_VALIDATION: Ações: 1
+I (32373) EMBEDMARK_VALIDATION: Tela gerada: OK
+I (32593) EMBEDMARK_VALIDATION: Ações: 1
+I (32813) EMBEDMARK_VALIDATION: Tela gerada: OK
+I (33033) EMBEDMARK_VALIDATION: Ações: 1
+I (33253) EMBEDMARK_VALIDATION: Tela gerada: OK
+I (33473) EMBEDMARK_VALIDATION: Ações: 1
+I (33693) EMBEDMARK_VALIDATION: Tela gerada: OK
+I (33913) EMBEDMARK_VALIDATION: Ações: 1
+I (34133) EMBEDMARK_VALIDATION: Tela gerada: OK
+I (34353) EMBEDMARK_VALIDATION: Ações: 1
+I (34573) EMBEDMARK_VALIDATION: Tela gerada: OK
+I (34793) EMBEDMARK_VALIDATION: Ações: 1
+I (35013) EMBEDMARK_VALIDATION: Padrao de cores ativo
+I (35233) EMBEDMARK_VALIDATION: Tela gerada: OK
+I (35453) EMBEDMARK_VALIDATION: Padrao de cores ativo
+I (35673) EMBEDMARK_VALIDATION: Tela gerada: OK
+I (35893) EMBEDMARK_VALIDATION: Padrao de cores ativo
+I (36113) EMBEDMARK_VALIDATION: Tela gerada: OK
+I (36333) EMBEDMARK_VALIDATION: Padrao de cores ativo
+I (36553) EMBEDMARK_VALIDATION: Tela gerada: OK
+I (36773) EMBEDMARK_VALIDATION: Padrao de cores ativo
+I (36993) EMBEDMARK_VALIDATION: Tela gerada: OK
+I (37213) EMBEDMARK_VALIDATION: Padrao de cores ativo
+I (37433) EMBEDMARK_VALIDATION: Tela gerada: OK
+I (37653) EMBEDMARK_VALIDATION: Padrao de cores ativo
+I (37873) EMBEDMARK_VALIDATION: Tela gerada: OK
+I (38093) EMBEDMARK_VALIDATION: Padrao de cores ativo
+I (38313) EMBEDMARK_VALIDATION: Tela gerada: OK
+I (38533) EMBEDMARK_VALIDATION: Padrao de cores ativo
+I (38753) EMBEDMARK_VALIDATION: Tela gerada: OK
+I (38973) EMBEDMARK_VALIDATION: Padrao de cores ativo
+I (39193) EMBEDMARK_VALIDATION: Tela gerada: OK
+I (39413) EMBEDMARK_VALIDATION: Ações: 2
+I (39633) EMBEDMARK_VALIDATION: Tela gerada: OK
+I (39853) EMBEDMARK_VALIDATION: Ações: 1
+I (40073) EMBEDMARK_VALIDATION: Ações: 2
+I (40293) EMBEDMARK_VALIDATION: Ações: 3

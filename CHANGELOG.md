@@ -1,3 +1,11 @@
+# Documentação da validação física — 11/11/2026
+
+- Registrado o ensaio do contador gerado pelo núcleo 0.4.2 na Waveshare ESP32-C6-LCD-1.47: 143 verificações por console aprovadas, confirmação visual e fotografia.
+- Publicados configuração, protocolo e registros do ensaio; README e guias atualizados para distinguir os resultados físicos dos testes de software e dos registros históricos.
+- Sem alteração do código, da versão 0.4.2 ou do pacote publicado no Marketplace. O vídeo de demonstração será gravado posteriormente.
+
+Resultados e limites: [validação física de 11/11/2026](docs/VALIDACAO_FISICA_2026-11-11.md).
+
 # 0.4.2 — 09/11/2026
 
 - Código original disponibilizado sob a licença MIT por decisão do autor, permitindo uso, modificação e redistribuição, inclusive comercial, com preservação dos avisos de autoria e licença.

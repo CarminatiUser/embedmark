@@ -4,7 +4,7 @@ Extensão para Visual Studio Code e núcleo Python para gerar interfaces **C par
 
 Nome adotado em 14/10/2026; anteriormente TCC UI Translator. Registros históricos conservam a identidade usada nas respectivas execuções. Consulte o [registro da adoção do nome EmbedMark](docs/RENOMEACAO_EMBEDMARK.md).
 
-Versão **0.4.2**, com extensão desktop do VS Code, núcleo Python e laboratório ESP-IDF separado. A referência é ESP32-C6 com display ST7789T de 172 × 320 pixels. Outros presets apenas configuram dimensões; não representam suporte a drivers ou hardware já validado.
+Versão **0.4.2**, com extensão desktop do VS Code, núcleo Python e laboratório ESP-IDF separado. A validação física de 11/11/2026 utilizou a placa integrada **Waveshare ESP32-C6-LCD-1.47**, com ESP32-C6FH4 e display ST7789 de 172 × 320 pixels. Outros presets apenas configuram dimensões; não representam suporte a drivers ou hardware já validado.
 
 ## Disponibilidade
 
@@ -145,11 +145,22 @@ Consulte o [manual da linguagem](docs/LINGUAGEM.md) para o contrato completo. ID
 - Uma saída gerada representa uma instância de tela. Vincular várias saídas no mesmo firmware exige suporte a namespaces, ainda pendente.
 - Não há garantia de equivalência com um navegador, nem resultados medidos de desempenho, consumo ou economia de tempo.
 
-O firmware deve inicializar o LVGL, configurar o driver e fornecer os eventos da aplicação. A extensão não grava a placa e não oferece uma prévia gráfica embutida. A execução gráfica com LVGL no computador verifica a interface e os eventos nesse ambiente; não emula o ESP32-C6, a comunicação SPI ou o display físico. A observação da imagem e da interação no equipamento de referência permanece pendente nas evidências documentadas.
+O firmware deve inicializar o LVGL, configurar o driver e fornecer os eventos da aplicação. A extensão não grava a placa e não oferece uma prévia gráfica embutida. A execução gráfica com LVGL no computador verifica a interface e os eventos nesse ambiente; não emula o ESP32-C6, a comunicação SPI ou o display físico. O ensaio na placa, descrito abaixo, tem registros próprios e escopo limitado à configuração utilizada.
+
+## Validação física
+
+Em **11/11/2026**, o contador em português foi regenerado a partir do HTML pelo núcleo EmbedMark **0.4.2**, integrado ao firmware do laboratório e executado na **Waveshare ESP32-C6-LCD-1.47**, sem touch. O ambiente utilizou ESP-IDF 5.4.3 e LVGL 8.3.11; a identificação exata das versões, a pinagem e os hashes estão no [relatório da validação física](docs/VALIDACAO_FISICA_2026-11-11.md).
+
+- **143 verificações por console aprovadas, sem falhas**, incluindo 50 ciclos de destruição/recriação da interface e 10 ciclos de alternância entre o padrão de cores e a tela gerada.
+- Cores, orientação, borda completa e textos com acentos conferidos visualmente pelo autor; a fotografia registra o estado final **“Ações: 3”**.
+- Cliques enviados por software pelo console USB Serial/JTAG, com atualização do contador e controle do modo automático. O ensaio não valida toque ou botão físico.
+- Duração de **42,59 segundos**, incluindo 3,5 segundos de inicialização da conexão. Esse tempo descreve o ensaio, não uma medida de desempenho do tradutor ou da interface.
+
+O [conjunto público de evidências](docs/validation/waveshare-2026-11-11/) reúne resultados, registros seriais, configuração e fotografia. No TCC, RF08 está **atendido no cenário ensaiado, com eventos por console**. As verificações físicas são distintas dos testes de software e da instalação da extensão; não comprovam todos os exemplos, outros displays, consumo, taxa de quadros ou estabilidade prolongada. O vídeo de demonstração será gravado posteriormente pelo autor.
 
 ## Integração e desenvolvimento
 
-- Laboratório `embedmark-validation` — projeto separado para ESP32-C6/ST7789T, necessário apenas para o ensaio de referência. Não está incluído neste repositório; seu endereço público ainda não foi confirmado. A validação física permanece pendente nas evidências documentadas.
+- [Validação física de 11/11/2026](docs/VALIDACAO_FISICA_2026-11-11.md) — configuração, protocolo, resultados e evidências do ensaio. O firmware completo foi preparado no laboratório local isolado `embedmark-validation-waveshare`, separado do laboratório anterior `embedmark-validation`; esses projetos não estão incluídos neste repositório. As evidências publicadas não substituem o projeto completo para recompilar e gravar a placa.
 - [Integração com o firmware](ESP_IDF_INTEGRATION.md)
 - [Registro de correções e verificações](docs/CORRECOES_2026-09-28.md)
 - [Integração e verificações da versão 0.3](docs/INTEGRACAO_0.3.0.md)
@@ -165,7 +176,7 @@ ruff format --check translator tests tools
 python -m pytest -q
 ```
 
-O arquivo `requirements-dev.lock` registra as versões verificadas localmente com Python 3.12. A compatibilidade anunciada em outros ambientes ainda precisa ser confirmada pela matriz de testes.
+O arquivo `requirements-dev.lock` registra as versões verificadas localmente com Python 3.12. A [validação da versão 0.4.2](docs/VALIDACAO_0.4.2.md) inclui a matriz aprovada para o núcleo em Python 3.10/3.12/3.14 e para a extensão em Linux/macOS/Windows; cada resultado corresponde ao commit e ao ambiente daquela execução.
 
 Os testes de compilação precisam do código-fonte LVGL 8.3.x e de um compilador C. Sem eles, esses testes são explicitamente marcados como ignorados. Para executá-los:
 

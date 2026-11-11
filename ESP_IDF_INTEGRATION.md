@@ -1,18 +1,34 @@
 # Integração com ESP-IDF e LVGL 8.3
 
-A referência encontrada no firmware local é ESP32-C6, ESP-IDF 5.4.3, LVGL 8.3.11 e display ST7789T 172 × 320. A versão 0.3 foi compilada contra headers reais e executada com o LVGL no computador. O laboratório separado também teve o firmware completo compilado com ESP-IDF; a execução física na placa permanece pendente.
+A integração foi executada fisicamente em **11/11/2026** na placa **Waveshare ESP32-C6-LCD-1.47**, com ESP32-C6FH4, display ST7789 de 172 × 320 pixels, ESP-IDF 5.4.3 e LVGL 8.3.11. O contador foi regenerado pelo núcleo EmbedMark **0.4.2**, compilado e gravado no laboratório separado. O ensaio teve **143 verificações por console aprovadas**, além da confirmação visual de cores, enquadramento e acentos. Consulte o [relatório completo e seus limites](docs/VALIDACAO_FISICA_2026-11-11.md).
+
+## Perfil físico ensaiado
+
+| Item | Configuração utilizada |
+|---|---|
+| Placa / chip / flash | Waveshare ESP32-C6-LCD-1.47 / ESP32-C6FH4 revisão 0.1 / 4 MB |
+| Display / driver do laboratório | ST7789 / `Vernon_ST7789T`, 172 × 320 pixels |
+| Comunicação | SPI2, 12 MHz, modo 0 |
+| Pinagem do LCD | SCLK 7, MOSI 6, **CS 14**, DC 15, RST 21, BL 22 |
+| Pixels / orientação | RGB565, BGR, `LV_COLOR_16_SWAP=0`; retrato, espelhamento X, deslocamentos X=34 e Y=0 |
+| Iluminação | 50%, limitada no código do perfil |
+| Console / eventos | USB Serial/JTAG como console principal; eventos enviados por software |
+
+Essa placa não tem touch. O perfil antigo “Arthur”, com CS 23, não foi usado nesse ensaio. A montagem anterior com LCD externo e o protótipo empresarial descritos no TCC são configurações distintas; não se deve transferir sua pinagem para a Waveshare.
 
 ## Testar no laboratório separado
 
-O projeto local `embedmark-validation` foi criado em `Downloads/embedmark-validation` a partir das configurações de `Downloads/tela_lcd/ESP32-C6-LCD-1.47-Test`. Ele não está incluído neste repositório, e seu endereço público ainda não foi confirmado. Ele contém o driver, LVGL, padrão de cores, contador com acentos e comandos para importar outra interface, compilar, copiar a flash e gravar uma porta explicitamente escolhida. O firmware original foi preservado. Os comandos abaixo pressupõem que esse laboratório esteja disponível como pasta irmã do EmbedMark.
+O ensaio utilizou o projeto local isolado `embedmark-validation-waveshare`, preparado a partir do laboratório anterior `embedmark-validation`, preservando o firmware de referência. Ele contém driver, LVGL, padrão de cores, contador com acentos e comandos para importar outra interface, compilar, copiar a flash e gravar uma porta explicitamente escolhida. O firmware completo não está incluído neste repositório; foram publicados o [relatório e o conjunto de evidências](docs/VALIDACAO_FISICA_2026-11-11.md), que não bastam para reconstruir o laboratório. Os comandos abaixo pressupõem que esse projeto completo esteja disponível como pasta irmã do EmbedMark.
 
 ```sh
-cd ../embedmark-validation
+cd ../embedmark-validation-waveshare
 ./lab build
 ./lab ports
 ```
 
-Confira a pinagem e identifique a porta conforme o README do laboratório antes de usar `./lab flash PORTA`. A configuração ativa do arquivo original e a alternativa comentada como “Arthur” têm pinos diferentes. Os resultados de compilação estão no arquivo local `embedmark-validation/docs/VALIDACAO.md`, fora deste repositório; o teste físico deve ser registrado separadamente.
+Confira o perfil da placa e identifique a porta com `./lab ports` antes de usar `./lab flash PORTA`. Preserve um backup do firmware que pretende substituir. No laboratório Waveshare, `./lab import` regenera a interface a partir do HTML pelo núcleo Python; ele não copia automaticamente a saída C produzida pela extensão. Informe também o catálogo de fontes usado pela interface.
+
+No firmware ensaiado, `p` mostra o padrão, `g` retorna à tela gerada, `c` envia `LV_EVENT_CLICKED`, `r` destrói e recria a interface e `a` alterna o incremento automático. `r` não reinicia o microcontrolador. A abertura do USB causou uma reinicialização inicial na sessão registrada, tratada por uma janela de inicialização de 3,5 segundos; não houve reinicialização posterior durante o ensaio. Esses comandos pertencem ao laboratório e não são acrescentados automaticamente ao firmware pelo EmbedMark.
 
 ## Exemplo completo com contador e acentos
 
@@ -43,7 +59,7 @@ Confira a pinagem e identifique a porta conforme o README do laboratório antes 
 
 5. O controlador registra `LV_EVENT_CLICKED` e atualiza “Ações: N”. Para um clique físico, a placa precisa ter o dispositivo de entrada e o driver correspondentes configurados. Se a demonstração usar botão externo, conecte sua ação ao fluxo da aplicação/LVGL; o tradutor não configura GPIO nem assume que o display tenha touch.
 
-6. Use o ambiente ESP-IDF configurado para o firmware e execute `idf.py build`. Depois, confira a interface na placa, incluindo acentos, resolução, clique e atualização do contador. Registre a configuração e os resultados. Nenhum firmware foi gravado automaticamente durante esta etapa.
+6. Use o ambiente ESP-IDF configurado para o firmware e execute `idf.py build`. Após a gravação na placa escolhida, confira acentos, resolução, o mecanismo de entrada utilizado e a atualização do contador. Registre a configuração e os resultados. O preparador de exemplos apenas gera arquivos; a gravação é uma etapa separada do firmware.
 
 O preparador gera tudo a partir de `examples/05_interacao.html`, `examples/fonts` e `examples/firmware`. O teste local executa esses mesmos fontes com LVGL real. O laboratório separado foi compilado por completo com ESP-IDF. Os passos desta seção são para integrar em outro firmware; essa integração adicional precisa de sua própria compilação e execução.
 

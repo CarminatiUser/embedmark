@@ -1,0 +1,1362 @@
+{
+  "started_at_utc": "2026-11-11T16:48:07.384752+00:00",
+  "port": "<PORTA_LOCAL_OMITIDA>",
+  "status": "passed_serial_only",
+  "assertions": [
+    {
+      "name": "initial_usb_warmup",
+      "passed": true,
+      "duration_s": 3.599,
+      "observed": null,
+      "expected": "janela inicial de 3,5s; boot permitido"
+    },
+    {
+      "name": "help",
+      "passed": true,
+      "duration_s": 0.214,
+      "observed": "EmbedMark: g=tela gerada | p=padrao de cores | c=clique | r=recriar | a=automatico | h=ajuda",
+      "command": "h",
+      "expected": "EmbedMark: g=tela gerada"
+    },
+    {
+      "name": "initial_recreate",
+      "passed": true,
+      "duration_s": 0.228,
+      "observed": "I (4033) EMBEDMARK_VALIDATION: Tela gerada: OK",
+      "command": "r",
+      "expected": "Tela gerada: OK"
+    },
+    {
+      "name": "manual_click_1",
+      "passed": true,
+      "duration_s": 0.213,
+      "observed": {
+        "count": 1,
+        "line": "I (4253) EMBEDMARK_VALIDATION: Ações: 1"
+      },
+      "command": "c",
+      "expected_count": 1
+    },
+    {
+      "name": "manual_click_2",
+      "passed": true,
+      "duration_s": 0.22,
+      "observed": {
+        "count": 2,
+        "line": "I (4473) EMBEDMARK_VALIDATION: Ações: 2"
+      },
+      "command": "c",
+      "expected_count": 2
+    },
+    {
+      "name": "manual_click_3",
+      "passed": true,
+      "duration_s": 0.22,
+      "observed": {
+        "count": 3,
+        "line": "I (4693) EMBEDMARK_VALIDATION: Ações: 3"
+      },
+      "command": "c",
+      "expected_count": 3
+    },
+    {
+      "name": "pattern",
+      "passed": true,
+      "duration_s": 0.22,
+      "observed": "I (4913) EMBEDMARK_VALIDATION: Padrao de cores ativo",
+      "command": "p",
+      "expected": "Padrao de cores ativo"
+    },
+    {
+      "name": "generated_preserves_state",
+      "passed": true,
+      "duration_s": 0.22,
+      "observed": "I (5133) EMBEDMARK_VALIDATION: Tela gerada: OK",
+      "command": "g",
+      "expected": "Tela gerada: OK"
+    },
+    {
+      "name": "click_after_return",
+      "passed": true,
+      "duration_s": 0.22,
+      "observed": {
+        "count": 4,
+        "line": "I (5353) EMBEDMARK_VALIDATION: Ações: 4"
+      },
+      "command": "c",
+      "expected_count": 4
+    },
+    {
+      "name": "reset_counter",
+      "passed": true,
+      "duration_s": 0.227,
+      "observed": "I (5573) EMBEDMARK_VALIDATION: Tela gerada: OK",
+      "command": "r",
+      "expected": "Tela gerada: OK"
+    },
+    {
+      "name": "click_after_reset",
+      "passed": true,
+      "duration_s": 0.213,
+      "observed": {
+        "count": 1,
+        "line": "I (5793) EMBEDMARK_VALIDATION: Ações: 1"
+      },
+      "command": "c",
+      "expected_count": 1
+    },
+    {
+      "name": "automatic_on",
+      "passed": true,
+      "duration_s": 0.22,
+      "observed": {
+        "automatic": true,
+        "line": "I (6013) EMBEDMARK_VALIDATION: Automatico: ON"
+      },
+      "command": "a",
+      "expected_automatic": true
+    },
+    {
+      "name": "automatic_increment_1",
+      "passed": true,
+      "duration_s": 0.271,
+      "observed": {
+        "count": 2,
+        "line": "I (6283) EMBEDMARK_VALIDATION: Ações: 2"
+      },
+      "expected_count": 2
+    },
+    {
+      "name": "automatic_increment_2",
+      "passed": true,
+      "duration_s": 2.0,
+      "observed": {
+        "count": 3,
+        "line": "I (8283) EMBEDMARK_VALIDATION: Ações: 3"
+      },
+      "expected_count": 3
+    },
+    {
+      "name": "automatic_increment_3",
+      "passed": true,
+      "duration_s": 2.0,
+      "observed": {
+        "count": 4,
+        "line": "I (10283) EMBEDMARK_VALIDATION: Ações: 4"
+      },
+      "expected_count": 4
+    },
+    {
+      "name": "automatic_off",
+      "passed": true,
+      "duration_s": 0.209,
+      "observed": {
+        "automatic": false,
+        "line": "I (10493) EMBEDMARK_VALIDATION: Automatico: OFF"
+      },
+      "command": "a",
+      "expected_automatic": false
+    },
+    {
+      "name": "automatic_stays_off",
+      "passed": true,
+      "duration_s": 2.291,
+      "observed": null,
+      "expected": "sem incrementos por 2,2s"
+    },
+    {
+      "name": "lifecycle_01_recreate",
+      "passed": true,
+      "duration_s": 0.236,
+      "observed": "I (13013) EMBEDMARK_VALIDATION: Tela gerada: OK",
+      "command": "r",
+      "expected": "Tela gerada: OK"
+    },
+    {
+      "name": "lifecycle_01_click",
+      "passed": true,
+      "duration_s": 0.213,
+      "observed": {
+        "count": 1,
+        "line": "I (13233) EMBEDMARK_VALIDATION: Ações: 1"
+      },
+      "command": "c",
+      "expected_count": 1
+    },
+    {
+      "name": "lifecycle_02_recreate",
+      "passed": true,
+      "duration_s": 0.227,
+      "observed": "I (13453) EMBEDMARK_VALIDATION: Tela gerada: OK",
+      "command": "r",
+      "expected": "Tela gerada: OK"
+    },
+    {
+      "name": "lifecycle_02_click",
+      "passed": true,
+      "duration_s": 0.213,
+      "observed": {
+        "count": 1,
+        "line": "I (13673) EMBEDMARK_VALIDATION: Ações: 1"
+      },
+      "command": "c",
+      "expected_count": 1
+    },
+    {
+      "name": "lifecycle_03_recreate",
+      "passed": true,
+      "duration_s": 0.227,
+      "observed": "I (13893) EMBEDMARK_VALIDATION: Tela gerada: OK",
+      "command": "r",
+      "expected": "Tela gerada: OK"
+    },
+    {
+      "name": "lifecycle_03_click",
+      "passed": true,
+      "duration_s": 0.213,
+      "observed": {
+        "count": 1,
+        "line": "I (14113) EMBEDMARK_VALIDATION: Ações: 1"
+      },
+      "command": "c",
+      "expected_count": 1
+    },
+    {
+      "name": "lifecycle_04_recreate",
+      "passed": true,
+      "duration_s": 0.227,
+      "observed": "I (14333) EMBEDMARK_VALIDATION: Tela gerada: OK",
+      "command": "r",
+      "expected": "Tela gerada: OK"
+    },
+    {
+      "name": "lifecycle_04_click",
+      "passed": true,
+      "duration_s": 0.213,
+      "observed": {
+        "count": 1,
+        "line": "I (14553) EMBEDMARK_VALIDATION: Ações: 1"
+      },
+      "command": "c",
+      "expected_count": 1
+    },
+    {
+      "name": "lifecycle_05_recreate",
+      "passed": true,
+      "duration_s": 0.227,
+      "observed": "I (14773) EMBEDMARK_VALIDATION: Tela gerada: OK",
+      "command": "r",
+      "expected": "Tela gerada: OK"
+    },
+    {
+      "name": "lifecycle_05_click",
+      "passed": true,
+      "duration_s": 0.213,
+      "observed": {
+        "count": 1,
+        "line": "I (14993) EMBEDMARK_VALIDATION: Ações: 1"
+      },
+      "command": "c",
+      "expected_count": 1
+    },
+    {
+      "name": "lifecycle_06_recreate",
+      "passed": true,
+      "duration_s": 0.232,
+      "observed": "I (15213) EMBEDMARK_VALIDATION: Tela gerada: OK",
+      "command": "r",
+      "expected": "Tela gerada: OK"
+    },
+    {
+      "name": "lifecycle_06_click",
+      "passed": true,
+      "duration_s": 0.207,
+      "observed": {
+        "count": 1,
+        "line": "I (15433) EMBEDMARK_VALIDATION: Ações: 1"
+      },
+      "command": "c",
+      "expected_count": 1
+    },
+    {
+      "name": "lifecycle_07_recreate",
+      "passed": true,
+      "duration_s": 0.227,
+      "observed": "I (15653) EMBEDMARK_VALIDATION: Tela gerada: OK",
+      "command": "r",
+      "expected": "Tela gerada: OK"
+    },
+    {
+      "name": "lifecycle_07_click",
+      "passed": true,
+      "duration_s": 0.214,
+      "observed": {
+        "count": 1,
+        "line": "I (15873) EMBEDMARK_VALIDATION: Ações: 1"
+      },
+      "command": "c",
+      "expected_count": 1
+    },
+    {
+      "name": "lifecycle_08_recreate",
+      "passed": true,
+      "duration_s": 0.226,
+      "observed": "I (16093) EMBEDMARK_VALIDATION: Tela gerada: OK",
+      "command": "r",
+      "expected": "Tela gerada: OK"
+    },
+    {
+      "name": "lifecycle_08_click",
+      "passed": true,
+      "duration_s": 0.213,
+      "observed": {
+        "count": 1,
+        "line": "I (16313) EMBEDMARK_VALIDATION: Ações: 1"
+      },
+      "command": "c",
+      "expected_count": 1
+    },
+    {
+      "name": "lifecycle_09_recreate",
+      "passed": true,
+      "duration_s": 0.227,
+      "observed": "I (16533) EMBEDMARK_VALIDATION: Tela gerada: OK",
+      "command": "r",
+      "expected": "Tela gerada: OK"
+    },
+    {
+      "name": "lifecycle_09_click",
+      "passed": true,
+      "duration_s": 0.213,
+      "observed": {
+        "count": 1,
+        "line": "I (16753) EMBEDMARK_VALIDATION: Ações: 1"
+      },
+      "command": "c",
+      "expected_count": 1
+    },
+    {
+      "name": "lifecycle_10_recreate",
+      "passed": true,
+      "duration_s": 0.227,
+      "observed": "I (16973) EMBEDMARK_VALIDATION: Tela gerada: OK",
+      "command": "r",
+      "expected": "Tela gerada: OK"
+    },
+    {
+      "name": "lifecycle_10_click",
+      "passed": true,
+      "duration_s": 0.213,
+      "observed": {
+        "count": 1,
+        "line": "I (17193) EMBEDMARK_VALIDATION: Ações: 1"
+      },
+      "command": "c",
+      "expected_count": 1
+    },
+    {
+      "name": "lifecycle_11_recreate",
+      "passed": true,
+      "duration_s": 0.227,
+      "observed": "I (17413) EMBEDMARK_VALIDATION: Tela gerada: OK",
+      "command": "r",
+      "expected": "Tela gerada: OK"
+    },
+    {
+      "name": "lifecycle_11_click",
+      "passed": true,
+      "duration_s": 0.213,
+      "observed": {
+        "count": 1,
+        "line": "I (17633) EMBEDMARK_VALIDATION: Ações: 1"
+      },
+      "command": "c",
+      "expected_count": 1
+    },
+    {
+      "name": "lifecycle_12_recreate",
+      "passed": true,
+      "duration_s": 0.227,
+      "observed": "I (17853) EMBEDMARK_VALIDATION: Tela gerada: OK",
+      "command": "r",
+      "expected": "Tela gerada: OK"
+    },
+    {
+      "name": "lifecycle_12_click",
+      "passed": true,
+      "duration_s": 0.213,
+      "observed": {
+        "count": 1,
+        "line": "I (18073) EMBEDMARK_VALIDATION: Ações: 1"
+      },
+      "command": "c",
+      "expected_count": 1
+    },
+    {
+      "name": "lifecycle_13_recreate",
+      "passed": true,
+      "duration_s": 0.227,
+      "observed": "I (18293) EMBEDMARK_VALIDATION: Tela gerada: OK",
+      "command": "r",
+      "expected": "Tela gerada: OK"
+    },
+    {
+      "name": "lifecycle_13_click",
+      "passed": true,
+      "duration_s": 0.213,
+      "observed": {
+        "count": 1,
+        "line": "I (18513) EMBEDMARK_VALIDATION: Ações: 1"
+      },
+      "command": "c",
+      "expected_count": 1
+    },
+    {
+      "name": "lifecycle_14_recreate",
+      "passed": true,
+      "duration_s": 0.227,
+      "observed": "I (18733) EMBEDMARK_VALIDATION: Tela gerada: OK",
+      "command": "r",
+      "expected": "Tela gerada: OK"
+    },
+    {
+      "name": "lifecycle_14_click",
+      "passed": true,
+      "duration_s": 0.213,
+      "observed": {
+        "count": 1,
+        "line": "I (18953) EMBEDMARK_VALIDATION: Ações: 1"
+      },
+      "command": "c",
+      "expected_count": 1
+    },
+    {
+      "name": "lifecycle_15_recreate",
+      "passed": true,
+      "duration_s": 0.227,
+      "observed": "I (19173) EMBEDMARK_VALIDATION: Tela gerada: OK",
+      "command": "r",
+      "expected": "Tela gerada: OK"
+    },
+    {
+      "name": "lifecycle_15_click",
+      "passed": true,
+      "duration_s": 0.213,
+      "observed": {
+        "count": 1,
+        "line": "I (19393) EMBEDMARK_VALIDATION: Ações: 1"
+      },
+      "command": "c",
+      "expected_count": 1
+    },
+    {
+      "name": "lifecycle_16_recreate",
+      "passed": true,
+      "duration_s": 0.227,
+      "observed": "I (19613) EMBEDMARK_VALIDATION: Tela gerada: OK",
+      "command": "r",
+      "expected": "Tela gerada: OK"
+    },
+    {
+      "name": "lifecycle_16_click",
+      "passed": true,
+      "duration_s": 0.213,
+      "observed": {
+        "count": 1,
+        "line": "I (19833) EMBEDMARK_VALIDATION: Ações: 1"
+      },
+      "command": "c",
+      "expected_count": 1
+    },
+    {
+      "name": "lifecycle_17_recreate",
+      "passed": true,
+      "duration_s": 0.227,
+      "observed": "I (20053) EMBEDMARK_VALIDATION: Tela gerada: OK",
+      "command": "r",
+      "expected": "Tela gerada: OK"
+    },
+    {
+      "name": "lifecycle_17_click",
+      "passed": true,
+      "duration_s": 0.213,
+      "observed": {
+        "count": 1,
+        "line": "I (20273) EMBEDMARK_VALIDATION: Ações: 1"
+      },
+      "command": "c",
+      "expected_count": 1
+    },
+    {
+      "name": "lifecycle_18_recreate",
+      "passed": true,
+      "duration_s": 0.226,
+      "observed": "I (20493) EMBEDMARK_VALIDATION: Tela gerada: OK",
+      "command": "r",
+      "expected": "Tela gerada: OK"
+    },
+    {
+      "name": "lifecycle_18_click",
+      "passed": true,
+      "duration_s": 0.213,
+      "observed": {
+        "count": 1,
+        "line": "I (20713) EMBEDMARK_VALIDATION: Ações: 1"
+      },
+      "command": "c",
+      "expected_count": 1
+    },
+    {
+      "name": "lifecycle_19_recreate",
+      "passed": true,
+      "duration_s": 0.227,
+      "observed": "I (20933) EMBEDMARK_VALIDATION: Tela gerada: OK",
+      "command": "r",
+      "expected": "Tela gerada: OK"
+    },
+    {
+      "name": "lifecycle_19_click",
+      "passed": true,
+      "duration_s": 0.213,
+      "observed": {
+        "count": 1,
+        "line": "I (21153) EMBEDMARK_VALIDATION: Ações: 1"
+      },
+      "command": "c",
+      "expected_count": 1
+    },
+    {
+      "name": "lifecycle_20_recreate",
+      "passed": true,
+      "duration_s": 0.227,
+      "observed": "I (21373) EMBEDMARK_VALIDATION: Tela gerada: OK",
+      "command": "r",
+      "expected": "Tela gerada: OK"
+    },
+    {
+      "name": "lifecycle_20_click",
+      "passed": true,
+      "duration_s": 0.213,
+      "observed": {
+        "count": 1,
+        "line": "I (21593) EMBEDMARK_VALIDATION: Ações: 1"
+      },
+      "command": "c",
+      "expected_count": 1
+    },
+    {
+      "name": "lifecycle_21_recreate",
+      "passed": true,
+      "duration_s": 0.227,
+      "observed": "I (21813) EMBEDMARK_VALIDATION: Tela gerada: OK",
+      "command": "r",
+      "expected": "Tela gerada: OK"
+    },
+    {
+      "name": "lifecycle_21_click",
+      "passed": true,
+      "duration_s": 0.213,
+      "observed": {
+        "count": 1,
+        "line": "I (22033) EMBEDMARK_VALIDATION: Ações: 1"
+      },
+      "command": "c",
+      "expected_count": 1
+    },
+    {
+      "name": "lifecycle_22_recreate",
+      "passed": true,
+      "duration_s": 0.227,
+      "observed": "I (22253) EMBEDMARK_VALIDATION: Tela gerada: OK",
+      "command": "r",
+      "expected": "Tela gerada: OK"
+    },
+    {
+      "name": "lifecycle_22_click",
+      "passed": true,
+      "duration_s": 0.213,
+      "observed": {
+        "count": 1,
+        "line": "I (22473) EMBEDMARK_VALIDATION: Ações: 1"
+      },
+      "command": "c",
+      "expected_count": 1
+    },
+    {
+      "name": "lifecycle_23_recreate",
+      "passed": true,
+      "duration_s": 0.227,
+      "observed": "I (22693) EMBEDMARK_VALIDATION: Tela gerada: OK",
+      "command": "r",
+      "expected": "Tela gerada: OK"
+    },
+    {
+      "name": "lifecycle_23_click",
+      "passed": true,
+      "duration_s": 0.213,
+      "observed": {
+        "count": 1,
+        "line": "I (22913) EMBEDMARK_VALIDATION: Ações: 1"
+      },
+      "command": "c",
+      "expected_count": 1
+    },
+    {
+      "name": "lifecycle_24_recreate",
+      "passed": true,
+      "duration_s": 0.227,
+      "observed": "I (23133) EMBEDMARK_VALIDATION: Tela gerada: OK",
+      "command": "r",
+      "expected": "Tela gerada: OK"
+    },
+    {
+      "name": "lifecycle_24_click",
+      "passed": true,
+      "duration_s": 0.213,
+      "observed": {
+        "count": 1,
+        "line": "I (23353) EMBEDMARK_VALIDATION: Ações: 1"
+      },
+      "command": "c",
+      "expected_count": 1
+    },
+    {
+      "name": "lifecycle_25_recreate",
+      "passed": true,
+      "duration_s": 0.227,
+      "observed": "I (23573) EMBEDMARK_VALIDATION: Tela gerada: OK",
+      "command": "r",
+      "expected": "Tela gerada: OK"
+    },
+    {
+      "name": "lifecycle_25_click",
+      "passed": true,
+      "duration_s": 0.213,
+      "observed": {
+        "count": 1,
+        "line": "I (23793) EMBEDMARK_VALIDATION: Ações: 1"
+      },
+      "command": "c",
+      "expected_count": 1
+    },
+    {
+      "name": "lifecycle_26_recreate",
+      "passed": true,
+      "duration_s": 0.227,
+      "observed": "I (24013) EMBEDMARK_VALIDATION: Tela gerada: OK",
+      "command": "r",
+      "expected": "Tela gerada: OK"
+    },
+    {
+      "name": "lifecycle_26_click",
+      "passed": true,
+      "duration_s": 0.213,
+      "observed": {
+        "count": 1,
+        "line": "I (24233) EMBEDMARK_VALIDATION: Ações: 1"
+      },
+      "command": "c",
+      "expected_count": 1
+    },
+    {
+      "name": "lifecycle_27_recreate",
+      "passed": true,
+      "duration_s": 0.227,
+      "observed": "I (24453) EMBEDMARK_VALIDATION: Tela gerada: OK",
+      "command": "r",
+      "expected": "Tela gerada: OK"
+    },
+    {
+      "name": "lifecycle_27_click",
+      "passed": true,
+      "duration_s": 0.213,
+      "observed": {
+        "count": 1,
+        "line": "I (24673) EMBEDMARK_VALIDATION: Ações: 1"
+      },
+      "command": "c",
+      "expected_count": 1
+    },
+    {
+      "name": "lifecycle_28_recreate",
+      "passed": true,
+      "duration_s": 0.227,
+      "observed": "I (24893) EMBEDMARK_VALIDATION: Tela gerada: OK",
+      "command": "r",
+      "expected": "Tela gerada: OK"
+    },
+    {
+      "name": "lifecycle_28_click",
+      "passed": true,
+      "duration_s": 0.213,
+      "observed": {
+        "count": 1,
+        "line": "I (25113) EMBEDMARK_VALIDATION: Ações: 1"
+      },
+      "command": "c",
+      "expected_count": 1
+    },
+    {
+      "name": "lifecycle_29_recreate",
+      "passed": true,
+      "duration_s": 0.227,
+      "observed": "I (25333) EMBEDMARK_VALIDATION: Tela gerada: OK",
+      "command": "r",
+      "expected": "Tela gerada: OK"
+    },
+    {
+      "name": "lifecycle_29_click",
+      "passed": true,
+      "duration_s": 0.213,
+      "observed": {
+        "count": 1,
+        "line": "I (25553) EMBEDMARK_VALIDATION: Ações: 1"
+      },
+      "command": "c",
+      "expected_count": 1
+    },
+    {
+      "name": "lifecycle_30_recreate",
+      "passed": true,
+      "duration_s": 0.227,
+      "observed": "I (25773) EMBEDMARK_VALIDATION: Tela gerada: OK",
+      "command": "r",
+      "expected": "Tela gerada: OK"
+    },
+    {
+      "name": "lifecycle_30_click",
+      "passed": true,
+      "duration_s": 0.213,
+      "observed": {
+        "count": 1,
+        "line": "I (25993) EMBEDMARK_VALIDATION: Ações: 1"
+      },
+      "command": "c",
+      "expected_count": 1
+    },
+    {
+      "name": "lifecycle_31_recreate",
+      "passed": true,
+      "duration_s": 0.227,
+      "observed": "I (26213) EMBEDMARK_VALIDATION: Tela gerada: OK",
+      "command": "r",
+      "expected": "Tela gerada: OK"
+    },
+    {
+      "name": "lifecycle_31_click",
+      "passed": true,
+      "duration_s": 0.213,
+      "observed": {
+        "count": 1,
+        "line": "I (26433) EMBEDMARK_VALIDATION: Ações: 1"
+      },
+      "command": "c",
+      "expected_count": 1
+    },
+    {
+      "name": "lifecycle_32_recreate",
+      "passed": true,
+      "duration_s": 0.227,
+      "observed": "I (26653) EMBEDMARK_VALIDATION: Tela gerada: OK",
+      "command": "r",
+      "expected": "Tela gerada: OK"
+    },
+    {
+      "name": "lifecycle_32_click",
+      "passed": true,
+      "duration_s": 0.213,
+      "observed": {
+        "count": 1,
+        "line": "I (26873) EMBEDMARK_VALIDATION: Ações: 1"
+      },
+      "command": "c",
+      "expected_count": 1
+    },
+    {
+      "name": "lifecycle_33_recreate",
+      "passed": true,
+      "duration_s": 0.227,
+      "observed": "I (27093) EMBEDMARK_VALIDATION: Tela gerada: OK",
+      "command": "r",
+      "expected": "Tela gerada: OK"
+    },
+    {
+      "name": "lifecycle_33_click",
+      "passed": true,
+      "duration_s": 0.213,
+      "observed": {
+        "count": 1,
+        "line": "I (27313) EMBEDMARK_VALIDATION: Ações: 1"
+      },
+      "command": "c",
+      "expected_count": 1
+    },
+    {
+      "name": "lifecycle_34_recreate",
+      "passed": true,
+      "duration_s": 0.227,
+      "observed": "I (27533) EMBEDMARK_VALIDATION: Tela gerada: OK",
+      "command": "r",
+      "expected": "Tela gerada: OK"
+    },
+    {
+      "name": "lifecycle_34_click",
+      "passed": true,
+      "duration_s": 0.213,
+      "observed": {
+        "count": 1,
+        "line": "I (27753) EMBEDMARK_VALIDATION: Ações: 1"
+      },
+      "command": "c",
+      "expected_count": 1
+    },
+    {
+      "name": "lifecycle_35_recreate",
+      "passed": true,
+      "duration_s": 0.227,
+      "observed": "I (27973) EMBEDMARK_VALIDATION: Tela gerada: OK",
+      "command": "r",
+      "expected": "Tela gerada: OK"
+    },
+    {
+      "name": "lifecycle_35_click",
+      "passed": true,
+      "duration_s": 0.213,
+      "observed": {
+        "count": 1,
+        "line": "I (28193) EMBEDMARK_VALIDATION: Ações: 1"
+      },
+      "command": "c",
+      "expected_count": 1
+    },
+    {
+      "name": "lifecycle_36_recreate",
+      "passed": true,
+      "duration_s": 0.227,
+      "observed": "I (28413) EMBEDMARK_VALIDATION: Tela gerada: OK",
+      "command": "r",
+      "expected": "Tela gerada: OK"
+    },
+    {
+      "name": "lifecycle_36_click",
+      "passed": true,
+      "duration_s": 0.213,
+      "observed": {
+        "count": 1,
+        "line": "I (28633) EMBEDMARK_VALIDATION: Ações: 1"
+      },
+      "command": "c",
+      "expected_count": 1
+    },
+    {
+      "name": "lifecycle_37_recreate",
+      "passed": true,
+      "duration_s": 0.227,
+      "observed": "I (28853) EMBEDMARK_VALIDATION: Tela gerada: OK",
+      "command": "r",
+      "expected": "Tela gerada: OK"
+    },
+    {
+      "name": "lifecycle_37_click",
+      "passed": true,
+      "duration_s": 0.213,
+      "observed": {
+        "count": 1,
+        "line": "I (29073) EMBEDMARK_VALIDATION: Ações: 1"
+      },
+      "command": "c",
+      "expected_count": 1
+    },
+    {
+      "name": "lifecycle_38_recreate",
+      "passed": true,
+      "duration_s": 0.227,
+      "observed": "I (29293) EMBEDMARK_VALIDATION: Tela gerada: OK",
+      "command": "r",
+      "expected": "Tela gerada: OK"
+    },
+    {
+      "name": "lifecycle_38_click",
+      "passed": true,
+      "duration_s": 0.213,
+      "observed": {
+        "count": 1,
+        "line": "I (29513) EMBEDMARK_VALIDATION: Ações: 1"
+      },
+      "command": "c",
+      "expected_count": 1
+    },
+    {
+      "name": "lifecycle_39_recreate",
+      "passed": true,
+      "duration_s": 0.227,
+      "observed": "I (29733) EMBEDMARK_VALIDATION: Tela gerada: OK",
+      "command": "r",
+      "expected": "Tela gerada: OK"
+    },
+    {
+      "name": "lifecycle_39_click",
+      "passed": true,
+      "duration_s": 0.213,
+      "observed": {
+        "count": 1,
+        "line": "I (29953) EMBEDMARK_VALIDATION: Ações: 1"
+      },
+      "command": "c",
+      "expected_count": 1
+    },
+    {
+      "name": "lifecycle_40_recreate",
+      "passed": true,
+      "duration_s": 0.227,
+      "observed": "I (30173) EMBEDMARK_VALIDATION: Tela gerada: OK",
+      "command": "r",
+      "expected": "Tela gerada: OK"
+    },
+    {
+      "name": "lifecycle_40_click",
+      "passed": true,
+      "duration_s": 0.213,
+      "observed": {
+        "count": 1,
+        "line": "I (30393) EMBEDMARK_VALIDATION: Ações: 1"
+      },
+      "command": "c",
+      "expected_count": 1
+    },
+    {
+      "name": "lifecycle_41_recreate",
+      "passed": true,
+      "duration_s": 0.227,
+      "observed": "I (30613) EMBEDMARK_VALIDATION: Tela gerada: OK",
+      "command": "r",
+      "expected": "Tela gerada: OK"
+    },
+    {
+      "name": "lifecycle_41_click",
+      "passed": true,
+      "duration_s": 0.213,
+      "observed": {
+        "count": 1,
+        "line": "I (30833) EMBEDMARK_VALIDATION: Ações: 1"
+      },
+      "command": "c",
+      "expected_count": 1
+    },
+    {
+      "name": "lifecycle_42_recreate",
+      "passed": true,
+      "duration_s": 0.227,
+      "observed": "I (31053) EMBEDMARK_VALIDATION: Tela gerada: OK",
+      "command": "r",
+      "expected": "Tela gerada: OK"
+    },
+    {
+      "name": "lifecycle_42_click",
+      "passed": true,
+      "duration_s": 0.213,
+      "observed": {
+        "count": 1,
+        "line": "I (31273) EMBEDMARK_VALIDATION: Ações: 1"
+      },
+      "command": "c",
+      "expected_count": 1
+    },
+    {
+      "name": "lifecycle_43_recreate",
+      "passed": true,
+      "duration_s": 0.227,
+      "observed": "I (31493) EMBEDMARK_VALIDATION: Tela gerada: OK",
+      "command": "r",
+      "expected": "Tela gerada: OK"
+    },
+    {
+      "name": "lifecycle_43_click",
+      "passed": true,
+      "duration_s": 0.213,
+      "observed": {
+        "count": 1,
+        "line": "I (31713) EMBEDMARK_VALIDATION: Ações: 1"
+      },
+      "command": "c",
+      "expected_count": 1
+    },
+    {
+      "name": "lifecycle_44_recreate",
+      "passed": true,
+      "duration_s": 0.227,
+      "observed": "I (31933) EMBEDMARK_VALIDATION: Tela gerada: OK",
+      "command": "r",
+      "expected": "Tela gerada: OK"
+    },
+    {
+      "name": "lifecycle_44_click",
+      "passed": true,
+      "duration_s": 0.213,
+      "observed": {
+        "count": 1,
+        "line": "I (32153) EMBEDMARK_VALIDATION: Ações: 1"
+      },
+      "command": "c",
+      "expected_count": 1
+    },
+    {
+      "name": "lifecycle_45_recreate",
+      "passed": true,
+      "duration_s": 0.227,
+      "observed": "I (32373) EMBEDMARK_VALIDATION: Tela gerada: OK",
+      "command": "r",
+      "expected": "Tela gerada: OK"
+    },
+    {
+      "name": "lifecycle_45_click",
+      "passed": true,
+      "duration_s": 0.213,
+      "observed": {
+        "count": 1,
+        "line": "I (32593) EMBEDMARK_VALIDATION: Ações: 1"
+      },
+      "command": "c",
+      "expected_count": 1
+    },
+    {
+      "name": "lifecycle_46_recreate",
+      "passed": true,
+      "duration_s": 0.227,
+      "observed": "I (32813) EMBEDMARK_VALIDATION: Tela gerada: OK",
+      "command": "r",
+      "expected": "Tela gerada: OK"
+    },
+    {
+      "name": "lifecycle_46_click",
+      "passed": true,
+      "duration_s": 0.213,
+      "observed": {
+        "count": 1,
+        "line": "I (33033) EMBEDMARK_VALIDATION: Ações: 1"
+      },
+      "command": "c",
+      "expected_count": 1
+    },
+    {
+      "name": "lifecycle_47_recreate",
+      "passed": true,
+      "duration_s": 0.227,
+      "observed": "I (33253) EMBEDMARK_VALIDATION: Tela gerada: OK",
+      "command": "r",
+      "expected": "Tela gerada: OK"
+    },
+    {
+      "name": "lifecycle_47_click",
+      "passed": true,
+      "duration_s": 0.213,
+      "observed": {
+        "count": 1,
+        "line": "I (33473) EMBEDMARK_VALIDATION: Ações: 1"
+      },
+      "command": "c",
+      "expected_count": 1
+    },
+    {
+      "name": "lifecycle_48_recreate",
+      "passed": true,
+      "duration_s": 0.227,
+      "observed": "I (33693) EMBEDMARK_VALIDATION: Tela gerada: OK",
+      "command": "r",
+      "expected": "Tela gerada: OK"
+    },
+    {
+      "name": "lifecycle_48_click",
+      "passed": true,
+      "duration_s": 0.213,
+      "observed": {
+        "count": 1,
+        "line": "I (33913) EMBEDMARK_VALIDATION: Ações: 1"
+      },
+      "command": "c",
+      "expected_count": 1
+    },
+    {
+      "name": "lifecycle_49_recreate",
+      "passed": true,
+      "duration_s": 0.227,
+      "observed": "I (34133) EMBEDMARK_VALIDATION: Tela gerada: OK",
+      "command": "r",
+      "expected": "Tela gerada: OK"
+    },
+    {
+      "name": "lifecycle_49_click",
+      "passed": true,
+      "duration_s": 0.213,
+      "observed": {
+        "count": 1,
+        "line": "I (34353) EMBEDMARK_VALIDATION: Ações: 1"
+      },
+      "command": "c",
+      "expected_count": 1
+    },
+    {
+      "name": "lifecycle_50_recreate",
+      "passed": true,
+      "duration_s": 0.227,
+      "observed": "I (34573) EMBEDMARK_VALIDATION: Tela gerada: OK",
+      "command": "r",
+      "expected": "Tela gerada: OK"
+    },
+    {
+      "name": "lifecycle_50_click",
+      "passed": true,
+      "duration_s": 0.213,
+      "observed": {
+        "count": 1,
+        "line": "I (34793) EMBEDMARK_VALIDATION: Ações: 1"
+      },
+      "command": "c",
+      "expected_count": 1
+    },
+    {
+      "name": "switch_01_pattern",
+      "passed": true,
+      "duration_s": 0.219,
+      "observed": "I (35013) EMBEDMARK_VALIDATION: Padrao de cores ativo",
+      "command": "p",
+      "expected": "Padrao de cores ativo"
+    },
+    {
+      "name": "switch_01_generated",
+      "passed": true,
+      "duration_s": 0.22,
+      "observed": "I (35233) EMBEDMARK_VALIDATION: Tela gerada: OK",
+      "command": "g",
+      "expected": "Tela gerada: OK"
+    },
+    {
+      "name": "switch_02_pattern",
+      "passed": true,
+      "duration_s": 0.22,
+      "observed": "I (35453) EMBEDMARK_VALIDATION: Padrao de cores ativo",
+      "command": "p",
+      "expected": "Padrao de cores ativo"
+    },
+    {
+      "name": "switch_02_generated",
+      "passed": true,
+      "duration_s": 0.22,
+      "observed": "I (35673) EMBEDMARK_VALIDATION: Tela gerada: OK",
+      "command": "g",
+      "expected": "Tela gerada: OK"
+    },
+    {
+      "name": "switch_03_pattern",
+      "passed": true,
+      "duration_s": 0.22,
+      "observed": "I (35893) EMBEDMARK_VALIDATION: Padrao de cores ativo",
+      "command": "p",
+      "expected": "Padrao de cores ativo"
+    },
+    {
+      "name": "switch_03_generated",
+      "passed": true,
+      "duration_s": 0.22,
+      "observed": "I (36113) EMBEDMARK_VALIDATION: Tela gerada: OK",
+      "command": "g",
+      "expected": "Tela gerada: OK"
+    },
+    {
+      "name": "switch_04_pattern",
+      "passed": true,
+      "duration_s": 0.22,
+      "observed": "I (36333) EMBEDMARK_VALIDATION: Padrao de cores ativo",
+      "command": "p",
+      "expected": "Padrao de cores ativo"
+    },
+    {
+      "name": "switch_04_generated",
+      "passed": true,
+      "duration_s": 0.22,
+      "observed": "I (36553) EMBEDMARK_VALIDATION: Tela gerada: OK",
+      "command": "g",
+      "expected": "Tela gerada: OK"
+    },
+    {
+      "name": "switch_05_pattern",
+      "passed": true,
+      "duration_s": 0.22,
+      "observed": "I (36773) EMBEDMARK_VALIDATION: Padrao de cores ativo",
+      "command": "p",
+      "expected": "Padrao de cores ativo"
+    },
+    {
+      "name": "switch_05_generated",
+      "passed": true,
+      "duration_s": 0.22,
+      "observed": "I (36993) EMBEDMARK_VALIDATION: Tela gerada: OK",
+      "command": "g",
+      "expected": "Tela gerada: OK"
+    },
+    {
+      "name": "switch_06_pattern",
+      "passed": true,
+      "duration_s": 0.22,
+      "observed": "I (37213) EMBEDMARK_VALIDATION: Padrao de cores ativo",
+      "command": "p",
+      "expected": "Padrao de cores ativo"
+    },
+    {
+      "name": "switch_06_generated",
+      "passed": true,
+      "duration_s": 0.22,
+      "observed": "I (37433) EMBEDMARK_VALIDATION: Tela gerada: OK",
+      "command": "g",
+      "expected": "Tela gerada: OK"
+    },
+    {
+      "name": "switch_07_pattern",
+      "passed": true,
+      "duration_s": 0.22,
+      "observed": "I (37653) EMBEDMARK_VALIDATION: Padrao de cores ativo",
+      "command": "p",
+      "expected": "Padrao de cores ativo"
+    },
+    {
+      "name": "switch_07_generated",
+      "passed": true,
+      "duration_s": 0.22,
+      "observed": "I (37873) EMBEDMARK_VALIDATION: Tela gerada: OK",
+      "command": "g",
+      "expected": "Tela gerada: OK"
+    },
+    {
+      "name": "switch_08_pattern",
+      "passed": true,
+      "duration_s": 0.22,
+      "observed": "I (38093) EMBEDMARK_VALIDATION: Padrao de cores ativo",
+      "command": "p",
+      "expected": "Padrao de cores ativo"
+    },
+    {
+      "name": "switch_08_generated",
+      "passed": true,
+      "duration_s": 0.22,
+      "observed": "I (38313) EMBEDMARK_VALIDATION: Tela gerada: OK",
+      "command": "g",
+      "expected": "Tela gerada: OK"
+    },
+    {
+      "name": "switch_09_pattern",
+      "passed": true,
+      "duration_s": 0.22,
+      "observed": "I (38533) EMBEDMARK_VALIDATION: Padrao de cores ativo",
+      "command": "p",
+      "expected": "Padrao de cores ativo"
+    },
+    {
+      "name": "switch_09_generated",
+      "passed": true,
+      "duration_s": 0.22,
+      "observed": "I (38753) EMBEDMARK_VALIDATION: Tela gerada: OK",
+      "command": "g",
+      "expected": "Tela gerada: OK"
+    },
+    {
+      "name": "switch_10_pattern",
+      "passed": true,
+      "duration_s": 0.22,
+      "observed": "I (38973) EMBEDMARK_VALIDATION: Padrao de cores ativo",
+      "command": "p",
+      "expected": "Padrao de cores ativo"
+    },
+    {
+      "name": "switch_10_generated",
+      "passed": true,
+      "duration_s": 0.22,
+      "observed": "I (39193) EMBEDMARK_VALIDATION: Tela gerada: OK",
+      "command": "g",
+      "expected": "Tela gerada: OK"
+    },
+    {
+      "name": "state_after_ten_switches",
+      "passed": true,
+      "duration_s": 0.22,
+      "observed": {
+        "count": 2,
+        "line": "I (39413) EMBEDMARK_VALIDATION: Ações: 2"
+      },
+      "command": "c",
+      "expected_count": 2
+    },
+    {
+      "name": "final_recreate",
+      "passed": true,
+      "duration_s": 0.228,
+      "observed": "I (39633) EMBEDMARK_VALIDATION: Tela gerada: OK",
+      "command": "r",
+      "expected": "Tela gerada: OK"
+    },
+    {
+      "name": "final_click_1",
+      "passed": true,
+      "duration_s": 0.212,
+      "observed": {
+        "count": 1,
+        "line": "I (39853) EMBEDMARK_VALIDATION: Ações: 1"
+      },
+      "command": "c",
+      "expected_count": 1
+    },
+    {
+      "name": "final_click_2",
+      "passed": true,
+      "duration_s": 0.22,
+      "observed": {
+        "count": 2,
+        "line": "I (40073) EMBEDMARK_VALIDATION: Ações: 2"
+      },
+      "command": "c",
+      "expected_count": 2
+    },
+    {
+      "name": "final_click_3",
+      "passed": true,
+      "duration_s": 0.22,
+      "observed": {
+        "count": 3,
+        "line": "I (40293) EMBEDMARK_VALIDATION: Ações: 3"
+      },
+      "command": "c",
+      "expected_count": 3
+    },
+    {
+      "name": "final_quiet",
+      "passed": true,
+      "duration_s": 2.289,
+      "observed": null,
+      "expected": "sem incrementos por 2,2s"
+    }
+  ],
+  "serial_opened": true,
+  "baudrate": 115200,
+  "expected_firmware": {
+    "primary_console": "USB Serial/JTAG",
+    "automatic_at_boot": false,
+    "pin_profile": "Waveshare"
+  },
+  "limits": {
+    "command_timeout_s": 5.0,
+    "total_timeout_s": 180.0,
+    "failure_recovery_timeout_s": 12
+  },
+  "visual_validation": "não realizada: cores, geometria, acentos e atualização física precisam de observação",
+  "scope": "Comandos e estado lógico do contador via serial; não comprova touch, sinais elétricos ou desempenho.",
+  "usb_connection": "DTR/RTS false antes de abrir; reset na abertura pode ocorrer no macOS e é tolerado só nos primeiros 3,5s.",
+  "final_state": {
+    "automatic": false,
+    "observed_counter": 3,
+    "generated_screen_requested": true
+  },
+  "duration_s": 42.59,
+  "finished_at_utc": "2026-11-11T16:48:49.975283+00:00",
+  "passed_assertions": 143,
+  "failed_assertions": 0,
+  "received_bytes": 10168
+}
