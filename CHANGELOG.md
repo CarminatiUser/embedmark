@@ -1,3 +1,10 @@
+# Atualização documental da demonstração — 12/11/2026
+
+- Acrescentado o relato da montagem com nanoESP32-C6 e LCD externo: perfil Arthur com CS23, 143 verificações seriais e confirmação visual de “Ações: 3”, botão azul e textos legíveis.
+- Registrada a conferência do fluxo da extensão 0.4.2 e da identidade dos arquivos C/H e fontes com os integrados ao firmware corrigido.
+- Publicado o [guia da demonstração](docs/DEMONSTRACAO.md), com criação, validação, geração e comandos do laboratório. [Resultados e limites da montagem](docs/VALIDACAO_MONTAGEM_2026-11-12.md).
+- Sem alterações funcionais, de versão, de licença ou do pacote distribuído no Marketplace. Os ensaios e pacotes anteriores permanecem identificados por suas datas e configurações.
+
 # Documentação da validação física — 11/11/2026
 
 - Registrado o ensaio do contador gerado pelo núcleo 0.4.2 na Waveshare ESP32-C6-LCD-1.47: 143 verificações por console aprovadas, confirmação visual e fotografia.

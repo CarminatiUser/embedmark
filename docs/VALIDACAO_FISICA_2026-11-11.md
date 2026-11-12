@@ -4,6 +4,8 @@ Em **11 de novembro de 2026**, uma interface de contador gerada pelo núcleo **E
 
 Este documento publica evidências de um ensaio já realizado. A fotografia mostra um estado da interface; a sequência de comandos e respostas está nos registros seriais. Os resultados se referem à placa, ao firmware e ao procedimento identificados abaixo, e são separados dos testes automatizados históricos do projeto.
 
+> A montagem com nanoESP32-C6 e LCD externo foi ensaiada posteriormente, em 12/11/2026, com outro perfil de pinagem. Consulte seu [relato separado](VALIDACAO_MONTAGEM_2026-11-12.md); os dados desta página continuam referentes somente à Waveshare de 11/11.
+
 ## Configuração examinada
 
 | Item | Configuração registrada |

@@ -4,7 +4,7 @@ Extensão para Visual Studio Code e núcleo Python para gerar interfaces **C par
 
 Nome adotado em 14/10/2026; anteriormente TCC UI Translator. Registros históricos conservam a identidade usada nas respectivas execuções. Consulte o [registro da adoção do nome EmbedMark](docs/RENOMEACAO_EMBEDMARK.md).
 
-Versão **0.4.2**, com extensão desktop do VS Code, núcleo Python e laboratório ESP-IDF separado. A validação física de 11/11/2026 utilizou a placa integrada **Waveshare ESP32-C6-LCD-1.47**, com ESP32-C6FH4 e display ST7789 de 172 × 320 pixels. Outros presets apenas configuram dimensões; não representam suporte a drivers ou hardware já validado.
+Versão **0.4.2**, com extensão desktop do VS Code, núcleo Python e laboratório ESP-IDF separado. A validação física de 11/11/2026 utilizou a placa integrada **Waveshare ESP32-C6-LCD-1.47**, com ESP32-C6FH4 e display ST7789 de 172 × 320 pixels. Em 12/11/2026, o contador também foi executado na [montagem com nanoESP32-C6 e LCD externo](docs/VALIDACAO_MONTAGEM_2026-11-12.md), usando seu próprio perfil de pinagem. Outros presets apenas configuram dimensões; não representam suporte a drivers ou hardware já validado.
 
 ## Disponibilidade
 
@@ -16,7 +16,7 @@ A pasta `release/` contém artefatos locais e não é versionada pelo Git. O pac
 
 Consulte os [resultados da versão 0.4.2](docs/VALIDACAO_0.4.2.md).
 
-Para conhecer o produto, comece pelo [manual de HTML/CSS](docs/LINGUAGEM.md), pelo [guia da extensão](extension/README.md) e pelos [exemplos](examples). A [arquitetura](ARCHITECTURE.md) descreve como a extensão e o núcleo se integram.
+Para conhecer o produto, comece pelo [manual de HTML/CSS](docs/LINGUAGEM.md), pelo [guia da extensão](extension/README.md) e pelos [exemplos](examples). O [guia da demonstração do contador](docs/DEMONSTRACAO.md) reúne os passos no editor e explica a integração com o firmware. A [arquitetura](ARCHITECTURE.md) descreve como a extensão e o núcleo se integram.
 
 ## Usar no VS Code
 
@@ -33,7 +33,7 @@ Abra uma pasta confiável e use a paleta de comandos:
 
 Salve o exemplo como `contador.html` dentro da pasta de trabalho antes de gerar. A saída padrão é `generated/contador/`, com `ui_generated.c`, `ui_generated.h`, fontes, licenças, `fontes.json`, `translation.json` e `sources.cmake`. Mantenha controladores e drivers fora dessa pasta; preserve o registro oculto `.embedmark-output.json`, usado na proteção contra sobrescrita.
 
-A extensão usa o conteúdo atual do editor, protege arquivos alterados manualmente e mantém a última saída válida quando a tradução falha. Configurações pertencem à pasta da interface, inclusive em workspaces com várias pastas. Consulte o [guia da extensão](extension/README.md), os [resultados da versão 0.4.1](docs/VALIDACAO_0.4.1.md) e as [instruções de publicação](docs/PUBLICACAO.md).
+A extensão usa o conteúdo atual do editor, protege arquivos alterados manualmente e mantém a última saída válida quando a tradução falha. Configurações pertencem à pasta da interface, inclusive em workspaces com várias pastas. Consulte o [guia da extensão](extension/README.md), os [resultados da versão 0.4.2](docs/VALIDACAO_0.4.2.md) e as [instruções de publicação](docs/PUBLICACAO.md).
 
 ## Primeiro HTML
 
@@ -156,7 +156,9 @@ Em **11/11/2026**, o contador em português foi regenerado a partir do HTML pelo
 - Cliques enviados por software pelo console USB Serial/JTAG, com atualização do contador e controle do modo automático. O ensaio não valida toque ou botão físico.
 - Duração de **42,59 segundos**, incluindo 3,5 segundos de inicialização da conexão. Esse tempo descreve o ensaio, não uma medida de desempenho do tradutor ou da interface.
 
-O [conjunto público de evidências](docs/validation/waveshare-2026-11-11/) reúne resultados, registros seriais, configuração e fotografia. No TCC, RF08 está **atendido no cenário ensaiado, com eventos por console**. As verificações físicas são distintas dos testes de software e da instalação da extensão; não comprovam todos os exemplos, outros displays, consumo, taxa de quadros ou estabilidade prolongada. O vídeo de demonstração será gravado posteriormente pelo autor.
+O [conjunto público de evidências](docs/validation/waveshare-2026-11-11/) reúne resultados, registros seriais, configuração e fotografia. No TCC, RF08 está **atendido no cenário ensaiado, com eventos por console**. As verificações físicas são distintas dos testes de software e da instalação da extensão; não comprovam todos os exemplos, outros displays, consumo, taxa de quadros ou estabilidade prolongada.
+
+Em **12/11/2026**, a montagem com **nanoESP32-C6 e LCD externo**, perfil Arthur com **CS23**, passou por outra rodada de **143 verificações por console**. O autor confirmou visualmente “Ações: 3”, botão azul e textos legíveis. O fluxo de validação e geração na extensão 0.4.2 também foi conferido, e os arquivos C/H e fontes coincidem byte a byte com os integrados ao firmware dessa montagem. Consulte o [relato separado de 12/11](docs/VALIDACAO_MONTAGEM_2026-11-12.md) e o [guia da demonstração](docs/DEMONSTRACAO.md).
 
 ## Integração e desenvolvimento
 

@@ -26,6 +26,8 @@ A saída representa uma instância de tela e fornece `screen_main_create`, `scre
 
 O laboratório local isolado `embedmark-validation-waveshare`, derivado do laboratório anterior `embedmark-validation`, inicializa SPI, ST7789, iluminação, buffers e temporização do LVGL na placa Waveshare ESP32-C6-LCD-1.47. O controlador de exemplo conta eventos enviados pelo console USB Serial/JTAG, e o padrão de calibração permite conferir cores e geometria. O firmware completo do laboratório não está incluído neste repositório; o [relatório de 11/11/2026](docs/VALIDACAO_FISICA_2026-11-11.md) publica a configuração e as evidências da execução física. O firmware original em `Downloads/tela_lcd` foi preservado.
 
+A montagem com nanoESP32-C6 e LCD externo usa outro laboratório local, `embedmark-demo-nanoesp32c6`, com perfil Arthur e CS23. A [rodada de 12/11/2026](docs/VALIDACAO_MONTAGEM_2026-11-12.md) registra sua configuração e seus resultados, sem transferir a ela a pinagem da Waveshare. O [guia da demonstração](docs/DEMONSTRACAO.md) relaciona a geração no editor à execução no firmware.
+
 ## Distribuição e verificação
 
 - `pyproject.toml` define o pacote do núcleo.

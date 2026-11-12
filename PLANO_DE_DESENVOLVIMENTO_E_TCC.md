@@ -1,14 +1,14 @@
 # Plano de desenvolvimento do produto e conclusão do TCC
 
-Plano original de setembro/outubro de 2026, com atualização de acompanhamento em **11/11/2026**. Os diagnósticos iniciais e marcos antigos abaixo preservam o contexto de cada rodada; não devem ser lidos como a situação atual do produto.
+Plano original de setembro/outubro de 2026, com atualização de acompanhamento em **12/11/2026**. Os diagnósticos iniciais e marcos antigos abaixo preservam o contexto de cada rodada; não devem ser lidos como a situação atual do produto.
 
-## Situação em 11/11/2026
+## Situação em 12/11/2026
 
 - **Distribuição:** a versão 0.4.2 está publicada no Marketplace sob MIT, com instalação verificada e matriz de testes de software aprovada. Veja o [registro da versão](docs/VALIDACAO_0.4.2.md).
-- **Hardware:** o contador gerado pelo núcleo 0.4.2 foi executado na Waveshare ESP32-C6-LCD-1.47. Foram aprovadas 143 verificações por console, com 50 ciclos de recriação e 10 ciclos de alternância entre padrão e interface, além da confirmação visual e fotografia. Veja a [validação física](docs/VALIDACAO_FISICA_2026-11-11.md).
+- **Hardware:** o contador gerado pelo núcleo 0.4.2 foi executado na Waveshare ESP32-C6-LCD-1.47. Foram aprovadas 143 verificações por console, com 50 ciclos de recriação e 10 ciclos de alternância entre padrão e interface, além da confirmação visual e fotografia. Veja a [validação física](docs/VALIDACAO_FISICA_2026-11-11.md). A [montagem com LCD externo](docs/VALIDACAO_MONTAGEM_2026-11-12.md) foi ensaiada em 12/11, com perfil Arthur, 143 verificações seriais e confirmação visual do contador; seus resultados são registrados separadamente.
 - **Escopo:** RF08 está atendido no cenário ensaiado, com eventos por console. Não foram validados todos os exemplos na placa, toque ou botão físico, outros periféricos ou estabilidade prolongada. Medições de desempenho/consumo e avaliação com participantes não foram realizadas nesse ensaio.
 - **Reprodução:** o protocolo e as evidências estão públicos; o firmware completo do laboratório isolado `embedmark-validation-waveshare` permanece local e separado deste repositório.
-- **TCC e vídeo:** o documento do TCC é mantido separadamente. Este plano não certifica seu fechamento editorial. O vídeo de demonstração será gravado posteriormente pelo autor; as evidências atuais são registros seriais, configuração, confirmação visual e fotografia.
+- **TCC e demonstração:** o documento do TCC é mantido separadamente e passou por revisão de redação, coerência e paginação em 12/11/2026. A gravação do vídeo permanece como atividade de apresentação, sem impedir o uso do produto. O [guia da demonstração](docs/DEMONSTRACAO.md) já documenta o fluxo executável. Este repositório não substitui o aceite acadêmico do orientador e da banca.
 
 ### Contexto das entregas iniciais
 
@@ -190,6 +190,8 @@ A extensão consumirá o núcleo por uma interface estável, evitando uma segund
 
 Esta etapa começa na A e acompanha o desenvolvimento. Resultados e conclusão são fechados após F; informações da versão publicada, após G.
 
+**Acompanhamento em 12/11/2026:** a redação como produto, os requisitos, a arquitetura, os resultados, os apêndices de uso e a revisão de paginação foram incorporados à versão do TCC mantida fora deste repositório. As caixas abaixo preservam o planejamento inicial e não são uma lista atual de bloqueios. A gravação e a inserção do endereço do vídeo no documento ainda dependem da apresentação preparada pelo autor.
+
 - [ ] H01. Fechar título coerente com a entrega e adequar a modalidade/formalização ao modelo institucional aplicável.
 - [ ] H02. Reescrever introdução, problema, público-alvo, justificativa e objetivos em torno do produto.
 - [ ] H03. Apresentar requisitos, critérios de aceitação e delimitação de escopo.
@@ -244,7 +246,7 @@ A documentação e os testes acompanham as correções; não ficam reservados ao
 - [x] Demonstração do contador registrada na Waveshare em 11/11/2026, com fotografia e logs; vídeo ainda não gravado.
 - [x] Extensão publicada e instalação da versão pública 0.4.2 verificada, conforme registro de 09/11/2026.
 - [x] Manual, exemplos, dependências, licença e versão organizados.
-- [ ] TCC vincula requisitos, testes e resultados da versão entregue.
+- [x] TCC vincula requisitos, testes e resultados da versão entregue, conforme revisão de 12/11/2026 mantida separadamente do repositório.
 
 ## 7. Referências para a implementação da extensão
 

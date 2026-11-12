@@ -2,6 +2,8 @@
 
 A integração foi executada fisicamente em **11/11/2026** na placa **Waveshare ESP32-C6-LCD-1.47**, com ESP32-C6FH4, display ST7789 de 172 × 320 pixels, ESP-IDF 5.4.3 e LVGL 8.3.11. O contador foi regenerado pelo núcleo EmbedMark **0.4.2**, compilado e gravado no laboratório separado. O ensaio teve **143 verificações por console aprovadas**, além da confirmação visual de cores, enquadramento e acentos. Consulte o [relatório completo e seus limites](docs/VALIDACAO_FISICA_2026-11-11.md).
 
+A [montagem com nanoESP32-C6 e LCD externo](docs/VALIDACAO_MONTAGEM_2026-11-12.md) foi ensaiada separadamente em **12/11/2026**, com perfil Arthur (**CS23**), 143 verificações seriais aprovadas e confirmação visual do contador. O [guia da demonstração](docs/DEMONSTRACAO.md) cobre o fluxo no editor e os comandos do laboratório. A tabela a seguir continua descrevendo exclusivamente a Waveshare.
+
 ## Perfil físico ensaiado
 
 | Item | Configuração utilizada |
