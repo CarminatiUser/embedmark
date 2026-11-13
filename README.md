@@ -18,6 +18,12 @@ Consulte os [resultados da versão 0.4.2](docs/VALIDACAO_0.4.2.md).
 
 Para conhecer o produto, comece pelo [manual de HTML/CSS](docs/LINGUAGEM.md), pelo [guia da extensão](extension/README.md) e pelos [exemplos](examples). O [guia da demonstração do contador](docs/DEMONSTRACAO.md) reúne os passos no editor e explica a integração com o firmware. A [arquitetura](ARCHITECTURE.md) descreve como a extensão e o núcleo se integram.
 
+## Vídeo de demonstração
+
+Veja o EmbedMark em uso no VS Code, desde a interface em HTML e CSS até o resultado no display do ESP32-C6.
+
+[▶ Assistir à demonstração](https://youtu.be/BBxMiQ06WGc)
+
 ## Usar no VS Code
 
 Requisitos: **VS Code 1.95 ou superior**, **Python 3.10 ou superior** e uma pasta de trabalho confiável. Na aba **Extensões**, procure **EmbedMark**, do publicador **Arthur Carminati**, e selecione **Instalar**. Você também pode abrir a [página oficial](https://marketplace.visualstudio.com/items?itemName=arthur-carminati.embedmark) ou usar `code --install-extension arthur-carminati.embedmark`. O pacote inclui o tradutor e suas dependências Python; Node.js e a instalação de bibliotecas com pip não são necessários para usar a extensão já empacotada.
